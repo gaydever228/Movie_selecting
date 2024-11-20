@@ -20,6 +20,8 @@ from PBF import PBF, BnB, bound, branch
 
 class election:
     def __init__(self, V, C, commit_size = 0, gen = False, distrV = 'normal', distrC = 'normal', boundV = 1, boundC = 1, matrix = None):
+        self.decision = None
+        self.Score = None
         self.V = V
         self.C = C
         self.k = commit_size
@@ -27,6 +29,9 @@ class election:
             self.generate(distrV, distrC, boundV, boundC)
             self.make_matrix()
             self.all_candidates = deepcopy(self.candidates)
+            self.all_dist_matrix = deepcopy(self.dist_matrix)
+            self.all_sorted_dist_matrix = deepcopy(self.sorted_dist_matrix)
+            self.all_VoteLists = deepcopy(self.VoteLists)
             #self.sort_candidates()
         elif matrix is not None:
             self.dist_matrix = matrix
@@ -171,7 +176,7 @@ class election:
             else:
                 Score[i] = np.sqrt(self.sorted_dist_matrix[0][i]/d2[0][i])
         self.Score = np.mean(Score)
-        return np.mean(Score)
+        return self.Score
     def Calc_Cost(self):
         self.Cost = 0
         distances = np.zeros((self.k, self.V))
@@ -242,57 +247,57 @@ class election:
         flag = 0
         while (elected < self.k):
             n = len(Votes)
-            print('Votes', Votes)
-            print("size:", n)
+            #print('Votes', Votes)
+            #print("size:", n)
             q = (n + 1)//(self.k + 1) + 1
-            print("q:", q)
+            #print("q:", q)
             PS = np.zeros(self.C)
             if flag == 1:
                 PS[deleted] = None
             for e in Votes:
                 PS[e[0]] += 1
-            print(PS)
+            #print(PS)
             c = np.nanargmax(PS)
-            print("c:", c, "PS:", PS[c])
+            #print("c:", c, "PS:", PS[c])
             if PS[c] >= q:
-                print('больше')
+                #print('больше')
                 dec[c] = 1
                 elected += 1
                 ind = np.where(Votes == c)
                 need = np.where(ind[1] == 0)
-                print(ind, need)
+                #print(ind, need)
                 for_remove = ind[0][need]
-                print('for_remove', for_remove)
+                #print('for_remove', for_remove)
                 if len(for_remove) > q:
                     sdvig = np.random.randint(0, len(for_remove) - q)
                     rem = for_remove[(0 + sdvig): (q + sdvig)]
                 else:
                     rem = for_remove
 
-                print('rem', rem)
+                #print('rem', rem)
                 Votes = np.delete(Votes, rem, 0)
-                print('Votes', Votes)
+                #print('Votes', Votes)
                 ind = np.where(Votes == c)
-                print('ind', ind)
+                #print('ind', ind)
                 Votes1 = []
                 for i in range(len(Votes)):
                     Votes1.append(np.delete(Votes[i], ind[1][i]))
                 Votes = np.array(Votes1)
-                print('Votes', Votes)
+                #print('Votes', Votes)
             else:
-                print('больше  нету')
+                #print('больше  нету')
                 c = np.nanargmin(PS)
-                print("c else:", c)
+                #print("c else:", c)
                 ind = np.where(Votes == c)
-                print(ind)
+                #print(ind)
                 Votes1 = []
                 for i in range(len(Votes)):
                     Votes1.append(np.delete(Votes[i], ind[1][i]))
                 Votes = np.array(Votes1)
-                print('Votes', Votes)
+                #print('Votes', Votes)
             deleted.append(c)
             flag = 1
-            print('deleted', deleted)
+            #print('deleted', deleted)
         print(dec)
 
         self.decision = dec

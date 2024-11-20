@@ -148,7 +148,12 @@ def BnB(matrix, p, tol=0, depth=True):
         polynome.approx(tol=tol)
     useless = polynome.useless()
     print(len(useless), 'бесполезных кандидатов')
-    empty_useless_flag = len(useless) == 0
+    while len(useless) > polynome.n - p:
+        print(polynome.n, p)
+        temp_list = list(useless)
+        useless.remove(temp_list[-1])
+        print(len(useless), 'теперь бесполезных')
+    #empty_useless_flag = len(useless) == 0
 
     init_vars = np.zeros(len(matrix))
     state = np.zeros(len(matrix))
@@ -168,22 +173,22 @@ def BnB(matrix, p, tol=0, depth=True):
             count += 1
             curr = queue.popleft()
             #print(count)
-            # if (curr[2] + 1) in useless:
-            #     curr[0][curr[2]] = 1
-            #     curr[2] += 1
-            #     #curr[1] += 1
-            #     curr[3] = 0
-            #     queue.appendleft(curr)
-            #     #useless.remove(curr[2])
-            #     #empty_useless_flag = (len(useless) == 0)
-            #     #print(curr, useless)
-            #     if polynome.n - np.count_nonzero(curr[0]) == p:
-            #         feasible_flag = True
-            #         stop_flag = True
-            #         if curr[4] < lowest:
-            #             lowest = curr[4]
-            #             state = curr[0]
-            #     continue
+            if (curr[2] + 1) in useless:
+                curr[0][curr[2]] = 1
+                curr[2] += 1
+                #curr[1] += 1
+                curr[3] = 0
+                queue.appendleft(curr)
+                #useless.remove(curr[2])
+                #empty_useless_flag = (len(useless) == 0)
+                #print(curr, useless)
+                if polynome.n - np.count_nonzero(curr[0]) == p:
+                    feasible_flag = True
+                    stop_flag = True
+                    if curr[4] < lowest:
+                        lowest = curr[4]
+                        state = curr[0]
+                continue
             curr, stop_flag, feasible = bound(polynome, p, feasible_flag, *curr)
             # print('ветвление номер: ', count, ', текущее состояние: ', curr, stop_flag, feasible)
             if curr[4] >= lowest:
