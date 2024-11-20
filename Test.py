@@ -101,13 +101,16 @@ class Test(election):
         SNTV_time = self.SNTV_test()
         STV_time = self.STV_test()
         tol_time = self.BnB_tol_test()
+        level_time = self.BnB_level_test()
 
         time_lists['SNTV'] = SNTV_time
         time_lists['STV'] = STV_time
         df_times = pd.DataFrame(time_lists)
         df_tols = pd.DataFrame(tol_time)
+        df_levels = pd.DataFrame(level_time)
         df_times.to_csv("times.csv", index=False)
         df_tols.to_csv("tols.csv", index=False)
+        df_levels.to_csv("levels.csv", index=False)
 
         Scores_to_df = deepcopy(self.Scores)
         Scores_to_df.pop('alpha')
@@ -156,7 +159,7 @@ class Test(election):
         plt.legend()
         # plt.show()
         fig.set_size_inches(10, 10)
-        fig.savefig('time(alpha).png', dpi=300)
+        fig.savefig('time(alpha)_with_tols.png', dpi=300)
         plt.close(fig)
 
         # зависимости скора на одном графике
@@ -177,6 +180,7 @@ class Test(election):
             fig, ax = plt.subplots()
             plt.plot(self.Scores['alpha'], self.Scores['SNTV'][s], marker='.', mfc='k', mec='k', ms=6, c='#ffad0a',
                      lw=2, label='SNTV')
+            cmap = cm.get_cmap("viridis", len(self.params['tol']))
             i = 0
             for tol in self.params['tol']:
                 test_str = 'BnB_' + str(tol) + '_tol'
@@ -192,12 +196,61 @@ class Test(election):
             fig.savefig('tol_' + s + 'test.png', dpi=300)
             plt.close(fig)
 
+        # зависимости скора на разных уровнях на одном графике
+        for s in ['Score', 'Cost']:
+            fig, ax = plt.subplots()
+            plt.plot(self.Scores['alpha'], self.Scores['SNTV'][s], marker='.', mfc='k', mec='k', ms=4, c='#ffad0a',
+                     lw=2, label='SNTV')
+            plt.plot(self.Scores['alpha'], self.Scores['BnB_depth'][s], marker='^', mfc='b', mec='b', ms=4, ls='-',
+                     c='#56b100', lw=2, label='no prunning')
+            cmap = cm.get_cmap("viridis", 2)
+            i = 0
+            for level in self.params['level']:
+                test_str = 'BnB_' + str(level) + '_level'
+                plt.plot(self.Scores['alpha'], self.Scores[test_str][s], marker='^', mfc='r', mec='r', ms=2,
+                         c=cmap(i), lw=1.5, label='level = ' + str(level))
+                i += 1
+
+            plt.xlabel("alpha")
+            plt.ylabel(s)
+            plt.legend()
+            # plt.show()
+            fig.set_size_inches(10, 10)
+            fig.savefig('level_' + s + 'test.png', dpi=300)
+            plt.close(fig)
+
+            # с различными уровнями отбраковки кандидатов для BnB
+            fig, ax = plt.subplots()
+
+            plt.plot(self.Scores['alpha'], time_lists[True], marker='^', mfc='b', mec='b', ms=6, ls='-', c='#56b100',
+                     lw=2,
+                     label='no prunning')
+            plt.plot(self.Scores['alpha'], SNTV_time, marker='.', mfc='k', mec='k', ms=6, c='#ffad0a', lw=2,
+                     label='SNTV')
+            plt.plot(self.Scores['alpha'], STV_time, marker='.', mfc='k', mec='k', ms=6, c='#009ee3', lw=2, label='STV')
+
+            cmap = cm.get_cmap("viridis", 2)
+            i = 0
+            for level in self.params['level']:
+                test_str = 'BnB_' + str(level) + '_level'
+                plt.plot(self.Scores['alpha'], level_time[level], marker='o', mfc='g', mec='g', ms=1, c=cmap(i), lw=1.2,
+                         label='level = ' + str(level))
+                i += 1
+
+            plt.xlabel("alpha")
+            plt.ylabel("time, s")
+            plt.legend()
+            # plt.show()
+            fig.set_size_inches(10, 10)
+            fig.savefig('level_time(alpha).png', dpi=300)
+            plt.close(fig)
+
     def BnB_tol_test(self):
         print('запущен тест порогов')
         self.params['tol'] = []
-        step = self.iterations//5
-        for i in range(0, self.iterations + 1, step):
-            self.params['tol'].append(i/(2*self.iterations))
+        step = self.iterations//10
+        for i in range(step, self.iterations + 1, step):
+            self.params['tol'].append(i/self.iterations)
         time_lists = {}
         for tol in self.params['tol']:
             test_str = 'BnB_' + str(tol) + '_tol'
@@ -243,4 +296,50 @@ class Test(election):
             plt.close(fig)
 
         return time_lists
+    def BnB_level_test(self):
+        print('запущен тест уровней отбора кандидатов')
+        self.params['level'] = [1, 2]
+        time_lists = {}
+        for level in self.params['level']:
+            test_str = 'BnB_' + str(level) + '_level'
+            #print(test_str)
+            self.Scores[test_str] = {'Score': [], 'Cost': []}
+            time_lists[level] = []
+            for k in self.params['k']:
+                print(str(k) + '/' + str(self.C))
+                print(test_str)
+                self.k = k
+                start_time = time.time()
+                self.Scores[test_str]['Score'].append(self.BnB_rule(level = level, depth = True, draw_name = test_str + '_' + str(k/self.C)))
+                time_lists[level].append(time.time() - start_time)
 
+                self.candidates = deepcopy(self.all_candidates)
+                self.dist_matrix = deepcopy(self.all_dist_matrix)
+                self.sorted_dist_matrix = deepcopy(self.all_sorted_dist_matrix)
+                self.VoteLists = deepcopy(self.all_VoteLists)
+                self.C = len(self.candidates[0])
+                self.Scores[test_str]['Cost'].append(self.Cost)
+            # fig, ax = plt.subplots()
+            # # figure(figsize=(16, 12), dpi=80)
+            # ax.scatter(self.Scores['alpha'], self.Scores[test_str]['Score'], c='#0101dd', label='score(k/n)')
+            # #plt.show()
+            # fig.set_size_inches(10, 10)
+            # fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
+            # plt.close(fig)
+        for s in ['Score', 'Cost']:
+            cmap = cm.get_cmap("viridis", len(self.params['tol']))
+            fig, ax = plt.subplots()
+            i = 0
+            for level in self.params['level']:
+                test_str = 'BnB_' + str(level) + '_level'
+                plt.plot(self.Scores['alpha'], self.Scores[test_str][s], marker='.', mfc='k', mec='k', ms=2, c = cmap(i), lw=1, label='level = ' + str(level))
+                i += 1
+            plt.xlabel("alpha")
+            plt.ylabel(s)
+            plt.legend()
+            # plt.show()
+            fig.set_size_inches(10, 10)
+            fig.savefig('level_' + s + '(alpha).png', dpi=300)
+            plt.close(fig)
+
+        return time_lists

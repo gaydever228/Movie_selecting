@@ -18,14 +18,19 @@ import csv
 from scipy.optimize import curve_fit
 
 class PBF:
-    def __init__(self, matrix):
+    def __init__(self, matrix, p):
         #n - количество переменных
         self.vars = []
+        self.p = p
         self.n = len(matrix)
         self.vals = np.zeros(self.n)
         for i in range(self.n):
             self.vars.append(i+1)
         self.dic = {}
+        self.inverted_flag = False
+        # if 2*p < self.n:
+        #     matrix = self.invert(matrix)
+        #     self.p = self.n - p
         #print(self.vars)
 
         # self.terms = [[], []]
@@ -39,6 +44,13 @@ class PBF:
         #     self.dic[t] = 0
         #print(self.dic)
         self.from_matrix(matrix)
+    def invert(self, matrix):
+        matrix = np.array(matrix)
+        max_el = np.max(matrix)
+        new_matrix = -matrix + max_el
+        self.inverted_flag = True
+        return new_matrix
+
     def add_coef(self, term, c):
         t = frozenset(term)
         if t in self.dic:
@@ -89,9 +101,9 @@ class PBF:
                 output = ''.join(f"y_{i}" for i in sorted(term))
                 print(str(coef) + output + ' +')
 
-    def truncate(self, p):
+    def truncate(self):
         for term, coef in self.dic.items():
-            if len(term) > (self.n - p):
+            if len(term) > (self.n - self.p):
                 self.dic[term] = 0
     def useless(self):
         useless_vars = set()
@@ -141,15 +153,17 @@ def bound(polynome, p, ff, current, prohibited, divider, B, curval):
     return [current, prohibited, divider, B, val], (zeros_count == p or prohibited > p or divider == polynome.n), zeros_count == p
 
 def BnB(matrix, p, tol=0, depth=True):
-    polynome = PBF(matrix)
-    polynome.truncate(p)
+    polynome = PBF(matrix, p)
+    # if 2*p < len(matrix):
+    #     p = len(matrix) - p
+    polynome.truncate()
     # polynome.print()
     if tol > 0:
         polynome.approx(tol=tol)
     useless = polynome.useless()
     print(len(useless), 'бесполезных кандидатов')
     while len(useless) > polynome.n - p:
-        print(polynome.n, p)
+        #print(polynome.n, p)
         temp_list = list(useless)
         useless.remove(temp_list[-1])
         print(len(useless), 'теперь бесполезных')
@@ -210,8 +224,10 @@ def BnB(matrix, p, tol=0, depth=True):
             pbar.update(1)
             # pbar.set_postfix({'lowest': lowest})
             # print('очередь: ', queue)
+    if polynome.inverted_flag:
+        state = 1 - state
     print(count, 'итераций заняла оптимизация')
     #print('оптимум:', state)
     print('сумма расстояний:', lowest)
     print('минимальная:', start)
-    return state, lowest
+    return state

@@ -203,7 +203,7 @@ class election:
 
     def BnB_rule(self, tol = 0, level = 1, depth = True, draw_name = 'BnB'):
         self.delete_max(level = level)
-        decision, sum_dist = BnB(self.dist_matrix, self.k, tol = tol, depth = depth)
+        decision = BnB(self.dist_matrix, self.k, tol = tol, depth = depth)
         self.decision = 1 - decision
         print(self.decision)
         self.ComDec()
