@@ -174,9 +174,14 @@ class election:
         return np.mean(Score)
     def Calc_Cost(self):
         self.Cost = 0
+        distances = np.zeros((self.C, self.V))
         for i in range(self.k):
             for j in range(self.V):
-                self.Cost += np.sqrt((self.voters[0][j] - self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
+                distances[i][j] = ((self.voters[0][j] - self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
+        sorted_committee_matrix = np.sort(distances, axis=0)
+        for i in range(self.V):
+            self.Cost += np.sqrt(sorted_committee_matrix[0][i])
+
         return self.Cost
     def draw(self, name = 'noname_pic'):
         fig, ax = plt.subplots()
