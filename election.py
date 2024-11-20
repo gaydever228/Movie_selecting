@@ -174,7 +174,7 @@ class election:
         return np.mean(Score)
     def Calc_Cost(self):
         self.Cost = 0
-        distances = np.zeros((self.C, self.V))
+        distances = np.zeros((self.k, self.V))
         for i in range(self.k):
             for j in range(self.V):
                 distances[i][j] = ((self.voters[0][j] - self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
