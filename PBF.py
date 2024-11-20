@@ -165,27 +165,26 @@ def BnB(matrix, p, tol=0, depth=True):
     count = 0
     with tqdm(total=total_iterations) as pbar:
         while (count < total_iterations or lowest == highest) and len(queue) > 0 and lowest != start:
+            count += 1
             curr = queue.popleft()
             #print(count)
-            if (curr[2] + 1) in useless:
-                curr[0][curr[2]] = 1
-                curr[2] += 1
-                #curr[1] += 1
-                curr[3] = 0
-                queue.appendleft(curr)
-                #useless.remove(curr[2])
-                #empty_useless_flag = (len(useless) == 0)
-                #print(curr, useless)
-                if polynome.n - np.count_nonzero(curr[0]) == p:
-                    feasible_flag = True
-                    stop_flag = True
-                    if curr[4] < lowest:
-                        lowest = curr[4]
-                        state = curr[0]
-                continue
-
+            # if (curr[2] + 1) in useless:
+            #     curr[0][curr[2]] = 1
+            #     curr[2] += 1
+            #     #curr[1] += 1
+            #     curr[3] = 0
+            #     queue.appendleft(curr)
+            #     #useless.remove(curr[2])
+            #     #empty_useless_flag = (len(useless) == 0)
+            #     #print(curr, useless)
+            #     if polynome.n - np.count_nonzero(curr[0]) == p:
+            #         feasible_flag = True
+            #         stop_flag = True
+            #         if curr[4] < lowest:
+            #             lowest = curr[4]
+            #             state = curr[0]
+            #     continue
             curr, stop_flag, feasible = bound(polynome, p, feasible_flag, *curr)
-            count += 1
             # print('ветвление номер: ', count, ', текущее состояние: ', curr, stop_flag, feasible)
             if curr[4] >= lowest:
                 stop_flag = True

@@ -185,7 +185,7 @@ class election:
         print("Score of " + name + " rule is ", self.Score)
         #print("median Score of STV rule is ", medianScore(Committee, Vamount, ComAmount, d1, V))
 
-    def BnB_rule(self, tol = 0, level = 1, depth = True, draw_name = 'noname'):
+    def BnB_rule(self, tol = 0, level = 1, depth = True, draw_name = 'BnB'):
         self.delete_max(level = level)
         decision, sum_dist = BnB(self.dist_matrix, self.k, tol = tol, depth = depth)
         self.decision = 1 - decision
@@ -194,3 +194,15 @@ class election:
         self.Calc_Score()
         self.draw(name = draw_name)
         return self.Score
+    def SNTV_rule(self, draw_name = 'SNTV'):
+        PS = np.zeros(self.C)
+        for e in self.VoteLists.T:
+            PS[e[0]] += 1
+        top = np.argsort(-PS)
+        dec = np.zeros(self.C)
+        for cand in top[:self.k]:
+            dec[cand] = 1
+        self.decision = dec
+        self.ComDec()
+        self.Calc_Score()
+        self.draw(name =  draw_name)
