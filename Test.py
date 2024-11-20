@@ -24,16 +24,13 @@ class Test(election):
         super().__init__(V, C, commit_size, gen, distrV, distrC, boundV, boundC, matrix)
         self.iterations = its
     def test_BnB_time(self):
-        params = {'k': [], 'tol': [], 'depth': [True, False]}
-        self.Scores = {'BnB_depth': {'Score': [], 'Cost': []}, 'BnB_width': {'Score': [], 'Cost': []}, 'SNTV': {'Score': [], 'Cost': []}, 'alpha': []}
-        for i in range(1, self.iterations):
-            params['k'].append(i*self.C//self.iterations)
-            self.Scores['alpha'].append(i/self.iterations)
-            # params['tol'].append((i-1)/self.iterations)
+        self.params['depth'] = [True, False]
+        self.Scores['BnB_depth'] = {'Score': [], 'Cost': []}
+        self.Scores['BnB_width'] = {'Score': [], 'Cost': []}
         time_lists = {True: [], False: []}
-        for dep in params['depth']:
+        for dep in self.params['depth']:
             test_str = 'BnB_' + dep*'depth' + (1-dep)*'width'
-            for k in params['k']:
+            for k in self.params['k']:
                 print(str(k) + '/' + str(self.C))
                 print(test_str)
                 self.k = k
@@ -48,9 +45,12 @@ class Test(election):
             fig.set_size_inches(10, 10)
             fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
             plt.close(fig)
+        return time_lists
+    def SNTV_test(self):
         SNTV_time = []
+        self.Scores['SNTV'] = {'Score': [], 'Cost': []}
         test_str = 'SNTV'
-        for k in params['k']:
+        for k in self.params['k']:
             print('SNTV: ' + str(k) + '/' + str(self.C))
             self.k = k
             start_time = time.time()
@@ -64,14 +64,43 @@ class Test(election):
         fig.set_size_inches(10, 10)
         fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
         plt.close(fig)
-
+        return SNTV_time
+    def STV_test(self):
+        STV_time = []
+        test_str = 'STV'
+        self.Scores[test_str] = {'Score': [], 'Cost': []}
+        for k in self.params['k']:
+            print('STV: ' + str(k) + '/' + str(self.C))
+            self.k = k
+            start_time = time.time()
+            self.Scores[test_str]['Score'].append(self.SNTV_rule(draw_name = test_str + '_' + str(k / self.C)))
+            STV_time.append(time.time() - start_time)
+            self.Scores[test_str]['Cost'].append(self.Cost)
+        fig, ax = plt.subplots()
+        # figure(figsize=(16, 12), dpi=80)
+        ax.scatter(self.Scores['alpha'], self.Scores[test_str]['Score'], c='#0101dd', label='score(k/n)')
+        # plt.show()
+        fig.set_size_inches(10, 10)
+        fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
+        plt.close(fig)
+        return STV_time
+    def test_rules(self):
+        self.Scores = {'alpha': []}
+        self.params = {'k': []}
+        for i in range(1, self.iterations):
+            self.params['k'].append(i * self.C // self.iterations)
+            self.Scores['alpha'].append(i/self.iterations)
+        time_lists = self.test_BnB_time()
+        SNTV_time = self.SNTV_test()
+        STV_time = self.STV_rule()
         fig, ax = plt.subplots()
         # figure(figsize=(16, 12), dpi=80)
         #ax.scatter(self.time_score_lists[True][2], self.time_score_lists[True][0], c='#56b100', label='depth')
-        plt.plot(self.Scores['alpha'], time_lists[True], marker='^', mfc='r', mec='r', ms=6, ls='-', c='#56b100', lw=2, label='depth')
+        plt.plot(self.Scores['alpha'], time_lists[True], marker='^', mfc='b', mec='b', ms=6, ls='-', c='#56b100', lw=2, label='depth')
         #ax.scatter(self.time_score_lists[False][2], self.time_score_lists[False][0], c='#9867cf', label='width')
-        plt.plot(self.Scores['alpha'], time_lists[False], marker = 'o', mfc = 'y', mec = 'y', ms = 6, c='#9867cf', lw=2, label='width')
-        plt.plot(self.Scores['alpha'], SNTV_time, marker='.', mfc='k', mec='y', ms=6, c='#ffad0a', lw=2, label='SNTV')
+        plt.plot(self.Scores['alpha'], time_lists[False], marker = '^', mfc = 'r', mec = 'r', ms = 6, c='#9867cf', lw=2, label='width')
+        plt.plot(self.Scores['alpha'], SNTV_time, marker='.', mfc='k', mec='k', ms=6, c='#ffad0a', lw=2, label='SNTV')
+        plt.plot(self.Scores['alpha'], STV_time, marker='.', mfc='k', mec='k', ms=6, c='#009ee3', lw=2, label='STV')
         plt.xlabel("alpha")
         plt.ylabel("time, s")
         plt.legend()
@@ -81,11 +110,10 @@ class Test(election):
         plt.close(fig)
         for s in ['Score', 'Cost']:
             fig, ax = plt.subplots()
-            plt.plot(self.Scores['alpha'], self.Scores['BnB_depth'][s], marker='^', mfc='r', mec='r', ms=6, ls='-', c='#56b100', lw=2,
-                     label='depth')
-            plt.plot(self.Scores['alpha'], self.Scores['BnB_width'][s], marker='o', mfc='y', mec='y', ms=6, c='#9867cf', lw=2,
-                     label='width')
-            plt.plot(self.Scores['alpha'], self.Scores['SNTV'][s], marker='.', mfc='k', mec='y', ms=6, c='#ffad0a', lw=2, label='SNTV')
+            plt.plot(self.Scores['alpha'], self.Scores['BnB_depth'][s], marker='^', mfc='b', mec='b', ms=6, ls='-', c='#56b100', lw=2, label='depth')
+            plt.plot(self.Scores['alpha'], self.Scores['BnB_width'][s], marker = '^', mfc = 'r', mec = 'r', ms = 6, c='#9867cf', lw=2, label='width')
+            plt.plot(self.Scores['alpha'], self.Scores['SNTV'][s], marker='.', mfc='k', mec='k', ms=6, c='#ffad0a', lw=2, label='SNTV')
+            plt.plot(self.Scores['alpha'], self.Scores['STV'][s], marker='.', mfc='k', mec='k', ms=6, c='#ffad0a', lw=2, label='STV')
             plt.xlabel("alpha")
             plt.ylabel(s)
             plt.legend()

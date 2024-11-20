@@ -21,10 +21,11 @@ from election import election
 from PBF import PBF, BnB, bound, branch
 from Test import Test
 
-#E_test = election(60, 35, 34, True)
+E_test = election(30, 7, 3, True)
+E_test.STV_rule('huynya')
 #E_test.BnB_rule(level = 0, depth = True)
 
-testing_BnB = Test(25, 80, 25)
-testing_BnB.test_BnB_time()
-print('finish')
-print(testing_BnB.Scores)
+# testing_BnB = Test(25, 80, 25)
+# testing_BnB.test_BnB_time()
+# print('finish')
+# print(testing_BnB.Scores)

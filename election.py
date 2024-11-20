@@ -220,3 +220,84 @@ class election:
         self.Calc_Cost()
         self.draw(name =  draw_name)
         return self.Score
+    # def STV_rule_new(self, draw_name = 'STV'):
+    #     elected = 0
+    #     PS = np.zeros(self.C)
+    #     for e in self.VoteLists.T:
+    #         PS[e[0]] += 1
+    #     n = self.V
+    #     dec = np.zeros(self.C)
+    #     while (elected < self.k):
+    #         c = np.nanargmax(PS)
+    #         q = (n + 1) // (self.k + 1) + 1
+    #         if PS[c] >= q:
+    #             dec[c] = 1
+    #
+
+    def STV_rule(self, draw_name = 'STV'):
+        elected = 0
+        deleted = []
+        Votes = self.VoteLists.T
+        dec = np.zeros(self.C)
+        flag = 0
+        while (elected < self.k):
+            n = len(Votes)
+            print('Votes', Votes)
+            print("size:", n)
+            q = (n + 1)//(self.k + 1) + 1
+            print("q:", q)
+            PS = np.zeros(self.C)
+            if flag == 1:
+                PS[deleted] = None
+            for e in Votes:
+                PS[e[0]] += 1
+            print(PS)
+            c = np.nanargmax(PS)
+            print("c:", c, "PS:", PS[c])
+            if PS[c] >= q:
+                print('больше')
+                dec[c] = 1
+                elected += 1
+                ind = np.where(Votes == c)
+                need = np.where(ind[1] == 0)
+                print(ind, need)
+                for_remove = ind[0][need]
+                print('for_remove', for_remove)
+                if len(for_remove) > q:
+                    sdvig = np.random.randint(0, len(for_remove) - q)
+                    rem = for_remove[(0 + sdvig): (q + sdvig)]
+                else:
+                    rem = for_remove
+
+                print('rem', rem)
+                Votes = np.delete(Votes, rem, 0)
+                print('Votes', Votes)
+                ind = np.where(Votes == c)
+                print('ind', ind)
+                Votes1 = []
+                for i in range(len(Votes)):
+                    Votes1.append(np.delete(Votes[i], ind[1][i]))
+                Votes = np.array(Votes1)
+                print('Votes', Votes)
+            else:
+                print('больше  нету')
+                c = np.nanargmin(PS)
+                print("c else:", c)
+                ind = np.where(Votes == c)
+                print(ind)
+                Votes1 = []
+                for i in range(len(Votes)):
+                    Votes1.append(np.delete(Votes[i], ind[1][i]))
+                Votes = np.array(Votes1)
+                print('Votes', Votes)
+            deleted.append(c)
+            flag = 1
+            print('deleted', deleted)
+        print(dec)
+
+        self.decision = dec
+        self.ComDec()
+        self.Calc_Score()
+        self.Calc_Cost()
+        self.draw(name =  draw_name)
+        return self.Score
