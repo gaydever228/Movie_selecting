@@ -26,4 +26,5 @@ from Test import Test
 
 testing_BnB = Test(10, 40, 10)
 testing_BnB.test_BnB_time()
-print(testing_BnB.time_score_lists)
+print('finish')
+print(testing_BnB.Scores)

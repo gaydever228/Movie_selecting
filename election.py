@@ -172,6 +172,12 @@ class election:
                 Score[i] = np.sqrt(self.sorted_dist_matrix[0][i]/d2[0][i])
         self.Score = np.mean(Score)
         return np.mean(Score)
+    def Calc_Cost(self):
+        self.Cost = 0
+        for i in range(self.k):
+            for j in range(self.V):
+                self.Cost += np.sqrt((self.voters[0][j] - self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
+        return self.Cost
     def draw(self, name = 'noname_pic'):
         fig, ax = plt.subplots()
         #figure(figsize=(16, 12), dpi=80)
@@ -192,6 +198,7 @@ class election:
         print(self.decision)
         self.ComDec()
         self.Calc_Score()
+        self.Calc_Cost()
         self.draw(name = draw_name)
         return self.Score
     def SNTV_rule(self, draw_name = 'SNTV'):
@@ -205,4 +212,6 @@ class election:
         self.decision = dec
         self.ComDec()
         self.Calc_Score()
+        self.Calc_Cost()
         self.draw(name =  draw_name)
+        return self.Score
