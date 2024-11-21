@@ -90,6 +90,10 @@ class Test(election):
         return STV_time
     def test_rules(self):
         time_lists = self.test_BnB_time()
+
+        df_times_BnB = pd.DataFrame(time_lists)
+        df_times_BnB.to_csv("csv/" + "times_BnB.csv", index=False)
+
         SNTV_time = self.SNTV_test()
         STV_time = self.STV_test()
         tol_time = self.BnB_tol_test()
@@ -100,16 +104,16 @@ class Test(election):
         df_times = pd.DataFrame(time_lists)
         df_tols = pd.DataFrame(tol_time)
         df_levels = pd.DataFrame(level_time)
-        df_times.to_csv("times.csv", index=False)
-        df_tols.to_csv("tols.csv", index=False)
-        df_levels.to_csv("levels.csv", index=False)
+        df_times.to_csv("csv/" + "times.csv", index=False)
+        df_tols.to_csv("csv/" + "tols.csv", index=False)
+        df_levels.to_csv("csv/" + "levels.csv", index=False)
 
         Scores_to_df = deepcopy(self.Scores)
         Scores_to_df.pop('alpha')
         Scores_to_df['alpha'] = {'Score': self.Scores['alpha'], 'Cost': self.Scores['alpha']}
         df_scores = pd.DataFrame.from_dict(Scores_to_df, orient='index')
         df_scores = df_scores.T
-        df_scores.to_csv('scores_costs.csv')
+        df_scores.to_csv('csv/' + 'scores_costs.csv')
 
         #без различных порогов точности для BnB
         fig, ax = plt.subplots()
