@@ -196,7 +196,7 @@ class election:
         ax.scatter(self.committee[0], self.committee[1], s = 70, c = '#01b700', alpha = 0.7)
         #plt.show()
         fig.set_size_inches(10, 10)
-        fig.savefig(name + '.png', dpi=100)
+        fig.savefig('draw_election/' + name + '.png', dpi=100)
         plt.close(fig)
         print("Score of " + name + " rule is ", self.Score)
         #print("median Score of STV rule is ", medianScore(Committee, Vamount, ComAmount, d1, V))

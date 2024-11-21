@@ -30,6 +30,16 @@ class Test(election):
         for i in range(1, self.iterations):
             self.params['k'].append(i * self.C // self.iterations)
             self.Scores['alpha'].append(i/self.iterations)
+    def draw_score(self, test_str, s = 'Score'):
+        fig, ax = plt.subplots()
+        # figure(figsize=(16, 12), dpi=80)
+        plt.plot(self.Scores['alpha'], self.Scores[test_str][s], marker='o', mfc='r', mec='r', ms=6, ls='-', lw=2, c='#0101dd')
+        plt.xlabel("alpha")
+        plt.ylabel("score_" + test_str)
+        # plt.show()
+        fig.set_size_inches(10, 10)
+        fig.savefig('rules_tests/' + s + '_' + test_str + '.png', dpi=300)
+        plt.close(fig)
     def test_BnB_time(self):
         self.params['depth'] = [True, False]
         self.Scores['BnB_depth'] = {'Score': [], 'Cost': []}
@@ -45,13 +55,7 @@ class Test(election):
                 self.Scores[test_str]['Score'].append(self.BnB_rule(level = 0, depth = dep, draw_name = test_str + '_' + str(k/self.C)))
                 time_lists[dep].append(time.time() - start_time)
                 self.Scores[test_str]['Cost'].append(self.Cost)
-            fig, ax = plt.subplots()
-            # figure(figsize=(16, 12), dpi=80)
-            ax.scatter(self.Scores['alpha'], self.Scores[test_str]['Score'], c='#0101dd', label='score(k/n)')
-            #plt.show()
-            fig.set_size_inches(10, 10)
-            fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
-            plt.close(fig)
+            self.draw_score(test_str)
         return time_lists
     def SNTV_test(self):
         SNTV_time = []
@@ -67,13 +71,7 @@ class Test(election):
             #print(type((time.time() - start_time)))
             #print(SNTV_time)
             self.Scores[test_str]['Cost'].append(self.Cost)
-        fig, ax = plt.subplots()
-        # figure(figsize=(16, 12), dpi=80)
-        ax.scatter(self.Scores['alpha'], self.Scores[test_str]['Score'], c='#0101dd', label='score(k/n)')
-        # plt.show()
-        fig.set_size_inches(10, 10)
-        fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
-        plt.close(fig)
+        self.draw_score(test_str)
         return SNTV_time
     def STV_test(self):
         STV_time = []
@@ -88,13 +86,7 @@ class Test(election):
             STV_time.append(time.time() - start_time)
             self.Scores[test_str]['Cost'].append(self.Cost)
         #print("STV", STV_time)
-        fig, ax = plt.subplots()
-        # figure(figsize=(16, 12), dpi=80)
-        ax.scatter(self.Scores['alpha'], self.Scores[test_str]['Score'], c='#0101dd', label='score(k/n)')
-        # plt.show()
-        fig.set_size_inches(10, 10)
-        fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
-        plt.close(fig)
+        self.draw_score(test_str)
         return STV_time
     def test_rules(self):
         time_lists = self.test_BnB_time()
@@ -133,7 +125,7 @@ class Test(election):
         plt.legend()
         #plt.show()
         fig.set_size_inches(10, 10)
-        fig.savefig('time(alpha).png', dpi=300)
+        fig.savefig('times/' + 'time_depth_width_SNTV_STV.png', dpi=300)
         plt.close(fig)
         # с различными порогами точности для BnB
         fig, ax = plt.subplots()
@@ -159,7 +151,7 @@ class Test(election):
         plt.legend()
         # plt.show()
         fig.set_size_inches(10, 10)
-        fig.savefig('time(alpha)_with_tols.png', dpi=300)
+        fig.savefig('times/' + 'time_depth_width_SNTV_STV_tols.png', dpi=300)
         plt.close(fig)
 
         # зависимости скора на одном графике
@@ -174,7 +166,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig(s + '_Test(alpha).png', dpi=300)
+            fig.savefig('scores/' + s + '_depth_width_SNTV_STV.png', dpi=300)
             plt.close(fig)
 
             fig, ax = plt.subplots()
@@ -193,7 +185,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig('tol_' + s + 'test.png', dpi=300)
+            fig.savefig('scores/' + s + '_SNTV_tols.png', dpi=300)
             plt.close(fig)
 
         # зависимости скора на разных уровнях на одном графике
@@ -216,7 +208,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig('level_' + s + 'test.png', dpi=300)
+            fig.savefig('scores/' + s + '_SNTV_levels.png', dpi=300)
             plt.close(fig)
 
             # с различными уровнями отбраковки кандидатов для BnB
@@ -242,7 +234,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig('level_time(alpha).png', dpi=300)
+            fig.savefig('times/' + 'time_SNTV_STV_levels.png', dpi=300)
             plt.close(fig)
 
     def BnB_tol_test(self):
