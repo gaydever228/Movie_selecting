@@ -288,7 +288,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig('tol_' + s + '(alpha).png', dpi=300)
+            fig.savefig('scores/' + 'tol_' + s + '(alpha).png', dpi=300)
             plt.close(fig)
 
         return time_lists
@@ -335,7 +335,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig('level_' + s + '(alpha).png', dpi=300)
+            fig.savefig('scores/' + 'level_' + s + '(alpha).png', dpi=300)
             plt.close(fig)
 
         return time_lists
