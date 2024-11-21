@@ -94,8 +94,6 @@ class election:
     def delete_max(self, level  = 2):
         #print('before:', self.dist_matrix)
         #print(self.VoteLists)
-        if level == 0:
-            return 0
         anti_PS = np.zeros(self.C)
         PS = np.zeros(self.C)
         #CN = deepcopy(self.candidates)
@@ -103,6 +101,8 @@ class election:
         for e in self.VoteLists.T:
             PS[e[0]] += 1
             for i in range(self.C - self.k):
+                if level == 0 and np.count_nonzero(anti_PS==0) < self.k:
+                    break
                 anti_PS[e[-i - 1]] += 1
         print(PS, anti_PS)
         # level 1
