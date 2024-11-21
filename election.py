@@ -29,6 +29,7 @@ class election:
             self.generate(distrV, distrC, boundV, boundC)
             self.make_matrix()
             self.all_candidates = deepcopy(self.candidates)
+            self.all_voters = deepcopy(self.voters)
             self.all_dist_matrix = deepcopy(self.dist_matrix)
             self.all_sorted_dist_matrix = deepcopy(self.sorted_dist_matrix)
             self.all_VoteLists = deepcopy(self.VoteLists)

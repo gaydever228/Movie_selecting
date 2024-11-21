@@ -25,8 +25,9 @@ from Test import Test
 #E_test.STV_rule('huynya')
 #E_test.BnB_rule(level = 0, depth = True)
 
-testing_BnB = Test(15, 50, 15)
+testing_BnB = Test(50, 200, 25, commit_size = 9)
 #testing_BnB.STV_test()
-testing_BnB.test_rules()
+testing_BnB.BnB_level_V()
+#testing_BnB.test_rules()
 print('finish')
 #print(testing_BnB.Scores)

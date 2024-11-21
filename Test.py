@@ -26,6 +26,7 @@ class Test(election):
         super().__init__(V, C, commit_size, gen, distrV, distrC, boundV, boundC, matrix)
         self.iterations = its
         self.Scores = {'alpha': []}
+        self.k = commit_size
         self.params = {'k': []}
         for i in range(1, self.iterations):
             self.params['k'].append(i * self.C // self.iterations)
@@ -246,7 +247,7 @@ class Test(election):
         self.params['tol'] = []
         step = self.iterations//10
         for i in range(step, self.iterations + 1, step):
-            self.params['tol'].append(i/self.iterations)
+            self.params['tol'].append(i/(0.75*self.iterations))
         time_lists = {}
         for tol in self.params['tol']:
             test_str = 'BnB_' + str(tol) + '_tol'
@@ -323,7 +324,7 @@ class Test(election):
             # fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
             # plt.close(fig)
         for s in ['Score', 'Cost']:
-            cmap = cm.get_cmap("viridis", len(self.params['tol']))
+            cmap = cm.get_cmap("viridis", len(self.params['level']))
             fig, ax = plt.subplots()
             i = 0
             for level in self.params['level']:
@@ -338,4 +339,82 @@ class Test(election):
             fig.savefig('scores/' + 'level_' + s + '(alpha).png', dpi=300)
             plt.close(fig)
 
+        return time_lists
+    def BnB_level_V(self):
+        print('запущен тест уровней отбора кандидатов в зависимости от количества избирателей!')
+        self.params['level'] = [0, 1, 2]
+        self.params['V'] = []
+        self.Scores['V/C'] = []
+        step = self.V//self.iterations
+        for i in range(step, self.V + 1, step):
+            self.params['V'].append(i)
+            self.Scores['V/C'].append(i/self.C)
+        time_lists = {}
+        #print('all voters:', self.all_VoteLists)
+        for level in self.params['level']:
+            test_str = 'BnB_' + str(level) + '_level_V'
+            #print(test_str)
+            self.Scores[test_str] = {'Score': [], 'Cost': []}
+            time_lists[level] = []
+            for V in self.params['V']:
+                self.V = V
+                self.voters = np.zeros((2, V))
+                #print(self.voters)
+                self.voters[0] = deepcopy(self.all_voters[0][:V])
+                self.voters[1] = deepcopy(self.all_voters[1][:V])
+                #print(self.voters)
+                self.make_matrix()
+                print(str(V) + '/' + str(self.C))
+                print(test_str)
+                #print('current votes:', self.VoteLists)
+                start_time = time.time()
+                self.Scores[test_str]['Score'].append(self.BnB_rule(level = level, depth = True, draw_name = test_str + '_' + str(V/self.C)))
+                time_lists[level].append(time.time() - start_time)
+
+                self.candidates = deepcopy(self.all_candidates)
+                #self.dist_matrix = deepcopy(self.all_dist_matrix)
+                #self.sorted_dist_matrix = deepcopy(self.all_sorted_dist_matrix)
+                #self.VoteLists = deepcopy(self.all_VoteLists)
+                self.C = len(self.candidates[0])
+                self.Scores[test_str]['Cost'].append(self.Cost)
+            # fig, ax = plt.subplots()
+            # # figure(figsize=(16, 12), dpi=80)
+            # ax.scatter(self.Scores['alpha'], self.Scores[test_str]['Score'], c='#0101dd', label='score(k/n)')
+            # #plt.show()
+            # fig.set_size_inches(10, 10)
+            # fig.savefig('score(alpha)_' + test_str + '.png', dpi=300)
+            # plt.close(fig)
+        for s in ['Score', 'Cost']:
+            cmap = cm.get_cmap("viridis", len(self.params['level']))
+            fig, ax = plt.subplots()
+            i = 0
+            for level in self.params['level']:
+                test_str = 'BnB_' + str(level) + '_level_V'
+                plt.plot(self.Scores['V/C'], self.Scores[test_str][s], marker='.', mfc='r', mec='k', ms=4, c = cmap(i), lw=2, label='level = ' + str(level))
+                i += 1
+            plt.xlabel("|V|/|C|")
+            plt.ylabel(s)
+            plt.legend()
+            # plt.show()
+            fig.set_size_inches(10, 10)
+            fig.savefig('scores/' + 'level_V_' + s + '(alpha).png', dpi=300)
+            plt.close(fig)
+
+        # время
+        fig, ax = plt.subplots()
+        cmap = cm.get_cmap("viridis", 3)
+        i = 0
+        for level in self.params['level']:
+            test_str = 'BnB_' + str(level) + '_level_V'
+            plt.plot(self.Scores['V/C'], time_lists[level], marker='o', mfc='r', mec='k', ms=3, c=cmap(i), lw=1.8,
+                     label='level = ' + str(level))
+            i += 1
+
+        plt.xlabel("|V|/|C|")
+        plt.ylabel("time, s")
+        plt.legend()
+        # plt.show()
+        fig.set_size_inches(10, 10)
+        fig.savefig('times/' + 'time_levels_V.png', dpi=300)
+        plt.close(fig)
         return time_lists
