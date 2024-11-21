@@ -175,6 +175,8 @@ class Test(election):
             plt.close(fig)
 
             fig, ax = plt.subplots()
+            plt.plot(self.Scores['alpha'], self.Scores['BnB_depth'][s], marker='o', mfc='b', mec='b', ms=6, ls='-',
+                     c='#56b100', lw=2, label='depth')
             plt.plot(self.Scores['alpha'], self.Scores['SNTV'][s], marker='.', mfc='k', mec='k', ms=6, c='#ffad0a',
                      lw=2, label='SNTV')
             cmap = cm.get_cmap("viridis", len(self.params['tol']))
@@ -190,7 +192,7 @@ class Test(election):
             plt.legend()
             # plt.show()
             fig.set_size_inches(10, 10)
-            fig.savefig('scores/' + s + '_SNTV_tols.png', dpi=300)
+            fig.savefig('scores/' + s + '_depth_SNTV_tols.png', dpi=300)
             plt.close(fig)
 
         # зависимости скора на разных уровнях на одном графике
