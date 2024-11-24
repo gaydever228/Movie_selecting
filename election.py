@@ -17,7 +17,7 @@ from rich.progress import Progress
 import csv
 from scipy.optimize import curve_fit
 from PBF import PBF, BnB, bound, branch
-
+#класс
 class election:
     def __init__(self, V, C, commit_size = 0, gen = False, distrV = 'normal', distrC = 'normal', boundV = 1, boundC = 1, matrix = None):
         self.decision = None

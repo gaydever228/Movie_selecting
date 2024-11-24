@@ -20,7 +20,7 @@ from scipy.optimize import curve_fit
 from election import election
 from PBF import PBF, BnB, bound, branch
 from Test import Test
-
+#мда
 testing_BnB = Test(25, 80, 25, commit_size = 9)
 #testing_BnB.STV_test()
 #testing_BnB.BnB_level_V()
