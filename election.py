@@ -56,6 +56,8 @@ class election:
             for j in range(self.V):
                 distances[i][j] = (self.voters[0][j]-self.candidates[0][i])**2 + (self.voters[1][j] - self.candidates[1][i])**2
         #self.sorted_dist_matrix = np.sort(distances, axis=0)
+        self.add_matrices(distances)
+    def add_matrices(self, distances):
         VoteLists = np.argsort(distances, axis=0)
         PS = np.zeros(self.C)
         for e in VoteLists.T:
@@ -118,7 +120,9 @@ class election:
             #print(Cand)
             self.candidates = np.delete(self.candidates, remove1, axis = 1)
             self.C = len(self.candidates[0])
-            self.make_matrix()
+            self.dist_matrix = np.delete(self.dist_matrix, remove1, axis = 0)
+            self.add_matrices(self.dist_matrix)
+            #self.make_matrix()
             self.VoteLists = np.argsort(self.dist_matrix, axis=0)
             PS = np.zeros(self.C)
             for e in self.VoteLists.T:
@@ -139,7 +143,9 @@ class election:
             #print(Cand)
             self.candidates = np.delete(self.candidates, remove2, axis = 1)
             self.C = len(self.candidates[0])
-            self.make_matrix()
+            self.dist_matrix = np.delete(self.dist_matrix, remove2, axis=0)
+            self.add_matrices(self.dist_matrix)
+            #self.make_matrix()
             self.VoteLists = np.argsort(self.dist_matrix, axis=0)
             #print('after:', self.dist_matrix)
 
@@ -156,19 +162,52 @@ class election:
         self.mD = np.mean(Candists)
         return self.mD
     def ComDec(self):
-        Com = np.zeros((2, self.k))
-        j = 0
+        #Com = np.zeros((2, self.k))
+        #j = 0
+        self.committee_id = []
         for i in range(self.C):
             if self.decision[i] == 1:
-                Com[0][j] = self.candidates[0][i]
-                Com[1][j] = self.candidates[1][i]
-                j += 1
-        self.committee = Com
-    def Calc_Score(self):
+                #Com[0][j] = self.candidates[0][i]
+                #Com[1][j] = self.candidates[1][i]
+                self.committee_id.append(i)
+                #j += 1
+        self.committee_id = np.array(self.committee_id)
+        #print('ids: ',  self.committee_id)
+        #self.committee = Com
+    def Calc_Score_old(self):
         distances2 = np.zeros((self.k, self.V))
         for i in range(self.k):
             for j in range(self.V):
                 distances2[i][j] = ((self.voters[0][j]-self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
+                #print('1 scorebetween', i, 'and', j, ':', np.sqrt(distances2[i][j]))
+        d2 = np.sort(distances2, axis=0)
+        Score = np.zeros(self.V)
+        for i in range(self.V):
+            if self.sorted_dist_matrix[0][i] == d2[0][i] or d2[0][i] == 0:
+                Score[i] = 1
+            else:
+                Score[i] = np.sqrt(self.sorted_dist_matrix[0][i]/d2[0][i])
+        self.Score = np.mean(Score)
+        return self.Score
+    def Calc_Cost_old(self):
+        self.Cost = 0
+        distances = np.zeros((self.k, self.V))
+        for i in range(self.k):
+            for j in range(self.V):
+                distances[i][j] = ((self.voters[0][j] - self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
+                #print('1cost between', i, 'and', j, ':', np.sqrt(distances[i][j]))
+        sorted_committee_matrix = np.sort(distances, axis=0)
+        for i in range(self.V):
+            self.Cost += np.sqrt(sorted_committee_matrix[0][i])
+
+        return self.Cost
+    def Calc_Score(self):
+        print('len', len(self.committee_id))
+        distances2 = np.zeros((self.k, self.V))
+        for i, id in enumerate(self.committee_id):
+            for j in range(self.V):
+                distances2[i][j] = self.dist_matrix[id][j]
+                #print('2 score between', i, 'and', j, ':', np.sqrt(distances2[i][j]))
         d2 = np.sort(distances2, axis=0)
         Score = np.zeros(self.V)
         for i in range(self.V):
@@ -180,10 +219,12 @@ class election:
         return self.Score
     def Calc_Cost(self):
         self.Cost = 0
+        print('len', len(self.committee_id))
         distances = np.zeros((self.k, self.V))
-        for i in range(self.k):
+        for i, id in enumerate(self.committee_id):
             for j in range(self.V):
-                distances[i][j] = ((self.voters[0][j] - self.committee[0][i])**2 + (self.voters[1][j] - self.committee[1][i])**2)
+                distances[i][j] = self.dist_matrix[id][j]
+                #print('2  cost between', i, 'and', j, ':', np.sqrt(distances[i][j]))
         sorted_committee_matrix = np.sort(distances, axis=0)
         for i in range(self.V):
             self.Cost += np.sqrt(sorted_committee_matrix[0][i])
@@ -202,7 +243,7 @@ class election:
         print("Score of " + name + " rule is ", self.Score)
         #print("median Score of STV rule is ", medianScore(Committee, Vamount, ComAmount, d1, V))
 
-    def BnB_rule(self, tol = 0, level = 1, depth = True, draw_name = 'BnB'):
+    def BnB_rule(self, tol = 0.2, level = 2, depth = True, draw_name = 'BnB'):
         self.delete_max(level = level)
         decision = BnB(self.dist_matrix, self.k, tol = tol, depth = depth)
         self.decision = 1 - decision
@@ -210,7 +251,7 @@ class election:
         self.ComDec()
         self.Calc_Score()
         self.Calc_Cost()
-        self.draw(name = draw_name)
+        #self.draw(name = draw_name)
         return self.Score
     def SNTV_rule(self, draw_name = 'SNTV'):
         PS = np.zeros(self.C)
@@ -224,7 +265,9 @@ class election:
         self.ComDec()
         self.Calc_Score()
         self.Calc_Cost()
-        self.draw(name =  draw_name)
+        #print('first: ', self.Score, self.Cost)
+        #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
+        #self.draw(name =  draw_name)
         return self.Score
     # def STV_rule_new(self, draw_name = 'STV'):
     #     elected = 0
@@ -305,5 +348,6 @@ class election:
         self.ComDec()
         self.Calc_Score()
         self.Calc_Cost()
-        self.draw(name =  draw_name)
+        #self.draw(name =  draw_name)
+
         return self.Score
