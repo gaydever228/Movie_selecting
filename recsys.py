@@ -157,6 +157,10 @@ class Reccomend(election):
             c_to_c.add(i)
         for i in range(self.degrees):
             c_to_v.update(self.voter_approval_sets[i][voter_id])
+        # удаляю ещё для проверки
+        #for _ in range(50):
+        #    c_to_v.pop()
+
         c_to_c = c_to_c.difference(c_to_v)
         print(c_to_v)
         print(c_to_c)
@@ -178,7 +182,7 @@ class Reccomend(election):
         for id in self.committee_id:
             print('SNTV recommends', self.candidates[0][id])
 
-        print('BnB:', self.BnB_rule(tol = 0.1))
+        print('BnB:', self.BnB_rule(tol = 0.7, level=2))
         print(self.Cost)
         for id in self.committee_id:
             print('BnB recommends', self.candidates[0][id])
