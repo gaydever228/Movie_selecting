@@ -22,7 +22,8 @@ from PBF import PBF, BnB, bound, branch
 from Test import Test
 
 class Reccomend(election):
-    def __init__(self, headers, V = 100, C = 100, commit_size = 10, gen = False, distrV = 'normal', distrC = 'normal', boundV = 1, boundC = 1, Vote_matrix = None, raiting = None, degrees = 1):
+    def __init__(self, headers, V = 100, C = 100, commit_size = 10, gen = False, distrV = 'normal', distrC = 'normal', boundV = 1, boundC = 1, Vote_matrix = None, raiting = None, degrees = 3, remove_rate = 1, bad_percent = 10):
+        self.bad_percent = bad_percent
         if raiting is not None:
             self.V = V
             self.C = C
@@ -52,7 +53,9 @@ class Reccomend(election):
                 for j in range(self.C):
                     self.real_cand_dist[i][j] = np.sqrt((self.candidates[0][i] -self.candidates[0][j])**2 + (self.candidates[1][i] -self.candidates[1][j])**2 )
         self.degrees = degrees
-        self.headers = headers
+        self.headers = np.array(headers)
+        self.remove_rate = remove_rate
+
     def App_Sets(self):
         self.approval_sets = {}
         for pos, cans in enumerate(self.VoteLists):
@@ -86,19 +89,30 @@ class Reccomend(election):
         # считаю, что кандидаты - строки, а столбцы - избиратели
         # пока что считаю, что degree = 3
         voters_dic = {}
-        voters_means = np.nanmean(raiting, axis = 0)
-        voters_medians = np.nanmedian(raiting, axis = 0)
-        voters_quantile = np.nanpercentile(raiting, 10, axis=0)
-        print(voters_means, voters_medians)
+        valid_raiting = raiting[~np.isnan(raiting)]
+        voters_means = np.nanmean(valid_raiting, axis = 0)
+        voters_medians = np.nanmedian(valid_raiting, axis = 0)
+        voters_quantile = np.nanpercentile(valid_raiting, self.bad_percent, axis=0) # bad_percent% худших кандидатов имеют рейтинг ниже этой отметки
+        #print("средняя оценка:", voters_means, "\nмедиана оценки:", voters_medians)
         for voter, voter_values in enumerate(raiting.T):
-            voters_dic[voter] = {'mean': voters_means[voter], 'median': voters_medians[voter], 'mid_low': voters_quantile[voter]}
+            valid_raiting = voter_values[~np.isnan(voter_values)]
+            print(voter, len(valid_raiting))
+            voters_means = np.nanmean(valid_raiting, axis=0)
+            voters_medians = np.nanmedian(valid_raiting, axis=0)
+            voters_quantile = np.nanpercentile(valid_raiting, self.bad_percent, axis=0)  # bad_percent% худших кандидатов имеют рейтинг ниже этой отметки
+            voters_dic[voter] = {'mean': voters_means, 'median': voters_medians, 'mid_low': voters_quantile}
         for candidate, candidate_rates in enumerate(raiting):
             for i in range(self.degrees):
                 self.approval_sets[i][candidate] = set()
             for voter, rate in enumerate(candidate_rates):
-                if rate >= max(voters_dic[voter]['mean'], voters_dic[voter]['median']):
+                #print(raiting[0][voter], raiting[candidate][0], rate)
+                #print('voter', voter)
+                #print("mediad:", voters_dic[voter]['median'])
+                #print("mean:", voters_dic[voter]['mean'])
+                if rate >= min(voters_dic[voter]['mean'], voters_dic[voter]['median']):
                     self.approval_sets[0][candidate].add(voter)
                     self.voter_approval_sets[0][voter].add(candidate)
+
                 elif rate <= voters_dic[voter]['mid_low']:
                     self.approval_sets[2][candidate].add(voter)
                     self.voter_approval_sets[2][voter].add(candidate)
@@ -149,24 +163,20 @@ class Reccomend(election):
                 self.cand_dist[c_1][c_2] -= sum
 
         #print(self.cand_dist)
-    def recommendation_voting(self, voter_id, commit_size = 10):
-        c_to_v = set()
-        c_to_c = set()
-        candidates = self.headers
-        for i in range(self.C):
-            c_to_c.add(i)
-        for i in range(self.degrees):
-            c_to_v.update(self.voter_approval_sets[i][voter_id])
-        # удаляю ещё для проверки
-        #for _ in range(50):
-        #    c_to_v.pop()
+    def voting(self, c_to_c, c_to_v, commit_size, rule = 'SNTV'):
+        #print("избиратели: ", sorted(c_to_v), type(sorted(c_to_v)[0]))
+        #print(len(c_to_v))
+        #print("кандидаты: ", c_to_c)
+        #print(len(c_to_c))
+        print("выбираем комитет мощности", commit_size, "из", len(c_to_c), "кандидатов с помощью", len(c_to_v), "избирателей")
+        #self.dist_matrix = np.delete(np.delete(self.cand_dist, list(all_c_to_v), axis=0), list(c_without_bad), axis=1)  # конструкция матрицы расстояний чисто для этого голосования
+        self.dist_matrix = self.cand_dist[np.ix_(sorted(c_to_c), sorted(c_to_v))]
+        candidates = np.array(self.headers)
 
-        c_to_c = c_to_c.difference(c_to_v)
-        print(c_to_v)
-        print(c_to_c)
-        self.dist_matrix = np.delete(np.delete(self.cand_dist, list(c_to_v), axis = 0), list(c_to_c), axis = 1)
-        self.candidates = [np.delete(candidates, list(c_to_v)), np.delete(candidates, list(c_to_v))]
+        #self.candidates = [np.delete(candidates, list(c_to_v)), np.delete(candidates, list(c_to_v))]  # зачем....?
+        self.candidates = [candidates[np.ix_(sorted(c_to_c))], candidates[np.ix_(sorted(c_to_c))]]
         self.dist_matrix = np.square(self.dist_matrix)
+        print(np.shape(self.dist_matrix))
         self.C = len(c_to_c)
         self.V = len(c_to_v)
         self.k = commit_size
@@ -174,18 +184,124 @@ class Reccomend(election):
         self.Score = None
 
         self.add_matrices(self.dist_matrix)
-        print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
+        #print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
         self.k = min(self.k, len(c_to_c))
+        if rule == 'SNTV':
+            print('SNTV:', self.SNTV_rule())
+            print(self.Score)
+        elif rule == 'BnB':
+            print('BnB:', self.BnB_rule(tol = 0.7, level=2))
+            print(self.Cost)
+            for id in self.committee_id:
+               print('BnB recommends', self.candidates[0][id])
+    def recommendation_voting(self, voter_id, commit_size = 10, rule = 'SNTV', method = 'no_bad'):
+        if method == 'no_bad':
+            c_to_v = set()  # множество фильмов, которые будут избирателями
+            c_to_c = set()  # множество фильмов, из которых будем выбирать
+            for i in range(self.C):
+                c_to_c.add(i)
+            for i in range(self.degrees):
+                c_to_v.update(self.voter_approval_sets[i][voter_id])
+            # удаляю ещё для проверки
+            # for _ in range(50):
+            #    c_to_v.pop()
 
-        print('SNTV:', self.SNTV_rule())
-        print(self.Cost)
-        for id in self.committee_id:
-            print('SNTV recommends', self.candidates[0][id])
+            c_to_c = c_to_c.difference(c_to_v)
+            self.voting(c_to_c, c_to_v, commit_size, rule)
+            for id in self.committee_id:
+                print('SNTV recommends', self.candidates[0][id])
 
-        print('BnB:', self.BnB_rule(tol = 0.7, level=2))
-        print(self.Cost)
-        for id in self.committee_id:
-            print('BnB recommends', self.candidates[0][id])
+        elif method == 'remove_bad' or method =='series':
+            c_to_v = set()  # множество фильмов, которые будут избирателями
+            c_to_c = set()  # множество фильмов, из которых будем выбирать
+            all_c_to_v = set()  # множество всех оценённых фильмов
+            for i in range(self.degrees):
+                all_c_to_v.update(self.voter_approval_sets[i][voter_id])
+            for i in range(self.C):
+                c_to_c.add(i)
+            print("количество оценённых фильмов", len(all_c_to_v))
+            print("всего фильмов", len(c_to_c))
+            c_to_v.update(self.voter_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
+            bad_voters = self.headers[np.ix_(sorted(c_to_v))]
+            c_to_c = c_to_c.difference(all_c_to_v)
+            print(self.bad_percent, "% плохих фильмов", len(c_to_v))
+            print("кандидатов", len(c_to_c))
+            self.voting(c_to_c, c_to_v, commit_size * self.remove_rate)
+            print('anti-reccomendations are:')
+            for id in self.committee_id:
+                print(self.candidates[0][id])
+                index = np.where(np.array(self.headers) == self.candidates[0][id])
+                #print(index[0][0])
+                c_to_c.remove(index[0][0])
+                nearest = np.argmin(self.dist_matrix[id, :])
+                print("near to", bad_voters[nearest], self.dist_matrix[id, nearest])
+            #c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
+            c_to_v = set()
+            c_to_v.update(self.voter_approval_sets[0][voter_id])
+            if method == 'series':
+                current_commit_size = max(int(len(c_to_c) * 0.75), commit_size)
+                i = 1
+                while current_commit_size > commit_size:
+                    self.voting(c_to_c, c_to_v, current_commit_size)
+                    print("step %d:" % i)
+                    c_to_c = set()
+                    for id in self.committee_id:
+                        #print(self.candidates[0][id])
+                        index = np.where(np.array(self.headers) == self.candidates[0][id])
+                        #print(index[0][0])
+                        c_to_c.add(index[0][0])
+                    i += 1
+                    current_commit_size = max(int(len(c_to_c) * 0.75), commit_size)
+            voters = self.headers[np.ix_(sorted(c_to_v))]
+            self.voting(c_to_c, c_to_v, commit_size)
+            print('reccomendations are:')
+            for id in self.committee_id:
+                print(self.candidates[0][id])
+                nearest = np.nanargmin(self.dist_matrix[id, :])
+                print("он близок к", voters[nearest], self.dist_matrix[id, nearest])
+        # elif method == 'series':
+        #     #current_commit = 0.75*self.C
+        #     c_to_v = set()  # множество фильмов, которые будут избирателями
+        #     c_to_c = set()  # множество фильмов, из которых будем выбирать
+        #     all_c_to_v = set()  # множество всех оценённых фильмов
+        #     for i in range(self.degrees):
+        #         all_c_to_v.update(self.voter_approval_sets[i][voter_id])
+        #     candidates = self.headers
+        #     for i in range(self.C):
+        #         c_to_c.add(i)
+        #     print("all rated", len(all_c_to_v))
+        #     print("cands", len(c_to_c))
+        #     c_to_v.update(self.voter_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
+        #     c_to_c = c_to_c.difference(all_c_to_v)
+        #     self.voting(c_to_c, c_to_v, commit_size * self.remove_rate)
+        #     print('anti-reccomendations are:')
+        #     for id in self.committee_id:
+        #         print(self.candidates[0][id])
+        #         index = np.where(np.array(self.headers) == self.candidates[0][id])
+        #         print(index[0][0])
+        #         c_to_c.remove(index[0][0])
+        #     current_commit_size = max(len(c_to_c)*0.75, commit_size)
+        #     c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
+        #     i = 1
+        #     while current_commit_size > commit_size:
+        #         self.voting(c_to_c, c_to_v, current_commit_size)
+        #         print("step %d:"%i)
+        #         c_to_c = set()
+        #         for id in self.committee_id:
+        #             print(self.candidates[0][id])
+        #             index = np.where(np.array(self.headers) == self.candidates[0][id])
+        #             print(index[0][0])
+        #             c_to_c.add(index[0][0])
+        #         i += 1
+        #         current_commit_size = max(len(c_to_c)*0.75, commit_size)
+        #
+        #     self.voting(c_to_c, c_to_v, commit_size)
+        #     print('reccomendations are:')
+        #     for id in self.committee_id:
+        #         print(self.candidates[0][id])
+
+
+
 
 
 
