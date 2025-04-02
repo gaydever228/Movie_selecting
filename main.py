@@ -101,7 +101,7 @@ def zero_split(rating):
     ratings_test = pd.DataFrame(ratings_test_list,
                                 columns=[Columns.User, Columns.Item, Columns.Weight, Columns.Datetime])
     return ratings, ratings_test, rating_cut
-def test_my(df, user_id = 0):
+def test_my(df, df_test, df_train, user_id = 0):
 
     #heh = np.array(headers)
     #mask = np.char.endswith(heh, ".1")
@@ -122,15 +122,24 @@ def test_my(df, user_id = 0):
     #    print(c>10)
     recs_test = Reccomend(headers, len(raiting1[0]), len(raiting1), degrees=3, raiting=raiting1)
     recs_test.recommendation_voting(user_id, 10, method='series')
+    recs_test.metrics(df_test, df_train)
 
 def test_ML(ratings, ratings_test, movies, user_id = 0):
-
-
+    metrics_values = {}
     print(ratings.shape)
     print(ratings.head(10))
     recs_test = Recommend(ratings, movies)
     recs_test.recs_KNN(user_id=user_id, commit_size=10)
-    metrics_values = recs_test.metrics(ratings_test, 'KNN')
+    recs_test.recs_Random(user_id=user_id, commit_size=10)
+    recs_test.recs_Popular(user_id=user_id, commit_size=10)
+    metrics_values['KNN'] = recs_test.metrics(ratings_test, 'KNN')
+    metrics_values['Random'] = recs_test.metrics(ratings_test, 'Random')
+    metrics_values['Popular'] = recs_test.metrics(ratings_test, 'Popular')
+
+
+    for key, item in metrics_values.items():
+        pass
+
 
 #recs_test.App_Sets_from_raiting3(raiting1)
 #recs_gen.App_Sets()
@@ -143,6 +152,7 @@ def test_ML(ratings, ratings_test, movies, user_id = 0):
 #testing_score.SNTV_rule()
 #testing_score.BnB_rule(tol =  0.5, level = 2)
 ratings_ML, ratings_test_ML, ratings_GT = random_split(rating)
-test_ML(ratings_ML, ratings_test_ML, movies)
+#test_ML(ratings_ML, ratings_test_ML, movies)
+test_my(ratings_GT, ratings_test_ML, ratings_ML)
 print('finish')
 #print(testing_BnB.Scores)

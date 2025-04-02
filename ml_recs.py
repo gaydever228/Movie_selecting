@@ -49,9 +49,9 @@ class Recommend():
             k=commit_size,
             filter_viewed=True,
         )
-        print(self.recos['KNN'].head(10))
+        print(self.recos['KNN'].head(40))
         user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
-        print(user_viewed.query("weight > 0"))
+        #print(user_viewed.query("weight > 0"))
         user_recos = self.recos['KNN'].query("user_id == @user_id").merge(self.movies, on="item_id")
         print(user_recos.head(10))
     def recs_Random(self, user_id, commit_size = 10):
@@ -63,9 +63,9 @@ class Recommend():
             k=commit_size,
             filter_viewed=True,
         )
-        print(self.recos['Random'].head(10))
+        #print(self.recos['Random'].head(10))
         user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
-        print(user_viewed.query("weight > 6"))
+        #print(user_viewed.query("weight > 6"))
         user_recos = self.recos['Random'].query("user_id == @user_id").merge(self.movies, on="item_id")
         print(user_recos.sort_values("rank"))
     def recs_Popular(self, user_id, commit_size = 10):
@@ -77,9 +77,9 @@ class Recommend():
             k=commit_size,
             filter_viewed=True,
         )
-        print(self.recos['Popular'].head(10))
+        #print(self.recos['Popular'].head(10))
         user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
-        print(user_viewed.query("weight > 6"))
+        #print(user_viewed.query("weight > 6"))
         user_recos = self.recos['Popular'].query("user_id == @user_id").merge(self.movies, on="item_id")
         print(user_recos.head(10))
     # def recs_ALSW(self, commit_size):
@@ -97,16 +97,16 @@ class Recommend():
         }
 
         metrics_values['prec@1'] = metrics['prec@1'].calc_per_user(reco=self.recos[model_name], interactions=df_test)
-        print(f"precision1: {metrics_values['prec@1']}")
+        #print(f"precision1: {metrics_values['prec@1']}")
         metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos[model_name], interactions=df_test)
-        print(f"precision10: {metrics_values['prec@10']}")
+        #print(f"precision10: {metrics_values['prec@10']}")
         metrics_values['recall@10'] = metrics['recall@10'].calc_per_user(reco=self.recos[model_name], interactions=df_test)
-        print(f"recall10: {metrics_values['recall@10']}")
+        #print(f"recall10: {metrics_values['recall@10']}")
         metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos[model_name], interactions=df_test)
-        print(f"ndcg: {metrics_values['ndcg']}")
+        #print(f"ndcg: {metrics_values['ndcg']}")
         catalog = self.rating[Columns.Item].unique()
         metrics_values['serendipity@10'] = metrics['serendipity@10'].calc_per_user(reco=self.recos[model_name], interactions=df_test, prev_interactions=self.rating, catalog=catalog)
-        print(f"serendipity10: {metrics_values['serendipity@10']}")
+        #print(f"serendipity10: {metrics_values['serendipity@10']}")
         return metrics_values
 
 
