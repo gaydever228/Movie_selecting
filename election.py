@@ -202,7 +202,7 @@ class election:
 
         return self.Cost
     def Calc_Score(self):
-        print('len', len(self.committee_id))
+        #print('len', len(self.committee_id))
         distances2 = np.zeros((self.k, self.V))
         for i, id in enumerate(self.committee_id):
             for j in range(self.V):

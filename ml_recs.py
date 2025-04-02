@@ -49,11 +49,12 @@ class Recommend():
             k=commit_size,
             filter_viewed=True,
         )
-        print(self.recos['KNN'].head(40))
+        #print(self.recos['KNN'].head(40))
         user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
         #print(user_viewed.query("weight > 0"))
         user_recos = self.recos['KNN'].query("user_id == @user_id").merge(self.movies, on="item_id")
-        print(user_recos.head(10))
+        #print(user_recos.head(10))
+        return list(user_recos['title'])
     def recs_Random(self, user_id, commit_size = 10):
         self.models['Random'] = RandomModel(random_state=42)
         self.models['Random'].fit(self.dataset)
@@ -67,7 +68,8 @@ class Recommend():
         user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
         #print(user_viewed.query("weight > 6"))
         user_recos = self.recos['Random'].query("user_id == @user_id").merge(self.movies, on="item_id")
-        print(user_recos.sort_values("rank"))
+        #print(user_recos.sort_values("rank"))
+        return list(user_recos['title'])
     def recs_Popular(self, user_id, commit_size = 10):
         self.models['Popular'] = PopularModel()
         self.models['Popular'].fit(self.dataset)
@@ -81,7 +83,8 @@ class Recommend():
         user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
         #print(user_viewed.query("weight > 6"))
         user_recos = self.recos['Popular'].query("user_id == @user_id").merge(self.movies, on="item_id")
-        print(user_recos.head(10))
+        #print(user_recos.head(10))
+        return list(user_recos['title'])
     # def recs_ALSW(self, commit_size):
     #     self.model_ALSW = ImplicitALSWrapperModel()
 

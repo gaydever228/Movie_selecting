@@ -172,7 +172,7 @@ class Reccomend(election):
         #print(len(c_to_v))
         #print("кандидаты: ", c_to_c)
         #print(len(c_to_c))
-        print("выбираем комитет мощности", commit_size, "из", len(c_to_c), "кандидатов с помощью", len(c_to_v), "избирателей")
+        #print("выбираем комитет мощности", commit_size, "из", len(c_to_c), "кандидатов с помощью", len(c_to_v), "избирателей")
         #self.dist_matrix = np.delete(np.delete(self.cand_dist, list(all_c_to_v), axis=0), list(c_without_bad), axis=1)  # конструкция матрицы расстояний чисто для этого голосования
         self.dist_matrix = self.cand_dist[np.ix_(sorted(c_to_c), sorted(c_to_v))]
         candidates = np.array(self.headers)
@@ -180,7 +180,7 @@ class Reccomend(election):
         #self.candidates = [np.delete(candidates, list(c_to_v)), np.delete(candidates, list(c_to_v))]  # зачем....?
         self.candidates = [candidates[np.ix_(sorted(c_to_c))], candidates[np.ix_(sorted(c_to_c))]]
         self.dist_matrix = np.square(self.dist_matrix)
-        print(np.shape(self.dist_matrix))
+        #print(np.shape(self.dist_matrix))
         self.C = len(c_to_c)
         self.V = len(c_to_v)
         self.k = commit_size
@@ -192,7 +192,7 @@ class Reccomend(election):
         self.k = min(self.k, len(c_to_c))
         if rule == 'SNTV':
             print('SNTV:', self.SNTV_rule())
-            print(self.Score)
+            #print(self.Score)
         elif rule == 'BnB':
             print('BnB:', self.BnB_rule(tol = 0.7, level=2))
             print(self.Cost)
@@ -223,22 +223,22 @@ class Reccomend(election):
                 all_c_to_v.update(self.voter_approval_sets[i][voter_id])
             for i in range(self.C):
                 c_to_c.add(i)
-            print("количество оценённых фильмов", len(all_c_to_v))
-            print("всего фильмов", len(c_to_c))
+            #print("количество оценённых фильмов", len(all_c_to_v))
+            #print("всего фильмов", len(c_to_c))
             c_to_v.update(self.voter_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
             bad_voters = self.headers[np.ix_(sorted(c_to_v))]
             c_to_c = c_to_c.difference(all_c_to_v)
-            print(self.bad_percent, "% плохих фильмов", len(c_to_v))
-            print("кандидатов", len(c_to_c))
+            #print(self.bad_percent, "% плохих фильмов", len(c_to_v))
+            #print("кандидатов", len(c_to_c))
             self.voting(c_to_c, c_to_v, commit_size * self.remove_rate)
-            print('anti-reccomendations are:')
+            #print('anti-reccomendations are:')
             for id in self.committee_id:
-                print(self.candidates[0][id])
+                #print(self.candidates[0][id])
                 index = np.where(np.array(self.headers) == self.candidates[0][id])
                 #print(index[0][0])
                 c_to_c.remove(index[0][0])
                 nearest = np.argmin(self.dist_matrix[id, :])
-                print("near to", bad_voters[nearest], self.dist_matrix[id, nearest])
+                #print("near to", bad_voters[nearest], self.dist_matrix[id, nearest])
             #c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
             c_to_v = set()
             c_to_v.update(self.voter_approval_sets[0][voter_id])
@@ -247,7 +247,7 @@ class Reccomend(election):
                 i = 1
                 while current_commit_size > commit_size:
                     self.voting(c_to_c, c_to_v, current_commit_size)
-                    print("step %d:" % i)
+                    #print("step %d:" % i)
                     c_to_c = set()
                     for id in self.committee_id:
                         #print(self.candidates[0][id])
@@ -259,17 +259,18 @@ class Reccomend(election):
             voters = self.headers[np.ix_(sorted(c_to_v))]
             self.voting(c_to_c, c_to_v, commit_size)
             recos_list = []
-            print('reccomendations are:')
+            #print('reccomendations are:')
             i = 1
             for id in self.committee_id:
-                print(self.candidates[0][id])
+                #print(self.candidates[0][id])
                 index = np.where(np.array(self.headers) == self.candidates[0][id])
                 recos_list.append([voter_id, index[0][0], i, self.candidates[0][id]])
                 nearest = np.nanargmin(self.dist_matrix[id, :])
-                print("он близок к", voters[nearest], self.dist_matrix[id, nearest])
+                #print("он близок к", voters[nearest], self.dist_matrix[id, nearest])
                 i += 1
             self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title"])
-    def metrics(self, df_test, df_train):
+            return list(self.recos['title'])
+    def metrics(self, df_test, df_train, voter_id):
         metrics_values = {}
         metrics = {
             "prec@1": Precision(k=1),
@@ -280,20 +281,20 @@ class Reccomend(election):
             "ndcg": NDCG(k=10, log_base=3)
         }
 
-        metrics_values['prec@1'] = metrics['prec@1'].calc_per_user(reco=self.recos, interactions=df_test)
+        metrics_values['prec@1'] = metrics['prec@1'].calc_per_user(reco=self.recos, interactions=df_test)[voter_id]
         #print(f"precision1: {metrics_values['prec@1']}")
-        metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos, interactions=df_test)
+        metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos, interactions=df_test)[voter_id]
         #print(f"precision10: {metrics_values['prec@10']}")
         metrics_values['recall@10'] = metrics['recall@10'].calc_per_user(reco=self.recos,
-                                                                         interactions=df_test)
+                                                                         interactions=df_test)[voter_id]
         #print(f"recall10: {metrics_values['recall@10']}")
-        metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)
+        metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)[voter_id]
         #print(f"ndcg: {metrics_values['ndcg']}")
         catalog = df_train[Columns.Item].unique()
         metrics_values['serendipity@10'] = metrics['serendipity@10'].calc_per_user(reco=self.recos,
                                                                                    interactions=df_test,
                                                                                    prev_interactions=df_train,
-                                                                                   catalog=catalog)
+                                                                                   catalog=catalog)[voter_id]
         #print(f"serendipity10: {metrics_values['serendipity@10']}")
         return metrics_values
         # elif method == 'series':
