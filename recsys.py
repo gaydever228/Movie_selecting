@@ -6,11 +6,15 @@ from collections import deque
 # библиотеки для симуляции и отрисовки выборов
 import time
 import matplotlib.pyplot as plt
+import pandas as pd
 from matplotlib.pyplot import figure
 from numpy.random import Generator, PCG64
 import math
 from random import sample
 import random
+
+from rectools import Columns
+from rectools.metrics import Precision, Recall, MAP, calc_metrics, MeanInvUserFreq, Serendipity, NDCG
 rng = Generator(PCG64())
 import copy
 from tqdm import tqdm
@@ -254,11 +258,42 @@ class Reccomend(election):
                     current_commit_size = max(int(len(c_to_c) * 0.75), commit_size)
             voters = self.headers[np.ix_(sorted(c_to_v))]
             self.voting(c_to_c, c_to_v, commit_size)
+            recos_list = []
             print('reccomendations are:')
             for id in self.committee_id:
                 print(self.candidates[0][id])
+                index = np.where(np.array(self.headers) == self.candidates[0][id])
+                recos_list.append([voter_id, index[0][0], self.candidates[0][id]])
                 nearest = np.nanargmin(self.dist_matrix[id, :])
                 print("он близок к", voters[nearest], self.dist_matrix[id, nearest])
+            self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, "title"])
+    def metrics(self, df_test, df_train):
+        metrics_values = {}
+        metrics = {
+            "prec@1": Precision(k=1),
+            "prec@10": Precision(k=10),
+            "recall@10": Recall(k=10),
+            "novelty@10": MeanInvUserFreq(k=10),
+            "serendipity@10": Serendipity(k=10),
+            "ndcg": NDCG(k=10, log_base=3)
+        }
+
+        metrics_values['prec@1'] = metrics['prec@1'].calc_per_user(reco=self.recos, interactions=df_test)
+        print(f"precision1: {metrics_values['prec@1']}")
+        metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos, interactions=df_test)
+        print(f"precision10: {metrics_values['prec@10']}")
+        metrics_values['recall@10'] = metrics['recall@10'].calc_per_user(reco=self.recos,
+                                                                         interactions=df_test)
+        print(f"recall10: {metrics_values['recall@10']}")
+        metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)
+        print(f"ndcg: {metrics_values['ndcg']}")
+        catalog = df_train[Columns.Item].unique()
+        metrics_values['serendipity@10'] = metrics['serendipity@10'].calc_per_user(reco=self.recos,
+                                                                                   interactions=df_test,
+                                                                                   prev_interactions=df_train,
+                                                                                   catalog=catalog)
+        print(f"serendipity10: {metrics_values['serendipity@10']}")
+        return metrics_values
         # elif method == 'series':
         #     #current_commit = 0.75*self.C
         #     c_to_v = set()  # множество фильмов, которые будут избирателями
