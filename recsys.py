@@ -100,7 +100,7 @@ class Reccomend(election):
         #print("средняя оценка:", voters_means, "\nмедиана оценки:", voters_medians)
         for voter, voter_values in enumerate(raiting.T):
             valid_raiting = voter_values[~np.isnan(voter_values)]
-            print(voter, len(valid_raiting))
+            #print(voter, len(valid_raiting))
             voters_means = np.nanmean(valid_raiting, axis=0)
             voters_medians = np.nanmedian(valid_raiting, axis=0)
             voters_quantile = np.nanpercentile(valid_raiting, self.bad_percent, axis=0)  # bad_percent% худших кандидатов имеют рейтинг ниже этой отметки
@@ -191,13 +191,15 @@ class Reccomend(election):
         #print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
         self.k = min(self.k, len(c_to_c))
         if rule == 'SNTV':
-            print('SNTV:', self.SNTV_rule())
+            self.SNTV_rule()
+            #print('SNTV:', self.SNTV_rule())
             #print(self.Score)
         elif rule == 'BnB':
-            print('BnB:', self.BnB_rule(tol = 0.7, level=2))
-            print(self.Cost)
-            for id in self.committee_id:
-               print('BnB recommends', self.candidates[0][id])
+            self.BnB_rule(tol=0.7, level=2)
+            #print('BnB:', self.BnB_rule(tol = 0.7, level=2))
+            #print(self.Cost)
+            #for id in self.committee_id:
+            #   print('BnB recommends', self.candidates[0][id])
     def recommendation_voting(self, voter_id, commit_size = 10, rule = 'SNTV', method = 'no_bad'):
         if method == 'no_bad':
             c_to_v = set()  # множество фильмов, которые будут избирателями
@@ -230,7 +232,7 @@ class Reccomend(election):
             c_to_c = c_to_c.difference(all_c_to_v)
             #print(self.bad_percent, "% плохих фильмов", len(c_to_v))
             #print("кандидатов", len(c_to_c))
-            self.voting(c_to_c, c_to_v, commit_size * self.remove_rate)
+            self.voting(c_to_c, c_to_v, commit_size * self.remove_rate, rule)
             #print('anti-reccomendations are:')
             for id in self.committee_id:
                 #print(self.candidates[0][id])
@@ -246,7 +248,7 @@ class Reccomend(election):
                 current_commit_size = max(int(len(c_to_c) * 0.75), commit_size)
                 i = 1
                 while current_commit_size > commit_size:
-                    self.voting(c_to_c, c_to_v, current_commit_size)
+                    self.voting(c_to_c, c_to_v, current_commit_size, rule)
                     #print("step %d:" % i)
                     c_to_c = set()
                     for id in self.committee_id:
@@ -257,7 +259,7 @@ class Reccomend(election):
                     i += 1
                     current_commit_size = max(int(len(c_to_c) * 0.75), commit_size)
             voters = self.headers[np.ix_(sorted(c_to_v))]
-            self.voting(c_to_c, c_to_v, commit_size)
+            self.voting(c_to_c, c_to_v, commit_size, rule)
             recos_list = []
             #print('reccomendations are:')
             i = 1

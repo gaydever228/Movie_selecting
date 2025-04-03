@@ -79,7 +79,7 @@ class election:
         for e in self.VoteLists.T:
             PS[e[0]] += 1
         # в PS индексы - номера кандидатов, а значение - их SNTV рейтинг
-        print(PS)
+        #print(PS)
         sorted_by_PS = np.argsort(PS)
         sorted_matrix = []
         sorted_candidates = []
@@ -107,7 +107,7 @@ class election:
                 if level == 0 and np.count_nonzero(anti_PS==0) < self.k:
                     break
                 anti_PS[e[-i - 1]] += 1
-        print(PS, anti_PS)
+        #print(PS, anti_PS)
         # level 1
         if self.V in anti_PS:
             remove1 = np.where(anti_PS == self.V)[0]
@@ -116,7 +116,7 @@ class election:
             # remove1 = remove1[~np.isin(remove1, not_remove)]
             # print(remove1)
             Cand = np.delete(Cand, remove1)
-            print(len(remove1), 'удалится кандидатов на первом уровне')
+            #print(len(remove1), 'удалится кандидатов на первом уровне')
             #print(Cand)
             self.candidates = np.delete(self.candidates, remove1, axis = 1)
             self.C = len(self.candidates[0])
@@ -132,7 +132,7 @@ class election:
         if level > 1:
             #print(PS)
             remove2 = np.where(PS == 0)[0]
-            print(len(remove2), 'удалится кандидатов на втором уровне')
+            #print(len(remove2), 'удалится кандидатов на втором уровне')
             if len(Cand) - len(remove2) < self.k:
                 if len(Cand) - self.k > 0:
                     sliceObj = slice(0, len(Cand) - self.k)
@@ -219,7 +219,7 @@ class election:
         return self.Score
     def Calc_Cost(self):
         self.Cost = 0
-        print('len', len(self.committee_id))
+        #print('len', len(self.committee_id))
         distances = np.zeros((self.k, self.V))
         for i, id in enumerate(self.committee_id):
             for j in range(self.V):
@@ -240,17 +240,18 @@ class election:
         fig.set_size_inches(10, 10)
         fig.savefig('draw_election/' + name + '.png', dpi=100)
         plt.close(fig)
-        print("Score of " + name + " rule is ", self.Score)
+        #print("Score of " + name + " rule is ", self.Score)
         #print("median Score of STV rule is ", medianScore(Committee, Vamount, ComAmount, d1, V))
 
     def BnB_rule(self, tol = 0.2, level = 2, depth = True, draw_name = 'BnB'):
         self.delete_max(level = level)
         decision = BnB(self.dist_matrix, self.k, tol = tol, depth = depth)
         self.decision = 1 - decision
-        print(self.decision)
+        #print(self.decision)
         self.ComDec()
-        self.Calc_Score()
-        self.Calc_Cost()
+        #self.Calc_Score()
+        #self.Calc_Cost()
+
         #self.draw(name = draw_name)
         return self.Score
     def SNTV_rule(self, draw_name = 'SNTV'):
@@ -263,8 +264,9 @@ class election:
             dec[cand] = 1
         self.decision = dec
         self.ComDec()
-        self.Calc_Score()
-        self.Calc_Cost()
+        #self.Calc_Score()
+        #self.Calc_Cost()
+
         #print('first: ', self.Score, self.Cost)
         #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
         #self.draw(name =  draw_name)
@@ -342,7 +344,7 @@ class election:
             deleted.append(c)
             flag = 1
             #print('deleted', deleted)
-        print(dec)
+        #print(dec)
 
         self.decision = dec
         self.ComDec()

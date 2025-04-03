@@ -101,7 +101,7 @@ def zero_split(rating, limit = 120):
     ratings_test = pd.DataFrame(ratings_test_list,
                                 columns=[Columns.User, Columns.Item, Columns.Weight, Columns.Datetime])
     return ratings, ratings_test, rating_cut
-def test_my(df, df_test, df_train, user_id = 0, method = 'series', metric = True):
+def test_my(df, df_test, df_train, user_id = 0, method = 'series', rule = 'SNTV', metric = True):
 
     #heh = np.array(headers)
     #mask = np.char.endswith(heh, ".1")
@@ -121,7 +121,7 @@ def test_my(df, df_test, df_train, user_id = 0, method = 'series', metric = True
     #    print(np.isnan(c))
     #    print(c>10)
     recs_test = Reccomend(headers, len(raiting1[0]), len(raiting1), degrees=3, raiting=raiting1)
-    recos = recs_test.recommendation_voting(user_id, 10, method=method)
+    recos = recs_test.recommendation_voting(user_id, 10, rule = rule, method=method)
     if metric:
         metrics = recs_test.metrics(df_test, df_train, user_id)
         return metrics, recos
@@ -176,33 +176,51 @@ def real_recos(rating, user = 0):
 
 '''
 user = 0
-for i in range(20):
+times = {'ML': [], 'series_SNTV': [], 'remove_bad_SNTV': [], 'series_BnB': [], 'remove_bad_BnB': []}
+for i in range(33, 40):
     ratings_ML, ratings_test_ML, ratings_GT = random_split(rating)
+    time_0 = time.time()
     metrics, recos_dic = test_ML(ratings_ML, ratings_test_ML, movies, user)
-    for key in ['series', 'remove_bad']:
-        metrics['Election_' + key], recos_dic['Election_' + key] = test_my(ratings_GT, ratings_test_ML, ratings_ML, user, method = key)
+    times['ML'].append(time.time() - time_0)
+    for rule in ['SNTV', 'BnB']:
+        for key in ['series', 'remove_bad']:
+            time_0 = time.time()
+            metrics['Election_' + key + '_' + rule], recos_dic['Election_' + key + '_' + rule] = test_my(ratings_GT, ratings_test_ML, ratings_ML, user, rule = rule, method = key)
+            times[key + '_' + rule].append(time.time() - time_0)
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
     metrics_df = metrics_df.T
-    recos_df = pd.DataFrame.from_dict(recos_dic)
+    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    #recos_df = pd.DataFrame.from_dict(recos_dic)
     print(recos_df)
     print(metrics_df)
-    metrics_df.to_csv('metrics_random_cut_' + str(i) + '.csv', index=False)
+    metrics_df.to_csv('metrics_random_cut_' + str(i) + '.csv', index=True)
     recos_df.to_csv('recos_' + str(user)  + '_' + str(i) + '.csv')
 
-
+for key, item in times.items():
+    print(key, np.array(item).mean())
+times_df = pd.DataFrame.from_dict(times)
+times_df.to_csv('times.csv')
+'''
+user = 0
 ratings_ML, ratings_test_ML, ratings_GT = zero_split(rating)
 metrics, recos_dic = test_ML(ratings_ML, ratings_test_ML, movies, user)
-for key in ['series', 'remove_bad']:
-    metrics['Election_' + key], recos_dic['Election_' + key] = test_my(ratings_GT, ratings_test_ML, ratings_ML, user, method = key)
+for rule in ['SNTV', 'BnB']:
+    for key in ['series', 'remove_bad']:
+        metrics['Election_' + key + '_' + rule], recos_dic['Election_' + key + '_' + rule] = test_my(ratings_GT,
+                                                                                                     ratings_test_ML,
+                                                                                                     ratings_ML, user,
+                                                                                                     rule=rule,
+                                                                                                     method=key)
 metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
 metrics_df = metrics_df.T
-recos_df = pd.DataFrame.from_dict(recos_dic)
+recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+#recos_df = pd.DataFrame.from_dict(recos_dic)
 print(recos_df)
 print(metrics_df)
-metrics_df.to_csv('metrics_zero_cut.csv', index=False)
+metrics_df.to_csv('metrics_zero_cut.csv', index=True)
 recos_df.to_csv('recos_zero_cut_' + str(user)  + '.csv')
-'''
-user = 39
-real_recos(rating, user)
+
+#user = 39
+#real_recos(rating, user)
 print('finish')
 #print(testing_BnB.Scores)
