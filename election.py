@@ -288,16 +288,17 @@ class election:
         PS = np.zeros(self.C)
         for voter, e in enumerate(self.VoteLists.T):
             PS[e[0]] += self.weights[voter]
+        print('PS', PS)
         top = np.argsort(-PS)
         dec = np.zeros(self.C)
         for cand in top[:self.k]:
             dec[cand] = 1
         self.decision = dec
         self.ComDec()
-        #self.Calc_Score()
+        self.Calc_Score()
         #self.Calc_Cost()
 
-        #print('first: ', self.Score, self.Cost)
+        print('first: ', self.Score)
         #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
         #self.draw(name =  draw_name)
         return self.Score
@@ -390,7 +391,7 @@ class election:
         Votes = copy.deepcopy(self.VoteLists.T)
         STV_weights = copy.deepcopy(self.weights)
         dec = np.zeros(self.C)
-        quota = int(np.ceil(weights_sum / (to_elect + 1)))
+        quota = weights_sum / (to_elect + 1)
         flag = 0
         while to_elect > 0:
             PS = np.zeros(self.C)
@@ -398,10 +399,25 @@ class election:
                 PS[deleted] = None
             for voter, e in enumerate(Votes):
                 PS[e[0]] += STV_weights[voter]
+            if len(PS[~np.isnan(PS)]) == to_elect:
+                 for i in range(to_elect):
+                    c = np.nanargmax(PS)
+                    dec[c] = 1
+                    PS[c] = None
+                 break
+            print('quota', quota)
+            print(to_elect)
+            print('V', len(Votes))
+            if len(PS[~np.isnan(PS)]) < 30:
+                print('PS', PS[~np.isnan(PS)])
 
             c = np.nanargmax(PS)
             if PS[c] >= quota:
                 dec[c] = 1
+                # новые значения
+                to_elect -= 1
+                if to_elect == 0:
+                    break
                 ind = np.where(Votes == c)
                 need = np.where(ind[1] == 0)
                 for_remove = ind[0][need]
@@ -415,11 +431,8 @@ class election:
                 for i in range(len(Votes)):
                     Votes1.append(np.delete(Votes[i], ind[1][i]))
                 Votes = np.array(Votes1)
-                # новые значения
-                to_elect -= 1
-                if to_elect == 0:
-                    break
-                quota = quota - int(np.ceil((PS[c] - quota)/to_elect))
+
+                quota = quota - (PS[c] - quota)/to_elect
                 weights_sum -= PS[c]
             else:
                 c = np.nanargmin(PS)
@@ -430,119 +443,156 @@ class election:
                 Votes = np.array(Votes1)
             deleted.append(c)
             flag = 1
+        self.decision = dec
+        self.ComDec()
+        self.Calc_Score()
+        self.Calc_Cost()
+        # self.draw(name =  draw_name)
+
+        return self.Score
     def STV_basic(self):
-        deleted = []
         to_elect = self.k
         weights_sum = self.weights.sum()
+        #print(weights_sum)
         Votes = copy.deepcopy(self.VoteLists.T)
         STV_weights = copy.deepcopy(self.weights)
         dec = np.zeros(self.C)
-        quota = int(np.ceil(weights_sum / (to_elect + 1)))
-        flag = 0
+        quota = weights_sum / (to_elect + 1)
+        print('quota', quota)
+        PS = np.zeros(self.C)
+        for voter, e in enumerate(Votes):
+            PS[e[0]] += STV_weights[voter]
         while to_elect > 0:
-            PS = np.zeros(self.C)
-            if flag == 1:
-                PS[deleted] = None
-            for voter, e in enumerate(Votes):
-                PS[e[0]] += STV_weights[voter]
+            if len(PS[~np.isnan(PS)]) == to_elect:
+                 for i in range(to_elect):
+                    c = np.nanargmax(PS)
+                    dec[c] = 1
+                    PS[c] = None
+                 break
 
+
+            #print(np.nansum(PS))
+            print(to_elect)
             c = np.nanargmax(PS)
-            if PS[c] >= quota:
+            if PS[c] >= quota - 0.001:
                 dec[c] = 1
-                ind = np.where(Votes == c)
-                need = np.where(ind[1] == 0)
-                for_remove = ind[0][need]
-                # удаление избирателей, у которых первый в списке
-                Votes = np.delete(Votes, for_remove, 0)
-                #STV_weights = np.delete(STV_weights, for_remove)
-
-                # удаление кандидата
-                ind = np.where(Votes == c)
-                # print('ind', ind)
-                Votes1 = []
-                for i in range(len(Votes)):
-                    Votes1.append(np.delete(Votes[i], ind[1][i]))
-                Votes = np.array(Votes1)
                 # новые значения
                 to_elect -= 1
                 if to_elect == 0:
                     break
-                quota = quota - int(np.ceil((PS[c] - quota)/to_elect))
-                weights_sum -= PS[c]
-            else:
-                c = np.nanargmin(PS)
-                ind = np.where(Votes == c)
-                Votes1 = []
-                for i in range(len(Votes)):
-                    Votes1.append(np.delete(Votes[i], ind[1][i]))
-                Votes = np.array(Votes1)
-            deleted.append(c)
-            flag = 1
-    def STV_basic_old(self, draw_name = 'STV'):
-        elected = 0
-        deleted = []
-        Votes = self.VoteLists.T
-        dec = np.zeros(self.C)
-        flag = 0
-        while (elected < self.k):
-            n = len(Votes)
-            #print('Votes', Votes)
-            #print("size:", n)
-            q = (n + 1)//(self.k + 1) + 1
-            #print("q:", q)
-            PS = np.zeros(self.C)
-            if flag == 1:
-                PS[deleted] = None
-            for e in Votes:
-                PS[e[0]] += 1
-            #print(PS)
-            c = np.nanargmax(PS)
-            #print("c:", c, "PS:", PS[c])
-            if PS[c] >= q:
-                #print('больше')
-                dec[c] = 1
-                elected += 1
                 ind = np.where(Votes == c)
                 need = np.where(ind[1] == 0)
-                #print(ind, need)
                 for_remove = ind[0][need]
-                #print('for_remove', for_remove)
-                if len(for_remove) > q:
-                    sdvig = np.random.randint(0, len(for_remove) - q)
-                    rem = for_remove[(0 + sdvig): (q + sdvig)]
-                else:
-                    rem = for_remove
 
-                #print('rem', rem)
-                Votes = np.delete(Votes, rem, 0)
-                #print('Votes', Votes)
-                ind = np.where(Votes == c)
-                #print('ind', ind)
+                # перераспределение голосов среди вторых кандидатов
+                for voter in for_remove:
+                    PS[Votes[voter][1]] += STV_weights[voter] * (PS[c] - quota)/len(for_remove)
+                    #print(STV_weights[voter],'*(', PS[c],'-',quota,')/',len(for_remove))
+                    #print(voter, Votes[voter][1], PS[Votes[voter][1]])
+
+                # удаление кандидата
                 Votes1 = []
                 for i in range(len(Votes)):
                     Votes1.append(np.delete(Votes[i], ind[1][i]))
                 Votes = np.array(Votes1)
-                #print('Votes', Votes)
+
             else:
-                #print('больше  нету')
                 c = np.nanargmin(PS)
-                #print("c else:", c)
                 ind = np.where(Votes == c)
-                #print(ind)
+                need = np.where(ind[1] == 0)
+                #print("need", need)
+                for_remove = ind[0][need]
+                #print("for remove", for_remove)
+                # Votes = np.delete(Votes, for_remove, 0)
+                debug_sum = 0
+                for voter in for_remove:
+                    PS[Votes[voter][1]] += STV_weights[voter]*(PS[c]/len(for_remove))
+                    debug_sum += STV_weights[voter]
+                    #print(voter, Votes[voter][1], PS[Votes[voter][1]])
+                # if debug_sum > PS[c]:
+                #     print(debug_sum, 'and', PS[c])
+                #     print(for_remove)
+                #     print(Votes[for_remove])
+                #     print('PS', PS)
+                #print(STV_weights)
                 Votes1 = []
                 for i in range(len(Votes)):
                     Votes1.append(np.delete(Votes[i], ind[1][i]))
                 Votes = np.array(Votes1)
-                #print('Votes', Votes)
-            deleted.append(c)
-            flag = 1
-            #print('deleted', deleted)
-        #print(dec)
+            #print('Votes', Votes)
+            PS[c] = None
 
         self.decision = dec
         self.ComDec()
         self.Calc_Score()
         self.Calc_Cost()
-        #self.draw(name =  draw_name)
+        # self.draw(name =  draw_name)
 
         return self.Score
+    # def STV_basic_old(self, draw_name = 'STV'):
+    #     elected = 0
+    #     deleted = []
+    #     Votes = self.VoteLists.T
+    #     dec = np.zeros(self.C)
+    #     flag = 0
+    #     while (elected < self.k):
+    #         n = len(Votes)
+    #         #print('Votes', Votes)
+    #         #print("size:", n)
+    #         q = (n + 1)//(self.k + 1) + 1
+    #         #print("q:", q)
+    #         PS = np.zeros(self.C)
+    #         if flag == 1:
+    #             PS[deleted] = None
+    #         for e in Votes:
+    #             PS[e[0]] += 1
+    #         #print(PS)
+    #         c = np.nanargmax(PS)
+    #         #print("c:", c, "PS:", PS[c])
+    #         if PS[c] >= q:
+    #             #print('больше')
+    #             dec[c] = 1
+    #             elected += 1
+    #             ind = np.where(Votes == c)
+    #             need = np.where(ind[1] == 0)
+    #             #print(ind, need)
+    #             for_remove = ind[0][need]
+    #             #print('for_remove', for_remove)
+    #             if len(for_remove) > q:
+    #                 sdvig = np.random.randint(0, len(for_remove) - q)
+    #                 rem = for_remove[(0 + sdvig): (q + sdvig)]
+    #             else:
+    #                 rem = for_remove
+    #
+    #             #print('rem', rem)
+    #             Votes = np.delete(Votes, rem, 0)
+    #             #print('Votes', Votes)
+    #             #print('ind', ind)
+    #             Votes1 = []
+    #             for i in range(len(Votes)):
+    #                 Votes1.append(np.delete(Votes[i], ind[1][i]))
+    #             Votes = np.array(Votes1)
+    #             #print('Votes', Votes)
+    #         else:
+    #             #print('больше  нету')
+    #             c = np.nanargmin(PS)
+    #             #print("c else:", c)
+    #             ind = np.where(Votes == c)
+    #             #print(ind)
+    #             Votes1 = []
+    #             for i in range(len(Votes)):
+    #                 Votes1.append(np.delete(Votes[i], ind[1][i]))
+    #             Votes = np.array(Votes1)
+    #             #print('Votes', Votes)
+    #         deleted.append(c)
+    #         flag = 1
+    #         #print('deleted', deleted)
+    #     #print(dec)
+    #
+    #     self.decision = dec
+    #     self.ComDec()
+    #     self.Calc_Score()
+    #     self.Calc_Cost()
+    #     #self.draw(name =  draw_name)
+    #
+    #     return self.Score

@@ -26,25 +26,24 @@ from PBF import PBF, BnB, bound, branch
 from Test import Test
 
 class Recommend_new(election):
-    def __init__(self, links, raiting, rec_size = 10, degrees = 4, remove_rate = 1, bad_percent = 10, series_rate = 2):
+    def __init__(self, links, raiting, degrees = 4, remove_rate = 1, series_rate = 2, dist_method = 'jaccar_mod', weights = None):
         self.candidates = None
         self.recos = None
         self.series_rate = series_rate
         self.approval_sets = {}
-        self.voter_approval_sets = {}
+        self.user_approval_sets = {}
         self.U = raiting[Columns.User].nunique()
         self.I = raiting[Columns.Item].nunique()
-        self.cand_dist = np.zeros((self.C, self.C))
-        self.bad_percent = bad_percent
         self.raiting = raiting
         self.links = links
         self.degrees = degrees
-        self.App_Sets(raiting)
-        exit()
-        self.Candidates_dists()
-
-
         self.headers = raiting[Columns.Item].unique()
+        self.id_to_num = {}
+        self.App_Sets(raiting)
+        #exit()
+        self.dist_method = dist_method
+        #self.Candidates_dists(dist_method)
+
         self.remove_rate = remove_rate
 
     def App_Sets(self, raiting):
@@ -52,13 +51,15 @@ class Recommend_new(election):
         print("степеней", self.degrees, ", квантили:", arr)
         quantiles = raiting.groupby(Columns.User)[Columns.Weight].quantile(arr)
         quantiles = quantiles.unstack()
+        step = 1
         for user in raiting[Columns.User].unique():
-            self.voter_approval_sets[user] = {}
+            #print("App_Sets, user", user, "Step", step,"/",self.U)
+            self.user_approval_sets[user] = {}
             for d in range(self.degrees):
-                self.voter_approval_sets[user][d] = set()
+                self.user_approval_sets[user][d] = set()
             user_weights = raiting[raiting[Columns.User] == user]
             user_quants = quantiles.loc[user]
-
+            step += 1
             #print(f"User {user}:")
             for idx, row in user_weights.iterrows():
                 weight = row[Columns.Weight]
@@ -73,11 +74,11 @@ class Recommend_new(election):
                         if item not in self.approval_sets:
                             self.approval_sets[item] = {}
                         self.approval_sets[item][d].add(user)
-                        self.voter_approval_sets[user][d].add(item)
+                        self.user_approval_sets[user][d].add(item)
                         break
     def Candidates_dists(self, method = 'jaccar_mod'):
         if method == 'jaccar_mod':
-
+            self.cand_dist = np.zeros((self.I, self.I))
             self.cand_dist += self.degrees
             #print(self.cand_dist)
             s = np.ones((self.degrees, self.degrees))
@@ -85,8 +86,11 @@ class Recommend_new(election):
                 for j in range(self.degrees):
                     s[i][j] -= 2*abs(i - j)/(self.degrees - 1)
             #print(s)
-            for c_1 in range(self.I):
-                for c_2 in range(self.I):
+            step = 1
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                print('item', c_1, 'number', c_1_num,'/',self.I)
+                for c_2_num, c_2 in enumerate(self.headers):
                     sum = 0
                     for i in range(self.degrees):
                         for j in range(self.degrees):
@@ -95,7 +99,7 @@ class Recommend_new(election):
                                 #print('i:', i, 'j:', j, 'c_1:', c_1, 'c_2:', c_2, 'intersection:', self.approval_sets[i][c_1] & self.approval_sets[j][c_2], 'union:', self.approval_sets[i][c_1] | self.approval_sets[j][c_2])
                             elif i == j and c_1 == c_2:
                                 sum += 1
-                    self.cand_dist[c_1][c_2] -= sum
+                    self.cand_dist[c_1_num][c_2_num] -= sum
         elif method == 'jaccar':
             pass
         elif method == 'pearson':
@@ -112,148 +116,197 @@ class Recommend_new(election):
             pass
 
         #print(self.cand_dist)
+    def nes_cand_dist(self, cands, voters):
+        dist_matrix = np.zeros((len(cands), len(voters))) + self.degrees
+        if self.dist_method == 'jaccar_mod':
+            # print(self.cand_dist)
+            s = np.ones((self.degrees, self.degrees))
+            for i in range(self.degrees):
+                for j in range(self.degrees):
+                    s[i][j] -= 2 * abs(i - j) / (self.degrees - 1)
+            # print(s)
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                self.id_to_num[c_1] = c_1_num
+                #print('item', c_1, 'number', c_1_num, '/', self.I)
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    sum = 0
+                    for i in range(self.degrees):
+                        for j in range(self.degrees):
+                            if len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j]) > 0:
+                                sum += s[i][j] * len(self.approval_sets[c_1][i] & self.approval_sets[c_2][j]) / len(
+                                    self.approval_sets[c_1][i] | self.approval_sets[c_2][j])
+                                # print('i:', i, 'j:', j, 'c_1:', c_1, 'c_2:', c_2, 'intersection:', self.approval_sets[i][c_1] & self.approval_sets[j][c_2], 'union:', self.approval_sets[i][c_1] | self.approval_sets[j][c_2])
+                            elif i == j and c_1 == c_2:
+                                sum += 1
+                    dist_matrix[c_1_num][c_2_num] -= sum
+        elif self.dist_method == 'jaccar':
+            pass
+        elif self.dist_method == 'pearson':
+            pass
+        elif self.dist_method == 'kendall':
+            pass
+        elif self.dist_method == 'spearman':
+            pass
+        elif self.dist_method == 'cosine':
+            pass
+        elif self.dist_method == 'pearson_mod':
+            pass
+        elif self.dist_method == 'cosine_mod':
+            pass
+        return dist_matrix
 
-    def voting(self, c_to_c, c_to_v, commit_size, rule = 'SNTV'):
-        #c_to_c - множество movieId!
-        #print("избиратели: ", sorted(c_to_v), type(sorted(c_to_v)[0]))
-        #print(len(c_to_v))
-        #print("кандидаты: ", c_to_c)
-        #print(len(c_to_c))
-        #print("выбираем комитет мощности", commit_size, "из", len(c_to_c), "кандидатов с помощью", len(c_to_v), "избирателей")
-        #self.dist_matrix = np.delete(np.delete(self.cand_dist, list(all_c_to_v), axis=0), list(c_without_bad), axis=1)  # конструкция матрицы расстояний чисто для этого голосования
-        self.dist_matrix = self.cand_dist[np.ix_(sorted(c_to_c), sorted(c_to_v))]
-        self.candidates = [np.array(sorted(c_to_c)), np.array(sorted(c_to_c))]
-        self.dist_matrix = np.square(self.dist_matrix)
-        #print(np.shape(self.dist_matrix))
-        self.C = len(c_to_c)
-        self.V = len(c_to_v)
-        self.k = commit_size
-        self.decision = None
-        self.Score = None
-
-        self.add_matrices(self.dist_matrix)
-        #print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
-        self.k = min(self.k, len(c_to_c))
-        if rule == 'SNTV':
-            self.SNTV_rule()
-            #print('SNTV:', self.SNTV_rule())
-            #print(self.Score)
-        elif rule == 'BnB':
-            self.BnB_rule(tol=0.7, level=2)
-            #print('BnB:', self.BnB_rule(tol = 0.7, level=2))
-            #print(self.Cost)
-            #for id in self.committee_id:
-            #   print('BnB recommends', self.candidates[0][id])
-    def voting_weighted(self, c_to_c, c_to_v, commit_size, weights, rule = 'SNTV'):
-        self.dist_matrix = self.cand_dist[np.ix_(sorted(c_to_c), sorted(c_to_v))]
-        self.candidates = [np.array(sorted(c_to_c)), np.array(sorted(c_to_c))]
+    # def voting(self, c_to_c, c_to_v, commit_size, rule = 'SNTV'):
+    #     #c_to_c - множество movieId!
+    #     #print("избиратели: ", sorted(c_to_v), type(sorted(c_to_v)[0]))
+    #     #print(len(c_to_v))
+    #     #print("кандидаты: ", c_to_c)
+    #     #print(len(c_to_c))
+    #     #print("выбираем комитет мощности", commit_size, "из", len(c_to_c), "кандидатов с помощью", len(c_to_v), "избирателей")
+    #     #self.dist_matrix = np.delete(np.delete(self.cand_dist, list(all_c_to_v), axis=0), list(c_without_bad), axis=1)  # конструкция матрицы расстояний чисто для этого голосования
+    #     self.dist_matrix = self.cand_dist[np.ix_(sorted(c_to_c), sorted(c_to_v))]
+    #     self.candidates = [np.array(sorted(c_to_c)), np.array(sorted(c_to_c))]
+    #     self.dist_matrix = np.square(self.dist_matrix)
+    #     #print(np.shape(self.dist_matrix))
+    #     self.C = len(c_to_c)
+    #     self.V = len(c_to_v)
+    #     self.k = commit_size
+    #     self.decision = None
+    #     self.Score = None
+    #
+    #     self.add_matrices(self.dist_matrix)
+    #     #print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
+    #     self.k = min(self.k, len(c_to_c))
+    #     if rule == 'SNTV':
+    #         self.SNTV_rule()
+    #         #print('SNTV:', self.SNTV_rule())
+    #         #print(self.Score)
+    #     elif rule == 'BnB':
+    #         self.BnB_rule(tol=0.7, level=2)
+    #         #print('BnB:', self.BnB_rule(tol = 0.7, level=2))
+    #         #print(self.Cost)
+    #         #for id in self.committee_id:
+    #         #   print('BnB recommends', self.candidates[0][id])
+    def voting(self, cands, voters, commit_size, rule = 'SNTV'):
+        #self.dist_matrix = self.cand_dist[np.ix_(sorted(cand_nums), sorted(voters_nums))]
+        self.candidates = [np.array(sorted(cands)), np.array(sorted(cands))]
         self.dist_matrix = np.square(self.dist_matrix)
         # print(np.shape(self.dist_matrix))
-        self.C = len(c_to_c)
-        self.V = len(c_to_v)
+        self.C = len(cands)
+        self.V = len(voters)
         self.k = commit_size
         self.decision = None
         self.Score = None
         self.add_matrices(self.dist_matrix)
         # print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
-        self.k = min(self.k, len(c_to_c))
+        self.k = min(self.k, len(cands))
+        #self.weights = weights
         if rule == 'SNTV':
             self.SNTV_rule()
             # print('SNTV:', self.SNTV_rule())
             # print(self.Score)
         elif rule == 'BnB':
-            self.BnB_rule_weighted(weights, tol=0.7, level=2)
+
+            self.BnB_rule(tol=0.7, level=2)
             # print('BnB:', self.BnB_rule(tol = 0.7, level=2))
             # print(self.Cost)
             # for id in self.committee_id:
             #   print('BnB recommends', self.candidates[0][id])
-    def recommendation_voting(self, user_id, commit_size=10, rule='SNTV', series=False, method = 'anti_rec'):
+        elif rule == 'STV_basic':
+            self.STV_basic()
+        elif rule == 'STV_star':
+            self.STV_star()
+    def recommendation_voting(self, user_id, commit_size=10, rule='SNTV', series=False, weighted = False):
         c_to_v = set()  # множество фильмов, которые будут избирателями
         all_c_to_v = set(
             self.raiting[self.raiting[Columns.User] == user_id][Columns.Item])  # множество всех оценённых фильмов
+        #all_items_num = {self.id_to_num[id] for id in all_c_to_v}
         all_items_set = set(self.raiting[Columns.Item])  # множество вообще всех фильмов
         c_to_c = all_items_set - all_c_to_v  # множество фильмов, из которых будем выбирать
-        if method == 'anti_rec':
+        if weighted:
+            for d in range(self.degrees // 2, self.degrees):
+                c_to_v.update(self.user_approval_sets[user_id][d])  # множество фильмов, которые будут избирателями
+            weights = []
+            # voters_nums = {self.id_to_num[id] for id in c_to_v}
+            # cands_nums = {self.id_to_num[id] for id in c_to_c}
+            for voter in sorted(c_to_v):
+                for d in range(self.degrees // 2, self.degrees):
+                    if voter in self.user_approval_sets[user_id][d]:
+                        weights.append(1 + d - self.degrees // 2)
+            self.weights = np.array(weights)
+        else:
+            print('anti rec')
             for d in range(self.degrees//2):
-                c_to_v.update(self.voter_approval_sets[user_id][d])  # избиратели - "плохие" фильмы
+                c_to_v.update(self.user_approval_sets[user_id][d])  # избиратели - "плохие" фильмы
+            self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
+            print(self.dist_matrix)
+            self.weights = np.ones(len(c_to_v))
             # print(self.bad_percent, "% плохих фильмов", len(c_to_v))
             # print("кандидатов", len(c_to_c))
+            #voters_nums = {self.id_to_num[id] for id in c_to_v}
+            #cands_nums = {self.id_to_num[id] for id in c_to_c}
             self.voting(c_to_c, c_to_v, commit_size * self.remove_rate, rule)
+            print(self.committee_id)
             # print('anti-reccomendations are:')
             for id in self.committee_id:
                 c_to_c.remove(self.candidates[0][id])
+            #self.dist_matrix = np.delete(self.dist_matrix, self.committee_id, axis=0)
+                #cands_nums.remove(id)
 
             c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
-            if series:
+            #voters_nums = all_items_num.difference(voters_nums)
+            #voters_nums = {self.id_to_num[id] for id in c_to_v}
+
+        self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
+        if series:
+            current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
+            i = 1
+            while current_commit_size > commit_size:
+                #cands_nums = {self.id_to_num[id] for id in c_to_c}
+                self.voting(c_to_c, c_to_v, current_commit_size, rule)
+                # print("step %d:" % i)
+                c_to_c = {self.candidates[0][id] for id in self.committee_id}
+                self.dist_matrix = self.dist_matrix[self.committee_id]
+                #cands_nums = set(self.committee_id)
                 current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
-                i = 1
-                while current_commit_size > commit_size:
-                    self.voting(c_to_c, c_to_v, current_commit_size, rule)
-                    # print("step %d:" % i)
-                    c_to_c = {self.candidates[0][id] for id in self.committee_id}
-                    current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
-                    i += 1
-            self.voting(c_to_c, c_to_v, commit_size, rule)
-            recos_list = []
-            # print('reccomendations are:')
-            i = 1
-            for id in self.committee_id:
-                recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]]])
                 i += 1
-            self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title"])
-            return list(self.recos['title'])
-        elif method == 'weights':
-            for d in range(self.degrees//2, self.degrees):
-                c_to_v.update(self.voter_approval_sets[user_id][d]) # множество фильмов, которые будут избирателями
-            weights = []
+        # voters_nums = {self.id_to_num[id] for id in c_to_v}
+        # cands_nums = {self.id_to_num[id] for id in c_to_c}
+        self.voting(c_to_c, c_to_v, commit_size, rule)
+        recos_list = []
+        # print('reccomendations are:')
+        i = 1
+        for id in self.committee_id:
+            recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]]])
+            i += 1
+        self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title"])
+        print(self.recos)
+        return list(self.recos['title'])
 
-            if series:
-                current_commit_size = max(min(int(commit_size * ((4 / 3) ** self.series_rate)), (3 * len(c_to_c)) // 4),
-                                          commit_size)
-                i = 1
-                while current_commit_size > commit_size:
-                    self.voting_weighted(c_to_c, c_to_v, current_commit_size, weights, rule)
-                    # print("step %d:" % i)
-                    c_to_c = {self.candidates[0][id] for id in self.committee_id}
-                    current_commit_size = max(
-                        min(int(commit_size * ((4 / 3) ** self.series_rate)), (3 * len(c_to_c)) // 4), commit_size)
-                    i += 1
-            self.voting_weighted(c_to_c, c_to_v, commit_size, weights, rule)
-            recos_list = []
-            # print('reccomendations are:')
-            i = 1
-            for id in self.committee_id:
-                recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]]])
-                i += 1
-            self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title"])
-            return list(self.recos['title'])
-        return None
 
-    def metrics(self, df_test, df_train, voter_id):
+    def metrics(self, df_test, df_train, user_id):
         metrics_values = {}
         metrics = {
-            "prec@1": Precision(k=1),
             "prec@10": Precision(k=10),
             "recall@10": Recall(k=10),
             "novelty@10": MeanInvUserFreq(k=10),
             "serendipity@10": Serendipity(k=10),
             "ndcg": NDCG(k=10, log_base=3)
         }
-
-        metrics_values['prec@1'] = metrics['prec@1'].calc_per_user(reco=self.recos, interactions=df_test)[voter_id]
-        #print(f"precision1: {metrics_values['prec@1']}")
-        metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos, interactions=df_test)[voter_id]
+        catalog = df_train[Columns.Item].unique()
+        #metric_values_warp = calc_metrics(metrics, reco=self.recos, interactions=df_test, prev_interactions=df_train, catalog=catalog)[user_id]
+        metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos, interactions=df_test)[user_id]
         #print(f"precision10: {metrics_values['prec@10']}")
         metrics_values['recall@10'] = metrics['recall@10'].calc_per_user(reco=self.recos,
-                                                                         interactions=df_test)[voter_id]
+                                                                         interactions=df_test)[user_id]
         #print(f"recall10: {metrics_values['recall@10']}")
-        metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)[voter_id]
+        metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)[user_id]
         #print(f"ndcg: {metrics_values['ndcg']}")
-        catalog = df_train[Columns.Item].unique()
+
         metrics_values['serendipity@10'] = metrics['serendipity@10'].calc_per_user(reco=self.recos,
                                                                                    interactions=df_test,
                                                                                    prev_interactions=df_train,
-                                                                                   catalog=catalog)[voter_id]
+                                                                                   catalog=catalog)[user_id]
+        metrics_values['novelty@10'] = metrics['novelty@10'].calc_per_user(reco=self.recos, prev_interactions=df_train)[user_id]
         #print(f"serendipity10: {metrics_values['serendipity@10']}")
         return metrics_values
 
@@ -304,12 +357,12 @@ class Reccomend(election):
         quantiles = raiting.groupby(Columns.User)[Columns.Weight].quantile(arr)
         quantiles = quantiles.unstack()
         self.approval_sets = {}
-        self.voter_approval_sets = {}
+        self.user_approval_sets = {}
         for i in range(self.degrees):
             self.approval_sets[i] = {}
-            self.voter_approval_sets[i] = {}
+            self.user_approval_sets[i] = {}
             for voter in range(self.V):
-                self.voter_approval_sets[i][voter] = set()
+                self.user_approval_sets[i][voter] = set()
         for user in raiting[Columns.User].unique():
             user_weights = raiting[raiting[Columns.User] == user]
             user_quants = quantiles.loc[user]
@@ -332,12 +385,12 @@ class Reccomend(election):
     def App_Sets_from_raiting3(self, raiting):
         self.degrees = 3
         self.approval_sets = {}
-        self.voter_approval_sets = {}
+        self.user_approval_sets = {}
         for i in range(self.degrees):
             self.approval_sets[i] = {}
-            self.voter_approval_sets[i] = {}
+            self.user_approval_sets[i] = {}
             for voter in range(self.V):
-                self.voter_approval_sets[i][voter] = set()
+                self.user_approval_sets[i][voter] = set()
         # считаю, что кандидаты - строки, а столбцы - избиратели
         # пока что считаю, что degree = 3
         voters_dic = {}
@@ -363,24 +416,24 @@ class Reccomend(election):
                 #print("mean:", voters_dic[voter]['mean'])
                 if rate >= min(voters_dic[voter]['mean'], voters_dic[voter]['median']):
                     self.approval_sets[0][candidate].add(voter)
-                    self.voter_approval_sets[0][voter].add(candidate)
+                    self.user_approval_sets[0][voter].add(candidate)
 
                 elif rate <= voters_dic[voter]['mid_low']:
                     self.approval_sets[2][candidate].add(voter)
-                    self.voter_approval_sets[2][voter].add(candidate)
+                    self.user_approval_sets[2][voter].add(candidate)
                 elif not np.isnan(rate):
                     self.approval_sets[1][candidate].add(voter)
-                    self.voter_approval_sets[1][voter].add(candidate)
+                    self.user_approval_sets[1][voter].add(candidate)
         #print(self.approval_sets)
     def App_Sets_from_raiting10(self, raiting):
         self.degrees = 10
         self.approval_sets = {}
-        self.voter_approval_sets = {}
+        self.user_approval_sets = {}
         for i in range(self.degrees):
             self.approval_sets[i] = {}
-            self.voter_approval_sets[i] = {}
+            self.user_approval_sets[i] = {}
             for voter in range(self.V):
-                self.voter_approval_sets[i][voter] = set()
+                self.user_approval_sets[i][voter] = set()
         # считаю, что кандидаты - строки, а столбцы - избиратели
         # пока что считаю, что degree = 10, а оценка ставится от 1 до 10
 
@@ -389,7 +442,7 @@ class Reccomend(election):
                 self.approval_sets[i][candidate] = set()
             for voter, rate in enumerate(candidate_rates):
                 self.approval_sets[int(rate)][candidate].add(voter)
-                self.voter_approval_sets[int(rate)][voter].add(candidate)
+                self.user_approval_sets[int(rate)][voter].add(candidate)
 
         #print(self.approval_sets)
 
@@ -456,7 +509,7 @@ class Reccomend(election):
             for i in range(self.C):
                 c_to_c.add(i)
             for i in range(self.degrees):
-                c_to_v.update(self.voter_approval_sets[i][voter_id])
+                c_to_v.update(self.user_approval_sets[i][voter_id])
             # удаляю ещё для проверки
             # for _ in range(50):
             #    c_to_v.pop()
@@ -471,12 +524,12 @@ class Reccomend(election):
             c_to_c = set()  # множество фильмов, из которых будем выбирать
             all_c_to_v = set()  # множество всех оценённых фильмов
             for i in range(self.degrees):
-                all_c_to_v.update(self.voter_approval_sets[i][voter_id])
+                all_c_to_v.update(self.user_approval_sets[i][voter_id])
             for i in range(self.C):
                 c_to_c.add(i)
             #print("количество оценённых фильмов", len(all_c_to_v))
             #print("всего фильмов", len(c_to_c))
-            c_to_v.update(self.voter_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
+            c_to_v.update(self.user_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
             bad_voters = self.headers[np.ix_(sorted(c_to_v))]
             c_to_c = c_to_c.difference(all_c_to_v)
             #print(self.bad_percent, "% плохих фильмов", len(c_to_v))
@@ -492,7 +545,7 @@ class Reccomend(election):
                 #print("near to", bad_voters[nearest], self.dist_matrix[id, nearest])
             #c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
             c_to_v = set()
-            c_to_v.update(self.voter_approval_sets[0][voter_id])
+            c_to_v.update(self.user_approval_sets[0][voter_id])
             if method == 'series':
                 current_commit_size = max(int(len(c_to_c) * 0.75), commit_size)
                 i = 1
@@ -556,13 +609,13 @@ class Reccomend(election):
         #     c_to_c = set()  # множество фильмов, из которых будем выбирать
         #     all_c_to_v = set()  # множество всех оценённых фильмов
         #     for i in range(self.degrees):
-        #         all_c_to_v.update(self.voter_approval_sets[i][voter_id])
+        #         all_c_to_v.update(self.user_approval_sets[i][voter_id])
         #     candidates = self.headers
         #     for i in range(self.C):
         #         c_to_c.add(i)
         #     print("all rated", len(all_c_to_v))
         #     print("cands", len(c_to_c))
-        #     c_to_v.update(self.voter_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
+        #     c_to_v.update(self.user_approval_sets[2][voter_id])  # избиратели - "плохие" фильмы
         #     c_to_c = c_to_c.difference(all_c_to_v)
         #     self.voting(c_to_c, c_to_v, commit_size * self.remove_rate)
         #     print('anti-reccomendations are:')

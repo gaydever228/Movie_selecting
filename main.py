@@ -27,20 +27,23 @@ from scipy.optimize import curve_fit
 from election import election
 from PBF import PBF, BnB, bound, branch
 from Test import Test
-from recsys import Reccomend
 from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
 
-def time_split(raiting):
+def time_split(raiting, user_id = 1, quant = 0.5):
     print("time splitting")
     df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight, 'timestamp': Columns.Datetime})
-    print(df.head(10))
-    split_date = df[Columns.Datetime].quantile(0.75)
+    #print(df.head(10))
+    split_date = df[df[Columns.User] == user_id][Columns.Datetime].quantile(quant)
+    print('split date', split_date)
+
     train = df[df[Columns.Datetime] <= split_date]
     test = df[df[Columns.Datetime] > split_date]
-    pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
-    return train, test, pivot_df
+    print('train:' ,train[train[Columns.User] == user_id])
+    print('test:', test[test[Columns.User] == user_id])
+    #pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+    return train, test
 
 def random_split(rating):
     ratings_list = []
@@ -100,33 +103,16 @@ def zero_split(rating, limit = 120):
     ratings_test = pd.DataFrame(ratings_test_list,
                                 columns=[Columns.User, Columns.Item, Columns.Weight, Columns.Datetime])
     return ratings, ratings_test, rating_cut
-def test_my(df, df_test, df_train, user_id = 0, method = 'series', rule = 'SNTV', metric = True):
+def test_GT(df_train, df_test, links, user_id = 0, size = 10, degrees = 4, series = True, weighted = True, rule = 'SNTV', metric = True):
     times = {}
-    #heh = np.array(headers)
-    #mask = np.char.endswith(heh, ".1")
-    #result = heh[mask]
-
-    #print("дубликаты:", result)
-    df = df.T
-    #print(df.head(10))
-
-    raiting1 = np.array(df.values[2:], dtype = float)
-    #print(raiting1)
-    #print(type(raiting1[0, 0]), type(raiting1[1, 1]))
-
-
-    #for c in raiting1[1]:
-    #    print(c)
-    #    print(np.isnan(c))
-    #    print(c>10)
     time_0 = time.time()
-    recs_test = Reccomend(headers, len(raiting1[0]), len(raiting1), degrees=3, raiting=raiting1)
-    times['generation distances_' + method + '_' + rule] = time.time() - time_0
-    print('generation distances_' + method + '_' + rule + ':', time.time() - time_0)
+    recs_test = Recommend_new(links, df_train, degrees = degrees, remove_rate = 1, series_rate = 2)
+    times['generation distances_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
+    print('generation distances_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
     time_0 = time.time()
-    recos = recs_test.recommendation_voting(user_id, 10, rule = rule, method=method)
-    times['recommendation_' + method + '_' + rule] = time.time() - time_0
-    print('recommendation_' + method + '_' + rule + ':', time.time() - time_0)
+    recos = recs_test.recommendation_voting(user_id, size, rule = rule, series=series, weighted = weighted)
+    times['recommendation_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
+    print('recommendation_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
     if metric:
         metrics = recs_test.metrics(df_test, df_train, user_id)
         return metrics, recos, times
@@ -209,7 +195,7 @@ metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
 
 movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
 links_dic = dict(zip(movies['movieId'], movies['original_title']))
-print(links_dic)
+#print(links_dic)
 #headers = list(rating.columns)[2:]
 #print('headers', headers)
 #movies_list = []
@@ -217,12 +203,17 @@ print(links_dic)
 #    movies_list.append([item_id, item])
 #movies = pd.DataFrame(movies_list, columns=[Columns.Item, "title"])
 #print(movies)
-df_train, df_test, df = time_split(rating)
-print(df_train)
-print(df_test)
-print(df)
-Recommend_new(links_dic, df_train)
-
+user = 418
+df_train, df_test = time_split(rating, user_id=user, quant=0.7)
+#for id in df_test[Columns.Item]:
+#    print('fim', links_dic[id])
+#print(df_train)
+#print(df_test)
+#print(df)
+all_metrics, recos, times = test_GT(df_train, df_test, links_dic, degrees = 5, user_id = user, size = 20, series=False, weighted=False, rule = 'BnB', metric = True)
+print(all_metrics)
+print(recos)
+print(time)
 '''
 user = 0
 times = {'ML': [], 'series_SNTV': [], 'remove_bad_SNTV': [], 'series_BnB': [], 'remove_bad_BnB': []}

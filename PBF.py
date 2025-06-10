@@ -24,10 +24,15 @@ class PBF:
         self.p = p
         self.n = len(matrix)
         self.vals = np.zeros(self.n)
+        if weights is None:
+            self.weights = np.ones(len(matrix.T))
+        else:
+            self.weights = weights
         for i in range(self.n):
             self.vars.append(i+1)
         self.dic = {}
         self.inverted_flag = False
+
         # if 2*p < self.n:
         #     matrix = self.invert(matrix)
         #     self.p = self.n - p
@@ -44,8 +49,7 @@ class PBF:
         #     self.dic[t] = 0
         #print(self.dic)
         self.from_matrix(matrix)
-        if weights is None:
-            self.weights = np.ones(len(matrix.T))
+
     def invert(self, matrix):
         matrix = np.array(matrix)
         max_el = np.max(matrix)
