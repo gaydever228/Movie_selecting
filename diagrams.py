@@ -12,7 +12,7 @@ meanprops = {
     'linewidth': 2,        # Толщина линии
     'linestyle': '--'       # Стиль линии (пунктир)
 }
-time_df = pd.read_csv('times.csv')
+time_df = pd.read_csv('full_times.csv')
 metrics_dfs = {}
 '''
 dic = {'prec@10': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
@@ -65,29 +65,26 @@ for num, key in enumerate(['prec@10', 'recall@10', 'ndcg', 'serendipity@10']):
               loc='upper right')
     plt.savefig('boxplot_' + key + '.png', dpi=300, bbox_inches='tight')
     plt.show()
-
+'''
 
 
 fig, ax = plt.subplots(figsize=(16, 9))
-indices = np.arange(4)
-width = 0.8
-colors = ['blue', 'green', 'red', 'purple', 'orange']
+indices = np.arange(5)
+width = 0.2
+colors = ['red', 'blue', 'blue', 'green', 'green']
 linestyles = ['-', '--', '-.', ':', '-']
-times_list = []
-for column in time_df.columns:
-    print(column)
-    if column != 'Unnamed: 0' and column != 'ML':
-        print(time_df[column])
-        times_list.append(np.array(time_df[column]).mean())
-ax.bar(indices, times_list, color = 'green', width = width)
-labs = ['series (SNTV)', 'one election (SNTV)', 'series (BnB)', 'one election (BnB)']
+times_list = time_df.loc[[0, 1, 2, 4, 6], 'value'].tolist()
+print(times_list)
+
+ax.bar(indices, times_list, color = colors, width = width)
+labs = ['KNN', 'Random', 'Popular', 'series (SNTV)', 'one election (SNTV)']
 #ax.set_xlabel('Категории')
 ax.set_ylabel('seconds')
-ax.set_title('Среднее время создание рекомендаций')
+ax.set_title('Среднее время создания рекомендаций')
 ax.set_xticks(indices)
 ax.set_xticklabels(labs)
 #ax.legend()
-plt.savefig('times_bar.png', dpi=300, bbox_inches='tight')
+plt.savefig('full_times_nolongs_bar.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 '''
@@ -102,7 +99,7 @@ colors = ['red', 'blue', 'blue', 'green', 'green', 'purple', 'purple']
 for i, (index, row) in enumerate(zero_cut_df.iterrows()):
     fig, ax = plt.subplots(figsize=(16, 9))
     ax.grid(True)
-    print(index)
+    #print(index)
     ax.bar(indices, row.values[1:], color = colors, width = width)
     ax.set_title(row.values[0])
     # ax.set_xlabel('Категории')
@@ -112,7 +109,7 @@ for i, (index, row) in enumerate(zero_cut_df.iterrows()):
     plt.tight_layout()
     plt.savefig(row.values[0] + '_bar.png', dpi=300, bbox_inches='tight')
     plt.show()
-
+'''
 # ax.set_xlabel('Категории')
 # ax.set_ylabel('Значения')
 # ax.set_title('Гистограммы по строкам DataFrame')

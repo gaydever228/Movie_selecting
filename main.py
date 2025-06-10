@@ -1,4 +1,6 @@
 # библиотеки для BnB алгоритма поиска оптимальных кандидатов через pseudo bollean polynomes
+from importlib.metadata import metadata
+
 import numpy as np
 from itertools import combinations
 from copy import deepcopy
@@ -26,23 +28,20 @@ from election import election
 from PBF import PBF, BnB, bound, branch
 from Test import Test
 from recsys import Reccomend
+from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
-# C = np.array([[7, 15, 10, 7, 10], [10, 17, 9, 11, 22], [16, 7, 6, 18, 14], [11, 7, 6, 12, 8]])
-# Votes = np.argsort(C, axis=0)
-# print(C)
-# print(Votes)
-# recs = Reccomend(Vote_matrix=Votes, degrees=2)
-# recs.App_Sets()
-# recs.Candidates_dists()
-rating = pd.read_csv('rate3.csv')
-headers = list(rating.columns)[2:]
-#print('headers', headers)
-movies_list = []
-for item_id, item in enumerate(headers):
-    movies_list.append([item_id, item])
-movies = pd.DataFrame(movies_list, columns=[Columns.Item, "title"])
-#print(movies)
+
+def time_split(raiting):
+    print("time splitting")
+    df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight, 'timestamp': Columns.Datetime})
+    print(df.head(10))
+    split_date = df[Columns.Datetime].quantile(0.75)
+    train = df[df[Columns.Datetime] <= split_date]
+    test = df[df[Columns.Datetime] > split_date]
+    pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+    return train, test, pivot_df
+
 def random_split(rating):
     ratings_list = []
     ratings_test_list = []
@@ -102,7 +101,7 @@ def zero_split(rating, limit = 120):
                                 columns=[Columns.User, Columns.Item, Columns.Weight, Columns.Datetime])
     return ratings, ratings_test, rating_cut
 def test_my(df, df_test, df_train, user_id = 0, method = 'series', rule = 'SNTV', metric = True):
-
+    times = {}
     #heh = np.array(headers)
     #mask = np.char.endswith(heh, ".1")
     #result = heh[mask]
@@ -120,23 +119,40 @@ def test_my(df, df_test, df_train, user_id = 0, method = 'series', rule = 'SNTV'
     #    print(c)
     #    print(np.isnan(c))
     #    print(c>10)
+    time_0 = time.time()
     recs_test = Reccomend(headers, len(raiting1[0]), len(raiting1), degrees=3, raiting=raiting1)
+    times['generation distances_' + method + '_' + rule] = time.time() - time_0
+    print('generation distances_' + method + '_' + rule + ':', time.time() - time_0)
+    time_0 = time.time()
     recos = recs_test.recommendation_voting(user_id, 10, rule = rule, method=method)
+    times['recommendation_' + method + '_' + rule] = time.time() - time_0
+    print('recommendation_' + method + '_' + rule + ':', time.time() - time_0)
     if metric:
         metrics = recs_test.metrics(df_test, df_train, user_id)
-        return metrics, recos
+        return metrics, recos, times
     else:
-        return recos
+        return recos, times
 
 def test_ML(ratings, ratings_test, movies, user_id = 0, metric = True):
     metrics_values = {}
     recos = {}
+    times = {}
     print(ratings.shape)
     #print(ratings.head(10))
+    time_0 = time.time()
     recs_test = Recommend(ratings, movies)
     recos['KNN'] = recs_test.recs_KNN(user_id=user_id, commit_size=10)
+    times['KNN'] = time.time() - time_0
+    print("KNN:", time.time() - time_0)
+    time_0 = time.time()
     recos['Random'] = recs_test.recs_Random(user_id=user_id, commit_size=10)
+    times['Random'] = time.time() - time_0
+    print("Random:", time.time() - time_0)
+    time_0 = time.time()
     recos['Popular'] = recs_test.recs_Popular(user_id=user_id, commit_size=10)
+    times['Popular'] = time.time() - time_0
+    print("Popular:", time.time() - time_0)
+    time_0 = time.time()
     if metric:
         metrics_values['KNN'] = recs_test.metrics(ratings_test, 'KNN')
         metrics_values['Random'] = recs_test.metrics(ratings_test, 'Random')
@@ -148,9 +164,9 @@ def test_ML(ratings, ratings_test, movies, user_id = 0, metric = True):
             for key2, item2 in item.items():
                 print('item2', item2)
                 all_metrics[key][key2] = item2[user_id]
-        return all_metrics, recos
+        return all_metrics, recos, times
     else:
-        return recos
+        return recos, times
 
 def real_recos(rating, user = 0):
     user_name = str(rating.iat[user, 1])
@@ -173,6 +189,39 @@ def real_recos(rating, user = 0):
 #testing_score.STV_rule()
 #testing_score.SNTV_rule()
 #testing_score.BnB_rule(tol =  0.5, level = 2)
+
+# C = np.array([[7, 15, 10, 7, 10], [10, 17, 9, 11, 22], [16, 7, 6, 18, 14], [11, 7, 6, 12, 8]])
+# Votes = np.argsort(C, axis=0)
+# print(C)
+# print(Votes)
+# recs = Reccomend(Vote_matrix=Votes, degrees=2)
+# recs.App_Sets()
+# recs.Candidates_dists()
+
+#rating = pd.read_csv('rate3.csv')
+rating = pd.read_csv('archive/ratings_small.csv')
+#print(rating)
+
+movies = pd.read_csv('archive/links_small.csv')
+metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
+#print(metadata.head(10))
+#print(movies.head(10))
+
+movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
+links_dic = dict(zip(movies['movieId'], movies['original_title']))
+print(links_dic)
+#headers = list(rating.columns)[2:]
+#print('headers', headers)
+#movies_list = []
+#for item_id, item in enumerate(headers):
+#    movies_list.append([item_id, item])
+#movies = pd.DataFrame(movies_list, columns=[Columns.Item, "title"])
+#print(movies)
+df_train, df_test, df = time_split(rating)
+print(df_train)
+print(df_test)
+print(df)
+Recommend_new(links_dic, df_train)
 
 '''
 user = 0
@@ -200,27 +249,33 @@ for key, item in times.items():
     print(key, np.array(item).mean())
 times_df = pd.DataFrame.from_dict(times)
 times_df.to_csv('times.csv')
-'''
+
 user = 0
+
 ratings_ML, ratings_test_ML, ratings_GT = zero_split(rating)
-metrics, recos_dic = test_ML(ratings_ML, ratings_test_ML, movies, user)
+metrics, recos_dic, full_times = test_ML(ratings_ML, ratings_test_ML, movies, user)
 for rule in ['SNTV', 'BnB']:
     for key in ['series', 'remove_bad']:
-        metrics['Election_' + key + '_' + rule], recos_dic['Election_' + key + '_' + rule] = test_my(ratings_GT,
+        metrics['Election_' + key + '_' + rule], recos_dic['Election_' + key + '_' + rule], temp_dic = test_my(ratings_GT,
                                                                                                      ratings_test_ML,
                                                                                                      ratings_ML, user,
                                                                                                      rule=rule,
                                                                                                      method=key)
-metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
-metrics_df = metrics_df.T
-recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-#recos_df = pd.DataFrame.from_dict(recos_dic)
-print(recos_df)
-print(metrics_df)
-metrics_df.to_csv('metrics_zero_cut.csv', index=True)
-recos_df.to_csv('recos_zero_cut_' + str(user)  + '.csv')
+        full_times.update(temp_dic)
+full_times_df = pd.DataFrame.from_dict(full_times, orient='index', columns=['value'])
+full_times_df.to_csv('full_times.csv')
+#metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+#metrics_df = metrics_df.T
+#recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+
+#print(recos_df)
+#print(metrics_df)
+
+#metrics_df.to_csv('metrics_zero_cut.csv', index=True)
+#recos_df.to_csv('recos_zero_cut_' + str(user)  + '.csv')
 
 #user = 39
 #real_recos(rating, user)
 print('finish')
 #print(testing_BnB.Scores)
+'''
