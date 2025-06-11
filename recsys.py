@@ -144,7 +144,7 @@ class Recommend_new(election):
         return c_1_num, c_2_num, dist
     def pearson_joblib(self, c_1_num, c_2_num, c_1, c_2):
         """Вычисляет корреляцию для одной пары"""
-        #print(c_1_num, c_2_num)
+        print(c_1_num, c_2_num)
         r1 = np.array(self.pivo[c_1].fillna(0))
         r2 = np.array(self.pivo[c_2].fillna(0))
         r1 = r1 - r1.mean()
@@ -208,7 +208,7 @@ class Recommend_new(election):
             step = 1
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
-                #print('item', c_1, 'number', c_1_num,'/',self.I)
+                print('number', c_1_num,'/',self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     sum = 0
                     for i in range(self.degrees):
@@ -229,6 +229,7 @@ class Recommend_new(election):
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     #print(c_1_num, c_2_num)
                     r1 = np.array(self.pivo[c_1].fillna(0))
@@ -247,11 +248,25 @@ class Recommend_new(election):
                 for c_2_num, c_2 in enumerate(self.headers):
                     _, _, dist = self.pearson_joblib(c_1_num, c_2_num, c_1, c_2)
                     self.cand_dist[c_1_num][c_2_num] = dist
+        elif self.dist_method == 'pearson_pp':
+            self.cand_dist = np.zeros((self.I, self.I))
+            tasks = []
+            for c_1_num, c_1 in enumerate(self.headers):
+                for c_2_num, c_2 in enumerate(self.headers):
+                    tasks.append((c_1_num, c_2_num, c_1, c_2))
+            #print(dist_matrix.shape)
+            results = Parallel(n_jobs=-1)(
+                delayed(self.pearson_joblib)(c_1_num, c_2_num, c_1, c_2)
+                for c_1_num, c_2_num, c_1, c_2 in tasks
+            )
+            for c_1_num, c_2_num, dist in results:
+                self.cand_dist[c_1_num][c_2_num] = dist
 
         elif self.dist_method == 'kendall':
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     #print(c_1_num, c_2_num)
                     r1 = np.array(self.pivo[c_1].fillna(0))
@@ -262,6 +277,7 @@ class Recommend_new(election):
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     #print(c_1_num, c_2_num)
                     r1 = np.array(self.pivo[c_1].fillna(0))
@@ -272,6 +288,7 @@ class Recommend_new(election):
             self.cand_dist = np.zeros((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
@@ -288,6 +305,7 @@ class Recommend_new(election):
             self.cand_dist = np.zeros((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
@@ -304,6 +322,7 @@ class Recommend_new(election):
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
@@ -312,6 +331,7 @@ class Recommend_new(election):
             self.cand_dist = np.zeros((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
@@ -337,6 +357,7 @@ class Recommend_new(election):
             self.cand_dist = np.zeros((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
+                print('number', c_1_num, '/', self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))

@@ -58,7 +58,6 @@ def test_GT(df_train, df_test, links, pivo, user_id = 0, size = 10, degrees = 4,
         return metrics, recos
     else:
         return recos, times
-
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
 
@@ -89,8 +88,9 @@ params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 
-for user in rating['userId'].unique()[2:51]:
+for user in rating['userId'].unique()[1:51]:
     df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
+
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
             combination[3]) +
@@ -106,7 +106,7 @@ for user in rating['userId'].unique()[2:51]:
         print(str(step) + '/' + str(30), cur_string)
         time_0 = time.time()
         (metrics[cur_string],
-         recos_dic[cur_string]) = test_GT(df_train, df_test, links_dic, pivo, user_id=user, metric=True, **config)
+         recos_dic[cur_string]) = test_GT(df_train, df_test, links_dic, pivo,  user_id=user, metric=True, **config)
         times[cur_string].append(time.time() - time_0)
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
     metrics_df = metrics_df.T
