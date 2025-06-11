@@ -478,7 +478,7 @@ class election:
         for voter, e in enumerate(Votes):
             PS[e[0]] += STV_weights[voter]
         while to_elect > 0:
-            if len(PS[~np.isnan(PS)]) == to_elect:
+            if len(PS[~np.isnan(PS)]) == to_elect or len(Votes) < to_elect:
                  for i in range(to_elect):
                     c = np.nanargmax(PS)
                     dec[c] = 1

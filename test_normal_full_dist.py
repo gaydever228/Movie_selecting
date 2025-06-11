@@ -96,7 +96,7 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
                'dist_method':['jaccar'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8],
+               'degrees':[2],
                'size':[10, 20],
                'weighted':[True, False],
                'series_rate':[0, 2]}
@@ -133,7 +133,7 @@ for user in rating['userId'].unique()[2:51]:
         (metrics[cur_string],
          recos_dic[cur_string]) = test_GT_light(df_train, df_test, links_dic, pivo,
                                                 cand_dist[combination[2]][combination[1]],
-                                                ids_to_num[cand_dist[combination[2]][combination[1]]],
+                                                ids_to_num[combination[2]][combination[1]],
                                                 user_id=user, metric=True, **config)
         times[cur_string].append(time.time() - time_0)
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
