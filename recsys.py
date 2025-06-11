@@ -451,19 +451,19 @@ class Recommend_new(election):
         }
         catalog = df_train[Columns.Item].unique()
         #metric_values_warp = calc_metrics(metrics, reco=self.recos, interactions=df_test, prev_interactions=df_train, catalog=catalog)[user_id]
-        metrics_values['prec@10'] = metrics['prec@10'].calc_per_user(reco=self.recos, interactions=df_test)[user_id]
+        metrics_values["prec"] = metrics["prec@" + str(k)].calc_per_user(reco=self.recos, interactions=df_test)[user_id]
         #print(f"precision10: {metrics_values['prec@10']}")
-        metrics_values['recall@10'] = metrics['recall@10'].calc_per_user(reco=self.recos,
+        metrics_values['recall'] = metrics["recall@" + str(k)].calc_per_user(reco=self.recos,
                                                                          interactions=df_test)[user_id]
         #print(f"recall10: {metrics_values['recall@10']}")
         metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)[user_id]
         #print(f"ndcg: {metrics_values['ndcg']}")
 
-        metrics_values['serendipity@10'] = metrics['serendipity@10'].calc_per_user(reco=self.recos,
+        metrics_values['serendipity@10'] = metrics["serendipity@" + str(k)].calc_per_user(reco=self.recos,
                                                                                    interactions=df_test,
                                                                                    prev_interactions=df_train,
                                                                                    catalog=catalog)[user_id]
-        metrics_values['novelty@10'] = metrics['novelty@10'].calc_per_user(reco=self.recos, prev_interactions=df_train)[user_id]
+        metrics_values['novelty'] = metrics["novelty@" + str(k)].calc_per_user(reco=self.recos, prev_interactions=df_train)[user_id]
         #print(f"serendipity10: {metrics_values['serendipity@10']}")
         return metrics_values
 
