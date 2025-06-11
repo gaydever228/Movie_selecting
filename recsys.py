@@ -195,162 +195,180 @@ class Recommend_new(election):
         return c_1_num, c_2_num, dist
     def distances(self):
         return self.cand_dist, self.id_to_num
-    def Candidates_dists(self, method = 'jaccar'):
-        if method == 'jaccar':
-            self.cand_dist = np.zeros((self.I, self.I))
-            self.cand_dist += self.degrees
-            #print(self.cand_dist)
-            s = np.ones((self.degrees, self.degrees))
-            for i in range(self.degrees):
-                for j in range(self.degrees):
-                    s[i][j] -= 2*abs(i - j)/(self.degrees - 1)
-            #print(s)
-            step = 1
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                #print('item', c_1, 'number', c_1_num,'/',self.I)
-                for c_2_num, c_2 in enumerate(self.headers):
-                    sum = 0
-                    for i in range(self.degrees):
-                        for j in range(self.degrees):
-                            if len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j]) > 0:
-                                sum += s[i][j]*len(self.approval_sets[c_1][i] & self.approval_sets[c_2][j])/len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j])
-                                #print('i:', i, 'j:', j, 'c_1:', c_1, 'c_2:', c_2, 'intersection:', self.approval_sets[i][c_1] & self.approval_sets[j][c_2], 'union:', self.approval_sets[i][c_1] | self.approval_sets[j][c_2])
-                            elif i == j and c_1 == c_2:
-                                sum += 1
-                    self.cand_dist[c_1_num][c_2_num] -= sum
-        elif self.dist_method == 'jaccar_p':
-            self.cand_dist = np.zeros((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                for c_2_num, c_2 in enumerate(self.headers):
-                    _, _, dist = self.jaccar_joblib(c_1_num, c_2_num, c_1, c_2)
-                    self.cand_dist[c_1_num][c_2_num] = dist
-        elif self.dist_method == 'pearson':
-            self.cand_dist = np.ones((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    #print(c_1_num, c_2_num)
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    r1 = r1 - r1.mean()
-                    r2 = r2 - r2.mean()
-                    d = (np.sqrt((r1 @ r1) * (r2 @ r2)))
-                    # print(d)
-                    if d == 0:
-                        self.cand_dist[c_1_num][c_2_num] = 2
-                    else:
-                        self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / d
-        elif self.dist_method == 'pearson_p':
-            self.cand_dist = np.zeros((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                for c_2_num, c_2 in enumerate(self.headers):
-                    _, _, dist = self.pearson_joblib(c_1_num, c_2_num, c_1, c_2)
-                    self.cand_dist[c_1_num][c_2_num] = dist
 
-        elif self.dist_method == 'kendall':
-            self.cand_dist = np.ones((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    #print(c_1_num, c_2_num)
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    tau, p = kendalltau(r1, r2)
-                    self.cand_dist[c_1_num][c_2_num] -= tau
-        elif self.dist_method == 'spearman':
-            self.cand_dist = np.ones((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    #print(c_1_num, c_2_num)
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    rho, p = spearmanr(r1, r2)
-                    self.cand_dist[c_1_num][c_2_num] -= rho
-        elif self.dist_method == 'kendall_hat':
-            self.cand_dist = np.zeros((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    if uc == 0:
-                        self.cand_dist[c_1_num][c_2_num] = 2
-                    else:
-                        tau, p = kendalltau(r1_hat, r2_hat)
-                        self.cand_dist[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
-        elif self.dist_method == 'spearman_hat':
-            self.cand_dist = np.zeros((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    if uc == 0:
-                        self.cand_dist[c_1_num][c_2_num] = 2
-                    else:
-                        rho, p = spearmanr(r1_hat, r2_hat)
-                        self.cand_dist[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
-        elif self.dist_method == 'cosine':
-            self.cand_dist = np.ones((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
-        elif self.dist_method == 'pearson_hat':
-            self.cand_dist = np.zeros((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    if uc <= 1:
-                        self.cand_dist[c_1_num][c_2_num] = 2
-                    else:
-                        r1_hat = r1_hat - r1_hat.mean()
-                        r2_hat = r2_hat - r2_hat.mean()
-                        d = (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
-                        # print(d)
-                        if d == 0:
-                            self.cand_dist[c_1_num][c_2_num] = 2 / np.sqrt(uc)
-                        else:
-                            cor = (r1_hat @ r2_hat) / d
-                            dist = (1 - cor) / np.sqrt(uc)
+    def Candidates_dists(self):
+        met_dic = {'cosine_hat': self.cosine_hat_joblib,
+                   'cosine': self.cosine_joblib,
+                   'jaccar': self.jaccar_joblib,
+                   'pearson': self.pearson_joblib,
+                   'pearson_hat': self.pearson_hat_joblib,
+                   'spearman': self.spearman_joblib,
+                   'spearman_hat': self.spearman_hat_joblib,
+                   'kendall': self.kendall_joblib,
+                   'kendall_hat': self.kendall_hat_joblib}
 
-                    self.cand_dist[c_1_num][c_2_num] = dist
-        elif self.dist_method == 'cosine_hat':
-            self.cand_dist = np.zeros((self.I, self.I))
-            for c_1_num, c_1 in enumerate(self.headers):
-                self.id_to_num[c_1] = c_1_num
-                for c_2_num, c_2 in enumerate(self.headers):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    if uc == 0:
-                        self.cand_dist[c_1_num][c_2_num] = 2
-                    else:
-                        cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
-                        self.cand_dist[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
-
-        #print(self.cand_dist)
+        self.cand_dist = np.zeros((self.I, self.I))
+        vyzov = met_dic[self.dist_method]
+        for c_1_num, c_1 in enumerate(self.headers):
+            for c_2_num, c_2 in enumerate(self.headers):
+                _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
+                self.cand_dist[c_1_num][c_2_num] = dist
+    # def Candidates_dists_old(self, method = 'jaccar'):
+    #     if method == 'jaccar':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         self.cand_dist += self.degrees
+    #         #print(self.cand_dist)
+    #         s = np.ones((self.degrees, self.degrees))
+    #         for i in range(self.degrees):
+    #             for j in range(self.degrees):
+    #                 s[i][j] -= 2*abs(i - j)/(self.degrees - 1)
+    #         #print(s)
+    #         step = 1
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             #print('item', c_1, 'number', c_1_num,'/',self.I)
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 sum = 0
+    #                 for i in range(self.degrees):
+    #                     for j in range(self.degrees):
+    #                         if len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j]) > 0:
+    #                             sum += s[i][j]*len(self.approval_sets[c_1][i] & self.approval_sets[c_2][j])/len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j])
+    #                             #print('i:', i, 'j:', j, 'c_1:', c_1, 'c_2:', c_2, 'intersection:', self.approval_sets[i][c_1] & self.approval_sets[j][c_2], 'union:', self.approval_sets[i][c_1] | self.approval_sets[j][c_2])
+    #                         elif i == j and c_1 == c_2:
+    #                             sum += 1
+    #                 self.cand_dist[c_1_num][c_2_num] -= sum
+    #     elif self.dist_method == 'jaccar_p':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 _, _, dist = self.jaccar_joblib(c_1_num, c_2_num, c_1, c_2)
+    #                 self.cand_dist[c_1_num][c_2_num] = dist
+    #     elif self.dist_method == 'pearson':
+    #         self.cand_dist = np.ones((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 #print(c_1_num, c_2_num)
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 r1 = r1 - r1.mean()
+    #                 r2 = r2 - r2.mean()
+    #                 d = (np.sqrt((r1 @ r1) * (r2 @ r2)))
+    #                 # print(d)
+    #                 if d == 0:
+    #                     self.cand_dist[c_1_num][c_2_num] = 2
+    #                 else:
+    #                     self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / d
+    #     elif self.dist_method == 'pearson_p':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 _, _, dist = self.pearson_joblib(c_1_num, c_2_num, c_1, c_2)
+    #                 self.cand_dist[c_1_num][c_2_num] = dist
+    #
+    #     elif self.dist_method == 'kendall':
+    #         self.cand_dist = np.ones((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 #print(c_1_num, c_2_num)
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 tau, p = kendalltau(r1, r2)
+    #                 self.cand_dist[c_1_num][c_2_num] -= tau
+    #     elif self.dist_method == 'spearman':
+    #         self.cand_dist = np.ones((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 #print(c_1_num, c_2_num)
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 rho, p = spearmanr(r1, r2)
+    #                 self.cand_dist[c_1_num][c_2_num] -= rho
+    #     elif self.dist_method == 'kendall_hat':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 mask = (r1 > 0) & (r2 > 0)
+    #                 r1_hat = r1[mask]
+    #                 r2_hat = r2[mask]
+    #                 uc = len(r1_hat)
+    #                 if uc == 0:
+    #                     self.cand_dist[c_1_num][c_2_num] = 2
+    #                 else:
+    #                     tau, p = kendalltau(r1_hat, r2_hat)
+    #                     self.cand_dist[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
+    #     elif self.dist_method == 'spearman_hat':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 mask = (r1 > 0) & (r2 > 0)
+    #                 r1_hat = r1[mask]
+    #                 r2_hat = r2[mask]
+    #                 uc = len(r1_hat)
+    #                 if uc == 0:
+    #                     self.cand_dist[c_1_num][c_2_num] = 2
+    #                 else:
+    #                     rho, p = spearmanr(r1_hat, r2_hat)
+    #                     self.cand_dist[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
+    #     elif self.dist_method == 'cosine':
+    #         self.cand_dist = np.ones((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+    #     elif self.dist_method == 'pearson_hat':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 mask = (r1 > 0) & (r2 > 0)
+    #                 r1_hat = r1[mask]
+    #                 r2_hat = r2[mask]
+    #                 uc = len(r1_hat)
+    #                 if uc <= 1:
+    #                     self.cand_dist[c_1_num][c_2_num] = 2
+    #                 else:
+    #                     r1_hat = r1_hat - r1_hat.mean()
+    #                     r2_hat = r2_hat - r2_hat.mean()
+    #                     d = (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+    #                     # print(d)
+    #                     if d == 0:
+    #                         self.cand_dist[c_1_num][c_2_num] = 2 / np.sqrt(uc)
+    #                     else:
+    #                         cor = (r1_hat @ r2_hat) / d
+    #                         dist = (1 - cor) / np.sqrt(uc)
+    #
+    #                 self.cand_dist[c_1_num][c_2_num] = dist
+    #     elif self.dist_method == 'cosine_hat':
+    #         self.cand_dist = np.zeros((self.I, self.I))
+    #         for c_1_num, c_1 in enumerate(self.headers):
+    #             self.id_to_num[c_1] = c_1_num
+    #             for c_2_num, c_2 in enumerate(self.headers):
+    #                 r1 = np.array(self.pivo[c_1].fillna(0))
+    #                 r2 = np.array(self.pivo[c_2].fillna(0))
+    #                 mask = (r1 > 0) & (r2 > 0)
+    #                 r1_hat = r1[mask]
+    #                 r2_hat = r2[mask]
+    #                 uc = len(r1_hat)
+    #                 if uc == 0:
+    #                     self.cand_dist[c_1_num][c_2_num] = 2
+    #                 else:
+    #                     cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+    #                     self.cand_dist[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
+    #
+    #     #print(self.cand_dist)
     def nes_cand_dist(self, cands, voters):
         if self.full_dist:
             voters_nums = {self.id_to_num[id] for id in voters}
@@ -376,39 +394,39 @@ class Recommend_new(election):
                 _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
                 dist_matrix[c_1_num][c_2_num] = dist
         return dist_matrix
-    def nes_cand_dist_parallel_shit(self, cands, voters):
-        if self.full_dist:
-            voters_nums = {self.id_to_num[id] for id in voters}
-            cands_nums = {self.id_to_num[id] for id in cands}
-            dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
-            return dist_matrix
-        met_dic = {'cosine_hat':{'function': self.cosine_hat_joblib},
-                   'cosine':{'function': self.cosine_joblib},
-                   'jaccar':{'function': self.jaccar_joblib},
-                   'pearson':{'function': self.pearson_joblib},
-                   'pearson_hat':{'function': self.pearson_hat_joblib},
-                   'spearman':{'function': self.spearman_joblib},
-                   'spearman_hat':{'function': self.spearman_hat_joblib},
-                   'kendall':{'function': self.kendall_joblib},
-                   'kendall_hat':{'function': self.kendall_hat_joblib}}
-
-        dist_matrix = np.zeros((len(cands), len(voters)))
-        sorted_cands = sorted(cands)
-        sorted_voters = sorted(voters)
-        vyzov = met_dic[self.dist_method]
-        tasks = []
-        for c_1_num, c_1 in enumerate(sorted_cands):
-            for c_2_num, c_2 in enumerate(sorted_voters):
-                tasks.append((c_1_num, c_2_num, c_1, c_2))
-        print(dist_matrix.shape)
-        results = Parallel(n_jobs=-1)(
-            delayed(**vyzov)(c_1_num, c_2_num, c_1, c_2)
-            for c_1_num, c_2_num, c_1, c_2 in tasks
-        )
-        for c_1_num, c_2_num, dist in results:
-            dist_matrix[c_1_num][c_2_num] = dist
-
-        return dist_matrix
+    # def nes_cand_dist_parallel_shit(self, cands, voters):
+    #     if self.full_dist:
+    #         voters_nums = {self.id_to_num[id] for id in voters}
+    #         cands_nums = {self.id_to_num[id] for id in cands}
+    #         dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
+    #         return dist_matrix
+    #     met_dic = {'cosine_hat':{'function': self.cosine_hat_joblib},
+    #                'cosine':{'function': self.cosine_joblib},
+    #                'jaccar':{'function': self.jaccar_joblib},
+    #                'pearson':{'function': self.pearson_joblib},
+    #                'pearson_hat':{'function': self.pearson_hat_joblib},
+    #                'spearman':{'function': self.spearman_joblib},
+    #                'spearman_hat':{'function': self.spearman_hat_joblib},
+    #                'kendall':{'function': self.kendall_joblib},
+    #                'kendall_hat':{'function': self.kendall_hat_joblib}}
+    #
+    #     dist_matrix = np.zeros((len(cands), len(voters)))
+    #     sorted_cands = sorted(cands)
+    #     sorted_voters = sorted(voters)
+    #     vyzov = met_dic[self.dist_method]
+    #     tasks = []
+    #     for c_1_num, c_1 in enumerate(sorted_cands):
+    #         for c_2_num, c_2 in enumerate(sorted_voters):
+    #             tasks.append((c_1_num, c_2_num, c_1, c_2))
+    #     print(dist_matrix.shape)
+    #     results = Parallel(n_jobs=-1)(
+    #         delayed(**vyzov)(c_1_num, c_2_num, c_1, c_2)
+    #         for c_1_num, c_2_num, c_1, c_2 in tasks
+    #     )
+    #     for c_1_num, c_2_num, dist in results:
+    #         dist_matrix[c_1_num][c_2_num] = dist
+    #
+    #     return dist_matrix
 
     # def voting(self, c_to_c, c_to_v, commit_size, rule = 'SNTV'):
     #     #c_to_c - множество movieId!

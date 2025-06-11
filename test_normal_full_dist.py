@@ -95,7 +95,7 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
-               'dist_method':['pearson_p', 'jaccar_p', 'spearman', 'cosine', 'kendall'],
+               'dist_method':['jaccar'],
                'degrees':[2, 3, 4, 5, 6, 7, 8],
                'size':[10, 20],
                'weighted':[True, False],
