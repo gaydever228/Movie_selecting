@@ -25,7 +25,7 @@ from rectools.models import (LightFMWrapperModel,
                              ImplicitALSWrapperModel, DSSMModel, PopularModel, RandomModel,
                              PopularInCategoryModel, PopularInCategoryModel, PureSVDModel, ImplicitItemKNNWrapperModel)
 
-from lightfm import LightFM
+#from lightfm import LightFM
 from rectools.metrics import Precision, Recall, MAP, calc_metrics, MeanInvUserFreq, Serendipity, NDCG
 sns.set_theme(style="whitegrid")
 

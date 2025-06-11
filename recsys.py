@@ -16,6 +16,8 @@ import random
 from scipy.stats import pearsonr, spearmanr, kendalltau
 from rectools import Columns
 from rectools.metrics import Precision, Recall, MAP, calc_metrics, MeanInvUserFreq, Serendipity, NDCG
+
+
 rng = Generator(PCG64())
 import copy
 from tqdm import tqdm
@@ -27,7 +29,8 @@ from PBF import PBF, BnB, bound, branch
 from Test import Test
 
 class Recommend_new(election):
-    def __init__(self, links, raiting, pivo, degrees = 4, remove_rate = 1, series_rate = 2, dist_method = 'jaccar', weights = None):
+    def __init__(self, links, raiting, pivo, degrees = 4, remove_rate = 1, series_rate = 2, dist_method = 'jaccar',
+                 weights = None, full_dist = False, ids_to_num = None, cand_dist_matrix = None):
         self.candidates = None
         self.recos = None
         self.pivo = pivo
@@ -40,18 +43,25 @@ class Recommend_new(election):
         self.links = links
         self.degrees = degrees
         self.headers = raiting[Columns.Item].unique()
-        self.id_to_num = {}
+        if ids_to_num is not None:
+            self.id_to_num = ids_to_num
+        else:
+            self.id_to_num = {}
         self.App_Sets(raiting)
         #exit()
         self.dist_method = dist_method
-        #self.Candidates_dists(dist_method)
-
-        self.remove_rate = remove_rate
+        self.full_dist = full_dist
         s = np.ones((self.degrees, self.degrees))
         for i in range(self.degrees):
             for j in range(self.degrees):
                 s[i][j] -= 2 * abs(i - j) / (self.degrees - 1)
         self.s = s
+        if full_dist and cand_dist_matrix is None:
+            self.Candidates_dists(dist_method)
+        elif cand_dist_matrix is not None:
+            self.cand_dist = cand_dist_matrix
+        self.remove_rate = remove_rate
+
     def App_Sets(self, raiting):
         arr = np.linspace(1/self.degrees, 1, self.degrees)
         #print("степеней", self.degrees, ", квантили:", arr)
@@ -85,6 +95,7 @@ class Recommend_new(election):
     def jaccar_joblib(self, c_1_num, c_2_num, c_1, c_2):
         sum = 0
         s = self.s
+        #print(c_1_num, c_2_num)
         for i in range(self.degrees):
             for j in range(self.degrees):
                 if len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j]) > 0:
@@ -133,6 +144,7 @@ class Recommend_new(election):
         return c_1_num, c_2_num, dist
     def pearson_joblib(self, c_1_num, c_2_num, c_1, c_2):
         """Вычисляет корреляцию для одной пары"""
+        #print(c_1_num, c_2_num)
         r1 = np.array(self.pivo[c_1].fillna(0))
         r2 = np.array(self.pivo[c_2].fillna(0))
         r1 = r1 - r1.mean()
@@ -181,7 +193,8 @@ class Recommend_new(election):
         cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
         dist = (1 - cos) / np.sqrt(uc)
         return c_1_num, c_2_num, dist
-
+    def distances(self):
+        return self.cand_dist, self.id_to_num
     def Candidates_dists(self, method = 'jaccar'):
         if method == 'jaccar':
             self.cand_dist = np.zeros((self.I, self.I))
@@ -206,23 +219,41 @@ class Recommend_new(election):
                             elif i == j and c_1 == c_2:
                                 sum += 1
                     self.cand_dist[c_1_num][c_2_num] -= sum
+        elif self.dist_method == 'jaccar_p':
+            self.cand_dist = np.zeros((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                for c_2_num, c_2 in enumerate(self.headers):
+                    _, _, dist = self.jaccar_joblib(c_1_num, c_2_num, c_1, c_2)
+                    self.cand_dist[c_1_num][c_2_num] = dist
         elif self.dist_method == 'pearson':
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
                 for c_2_num, c_2 in enumerate(self.headers):
+                    #print(c_1_num, c_2_num)
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
                     r1 = r1 - r1.mean()
                     r2 = r2 - r2.mean()
-                    self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
-
+                    d = (np.sqrt((r1 @ r1) * (r2 @ r2)))
+                    # print(d)
+                    if d == 0:
+                        self.cand_dist[c_1_num][c_2_num] = 2
+                    else:
+                        self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / d
+        elif self.dist_method == 'pearson_p':
+            self.cand_dist = np.zeros((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                for c_2_num, c_2 in enumerate(self.headers):
+                    _, _, dist = self.pearson_joblib(c_1_num, c_2_num, c_1, c_2)
+                    self.cand_dist[c_1_num][c_2_num] = dist
 
         elif self.dist_method == 'kendall':
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
                 for c_2_num, c_2 in enumerate(self.headers):
+                    #print(c_1_num, c_2_num)
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
                     tau, p = kendalltau(r1, r2)
@@ -232,6 +263,7 @@ class Recommend_new(election):
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
                 for c_2_num, c_2 in enumerate(self.headers):
+                    #print(c_1_num, c_2_num)
                     r1 = np.array(self.pivo[c_1].fillna(0))
                     r2 = np.array(self.pivo[c_2].fillna(0))
                     rho, p = spearmanr(r1, r2)
@@ -247,8 +279,11 @@ class Recommend_new(election):
                     r1_hat = r1[mask]
                     r2_hat = r2[mask]
                     uc = len(r1_hat)
-                    tau, p = kendalltau(r1_hat, r2_hat)
-                    self.cand_dist[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
+                    if uc == 0:
+                        self.cand_dist[c_1_num][c_2_num] = 2
+                    else:
+                        tau, p = kendalltau(r1_hat, r2_hat)
+                        self.cand_dist[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
         elif self.dist_method == 'spearman_hat':
             self.cand_dist = np.zeros((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
@@ -260,8 +295,11 @@ class Recommend_new(election):
                     r1_hat = r1[mask]
                     r2_hat = r2[mask]
                     uc = len(r1_hat)
-                    rho, p = spearmanr(r1_hat, r2_hat)
-                    self.cand_dist[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
+                    if uc == 0:
+                        self.cand_dist[c_1_num][c_2_num] = 2
+                    else:
+                        rho, p = spearmanr(r1_hat, r2_hat)
+                        self.cand_dist[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
         elif self.dist_method == 'cosine':
             self.cand_dist = np.ones((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
@@ -281,10 +319,20 @@ class Recommend_new(election):
                     r1_hat = r1[mask]
                     r2_hat = r2[mask]
                     uc = len(r1_hat)
-                    r1_hat = r1_hat - r1_hat.mean()
-                    r2_hat = r2_hat - r2_hat.mean()
-                    cor = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
-                    self.cand_dist[c_1_num][c_2_num] = (1 - cor) / np.sqrt(uc)
+                    if uc <= 1:
+                        self.cand_dist[c_1_num][c_2_num] = 2
+                    else:
+                        r1_hat = r1_hat - r1_hat.mean()
+                        r2_hat = r2_hat - r2_hat.mean()
+                        d = (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+                        # print(d)
+                        if d == 0:
+                            self.cand_dist[c_1_num][c_2_num] = 2 / np.sqrt(uc)
+                        else:
+                            cor = (r1_hat @ r2_hat) / d
+                            dist = (1 - cor) / np.sqrt(uc)
+
+                    self.cand_dist[c_1_num][c_2_num] = dist
         elif self.dist_method == 'cosine_hat':
             self.cand_dist = np.zeros((self.I, self.I))
             for c_1_num, c_1 in enumerate(self.headers):
@@ -296,11 +344,44 @@ class Recommend_new(election):
                     r1_hat = r1[mask]
                     r2_hat = r2[mask]
                     uc = len(r1_hat)
-                    cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
-                    self.cand_dist[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
+                    if uc == 0:
+                        self.cand_dist[c_1_num][c_2_num] = 2
+                    else:
+                        cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+                        self.cand_dist[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
 
         #print(self.cand_dist)
     def nes_cand_dist(self, cands, voters):
+        if self.full_dist:
+            voters_nums = {self.id_to_num[id] for id in voters}
+            cands_nums = {self.id_to_num[id] for id in cands}
+            dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
+            return dist_matrix
+        met_dic = {'cosine_hat':self.cosine_hat_joblib,
+                   'cosine':self.cosine_joblib,
+                   'jaccar':self.jaccar_joblib,
+                   'pearson':self.pearson_joblib,
+                   'pearson_hat':self.pearson_hat_joblib,
+                   'spearman':self.spearman_joblib,
+                   'spearman_hat':self.spearman_hat_joblib,
+                   'kendall':self.kendall_joblib,
+                   'kendall_hat':self.kendall_hat_joblib}
+
+        dist_matrix = np.zeros((len(cands), len(voters)))
+        sorted_cands = sorted(cands)
+        sorted_voters = sorted(voters)
+        vyzov = met_dic[self.dist_method]
+        for c_1_num, c_1 in enumerate(sorted_cands):
+            for c_2_num, c_2 in enumerate(sorted_voters):
+                _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
+                dist_matrix[c_1_num][c_2_num] = dist
+        return dist_matrix
+    def nes_cand_dist_parallel_shit(self, cands, voters):
+        if self.full_dist:
+            voters_nums = {self.id_to_num[id] for id in voters}
+            cands_nums = {self.id_to_num[id] for id in cands}
+            dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
+            return dist_matrix
         met_dic = {'cosine_hat':{'function': self.cosine_hat_joblib},
                    'cosine':{'function': self.cosine_joblib},
                    'jaccar':{'function': self.jaccar_joblib},
@@ -319,7 +400,7 @@ class Recommend_new(election):
         for c_1_num, c_1 in enumerate(sorted_cands):
             for c_2_num, c_2 in enumerate(sorted_voters):
                 tasks.append((c_1_num, c_2_num, c_1, c_2))
-
+        print(dist_matrix.shape)
         results = Parallel(n_jobs=-1)(
             delayed(**vyzov)(c_1_num, c_2_num, c_1, c_2)
             for c_1_num, c_2_num, c_1, c_2 in tasks

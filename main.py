@@ -212,20 +212,20 @@ links_dic = dict(zip(movies['movieId'], movies['original_title']))
 #    movies_list.append([item_id, item])
 #movies = pd.DataFrame(movies_list, columns=[Columns.Item, "title"])
 #print(movies)
-user = 2
-#df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
+user = 3
+df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
 #for id in df_test[Columns.Item]:
 #    print('fim', links_dic[id])
 #print(df_train)
 #print(df_test)
 #print(df)
-#all_metrics, recos = test_GT(df_train, df_test, links_dic, pivo, degrees = 2, user_id = user, size = 10,
-#                             weighted=True, rule = 'STV_star', dist_method='cosine_hat', metric = True)
-#print(all_metrics)
-#print(recos)
-#print(time)
+all_metrics, recos = test_GT(df_train, df_test, links_dic, pivo, degrees = 2, user_id = user, size = 10,
+                             weighted=True, rule = 'STV_star', dist_method='jaccar', metric = True)
+print(all_metrics)
+print(recos)
+print(time)
 
-#exit()
+exit()
 times = {}
 metrics = {}
 recos_dic = {}
