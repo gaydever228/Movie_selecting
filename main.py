@@ -17,7 +17,7 @@ from random import sample
 import random
 from itertools import product
 from ml_recs import Recommend
-
+from joblib import Parallel, delayed
 rng = Generator(PCG64())
 import copy
 from tqdm import tqdm
@@ -118,7 +118,16 @@ def test_GT(df_train, df_test, links, pivo, user_id = 0, size = 10, degrees = 4,
         return metrics, recos
     else:
         return recos, times
-
+def full_test_GT(combination):
+    cur_string = (
+                combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(combination[3]) +
+                '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(combination[5]))
+    config = dict(zip(params_keys, combination))
+    print(cur_string)
+    time_0 = time.time()
+    metric, rec = test_GT(df_train, df_test, links_dic, pivo, user_id=user, metric=True, **config)
+    timess = time.time() - time_0
+    return metric, rec, timess, cur_string
 def test_ML(ratings, ratings_test, movies, user_id = 0, metric = True):
     metrics_values = {}
     recos = {}
@@ -203,14 +212,15 @@ links_dic = dict(zip(movies['movieId'], movies['original_title']))
 #    movies_list.append([item_id, item])
 #movies = pd.DataFrame(movies_list, columns=[Columns.Item, "title"])
 #print(movies)
-user = 1
+user = 2
 #df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
 #for id in df_test[Columns.Item]:
 #    print('fim', links_dic[id])
 #print(df_train)
 #print(df_test)
 #print(df)
-#all_metrics, recos = test_GT(df_train, df_test, links_dic, pivo, degrees = 2, user_id = user, size = 10, weighted=True, rule = 'BnB', metric = True)
+#all_metrics, recos = test_GT(df_train, df_test, links_dic, pivo, degrees = 2, user_id = user, size = 10,
+#                             weighted=True, rule = 'STV_star', dist_method='cosine_hat', metric = True)
 #print(all_metrics)
 #print(recos)
 #print(time)
@@ -226,7 +236,7 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'pearson', 'spearman'],
+               'dist_method':['jaccar', 'pearson', 'spearman', 'cosine', 'kendall'],
                'degrees':[2, 3, 4, 5, 6, 7, 8],
                'size':[10, 20],
                'weighted':[True, False],
@@ -234,6 +244,37 @@ params_grid = {'rule':['STV_star', 'STV_basic'],
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
+tests = []
+for user in rating['userId'].unique()[1:51]:
+    df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
+    time_0 = time.time()
+    print(step)
+    for combination in product(*params_values):
+        cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+            combination[3]) +
+                      '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                    combination[5]))
+        times[cur_string] = []
+        tests.append(combination)
+
+    results = Parallel(n_jobs=-1)(
+        delayed(full_test_GT)(combination)
+        for combination in tests
+    )
+    for metric, rec, timess, cur_string in results:
+        metrics[cur_string] = metric
+        recos_dic[cur_string] = rec
+        times[cur_string].append(timess)
+    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+    metrics_df = metrics_df.T
+    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    # recos_df = pd.DataFrame.from_dict(recos_dic)
+    print(recos_df)
+    print(metrics_df)
+    metrics_df.to_csv('GT/STV_metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv('GT/STV_recos_' + str(user) + '.csv')
+    step += 1
+
 for user in rating['userId'].unique()[1:51]:
     df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
     time_0 = time.time()
@@ -261,7 +302,7 @@ for user in rating['userId'].unique()[1:51]:
 #for key, item in times.items():
 #    print(key, np.array(item).mean())
 times_df = pd.DataFrame.from_dict(times)
-times_df.to_csv('times.csv')
+times_df.to_csv('GT/STV_times.csv')
 
 
 '''

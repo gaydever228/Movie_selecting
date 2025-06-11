@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.pyplot import figure
 from numpy.random import Generator, PCG64
+from joblib import Parallel, delayed
 import math
 from random import sample
 import random
@@ -46,7 +47,11 @@ class Recommend_new(election):
         #self.Candidates_dists(dist_method)
 
         self.remove_rate = remove_rate
-
+        s = np.ones((self.degrees, self.degrees))
+        for i in range(self.degrees):
+            for j in range(self.degrees):
+                s[i][j] -= 2 * abs(i - j) / (self.degrees - 1)
+        self.s = s
     def App_Sets(self, raiting):
         arr = np.linspace(1/self.degrees, 1, self.degrees)
         #print("степеней", self.degrees, ", квантили:", arr)
@@ -77,6 +82,106 @@ class Recommend_new(election):
                         self.approval_sets[item][d].add(user)
                         self.user_approval_sets[user][d].add(item)
                         break
+    def jaccar_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        sum = 0
+        s = self.s
+        for i in range(self.degrees):
+            for j in range(self.degrees):
+                if len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j]) > 0:
+                    sum += s[i][j] * len(self.approval_sets[c_1][i] & self.approval_sets[c_2][j]) / len(
+                        self.approval_sets[c_1][i] | self.approval_sets[c_2][j])
+                    # print('i:', i, 'j:', j, 'c_1:', c_1, 'c_2:', c_2, 'intersection:', self.approval_sets[i][c_1] & self.approval_sets[j][c_2], 'union:', self.approval_sets[i][c_1] | self.approval_sets[j][c_2])
+                elif i == j and c_1 == c_2:
+                    sum += 1
+        dist = self.degrees - sum
+        return c_1_num, c_2_num, dist
+    def spearman_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        rho, p = spearmanr(r1, r2)
+        dist = 1 - rho
+        return c_1_num, c_2_num, dist
+    def spearman_hat_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        mask = (r1 > 0) & (r2 > 0)
+        r1_hat = r1[mask]
+        r2_hat = r2[mask]
+        uc = len(r1_hat)
+        if uc == 0:
+            return c_1_num, c_2_num, 2
+        rho, p = spearmanr(r1_hat, r2_hat)
+        dist = 1 - rho
+        return c_1_num, c_2_num, dist
+    def kendall_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        tau, p = kendalltau(r1, r2)
+        dist = 1 - tau
+        return c_1_num, c_2_num, dist
+    def kendall_hat_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        mask = (r1 > 0) & (r2 > 0)
+        r1_hat = r1[mask]
+        r2_hat = r2[mask]
+        uc = len(r1_hat)
+        if uc == 0:
+            return c_1_num, c_2_num, 2
+        tau, p = kendalltau(r1_hat, r2_hat)
+        dist = 1 - tau
+        return c_1_num, c_2_num, dist
+    def pearson_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        """Вычисляет корреляцию для одной пары"""
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        r1 = r1 - r1.mean()
+        r2 = r2 - r2.mean()
+
+        dist = 1 - (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        return c_1_num, c_2_num, dist
+    def pearson_hat_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        """Вычисляет корреляцию для одной пары"""
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        mask = (r1 > 0) & (r2 > 0)
+        #print(mask)
+        r1_hat = r1[mask]
+        r2_hat = r2[mask]
+        uc = len(r1_hat)
+        #print(r1_hat, r2_hat)
+        #print(uc)
+        if uc <= 1:
+            return c_1_num, c_2_num, 2
+        r1_hat = r1_hat - r1_hat.mean()
+        r2_hat = r2_hat - r2_hat.mean()
+        d = (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+        #print(d)
+        if d == 0:
+            return c_1_num, c_2_num, 2/np.sqrt(uc)
+        cor = (r1_hat @ r2_hat) / d
+        dist = (1 - cor) / np.sqrt(uc)
+        return c_1_num, c_2_num, dist
+    def cosine_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+
+        dist = 1 - (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        return c_1_num, c_2_num, dist
+    def cosine_hat_joblib(self, c_1_num, c_2_num, c_1, c_2):
+        r1 = np.array(self.pivo[c_1].fillna(0))
+        r2 = np.array(self.pivo[c_2].fillna(0))
+        mask = (r1 > 0) & (r2 > 0)
+
+        r1_hat = r1[mask]
+        r2_hat = r2[mask]
+        uc = len(r1_hat)
+        if uc == 0:
+            return c_1_num, c_2_num, 2
+        cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+        dist = (1 - cos) / np.sqrt(uc)
+        return c_1_num, c_2_num, dist
+
     def Candidates_dists(self, method = 'jaccar'):
         if method == 'jaccar':
             self.cand_dist = np.zeros((self.I, self.I))
@@ -196,112 +301,32 @@ class Recommend_new(election):
 
         #print(self.cand_dist)
     def nes_cand_dist(self, cands, voters):
-        if self.dist_method == 'jaccar':
-            dist_matrix = np.zeros((len(cands), len(voters))) + self.degrees
-            # print(self.cand_dist)
-            s = np.ones((self.degrees, self.degrees))
-            for i in range(self.degrees):
-                for j in range(self.degrees):
-                    s[i][j] -= 2 * abs(i - j) / (self.degrees - 1)
-            # print(s)
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                self.id_to_num[c_1] = c_1_num
-                #print('item', c_1, 'number', c_1_num, '/', self.I)
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    sum = 0
-                    for i in range(self.degrees):
-                        for j in range(self.degrees):
-                            if len(self.approval_sets[c_1][i] | self.approval_sets[c_2][j]) > 0:
-                                sum += s[i][j] * len(self.approval_sets[c_1][i] & self.approval_sets[c_2][j]) / len(
-                                    self.approval_sets[c_1][i] | self.approval_sets[c_2][j])
-                                # print('i:', i, 'j:', j, 'c_1:', c_1, 'c_2:', c_2, 'intersection:', self.approval_sets[i][c_1] & self.approval_sets[j][c_2], 'union:', self.approval_sets[i][c_1] | self.approval_sets[j][c_2])
-                            elif i == j and c_1 == c_2:
-                                sum += 1
-                    dist_matrix[c_1_num][c_2_num] -= sum
-        elif self.dist_method == 'pearson':
-            dist_matrix = np.ones((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    r1 = r1 - r1.mean()
-                    r2 = r2 - r2.mean()
-                    dist_matrix[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        met_dic = {'cosine_hat':{'function': self.cosine_hat_joblib},
+                   'cosine':{'function': self.cosine_joblib},
+                   'jaccar':{'function': self.jaccar_joblib},
+                   'pearson':{'function': self.pearson_joblib},
+                   'pearson_hat':{'function': self.pearson_hat_joblib},
+                   'spearman':{'function': self.spearman_joblib},
+                   'spearman_hat':{'function': self.spearman_hat_joblib},
+                   'kendall':{'function': self.kendall_joblib},
+                   'kendall_hat':{'function': self.kendall_hat_joblib}}
 
+        dist_matrix = np.zeros((len(cands), len(voters)))
+        sorted_cands = sorted(cands)
+        sorted_voters = sorted(voters)
+        vyzov = met_dic[self.dist_method]
+        tasks = []
+        for c_1_num, c_1 in enumerate(sorted_cands):
+            for c_2_num, c_2 in enumerate(sorted_voters):
+                tasks.append((c_1_num, c_2_num, c_1, c_2))
 
-        elif self.dist_method == 'kendall':
-            dist_matrix = np.ones((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    tau, p = kendalltau(r1, r2)
-                    dist_matrix[c_1_num][c_2_num] -= tau
-        elif self.dist_method == 'spearman':
-            dist_matrix = np.ones((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    rho, p = spearmanr(r1, r2)
-                    dist_matrix[c_1_num][c_2_num] -= rho
-        elif self.dist_method == 'kendall_hat':
-            dist_matrix = np.zeros((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    tau, p = kendalltau(r1_hat, r2_hat)
-                    dist_matrix[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
-        elif self.dist_method == 'spearman_hat':
-            dist_matrix = np.zeros((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    rho, p = spearmanr(r1_hat, r2_hat)
-                    dist_matrix[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
-        elif self.dist_method == 'cosine':
-            dist_matrix = np.ones((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    dist_matrix[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
-        elif self.dist_method == 'pearson_hat':
-            dist_matrix = np.zeros((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    r1_hat = r1_hat - r1_hat.mean()
-                    r2_hat = r2_hat - r2_hat.mean()
-                    cor = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
-                    dist_matrix[c_1_num][c_2_num] = (1 - cor) / np.sqrt(uc)
-        elif self.dist_method == 'cosine_hat':
-            dist_matrix = np.zeros((len(cands), len(voters)))
-            for c_1_num, c_1 in enumerate(sorted(cands)):
-                for c_2_num, c_2 in enumerate(sorted(voters)):
-                    r1 = np.array(self.pivo[c_1].fillna(0))
-                    r2 = np.array(self.pivo[c_2].fillna(0))
-                    mask = (r1 > 0) & (r2 > 0)
-                    r1_hat = r1[mask]
-                    r2_hat = r2[mask]
-                    uc = len(r1_hat)
-                    cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
-                    dist_matrix[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
+        results = Parallel(n_jobs=-1)(
+            delayed(**vyzov)(c_1_num, c_2_num, c_1, c_2)
+            for c_1_num, c_2_num, c_1, c_2 in tasks
+        )
+        for c_1_num, c_2_num, dist in results:
+            dist_matrix[c_1_num][c_2_num] = dist
+
         return dist_matrix
 
     # def voting(self, c_to_c, c_to_v, commit_size, rule = 'SNTV'):
