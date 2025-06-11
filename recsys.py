@@ -57,7 +57,7 @@ class Recommend_new(election):
                 s[i][j] -= 2 * abs(i - j) / (self.degrees - 1)
         self.s = s
         if full_dist and cand_dist_matrix is None:
-            self.Candidates_dists(dist_method)
+            self.Candidates_dists()
         elif cand_dist_matrix is not None:
             self.cand_dist = cand_dist_matrix
         self.remove_rate = remove_rate
@@ -211,6 +211,7 @@ class Recommend_new(election):
         vyzov = met_dic[self.dist_method]
         for c_1_num, c_1 in enumerate(self.headers):
             for c_2_num, c_2 in enumerate(self.headers):
+                print(str(c_1_num) + '/' + str(self.I))
                 _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
                 self.cand_dist[c_1_num][c_2_num] = dist
     # def Candidates_dists_old(self, method = 'jaccar'):
