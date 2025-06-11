@@ -109,6 +109,7 @@ class Recommend():
         #print(f"ndcg: {metrics_values['ndcg']}")
         catalog = self.rating[Columns.Item].unique()
         metrics_values['serendipity@10'] = metrics['serendipity@10'].calc_per_user(reco=self.recos[model_name], interactions=df_test, prev_interactions=self.rating, catalog=catalog)
+        metrics_values['novelty@10'] = metrics['novelty@10'].calc_per_user(reco=self.recos, prev_interactions=self.rating)
         #print(f"serendipity10: {metrics_values['serendipity@10']}")
         return metrics_values
 

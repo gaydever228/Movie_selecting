@@ -288,17 +288,17 @@ class election:
         PS = np.zeros(self.C)
         for voter, e in enumerate(self.VoteLists.T):
             PS[e[0]] += self.weights[voter]
-        print('PS', PS)
+        #print('PS', PS)
         top = np.argsort(-PS)
         dec = np.zeros(self.C)
         for cand in top[:self.k]:
             dec[cand] = 1
         self.decision = dec
         self.ComDec()
-        self.Calc_Score()
+        #self.Calc_Score()
         #self.Calc_Cost()
 
-        print('first: ', self.Score)
+        #print('Score: ', self.Score)
         #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
         #self.draw(name =  draw_name)
         return self.Score
@@ -387,6 +387,7 @@ class election:
     def STV_star(self):
         deleted = []
         to_elect = self.k
+        #print('COM SIZE', self.k)
         weights_sum = self.weights.sum()
         Votes = copy.deepcopy(self.VoteLists.T)
         STV_weights = copy.deepcopy(self.weights)
@@ -405,11 +406,23 @@ class election:
                     dec[c] = 1
                     PS[c] = None
                  break
-            print('quota', quota)
-            print(to_elect)
-            print('V', len(Votes))
-            if len(PS[~np.isnan(PS)]) < 30:
-                print('PS', PS[~np.isnan(PS)])
+            if len(Votes) < to_elect:
+                PS = np.zeros(self.C)
+                if flag == 1:
+                    PS[deleted] = None
+                for voter, e in enumerate(Votes):
+                    for l in range(min(len(e), 10)):
+                        PS[e[l]] += STV_weights[voter]/(2**l)
+                for i in range(to_elect):
+                    c = np.nanargmax(PS)
+                    dec[c] = 1
+                    PS[c] = None
+                break
+            #print('quota', quota)
+            #print(to_elect)
+            #print('V', len(Votes))
+            #if len(PS[~np.isnan(PS)]) < 30:
+            #    print('PS', PS[~np.isnan(PS)])
 
             c = np.nanargmax(PS)
             if PS[c] >= quota:
@@ -418,7 +431,9 @@ class election:
                 to_elect -= 1
                 if to_elect == 0:
                     break
+                #print('votes', Votes.shape, to_elect)
                 ind = np.where(Votes == c)
+                #print('ind', ind)
                 need = np.where(ind[1] == 0)
                 for_remove = ind[0][need]
                 # удаление избирателей, у которых первый в списке
@@ -445,8 +460,8 @@ class election:
             flag = 1
         self.decision = dec
         self.ComDec()
-        self.Calc_Score()
-        self.Calc_Cost()
+        #self.Calc_Score()
+        #self.Calc_Cost()
         # self.draw(name =  draw_name)
 
         return self.Score
@@ -458,7 +473,7 @@ class election:
         STV_weights = copy.deepcopy(self.weights)
         dec = np.zeros(self.C)
         quota = weights_sum / (to_elect + 1)
-        print('quota', quota)
+        #print('quota', quota)
         PS = np.zeros(self.C)
         for voter, e in enumerate(Votes):
             PS[e[0]] += STV_weights[voter]
@@ -472,7 +487,7 @@ class election:
 
 
             #print(np.nansum(PS))
-            print(to_elect)
+            #print(to_elect)
             c = np.nanargmax(PS)
             if PS[c] >= quota - 0.001:
                 dec[c] = 1
@@ -524,8 +539,8 @@ class election:
 
         self.decision = dec
         self.ComDec()
-        self.Calc_Score()
-        self.Calc_Cost()
+        #self.Calc_Score()
+        #self.Calc_Cost()
         # self.draw(name =  draw_name)
 
         return self.Score

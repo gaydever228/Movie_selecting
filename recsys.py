@@ -12,7 +12,7 @@ from numpy.random import Generator, PCG64
 import math
 from random import sample
 import random
-
+from scipy.stats import pearsonr, spearmanr, kendalltau
 from rectools import Columns
 from rectools.metrics import Precision, Recall, MAP, calc_metrics, MeanInvUserFreq, Serendipity, NDCG
 rng = Generator(PCG64())
@@ -26,9 +26,10 @@ from PBF import PBF, BnB, bound, branch
 from Test import Test
 
 class Recommend_new(election):
-    def __init__(self, links, raiting, degrees = 4, remove_rate = 1, series_rate = 2, dist_method = 'jaccar_mod', weights = None):
+    def __init__(self, links, raiting, pivo, degrees = 4, remove_rate = 1, series_rate = 2, dist_method = 'jaccar', weights = None):
         self.candidates = None
         self.recos = None
+        self.pivo = pivo
         self.series_rate = series_rate
         self.approval_sets = {}
         self.user_approval_sets = {}
@@ -48,7 +49,7 @@ class Recommend_new(election):
 
     def App_Sets(self, raiting):
         arr = np.linspace(1/self.degrees, 1, self.degrees)
-        print("степеней", self.degrees, ", квантили:", arr)
+        #print("степеней", self.degrees, ", квантили:", arr)
         quantiles = raiting.groupby(Columns.User)[Columns.Weight].quantile(arr)
         quantiles = quantiles.unstack()
         step = 1
@@ -76,8 +77,8 @@ class Recommend_new(election):
                         self.approval_sets[item][d].add(user)
                         self.user_approval_sets[user][d].add(item)
                         break
-    def Candidates_dists(self, method = 'jaccar_mod'):
-        if method == 'jaccar_mod':
+    def Candidates_dists(self, method = 'jaccar'):
+        if method == 'jaccar':
             self.cand_dist = np.zeros((self.I, self.I))
             self.cand_dist += self.degrees
             #print(self.cand_dist)
@@ -89,7 +90,7 @@ class Recommend_new(election):
             step = 1
             for c_1_num, c_1 in enumerate(self.headers):
                 self.id_to_num[c_1] = c_1_num
-                print('item', c_1, 'number', c_1_num,'/',self.I)
+                #print('item', c_1, 'number', c_1_num,'/',self.I)
                 for c_2_num, c_2 in enumerate(self.headers):
                     sum = 0
                     for i in range(self.degrees):
@@ -100,25 +101,103 @@ class Recommend_new(election):
                             elif i == j and c_1 == c_2:
                                 sum += 1
                     self.cand_dist[c_1_num][c_2_num] -= sum
-        elif method == 'jaccar':
-            pass
-        elif method == 'pearson':
-            pass
-        elif method == 'kendall':
-            pass
-        elif method == 'spearman':
-            pass
-        elif method == 'cosine':
-            pass
-        elif method == 'pearson_mod':
-            pass
-        elif method == 'cosine_mod':
-            pass
+        elif self.dist_method == 'pearson':
+            self.cand_dist = np.ones((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    r1 = r1 - r1.mean()
+                    r2 = r2 - r2.mean()
+                    self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+
+
+        elif self.dist_method == 'kendall':
+            self.cand_dist = np.ones((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    tau, p = kendalltau(r1, r2)
+                    self.cand_dist[c_1_num][c_2_num] -= tau
+        elif self.dist_method == 'spearman':
+            self.cand_dist = np.ones((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    rho, p = spearmanr(r1, r2)
+                    self.cand_dist[c_1_num][c_2_num] -= rho
+        elif self.dist_method == 'kendall_hat':
+            self.cand_dist = np.zeros((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    tau, p = kendalltau(r1_hat, r2_hat)
+                    self.cand_dist[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
+        elif self.dist_method == 'spearman_hat':
+            self.cand_dist = np.zeros((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    rho, p = spearmanr(r1_hat, r2_hat)
+                    self.cand_dist[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
+        elif self.dist_method == 'cosine':
+            self.cand_dist = np.ones((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    self.cand_dist[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        elif self.dist_method == 'pearson_hat':
+            self.cand_dist = np.zeros((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    r1_hat = r1_hat - r1_hat.mean()
+                    r2_hat = r2_hat - r2_hat.mean()
+                    cor = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+                    self.cand_dist[c_1_num][c_2_num] = (1 - cor) / np.sqrt(uc)
+        elif self.dist_method == 'cosine_hat':
+            self.cand_dist = np.zeros((self.I, self.I))
+            for c_1_num, c_1 in enumerate(self.headers):
+                self.id_to_num[c_1] = c_1_num
+                for c_2_num, c_2 in enumerate(self.headers):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+                    self.cand_dist[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
 
         #print(self.cand_dist)
     def nes_cand_dist(self, cands, voters):
-        dist_matrix = np.zeros((len(cands), len(voters))) + self.degrees
-        if self.dist_method == 'jaccar_mod':
+        if self.dist_method == 'jaccar':
+            dist_matrix = np.zeros((len(cands), len(voters))) + self.degrees
             # print(self.cand_dist)
             s = np.ones((self.degrees, self.degrees))
             for i in range(self.degrees):
@@ -139,20 +218,90 @@ class Recommend_new(election):
                             elif i == j and c_1 == c_2:
                                 sum += 1
                     dist_matrix[c_1_num][c_2_num] -= sum
-        elif self.dist_method == 'jaccar':
-            pass
         elif self.dist_method == 'pearson':
-            pass
+            dist_matrix = np.ones((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    r1 = r1 - r1.mean()
+                    r2 = r2 - r2.mean()
+                    dist_matrix[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+
+
         elif self.dist_method == 'kendall':
-            pass
+            dist_matrix = np.ones((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    tau, p = kendalltau(r1, r2)
+                    dist_matrix[c_1_num][c_2_num] -= tau
         elif self.dist_method == 'spearman':
-            pass
+            dist_matrix = np.ones((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    rho, p = spearmanr(r1, r2)
+                    dist_matrix[c_1_num][c_2_num] -= rho
+        elif self.dist_method == 'kendall_hat':
+            dist_matrix = np.zeros((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    tau, p = kendalltau(r1_hat, r2_hat)
+                    dist_matrix[c_1_num][c_2_num] = (1 - tau)/np.sqrt(uc)
+        elif self.dist_method == 'spearman_hat':
+            dist_matrix = np.zeros((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    rho, p = spearmanr(r1_hat, r2_hat)
+                    dist_matrix[c_1_num][c_2_num] = (1 - rho)/np.sqrt(uc)
         elif self.dist_method == 'cosine':
-            pass
-        elif self.dist_method == 'pearson_mod':
-            pass
-        elif self.dist_method == 'cosine_mod':
-            pass
+            dist_matrix = np.ones((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    dist_matrix[c_1_num][c_2_num] -= (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        elif self.dist_method == 'pearson_hat':
+            dist_matrix = np.zeros((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    r1_hat = r1_hat - r1_hat.mean()
+                    r2_hat = r2_hat - r2_hat.mean()
+                    cor = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+                    dist_matrix[c_1_num][c_2_num] = (1 - cor) / np.sqrt(uc)
+        elif self.dist_method == 'cosine_hat':
+            dist_matrix = np.zeros((len(cands), len(voters)))
+            for c_1_num, c_1 in enumerate(sorted(cands)):
+                for c_2_num, c_2 in enumerate(sorted(voters)):
+                    r1 = np.array(self.pivo[c_1].fillna(0))
+                    r2 = np.array(self.pivo[c_2].fillna(0))
+                    mask = (r1 > 0) & (r2 > 0)
+                    r1_hat = r1[mask]
+                    r2_hat = r2[mask]
+                    uc = len(r1_hat)
+                    cos = (r1_hat @ r2_hat) / (np.sqrt((r1_hat @ r1_hat) * (r2_hat @ r2_hat)))
+                    dist_matrix[c_1_num][c_2_num] = (1 - cos)/np.sqrt(uc)
         return dist_matrix
 
     # def voting(self, c_to_c, c_to_v, commit_size, rule = 'SNTV'):
@@ -215,7 +364,7 @@ class Recommend_new(election):
             self.STV_basic()
         elif rule == 'STV_star':
             self.STV_star()
-    def recommendation_voting(self, user_id, commit_size=10, rule='SNTV', series=False, weighted = False):
+    def recommendation_voting(self, user_id, commit_size=10, rule='SNTV', weighted = False):
         c_to_v = set()  # множество фильмов, которые будут избирателями
         all_c_to_v = set(
             self.raiting[self.raiting[Columns.User] == user_id][Columns.Item])  # множество всех оценённых фильмов
@@ -223,29 +372,35 @@ class Recommend_new(election):
         all_items_set = set(self.raiting[Columns.Item])  # множество вообще всех фильмов
         c_to_c = all_items_set - all_c_to_v  # множество фильмов, из которых будем выбирать
         if weighted:
-            for d in range(self.degrees // 2, self.degrees):
-                c_to_v.update(self.user_approval_sets[user_id][d])  # множество фильмов, которые будут избирателями
-            weights = []
+            weights_dic = {}
             # voters_nums = {self.id_to_num[id] for id in c_to_v}
             # cands_nums = {self.id_to_num[id] for id in c_to_c}
-            for voter in sorted(c_to_v):
+            for voter in sorted(all_c_to_v):
                 for d in range(self.degrees // 2, self.degrees):
                     if voter in self.user_approval_sets[user_id][d]:
-                        weights.append(1 + d - self.degrees // 2)
-            self.weights = np.array(weights)
+                        weights_dic[voter] =1 + d - self.degrees//2
+            for d in range(self.degrees // 2, self.degrees):
+                c_to_v.update(self.user_approval_sets[user_id][d])  # множество фильмов, которые будут избирателями
+
+            self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
         else:
-            print('anti rec')
+            #print('anti rec')
+            weights_dic = {}
+            # voters_nums = {self.id_to_num[id] for id in c_to_v}
+            # cands_nums = {self.id_to_num[id] for id in c_to_c}
+            for voter in sorted(all_c_to_v):
+                weights_dic[voter] = 1
             for d in range(self.degrees//2):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # избиратели - "плохие" фильмы
             self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
-            print(self.dist_matrix)
-            self.weights = np.ones(len(c_to_v))
+            #print(self.dist_matrix)
+            self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
             # print(self.bad_percent, "% плохих фильмов", len(c_to_v))
             # print("кандидатов", len(c_to_c))
             #voters_nums = {self.id_to_num[id] for id in c_to_v}
             #cands_nums = {self.id_to_num[id] for id in c_to_c}
             self.voting(c_to_c, c_to_v, commit_size * self.remove_rate, rule)
-            print(self.committee_id)
+            #print(self.committee_id)
             # print('anti-reccomendations are:')
             for id in self.committee_id:
                 c_to_c.remove(self.candidates[0][id])
@@ -253,22 +408,23 @@ class Recommend_new(election):
                 #cands_nums.remove(id)
 
             c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
+            self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
             #voters_nums = all_items_num.difference(voters_nums)
             #voters_nums = {self.id_to_num[id] for id in c_to_v}
 
         self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
-        if series:
+        # если series_rate = 0, будет просто единичное голосование
+        current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
+        i = 1
+        while current_commit_size > commit_size:
+            #cands_nums = {self.id_to_num[id] for id in c_to_c}
+            self.voting(c_to_c, c_to_v, current_commit_size, rule)
+            # print("step %d:" % i)
+            c_to_c = {self.candidates[0][id] for id in self.committee_id}
+            self.dist_matrix = self.dist_matrix[self.committee_id]
+            #cands_nums = set(self.committee_id)
             current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
-            i = 1
-            while current_commit_size > commit_size:
-                #cands_nums = {self.id_to_num[id] for id in c_to_c}
-                self.voting(c_to_c, c_to_v, current_commit_size, rule)
-                # print("step %d:" % i)
-                c_to_c = {self.candidates[0][id] for id in self.committee_id}
-                self.dist_matrix = self.dist_matrix[self.committee_id]
-                #cands_nums = set(self.committee_id)
-                current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
-                i += 1
+            i += 1
         # voters_nums = {self.id_to_num[id] for id in c_to_v}
         # cands_nums = {self.id_to_num[id] for id in c_to_c}
         self.voting(c_to_c, c_to_v, commit_size, rule)
@@ -279,18 +435,19 @@ class Recommend_new(election):
             recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]]])
             i += 1
         self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title"])
-        print(self.recos)
+        #print(self.recos)
         return list(self.recos['title'])
 
 
     def metrics(self, df_test, df_train, user_id):
         metrics_values = {}
+        k = self.k
         metrics = {
-            "prec@10": Precision(k=10),
-            "recall@10": Recall(k=10),
-            "novelty@10": MeanInvUserFreq(k=10),
-            "serendipity@10": Serendipity(k=10),
-            "ndcg": NDCG(k=10, log_base=3)
+            "prec@" + str(k): Precision(k=k),
+            "recall@" + str(k): Recall(k=k),
+            "novelty@" + str(k): MeanInvUserFreq(k=k),
+            "serendipity@" + str(k): Serendipity(k=k),
+            "ndcg": NDCG(k=k, log_base=3)
         }
         catalog = df_train[Columns.Item].unique()
         #metric_values_warp = calc_metrics(metrics, reco=self.recos, interactions=df_test, prev_interactions=df_train, catalog=catalog)[user_id]
