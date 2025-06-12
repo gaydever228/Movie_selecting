@@ -130,6 +130,7 @@ def safe_from_csv(path):
                     return val
 
     df = pd.read_csv(path, index_col=0)
+    print('read from csv')
     return df.map(deserialize)
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
@@ -163,7 +164,7 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
+               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'kendall_hat', 'kendall'],
                'degrees':[4, 5, 8, 10],
                'size':[10, 20],
                'weighted':[True, False],
@@ -176,10 +177,11 @@ df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 cand_dist_df = safe_from_csv('GT/gened_dists.csv')
 ids_to_num_df = safe_from_csv('GT/gened_dists_ids.csv')
-
+cand_dist_df = cand_dist_df.loc[params_grid['degrees'], params_grid['dist_method']]
+print('exported')
 cand_dist = cand_dist_df.to_dict(orient='dict')
 ids_to_num = ids_to_num_df.to_dict(orient='dict')
-
+print('dicted')
 for user in rating['userId'].unique()[31:50]:
 
     tests = []
