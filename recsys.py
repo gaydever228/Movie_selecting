@@ -43,8 +43,10 @@ class Recommend_new(election):
         self.links = links
         self.degrees = degrees
         self.headers = raiting[Columns.Item].unique()
+        self.headers = self.headers.tolist()
         if ids_to_num is not None:
             self.id_to_num = ids_to_num
+            #print(type(self.id_to_num))
         else:
             self.id_to_num = {}
         self.App_Sets(raiting)
@@ -60,6 +62,7 @@ class Recommend_new(election):
             self.Candidates_dists()
         elif cand_dist_matrix is not None:
             self.cand_dist = cand_dist_matrix
+            #print(type(self.cand_dist))
         self.remove_rate = remove_rate
 
     def App_Sets(self, raiting):
@@ -109,6 +112,8 @@ class Recommend_new(election):
     def spearman_joblib(self, c_1_num, c_2_num, c_1, c_2):
         r1 = np.array(self.pivo[c_1].fillna(0))
         r2 = np.array(self.pivo[c_2].fillna(0))
+        if np.all(r1 == r1[0]) or np.all(r2 == r2[0]):
+            return c_1_num, c_2_num, 1
         rho, p = spearmanr(r1, r2)
         dist = 1 - rho
         return c_1_num, c_2_num, dist
@@ -121,6 +126,8 @@ class Recommend_new(election):
         uc = len(r1_hat)
         if uc == 0:
             return c_1_num, c_2_num, 2
+        if np.all(r1_hat == r1_hat[0]) or np.all(r2_hat == r2_hat[0]):
+            return c_1_num, c_2_num, 1
         rho, p = spearmanr(r1_hat, r2_hat)
         dist = 1 - rho
         return c_1_num, c_2_num, dist
@@ -149,8 +156,12 @@ class Recommend_new(election):
         r2 = np.array(self.pivo[c_2].fillna(0))
         r1 = r1 - r1.mean()
         r2 = r2 - r2.mean()
-
-        dist = 1 - (r1 @ r2) / (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        d = (np.sqrt((r1 @ r1) * (r2 @ r2)))
+        # print(d)
+        if d == 0:
+            return c_1_num, c_2_num, 2
+        cor = (r1 @ r2) / d
+        dist = 1 - cor
         return c_1_num, c_2_num, dist
     def pearson_hat_joblib(self, c_1_num, c_2_num, c_1, c_2):
         """Вычисляет корреляцию для одной пары"""
@@ -194,7 +205,8 @@ class Recommend_new(election):
         dist = (1 - cos) / np.sqrt(uc)
         return c_1_num, c_2_num, dist
     def distances(self):
-        return self.cand_dist, self.id_to_num
+        print('export')
+        return self.cand_dist.tolist(), self.id_to_num
 
     def Candidates_dists(self):
         met_dic = {'cosine_hat': self.cosine_hat_joblib,
@@ -212,7 +224,7 @@ class Recommend_new(election):
         vyzov = met_dic[self.dist_method]
         for c_1_num, c_1 in enumerate(self.headers):
             self.id_to_num[c_1] = c_1_num
-            #print(str(c_1_num) + '/' + str(self.I))
+            #print(self.dist_method + ': ' + str(c_1_num) + '/' + str(self.I))
             for c_2_num, c_2 in enumerate(self.headers):
                 _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
                 self.cand_dist[c_1_num][c_2_num] = dist

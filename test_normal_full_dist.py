@@ -155,7 +155,7 @@ for user in rating['userId'].unique()[2:20]:
         (metrics[cur_string],
          recos_dic[cur_string]) = test_GT_light(df_train, df_test, links_dic, pivo,
                                                 cand_dist[combination[1]][combination[2]],
-                                                ids_to_num[cand_dist[combination[1]][combination[2]]],
+                                                ids_to_num[[combination[1]][combination[2]]],
                                                 user_id=user, metric=True, **config)
         times[cur_string].append(time.time() - time_0)
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
