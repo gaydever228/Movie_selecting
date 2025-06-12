@@ -29,20 +29,39 @@ from Test import Test
 from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
-
-def time_split(raiting, user_id = 1, quant = 0.5):
+def time_split(raiting, quant = 0.5):
     print("time splitting")
-    df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight, 'timestamp': Columns.Datetime})
-    #print(df.head(10))
-    split_date = df[df[Columns.User] == user_id][Columns.Datetime].quantile(quant)
-    #print('split date', split_date)
+    train_parts = []
+    test_parts = []
+    df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight,
+                                 'timestamp': Columns.Datetime})
+    for user_id, user_df in df.groupby(Columns.User):
+        # Вычисляем квантиль для текущего пользователя
+        split_date = user_df[Columns.Datetime].quantile(quant)
+        # Разделяем на train и test по split_date
+        train_user = user_df[user_df[Columns.Datetime] <= split_date]
+        test_user = user_df[user_df[Columns.Datetime] > split_date]
+        train_parts.append(train_user)
+        test_parts.append(test_user)
 
-    train = df[df[Columns.Datetime] <= split_date]
-    test = df[df[Columns.Datetime] > split_date]
-    #print('train:' ,train[train[Columns.User] == user_id])
-    #print('test:', test[test[Columns.User] == user_id])
-    pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
-    return train, test, pivot_df
+    # Объединяем по всем пользователям
+    train_df = pd.concat(train_parts)
+    test_df = pd.concat(test_parts)
+    pivot_df = train_df.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+    return train_df, test_df, pivot_df
+# def time_split_shit(raiting, user_id = 1, quant = 0.5):
+#     print("time splitting")
+#     df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight, 'timestamp': Columns.Datetime})
+#     #print(df.head(10))
+#     split_date = df[df[Columns.User] == user_id][Columns.Datetime].quantile(quant)
+#     #print('split date', split_date)
+#
+#     train = df[df[Columns.Datetime] <= split_date]
+#     test = df[df[Columns.Datetime] > split_date]
+#     #print('train:' ,train[train[Columns.User] == user_id])
+#     #print('test:', test[test[Columns.User] == user_id])
+#     pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+#     return train, test, pivot_df
 def test_GT(df_train, df_test, links, pivo, user_id = 0, size = 10, degrees = 4, series = True, weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
     times = {}
     time_0 = time.time()
@@ -105,9 +124,8 @@ params_grid = {'rule':['STV_star', 'STV_basic'],
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
-
+df_train, df_test, pivo = time_split(rating, quant=0.75)
 for user in rating['userId'].unique()[2:3]:
-    df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
     print(step)
     tests = []
     for combination in product(*params_values):

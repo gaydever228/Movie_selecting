@@ -31,20 +31,39 @@ from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
 
-def time_split(raiting, user_id = 1, quant = 0.5):
+# def time_split(raiting, user_id = 1, quant = 0.5):
+#     print("time splitting")
+#     df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight, 'timestamp': Columns.Datetime})
+#     #print(df.head(10))
+#     split_date = df[df[Columns.User] == user_id][Columns.Datetime].quantile(quant)
+#     #print('split date', split_date)
+#
+#     train = df[df[Columns.Datetime] <= split_date]
+#     test = df[df[Columns.Datetime] > split_date]
+#     #print('train:' ,train[train[Columns.User] == user_id])
+#     #print('test:', test[test[Columns.User] == user_id])
+#     pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+#     return train, test, pivot_df
+def time_split(raiting, quant = 0.5):
     print("time splitting")
-    df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight, 'timestamp': Columns.Datetime})
-    #print(df.head(10))
-    split_date = df[df[Columns.User] == user_id][Columns.Datetime].quantile(quant)
-    #print('split date', split_date)
+    train_parts = []
+    test_parts = []
+    df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight,
+                                 'timestamp': Columns.Datetime})
+    for user_id, user_df in df.groupby(Columns.User):
+        # Вычисляем квантиль для текущего пользователя
+        split_date = user_df[Columns.Datetime].quantile(quant)
+        # Разделяем на train и test по split_date
+        train_user = user_df[user_df[Columns.Datetime] <= split_date]
+        test_user = user_df[user_df[Columns.Datetime] > split_date]
+        train_parts.append(train_user)
+        test_parts.append(test_user)
 
-    train = df[df[Columns.Datetime] <= split_date]
-    test = df[df[Columns.Datetime] > split_date]
-    #print('train:' ,train[train[Columns.User] == user_id])
-    #print('test:', test[test[Columns.User] == user_id])
-    pivot_df = train.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
-    return train, test, pivot_df
-
+    # Объединяем по всем пользователям
+    train_df = pd.concat(train_parts)
+    test_df = pd.concat(test_parts)
+    pivot_df = train_df.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+    return train_df, test_df, pivot_df
 def random_split(rating):
     ratings_list = []
     ratings_test_list = []

@@ -111,26 +111,26 @@ params_grid = {'rule':['STV_star', 'STV_basic'],
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
+df_train, df_test, pivo = time_split(rating, quant=0.75)
+cand_dist = {}
+ids_to_num = {}
+for dist_method in params_grid['dist_method']:
+    cand_dist[dist_method] = {}
+    ids_to_num[dist_method] = {}
 
+    for degrees in params_grid['degrees']:
+        print(degrees, dist_method)
+        if dist_method == 'jaccar' or len(cand_dist[dist_method]) == 0:
+            dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
+                                  dist_method=dist_method, full_dist=True)
+
+            cand_dist[dist_method][degrees], ids_to_num[dist_method][degrees] = dist_gen.distances()
+        else:
+            cand_dist[dist_method][degrees], ids_to_num[dist_method][degrees] = (
+                cand_dist[dist_method][params_grid['degrees'][0]],
+                ids_to_num[dist_method][params_grid['degrees'][0]])
 for user in rating['userId'].unique()[2:20]:
-    df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
-    cand_dist = {}
-    ids_to_num = {}
-    for dist_method in params_grid['dist_method']:
-        cand_dist[dist_method] = {}
-        ids_to_num[dist_method] = {}
 
-        for degrees in params_grid['degrees']:
-            print(degrees, dist_method)
-            if dist_method == 'jaccar' or len(cand_dist[dist_method]) == 0:
-                dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
-                                      dist_method=dist_method, full_dist=True)
-
-                cand_dist[dist_method][degrees], ids_to_num[dist_method][degrees] = dist_gen.distances()
-            else:
-                cand_dist[dist_method][degrees], ids_to_num[dist_method][degrees] = (
-                    cand_dist[dist_method][params_grid['degrees'][0]],
-                    ids_to_num[dist_method][params_grid['degrees'][0]])
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
             combination[3]) +
