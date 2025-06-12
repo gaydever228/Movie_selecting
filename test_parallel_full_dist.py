@@ -92,11 +92,11 @@ def full_test_GT_light(combination):
     if combination[1] == 'jaccar':
         cand_dist = pd.read_csv('GT/gened_dists_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0).to_numpy()
         ids_to_num_df = pd.read_csv('GT/gened_dists_ids_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0)
-        ids_to_num = ids_to_num_df.to_dict(orient='index')
+        ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
     else:
         cand_dist = pd.read_csv('GT/gened_dists_' + combination[1] + '.csv', index_col=0).to_numpy()
         ids_to_num_df = pd.read_csv('GT/gened_dists_ids_' + combination[1] + '.csv', index_col=0)
-        ids_to_num = ids_to_num_df.to_dict(orient='index')
+        ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
     cur_string = (
                 combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(combination[3]) +
                 '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(combination[5]))
@@ -189,7 +189,7 @@ df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 cand_dist = pd.read_csv('GT/gened_dists_jaccar_2.csv', index_col=0).to_numpy()
 ids_to_num_df = pd.read_csv('GT/gened_dists_ids_jaccar_2.csv', index_col=0)
-ids_to_num = ids_to_num_df.to_dict(orient='index')
+ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
 print(cand_dist)
 print(type(cand_dist))
 print(ids_to_num)
@@ -197,7 +197,6 @@ print(type(ids_to_num))
 print('dicted')
 exit()
 for user in rating['userId'].unique()[31:50]:
-    dist_flag = 0
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(

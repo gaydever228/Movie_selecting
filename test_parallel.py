@@ -116,8 +116,8 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'pearson', 'spearman', 'cosine', 'kendall'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8],
+               'dist_method':['jaccar'],
+               'degrees':[4, 5, 6, 7, 8],
                'size':[10, 20],
                'weighted':[True, False],
                'series_rate':[0, 2]}
@@ -125,7 +125,7 @@ params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 df_train, df_test, pivo = time_split(rating, quant=0.75)
-for user in rating['userId'].unique()[2:3]:
+for user in rating['userId'].unique()[20:30]:
     print(step)
     tests = []
     for combination in product(*params_values):
