@@ -431,7 +431,7 @@ class election:
                 to_elect -= 1
                 if to_elect == 0:
                     break
-                #print('votes', Votes.shape, to_elect)
+                print(to_elect)
                 ind = np.where(Votes == c)
                 #print('ind', ind)
                 need = np.where(ind[1] == 0)

@@ -95,8 +95,8 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
-               'dist_method':['jaccar'],
-               'degrees':[2],
+               'dist_method':['jaccar', 'spearman', 'pearson', 'cosine', 'kendall'],
+               'degrees':[2, 3, 4, 5],
                'size':[10, 20],
                'weighted':[True, False],
                'series_rate':[0, 2]}
@@ -104,18 +104,25 @@ params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 
-for user in rating['userId'].unique()[2:51]:
+for user in rating['userId'].unique()[2:20]:
     df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
     cand_dist = {}
     ids_to_num = {}
-    for degrees in params_grid['degrees']:
-        cand_dist[degrees] = {}
-        ids_to_num[degrees] = {}
-        for dist_method in params_grid['dist_method']:
+    for dist_method in params_grid['dist_method']:
+        cand_dist[dist_method] = {}
+        ids_to_num[dist_method] = {}
+
+        for degrees in params_grid['degrees']:
             print(degrees, dist_method)
-            dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
+            if dist_method == 'jaccar' or len(cand_dist[dist_method]) == 0:
+                dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
                                       dist_method=dist_method, full_dist=True)
-            cand_dist[degrees][dist_method], ids_to_num[degrees][dist_method] = dist_gen.distances()
+
+                cand_dist[dist_method][degrees], ids_to_num[dist_method][degrees] = dist_gen.distances()
+            else:
+                cand_dist[dist_method][degrees], ids_to_num[dist_method][degrees] = (
+                    cand_dist[dist_method][params_grid['degrees'][0]],
+                    ids_to_num[dist_method][params_grid['degrees'][0]])
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
             combination[3]) +
@@ -132,8 +139,8 @@ for user in rating['userId'].unique()[2:51]:
         time_0 = time.time()
         (metrics[cur_string],
          recos_dic[cur_string]) = test_GT_light(df_train, df_test, links_dic, pivo,
-                                                cand_dist[combination[2]][combination[1]],
-                                                ids_to_num[combination[2]][combination[1]],
+                                                cand_dist[combination[1]][combination[2]],
+                                                ids_to_num[cand_dist[combination[1]][combination[2]]],
                                                 user_id=user, metric=True, **config)
         times[cur_string].append(time.time() - time_0)
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')

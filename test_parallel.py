@@ -98,7 +98,7 @@ params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 tests = []
-for user in rating['userId'].unique()[1:51]:
+for user in rating['userId'].unique()[2:3]:
     df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
     print(step)
     for combination in product(*params_values):
