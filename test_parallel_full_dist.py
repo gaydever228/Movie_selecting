@@ -167,8 +167,8 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'pearson', 'kendall'],
-               'degrees':[4, 5, 8, 10],
+               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat'],
+               'degrees':[4, 3, 5, 8],
                'size':[10, 20],
                'weighted':[True, False],
                'series_rate':[0, 2]}
@@ -187,16 +187,16 @@ df_train, df_test, pivo = time_split(rating, quant=0.75)
 #     ids_to_num_df[col] = ids_to_num_df[col].apply(lambda x: ast.literal_eval(x))
 
 
-cand_dist = pd.read_csv('GT/gened_dists_jaccar_2.csv', index_col=0).to_numpy()
-ids_to_num_df = pd.read_csv('GT/gened_dists_ids_jaccar_2.csv', index_col=0)
-ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
-print(cand_dist)
-print(type(cand_dist))
-print(ids_to_num)
-print(type(ids_to_num))
-print('dicted')
-exit()
-for user in rating['userId'].unique()[31:50]:
+# cand_dist = pd.read_csv('GT/gened_dists_jaccar_2.csv', index_col=0).to_numpy()
+# ids_to_num_df = pd.read_csv('GT/gened_dists_ids_jaccar_2.csv', index_col=0)
+# ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
+# print(cand_dist)
+# print(type(cand_dist))
+# print(ids_to_num)
+# print(type(ids_to_num))
+# print('dicted')
+# exit()
+for user in rating['userId'].unique()[:30]:
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
@@ -221,11 +221,11 @@ for user in rating['userId'].unique()[31:50]:
     #recos_df = pd.DataFrame.from_dict(recos_dic)
     #print(recos_df)
     #print(metrics_df)
-    metrics_df.to_csv('GT/STV_metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('GT/STV_recos_' + str(user) + '.csv')
+    metrics_df.to_csv('GT/test1/metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv('GT/test1/recos_' + str(user) + '.csv')
     step += 1
 
 #for key, item in times.items():
 #    print(key, np.array(item).mean())
 times_df = pd.DataFrame.from_dict(times)
-times_df.to_csv('GT/STV_times.csv')
+times_df.to_csv('GT/test1/times.csv')
