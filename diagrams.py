@@ -1,5 +1,7 @@
 import numpy as np
 import pandas as pd
+from itertools import product
+import os
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 medianprops = {
@@ -14,11 +16,51 @@ meanprops = {
 }
 time_df = pd.read_csv('full_times.csv')
 metrics_dfs = {}
-'''
-dic = {'prec@10': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
-       'recall@10': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
+rating = pd.read_csv('archive/ratings_small.csv')
+#print(rating)
+print('до', rating['movieId'].nunique(), rating['userId'].nunique())
+item_user_counts = rating.groupby('movieId')['userId'].nunique()
+valid_items = item_user_counts[item_user_counts > 2].index
+rating = rating[rating['movieId'].isin(valid_items)]
+
+user_item_counts = rating.groupby('userId')['movieId'].nunique()
+valid_users = user_item_counts[user_item_counts > 2].index
+rating = rating[rating['userId'].isin(valid_users)]
+print('после', rating['movieId'].nunique(), rating['userId'].nunique())
+movies = pd.read_csv('archive/links_small.csv')
+metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
+#print(metadata.head(10))
+#print(movies.head(10))
+
+movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
+links_dic = dict(zip(movies['movieId'], movies['original_title']))
+
+all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
+               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall', 'kendall_hat'],
+               'degrees':[2, 3, 4, 5, 6, 7, 8],
+               'size':[10, 15, 20, 25, 30],
+               'weighted':[True, False],
+               'series_rate':[0, 1, 2, 3]}
+params_grid = {'rule':['STV_star', 'STV_basic'],
+               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'kendall'],
+               'degrees':[2, 3, 4, 5, 6],
+               'size':[10, 20],
+               'weighted':[True, False],
+               'series_rate':[0, 2]}
+
+df_dic = {}
+
+for user in rating['userId'].unique()[:50]:
+    filename = f"GT/STV_metrics_user{user}.csv"
+    if os.path.exists(filename):
+        df_dic[user] = pd.read_csv(filename)
+
+
+dic = {'prec@k': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
+       'recall@k': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
        'ndcg': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
-       'serendipity@10': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []}}
+       'serendipity@k': {'KNN': [], 'Random': [], 'Election_series_SNTV': [], 'Election_remove_bad_SNTV': [], 'Election_series_BnB': [], 'Election_remove_bad_BnB': []},
+       'novelty@k':{}}
 for num, key in enumerate(['prec@10', 'recall@10', 'ndcg', 'serendipity@10']):
     for i in range(41):
         metrics_dfs[i] = pd.read_csv('metrics3/metrics_random_cut_'+str(i)+'.csv')
@@ -65,7 +107,7 @@ for num, key in enumerate(['prec@10', 'recall@10', 'ndcg', 'serendipity@10']):
               loc='upper right')
     plt.savefig('boxplot_' + key + '.png', dpi=300, bbox_inches='tight')
     plt.show()
-'''
+
 
 
 fig, ax = plt.subplots(figsize=(16, 9))

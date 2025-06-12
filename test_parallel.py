@@ -70,7 +70,15 @@ def full_test_GT(df_train, df_test, links_dic, pivo,combination):
     return metric, rec, timess, cur_string
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
+print('до', rating['movieId'].nunique(), rating['userId'].nunique())
+item_user_counts = rating.groupby('movieId')['userId'].nunique()
+valid_items = item_user_counts[item_user_counts > 2].index
+rating = rating[rating['movieId'].isin(valid_items)]
 
+user_item_counts = rating.groupby('userId')['movieId'].nunique()
+valid_users = user_item_counts[user_item_counts > 2].index
+rating = rating[rating['userId'].isin(valid_users)]
+print('после', rating['movieId'].nunique(), rating['userId'].nunique())
 movies = pd.read_csv('archive/links_small.csv')
 metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
 #print(metadata.head(10))

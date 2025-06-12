@@ -96,15 +96,23 @@ def gen_dist(dist_method):
             dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
                                      dist_method=dist_method, full_dist=True)
             times[degrees] = time.time() - time0
-            cand_dist[degrees], ids_to_num[dist_method][degrees] = dist_gen.distances()
+            cand_dist[degrees], ids_to_num[degrees] = dist_gen.distances()
         else:
-            cand_dist[degrees], ids_to_num[dist_method][degrees] = (
+            cand_dist[degrees], ids_to_num[degrees] = (
                 cand_dist[params_grid['degrees'][0]],
                 ids_to_num[params_grid['degrees'][0]])
     return dist_method, cand_dist, ids_to_num, times
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
+print('до', rating['movieId'].nunique(), rating['userId'].nunique())
+item_user_counts = rating.groupby('movieId')['userId'].nunique()
+valid_items = item_user_counts[item_user_counts > 2].index
+rating = rating[rating['movieId'].isin(valid_items)]
 
+user_item_counts = rating.groupby('userId')['movieId'].nunique()
+valid_users = user_item_counts[user_item_counts > 2].index
+rating = rating[rating['userId'].isin(valid_users)]
+print('после', rating['movieId'].nunique(), rating['userId'].nunique())
 movies = pd.read_csv('archive/links_small.csv')
 metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
 #print(metadata.head(10))
@@ -123,8 +131,8 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'spearman', 'pearson', 'cosine', 'kendall'],
-               'degrees':[2, 3, 4, 5],
+               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'kendall'],
+               'degrees':[2, 3, 4, 5, 6],
                'size':[10, 20],
                'weighted':[True, False],
                'series_rate':[0, 2]}
@@ -132,16 +140,12 @@ params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 
-for user in rating['userId'].unique()[2:20]:
-    tests = []
+for user in rating['userId'].unique()[11:20]:
+
     df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
     cand_dist = {}
     ids_to_num = {}
     time_dist = {}
-    for dist_method in params_grid['dist_method']:
-        cand_dist[dist_method] = {}
-        ids_to_num[dist_method] = {}
-        tests.append(dist_method)
 
     results = Parallel(n_jobs=-1)(
         delayed(gen_dist)(dist_method)
@@ -151,7 +155,7 @@ for user in rating['userId'].unique()[2:20]:
     for dist_method, cd, i2n, t in results:
         cand_dist[dist_method], ids_to_num[dist_method] = cd, i2n
         time_dist[dist_method] = t[params_grid['degrees'][0]]
-    times_dist_df = pd.DataFrame.from_dict(time_dist)
+    times_dist_df = pd.DataFrame.from_dict(time_dist, orient='index')
     times_dist_df.to_csv('GT/gen_dist_times.csv')
     tests = []
     for combination in product(*params_values):
@@ -175,8 +179,8 @@ for user in rating['userId'].unique()[2:20]:
     metrics_df = metrics_df.T
     recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
     #recos_df = pd.DataFrame.from_dict(recos_dic)
-    print(recos_df)
-    print(metrics_df)
+    #print(recos_df)
+    #print(metrics_df)
     metrics_df.to_csv('GT/STV_metrics_user' + str(user) + '.csv', index=True)
     recos_df.to_csv('GT/STV_recos_' + str(user) + '.csv')
     step += 1

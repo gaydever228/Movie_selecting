@@ -208,6 +208,7 @@ class Recommend_new(election):
                    'kendall_hat': self.kendall_hat_joblib}
 
         self.cand_dist = np.zeros((self.I, self.I))
+        print(self.I)
         vyzov = met_dic[self.dist_method]
         for c_1_num, c_1 in enumerate(self.headers):
             self.id_to_num[c_1] = c_1_num
