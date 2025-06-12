@@ -211,7 +211,7 @@ class Recommend_new(election):
         vyzov = met_dic[self.dist_method]
         for c_1_num, c_1 in enumerate(self.headers):
             self.id_to_num[c_1] = c_1_num
-            print(str(c_1_num) + '/' + str(self.I))
+            #print(str(c_1_num) + '/' + str(self.I))
             for c_2_num, c_2 in enumerate(self.headers):
                 _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
                 self.cand_dist[c_1_num][c_2_num] = dist

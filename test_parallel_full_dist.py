@@ -58,7 +58,23 @@ def test_GT(df_train, df_test, links, pivo, user_id = 0, size = 10, degrees = 4,
         return metrics, recos
     else:
         return recos, times
-def full_test_GT(df_train, df_test, links_dic, pivo,combination):
+def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id = 0, size = 10, degrees = 4, series = True, weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
+    times = {}
+    time_0 = time.time()
+    recs_test = Recommend_new(links, df_train, pivo, degrees = degrees, remove_rate = 1, series_rate = series_rate,
+                              dist_method=dist_method, full_dist=True, ids_to_num=ids_to_num, cand_dist_matrix=cand_dist)
+    #times['generation distances_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
+    print('generation distances_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
+    time_0 = time.time()
+    recos = recs_test.recommendation_voting(user_id, size, rule = rule, weighted = weighted)
+    #times['recommendation_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
+    print('recommendation_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
+    if metric:
+        metrics = recs_test.metrics(df_test, df_train, user_id)
+        return metrics, recos
+    else:
+        return recos, times
+def full_test_GT(df_train, df_test, pivo,combination):
     cur_string = (
                 combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(combination[3]) +
                 '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(combination[5]))
@@ -68,6 +84,24 @@ def full_test_GT(df_train, df_test, links_dic, pivo,combination):
     metric, rec = test_GT(df_train, df_test, links_dic, pivo, user_id=user, metric=True, **config)
     timess = time.time() - time_0
     return metric, rec, timess, cur_string
+def gen_dist(dist_method):
+    cand_dist = {}
+    ids_to_num = {}
+    times = {}
+
+    for degrees in params_grid['degrees']:
+        print('comp dist', dist_method, degrees)
+        if dist_method == 'jaccar' or len(cand_dist) == 0:
+            time0 = time.time()
+            dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
+                                     dist_method=dist_method, full_dist=True)
+            times[degrees] = time.time() - time0
+            cand_dist[degrees], ids_to_num[dist_method][degrees] = dist_gen.distances()
+        else:
+            cand_dist[degrees], ids_to_num[dist_method][degrees] = (
+                cand_dist[params_grid['degrees'][0]],
+                ids_to_num[params_grid['degrees'][0]])
+    return dist_method, cand_dist, ids_to_num, times
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
 
@@ -89,8 +123,8 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'pearson', 'spearman', 'cosine', 'kendall'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8],
+               'dist_method':['jaccar', 'spearman', 'pearson', 'cosine', 'kendall'],
+               'degrees':[2, 3, 4, 5],
                'size':[10, 20],
                'weighted':[True, False],
                'series_rate':[0, 2]}
@@ -98,9 +132,27 @@ params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 
-for user in rating['userId'].unique()[2:3]:
+for user in rating['userId'].unique()[2:20]:
+    tests = []
     df_train, df_test, pivo = time_split(rating, user_id=user, quant=0.75)
-    print(step)
+    cand_dist = {}
+    ids_to_num = {}
+    time_dist = {}
+    for dist_method in params_grid['dist_method']:
+        cand_dist[dist_method] = {}
+        ids_to_num[dist_method] = {}
+        tests.append(dist_method)
+
+    results = Parallel(n_jobs=-1)(
+        delayed(gen_dist)(dist_method)
+        for dist_method in params_grid['dist_method']
+    )
+
+    for dist_method, cd, i2n, t in results:
+        cand_dist[dist_method], ids_to_num[dist_method] = cd, i2n
+        time_dist[dist_method] = t[params_grid['degrees'][0]]
+    times_dist_df = pd.DataFrame.from_dict(time_dist)
+    times_dist_df.to_csv('GT/gen_dist_times.csv')
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
@@ -111,9 +163,10 @@ for user in rating['userId'].unique()[2:3]:
         tests.append(combination)
 
     results = Parallel(n_jobs=-1)(
-        delayed(full_test_GT)(df_train, df_test, links_dic, pivo, combination)
+        delayed(full_test_GT)(df_train, df_test, pivo, combination)
         for combination in tests
     )
+
     for metric, rec, timess, cur_string in results:
         metrics[cur_string] = metric
         recos_dic[cur_string] = rec
@@ -121,12 +174,14 @@ for user in rating['userId'].unique()[2:3]:
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
     metrics_df = metrics_df.T
     recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    # recos_df = pd.DataFrame.from_dict(recos_dic)
+    #recos_df = pd.DataFrame.from_dict(recos_dic)
     print(recos_df)
     print(metrics_df)
     metrics_df.to_csv('GT/STV_metrics_user' + str(user) + '.csv', index=True)
     recos_df.to_csv('GT/STV_recos_' + str(user) + '.csv')
     step += 1
 
+#for key, item in times.items():
+#    print(key, np.array(item).mean())
 times_df = pd.DataFrame.from_dict(times)
 times_df.to_csv('GT/STV_times.csv')
