@@ -71,6 +71,8 @@ def test_GT(df_train, df_test, links, pivo, user_id = 0, size = 10, degrees = 4,
         return recos, times
 def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id = 0, size = 10, degrees = 4, series = True, weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
     times = {}
+
+
     time_0 = time.time()
     recs_test = Recommend_new(links, df_train, pivo, degrees = degrees, remove_rate = 1, series_rate = series_rate,
                               dist_method=dist_method, full_dist=True, ids_to_num=ids_to_num, cand_dist_matrix=cand_dist)
@@ -86,6 +88,15 @@ def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id
     else:
         return recos, times
 def full_test_GT_light(combination):
+
+    if combination[1] == 'jaccar':
+        cand_dist = pd.read_csv('GT/gened_dists_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0).to_numpy()
+        ids_to_num_df = pd.read_csv('GT/gened_dists_ids_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0)
+        ids_to_num = ids_to_num_df.to_dict(orient='index')
+    else:
+        cand_dist = pd.read_csv('GT/gened_dists_' + combination[1] + '.csv', index_col=0).to_numpy()
+        ids_to_num_df = pd.read_csv('GT/gened_dists_ids_' + combination[1] + '.csv', index_col=0)
+        ids_to_num = ids_to_num_df.to_dict(orient='index')
     cur_string = (
                 combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(combination[3]) +
                 '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(combination[5]))
@@ -93,45 +104,37 @@ def full_test_GT_light(combination):
     print(cur_string)
     time_0 = time.time()
     metric, rec = test_GT_light(df_train, df_test, links_dic, pivo,
-                                np.array(cand_dist[combination[1]][combination[2]]),
-                                ids_to_num[combination[1]][combination[2]],
+                                cand_dist,
+                                ids_to_num,
                                 user_id=user,
                                 metric=True, **config)
     timess = time.time() - time_0
     return metric, rec, timess, cur_string
 
-def safe_to_csv(df, path):
-    def serialize(val):
-        if isinstance(val, (list, dict)):
-            return json.dumps(val)
-        return val
-
-    df_serialized = df.map(serialize)
-    df_serialized.to_csv(path)
-def safe_from_csv(path):
-    def parse_obj(obj):
-        if isinstance(obj, dict):
-            try:
-                return {int(k): v for k, v in obj.items()}
-            except ValueError:
-                return obj
-        return obj
-    def deserialize(val):
-        try:
-            obj = json.loads(val)
-            return parse_obj(obj)
-        except (json.JSONDecodeError, TypeError):
-            try:
-                return int(val)
-            except (ValueError, TypeError):
-                try:
-                    return float(val)
-                except (ValueError, TypeError):
-                    return val
-
-    df = pd.read_csv(path, index_col=0)
-    print('read from csv')
-    return df.map(deserialize)
+# def safe_from_csv(path):
+#     def parse_obj(obj):
+#         if isinstance(obj, dict):
+#             try:
+#                 return {int(k): v for k, v in obj.items()}
+#             except ValueError:
+#                 return obj
+#         return obj
+#     def deserialize(val):
+#         try:
+#             obj = json.loads(val)
+#             return parse_obj(obj)
+#         except (json.JSONDecodeError, TypeError):
+#             try:
+#                 return int(val)
+#             except (ValueError, TypeError):
+#                 try:
+#                     return float(val)
+#                 except (ValueError, TypeError):
+#                     return val
+#
+#     df = pd.read_csv(path, index_col=0)
+#     print('read from csv')
+#     return df.map(deserialize)
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
 #rating['movieId'] = rating['movieId'].astype(int)
@@ -159,12 +162,12 @@ metrics = {}
 recos_dic = {}
 all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8, 9, 10],
+               'degrees':[4, 2, 3, 5, 6, 7, 8, 9, 10],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'kendall_hat', 'kendall'],
+               'dist_method':['jaccar', 'pearson', 'kendall'],
                'degrees':[4, 5, 8, 10],
                'size':[10, 20],
                'weighted':[True, False],
@@ -175,15 +178,26 @@ step = 1
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 
-cand_dist_df = safe_from_csv('GT/gened_dists.csv')
-ids_to_num_df = safe_from_csv('GT/gened_dists_ids.csv')
-cand_dist_df = cand_dist_df.loc[params_grid['degrees'], params_grid['dist_method']]
-print('exported')
-cand_dist = cand_dist_df.to_dict(orient='dict')
-ids_to_num = ids_to_num_df.to_dict(orient='dict')
-print('dicted')
-for user in rating['userId'].unique()[31:50]:
+#cand_dist_df = safe_from_csv('GT/gened_dists.csv')
+#ids_to_num_df = safe_from_csv('GT/gened_dists_ids.csv')
 
+# for col in cand_dist_df.columns:
+#     print('trans', col)
+#     cand_dist_df[col] = cand_dist_df[col].apply(lambda x: ast.literal_eval(x))
+#     ids_to_num_df[col] = ids_to_num_df[col].apply(lambda x: ast.literal_eval(x))
+
+
+cand_dist = pd.read_csv('GT/gened_dists_jaccar_2.csv', index_col=0).to_numpy()
+ids_to_num_df = pd.read_csv('GT/gened_dists_ids_jaccar_2.csv', index_col=0)
+ids_to_num = ids_to_num_df.to_dict(orient='index')
+print(cand_dist)
+print(type(cand_dist))
+print(ids_to_num)
+print(type(ids_to_num))
+print('dicted')
+exit()
+for user in rating['userId'].unique()[31:50]:
+    dist_flag = 0
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(

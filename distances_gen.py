@@ -56,26 +56,36 @@ def time_split(raiting, quant = 0.5):
     return train_df, test_df, pivot_df
 
 def gen_dist(dist_method):
-    cand_dist = {}
-    ids_to_num = {}
-    times = {}
 
+    times = {}
+    flag = 0
     for degrees in params_grid['degrees']:
         print('comp dist', dist_method, degrees)
-        if dist_method == 'jaccar' or len(cand_dist) == 0:
+        if dist_method == 'jaccar' or flag == 0:
+            flag = 1
             time0 = time.time()
             dist_gen = Recommend_new(links_dic, df_train, pivo, degrees=degrees, remove_rate=1,
                                      dist_method=dist_method, full_dist=True)
             times[degrees] = time.time() - time0
-            cand_dist[degrees], ids_to_num[degrees] = dist_gen.distances()
+            cand, ids = dist_gen.distances()
             print('comp dist', dist_method, degrees, 'export finished')
+            cand_dist_df = pd.DataFrame(cand)
+            ids_to_num_df = pd.DataFrame.from_dict(ids, orient='index')
+            if dist_method == 'jaccar':
+                #safe_to_csv(cand_dist_df, 'GT/gened_dists_' + dist_method + '_' + str(degrees) + '.csv')
+                cand_dist_df.to_csv('GT/gened_dists_' + dist_method + '_' + str(degrees) + '.csv')
+                ids_to_num_df.to_csv('GT/gened_dists_ids_' + dist_method + '_' + str(degrees) + '.csv')
+                #safe_to_csv(ids_to_num_df, 'GT/gened_dists_ids_' + dist_method + '_' + str(degrees) + '.csv')
+            else:
+                cand_dist_df.to_csv('GT/gened_dists_' + dist_method + '.csv')
+                ids_to_num_df.to_csv('GT/gened_dists_ids_' + dist_method + '.csv')
 
-        else:
-            cand_dist[degrees], ids_to_num[degrees] = (
-                cand_dist[params_grid['degrees'][0]],
-                ids_to_num[params_grid['degrees'][0]])
+        # else:
+        #     cand_dist[degrees], ids_to_num[degrees] = (
+        #         cand_dist[params_grid['degrees'][0]],
+        #         ids_to_num[params_grid['degrees'][0]])
 
-    return dist_method, cand_dist, ids_to_num, times
+    return dist_method, times
 def safe_to_csv(df, path):
     def serialize(val):
         if isinstance(val, (list, dict)):
@@ -159,15 +169,14 @@ results = Parallel(n_jobs=-1)(
     for dist_method in params_grid['dist_method']
 )
 
-for dist_method, cd, i2n, t in results:
-    cand_dist[dist_method], ids_to_num[dist_method] = cd, i2n
-    time_dist[dist_method] = t[params_grid['degrees'][0]]
-cand_dist_df = pd.DataFrame.from_dict(cand_dist)
-ids_to_num_df = pd.DataFrame.from_dict(ids_to_num)
-# cand_dist_df.to_csv('GT/gened_dists.csv')
-# ids_to_num_df.to_csv('GT/gened_dists_ids.csv')
-safe_to_csv(cand_dist_df, 'GT/gened_dists.csv')
-safe_to_csv(ids_to_num_df, 'GT/gened_dists_ids.csv')
+# for dist_method, t in results:
+#     time_dist[dist_method] = t[params_grid['degrees'][0]]
+#cand_dist_df = pd.DataFrame.from_dict(cand_dist)
+#ids_to_num_df = pd.DataFrame.from_dict(ids_to_num)
+#cand_dist_df.to_csv('GT/gened_dists2.csv')
+#ids_to_num_df.to_csv('GT/gened_dists_ids2.csv')
+#safe_to_csv(cand_dist_df, 'GT/gened_dists.csv')
+#safe_to_csv(ids_to_num_df, 'GT/gened_dists_ids.csv')
 
-times_dist_df = pd.DataFrame.from_dict(time_dist, orient='index')
-times_dist_df.to_csv('GT/gen_dist_times.csv')
+# times_dist_df = pd.DataFrame.from_dict(time_dist, orient='index')
+# times_dist_df.to_csv('GT/gen_dist_times.csv')
