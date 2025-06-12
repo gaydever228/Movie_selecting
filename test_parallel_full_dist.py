@@ -42,6 +42,7 @@ def time_split(raiting, quant = 0.5):
         # Разделяем на train и test по split_date
         train_user = user_df[user_df[Columns.Datetime] <= split_date]
         test_user = user_df[user_df[Columns.Datetime] > split_date]
+        #print(test_user[Columns.Item].nunique()/user_df[Columns.Item].nunique())
         train_parts.append(train_user)
         test_parts.append(test_user)
 
@@ -49,6 +50,7 @@ def time_split(raiting, quant = 0.5):
     train_df = pd.concat(train_parts)
     test_df = pd.concat(test_parts)
     pivot_df = train_df.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+    print(train_df[Columns.Item].nunique()/df[Columns.Item].nunique())
     return train_df, test_df, pivot_df
 def test_GT(df_train, df_test, links, pivo, user_id = 0, size = 10, degrees = 4, series = True, weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
     times = {}
@@ -146,7 +148,8 @@ params_grid = {'rule':['STV_star', 'STV_basic'],
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
-df_train, df_test, pivo = time_split(rating, quant=0.75)
+df_train, df_test, pivo = time_split(rating, quant=0.7)
+
 cand_dist = {}
 ids_to_num = {}
 time_dist = {}
