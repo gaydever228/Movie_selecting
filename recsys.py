@@ -220,7 +220,7 @@ class Recommend_new(election):
                    'kendall_hat': self.kendall_hat_joblib}
 
         self.cand_dist = np.zeros((self.I, self.I))
-        print(self.I)
+        #print(self.I)
         vyzov = met_dic[self.dist_method]
         for c_1_num, c_1 in enumerate(self.headers):
             self.id_to_num[c_1] = c_1_num
@@ -598,7 +598,7 @@ class Recommend_new(election):
         metrics_values['ndcg'] = metrics['ndcg'].calc_per_user(reco=self.recos, interactions=df_test)[user_id]
         #print(f"ndcg: {metrics_values['ndcg']}")
 
-        metrics_values['serendipity@10'] = metrics["serendipity@" + str(k)].calc_per_user(reco=self.recos,
+        metrics_values['serendipity'] = metrics["serendipity@" + str(k)].calc_per_user(reco=self.recos,
                                                                                    interactions=df_test,
                                                                                    prev_interactions=df_train,
                                                                                    catalog=catalog)[user_id]

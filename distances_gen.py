@@ -32,19 +32,18 @@ from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
 
-def time_split(raiting, quant = 0.5):
+def time_split(df, quant = 0.5):
     print("time splitting")
     train_parts = []
     test_parts = []
-    df = raiting.rename(columns={'userId': Columns.User, 'movieId': Columns.Item, 'rating': Columns.Weight,
-                                 'timestamp': Columns.Datetime})
+
     for user_id, user_df in df.groupby(Columns.User):
         # Вычисляем квантиль для текущего пользователя
         split_date = user_df[Columns.Datetime].quantile(quant)
         # Разделяем на train и test по split_date
         train_user = user_df[user_df[Columns.Datetime] <= split_date]
         test_user = user_df[user_df[Columns.Datetime] > split_date]
-        #print(test_user[Columns.Item].nunique()/user_df[Columns.Item].nunique())
+        print(test_user[Columns.Item].nunique()/user_df[Columns.Item].nunique())
         train_parts.append(train_user)
         test_parts.append(test_user)
 
@@ -73,12 +72,12 @@ def gen_dist(dist_method):
             ids_to_num_df = pd.DataFrame.from_dict(ids, orient='index')
             if dist_method == 'jaccar':
                 #safe_to_csv(cand_dist_df, 'GT/gened_dists_' + dist_method + '_' + str(degrees) + '.csv')
-                cand_dist_df.to_csv('GT/gened_dists_' + dist_method + '_' + str(degrees) + '.csv')
-                ids_to_num_df.to_csv('GT/gened_dists_ids_' + dist_method + '_' + str(degrees) + '.csv')
+                cand_dist_df.to_csv('my_films/gened_dists_' + dist_method + '_' + str(degrees) + '.csv')
+                ids_to_num_df.to_csv('my_films/gened_dists_ids_' + dist_method + '_' + str(degrees) + '.csv')
                 #safe_to_csv(ids_to_num_df, 'GT/gened_dists_ids_' + dist_method + '_' + str(degrees) + '.csv')
             else:
-                cand_dist_df.to_csv('GT/gened_dists_' + dist_method + '.csv')
-                ids_to_num_df.to_csv('GT/gened_dists_ids_' + dist_method + '.csv')
+                cand_dist_df.to_csv('my_films/gened_dists_' + dist_method + '.csv')
+                ids_to_num_df.to_csv('my_films/gened_dists_ids_' + dist_method + '.csv')
 
         # else:
         #     cand_dist[degrees], ids_to_num[degrees] = (
@@ -117,28 +116,31 @@ def safe_from_csv(path):
 
     df = pd.read_csv(path, index_col=0)
     return df.map(deserialize)
-rating = pd.read_csv('archive/ratings_small.csv')
-#print(rating)
-#rating['movieId'] = rating['movieId'].astype(int)
-#rating['userId'] = rating['userId'].astype(int)
-print('до', rating['movieId'].nunique(), rating['userId'].nunique())
-item_user_counts = rating.groupby('movieId')['userId'].nunique()
-valid_items = item_user_counts[item_user_counts > 2].index
-rating = rating[rating['movieId'].isin(valid_items)]
+# rating = pd.read_csv('archive/ratings_small.csv')
+# #print(rating)
+# #rating['movieId'] = rating['movieId'].astype(int)
+# #rating['userId'] = rating['userId'].astype(int)
+# print('до', rating['movieId'].nunique(), rating['userId'].nunique())
+# item_user_counts = rating.groupby('movieId')['userId'].nunique()
+# valid_items = item_user_counts[item_user_counts > 2].index
+# rating = rating[rating['movieId'].isin(valid_items)]
+#
+# user_item_counts = rating.groupby('userId')['movieId'].nunique()
+# valid_users = user_item_counts[user_item_counts > 2].index
+# rating = rating[rating['userId'].isin(valid_users)]
+# print('после', rating['movieId'].nunique(), rating['userId'].nunique())
+# movies = pd.read_csv('archive/links_small.csv')
+# #movies['movieId'] = movies['movieId'].astype(int)
+# metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
+# #print(metadata.head(10))
+# #print(movies.head(10))
+#
+# movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
+# links_dic = dict(zip(movies['movieId'], movies['original_title']))
+rating = pd.read_csv('long_my_films.csv')
+movies = pd.read_csv('map_my_films.csv')
 
-user_item_counts = rating.groupby('userId')['movieId'].nunique()
-valid_users = user_item_counts[user_item_counts > 2].index
-rating = rating[rating['userId'].isin(valid_users)]
-print('после', rating['movieId'].nunique(), rating['userId'].nunique())
-movies = pd.read_csv('archive/links_small.csv')
-#movies['movieId'] = movies['movieId'].astype(int)
-metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
-#print(metadata.head(10))
-#print(movies.head(10))
-
-movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
-links_dic = dict(zip(movies['movieId'], movies['original_title']))
-
+links_dic = movies[movies.columns[1]].to_dict()
 times = {}
 metrics = {}
 recos_dic = {}
@@ -148,15 +150,15 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['STV_star', 'STV_basic'],
+params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star', 'BnB'],
                'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
                'degrees':[2, 3, 4, 5, 6, 7, 8, 9, 10],
-               'size':[10, 20],
-               'weighted':[True, False],
-               'series_rate':[0, 2]}
+               'size':[5, 10, 15, 20, 25, 30],
+               'weighted':[False, True],
+               'series_rate':[0, 1, 2, 3]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
-step = 1
+
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 
