@@ -7,6 +7,7 @@ from copy import deepcopy
 from matplotlib.pyplot import figure
 from rich.columns import Columns
 from rectools import Columns
+from scipy import stats
 
 medianprops = {
         'color': 'blue',  # Цвет линии
@@ -19,6 +20,157 @@ meanprops = {
     'linestyle': '--'       # Стиль линии (пунктир)
 }
 
+
+def chi_square_test(sample1, sample2):
+    """
+    Критерий хи-квадрат Пирсона для сравнения распределений
+    """
+    # Объединяем выборки для получения всех уникальных значений
+    all_values = sorted(set(sample1) | set(sample2))
+
+    # Подсчитываем частоты для каждой выборки
+    freq1 = [list(sample1).count(val) for val in all_values]
+    freq2 = [list(sample2).count(val) for val in all_values]
+
+    # Создаем таблицу сопряженности
+    observed = np.array([freq1, freq2])
+
+    # Проверяем условие применимости (ожидаемые частоты >= 5)
+    chi2, p_value, dof, expected = stats.chi2_contingency(observed)
+    min_expected = np.min(expected)
+
+    return {
+        'statistic': chi2,
+        'p_value': p_value,
+        'dof': dof,
+        'min_expected_freq': min_expected,
+        'test_name': 'Chi-square test'
+    }
+def permutation_test(sample1, sample2, n_permutations=10000, stat_func=None):
+    """
+    Перестановочный тест для сравнения двух выборок
+    """
+    if stat_func is None:
+        # По умолчанию используем разность средних
+        stat_func = lambda x, y: np.mean(x) - np.mean(y)
+
+    # Наблюдаемая статистика
+    observed_stat = stat_func(sample1, sample2)
+
+    # Объединяем выборки
+    combined = np.concatenate([sample1, sample2])
+    n1 = len(sample1)
+
+    # Генерируем перестановки
+    permuted_stats = []
+    for _ in range(n_permutations):
+        np.random.shuffle(combined)
+        perm_sample1 = combined[:n1]
+        perm_sample2 = combined[n1:]
+        permuted_stats.append(stat_func(perm_sample1, perm_sample2))
+
+    # Вычисляем p-value
+    permuted_stats = np.array(permuted_stats)
+    p_value = np.mean(np.abs(permuted_stats) >= np.abs(observed_stat))
+
+    return {
+        'observed_statistic': observed_stat,
+        'p_value': p_value,
+        'n_permutations': n_permutations,
+        'test_name': 'Permutation test'
+    }
+def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05):
+    """Комплексное сравнение двух выборок"""
+
+    # # Тест Шапиро-Уилка на нормальность
+    # _, p_norm1 = stats.shapiro(sample1)
+    # _, p_norm2 = stats.shapiro(sample2)
+    _, p_norm1 = stats.normaltest(sample1)
+    _, p_norm2 = stats.normaltest(sample2)
+    #print(p_norm1, p_norm2)
+
+    normal_dist = (p_norm1 > alpha) and (p_norm2 > alpha)
+
+    # Тест Левена на равенство дисперсий
+    _, p_var = stats.levene(sample1, sample2)
+
+    equal_var = p_var > alpha
+
+
+    if normal_dist:
+        # Параметрические тесты
+        t_stat, p_val = stats.ttest_ind(sample1, sample2, equal_var=equal_var)
+        print(f"t-тест: p={p_val:.4f}")
+        return p_val, '(критерий Стьюдента)'
+
+    # Непараметрические тесты (всегда)
+    if metric != 'novelty':
+        u_stat, p_mann = stats.mannwhitneyu(sample1, sample2, alternative='two-sided')
+        #print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
+        chi2 = chi_square_test(sample1, sample2)
+        if p_mann < 0.00001 and chi2['min_expected_freq'] < 5:
+            per_test = permutation_test(sample1, sample2)
+            print(f"Перестановочный критерий: p={per_test['p_value']:.4f}")
+            return per_test['p_value'], '(перестановочный критерий)'
+        elif p_mann < 0.00001:
+            print(f"Критерий Хи-Квадрат: p={chi2['p_value']:.4f}, n = {chi2['min_expected_freq']}")
+            return chi2['p_value'], '(критерий хи-квадрат)'
+        return p_mann, '(критерий Манна-Уитни)'
+    else:
+        ks_stat, p_ks = stats.ks_2samp(sample1, sample2)
+        #print(f"Критерий Колмогорова-Смирнова: p={p_ks:.4f}")
+        return p_ks, '(критерий Колмогорова-Смирнова)'
+def comprehensive_comparison(sample1, sample2, alpha=0.05):
+    """Комплексное сравнение двух выборок"""
+
+    print("=== ОПИСАТЕЛЬНАЯ СТАТИСТИКА ===")
+    print(f"Выборка 1: среднее={np.mean(sample1):.3f}, std={np.std(sample1):.3f}, n={len(sample1)}")
+    print(f"Выборка 2: среднее={np.mean(sample2):.3f}, std={np.std(sample2):.3f}, n={len(sample2)}")
+
+    print("\n=== ПРОВЕРКА НОРМАЛЬНОСТИ ===")
+    # Тест Шапиро-Уилка на нормальность
+    _, p_norm1 = stats.shapiro(sample1)
+    _, p_norm2 = stats.shapiro(sample2)
+    print(f"Нормальность выборки 1: p={p_norm1:.9f}")
+    print(f"Нормальность выборки 2: p={p_norm2:.9f}")
+
+    normal_dist = (p_norm1 > alpha) and (p_norm2 > alpha)
+
+    print("\n=== ПРОВЕРКА РАВЕНСТВА ДИСПЕРСИЙ ===")
+    # Тест Левена на равенство дисперсий
+    _, p_var = stats.levene(sample1, sample2)
+    print(f"Равенство дисперсий: p={p_var:.4f}")
+
+    equal_var = p_var > alpha
+
+    print("\n=== СРАВНЕНИЕ СРЕДНИХ ===")
+
+    if normal_dist:
+        # Параметрические тесты
+        if equal_var:
+            t_stat, p_val = stats.ttest_ind(sample1, sample2, equal_var=True)
+            print(f"t-тест (равные дисперсии): p={p_val:.4f}")
+        else:
+            t_stat, p_val = stats.ttest_ind(sample1, sample2, equal_var=False)
+            print(f"Welch t-тест (разные дисперсии): p={p_val:.4f}")
+    else:
+        print("Данные не нормальны, используем непараметрические тесты")
+
+    # Непараметрические тесты (всегда)
+    u_stat, p_mann = stats.mannwhitneyu(sample1, sample2, alternative='two-sided')
+    print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
+
+    # Тест Колмогорова-Смирнова
+    ks_stat, p_ks = stats.ks_2samp(sample1, sample2)
+    print(f"Критерий Колмогорова-Смирнова: p={p_ks:.4f}")
+
+    print(f"\n=== ЗАКЛЮЧЕНИЕ (α={alpha}) ===")
+    if normal_dist and equal_var:
+        conclusion = "отвергаем H0" if p_val < alpha else "не отвергаем H0"
+        print(f"Основной тест (t-тест): {conclusion}")
+    else:
+        conclusion = "отвергаем H0" if p_mann < alpha else "не отвергаем H0"
+        print(f"Основной тест (Манн-Уитни): {conclusion}")
 def bar_metrics_draw(labs, list, name, title):
     fig, ax = plt.subplots(figsize=(16, 9))
     n = len(list)
@@ -34,28 +186,33 @@ def bar_metrics_draw(labs, list, name, title):
     ax.set_xticklabels(labs)
     # ax.legend()
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
+    plt.close()
     #plt.show()
-def box_plot_metrics_draw(dic, xlabs, title, name, ref = None):
+def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = None, test_name = None):
     fig, ax = plt.subplots(figsize=(16, 9))
     bp = ax.boxplot(dic.values(), showmeans=True, meanline=True, medianprops=medianprops, meanprops=meanprops)
     #print(xlabs)
     ax.set_xticklabels(xlabs)
+    legend_handles = [bp['medians'][0], bp['means'][0]]
+    legend_labels = ['Медиана', 'Среднее']
     if ref is not None:
         ax.axhline(y=0, color='red', linestyle='--', linewidth=0.5)
-        ax.set_title(title)
-        # ax.set_xlabel('Алгоритмы')
-        # ax.set_ylabel(key)
-        ax.legend([bp['medians'][0], bp['means'][0], ax.lines[-1]],
-                  ['Медиана', 'Среднее', 'Значение ' + ref],
-                  loc='upper right')
-    else:
-        ax.set_title(title)
-        # ax.set_xlabel('Алгоритмы')
-        # ax.set_ylabel(key)
-        ax.legend([bp['medians'][0], bp['means'][0]],
-                  ['Медиана', 'Среднее'],
-                  loc='upper right')
+        legend_handles.append(ax.lines[-1])
+        legend_labels.append('Значение ' + ref)
+    if p_values_dict is not None:
+        p_text = '\n'.join([f'{key}: p={p_val:.3f}\n{test_name[key]}' for key, p_val in p_values_dict.items()])
+        ax.text(0.02, 0.98, p_text, transform=ax.transAxes,
+                ha='left', va='top', fontsize=9,
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='lightgray', alpha=0.7))
+        # for key, p_val in p_values_dict.items():
+        #     invisible_line = ax.plot([], [], ' ')[0]  # невидимая линия
+        #     legend_handles.append(invisible_line)
+        #     legend_labels.append(f'{key}: p={p_val:.3f}')
+
+    ax.legend(legend_handles, legend_labels, loc='upper right')
+    ax.set_title(title)
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
+    plt.close()
     #plt.show()
 def lab_title_make(param_id, p = 0):
     if param_id == 0:
@@ -175,7 +332,7 @@ def metrics_draw_small(param_id, inner_param_grid):
                 #print(col_key)
 
                 col = string_make(combination, param_id, p, False)
-                print(col)
+                #print(col)
                 for user, df in df_dic.items():
                     if col in df.columns:
                         v = df.at[num, col]
@@ -185,12 +342,18 @@ def metrics_draw_small(param_id, inner_param_grid):
         name = 'my_films/' + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
         title = 'Значение ' + key + ' в зависимости от ' + title_part
         box_plot_metrics_draw(dic[key], labs, title, name)
+        p_dic = {}
+        test_name_dic = {}
         for i in range(1, len(ps)):
+            (p_dic[str(labs[0]) + ' ~ ' + str(labs[i])],
+             test_name_dic[str(labs[0]) + ' ~ ' + str(labs[i])]) = (
+                mini_comparison(dic[key][ps[0]], dic[key][ps[i]], key))
             dic[key][ps[i]] = np.array(dic[key][ps[i]]) - np.array(dic[key][ps[0]])
         dic[key].pop(ps[0], None)
         name = 'my_films/' + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0])
         title = key + ': Сравнение' + ' с ' + str(labs[0])
-        box_plot_metrics_draw(dic[key], labs[1:], title, name, str(labs[0]))
+        box_plot_metrics_draw(dic[key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
+    plt.close('all')
 
 def metrics_draw(param_id, inner_param_grid):
     param_grid = deepcopy(inner_param_grid)
@@ -253,12 +416,18 @@ def metrics_draw(param_id, inner_param_grid):
             name = 'my_films/' + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id] + '@' + col_key
             title = 'Значение ' + key + ' в зависимости от ' + title_part  + ' (' + col_key + ')'
             box_plot_metrics_draw(dic[key][col_key], labs, title, name)
+            p_dic = {}
+            test_name_dic = {}
             for i in range(1, len(ps)):
+                (p_dic[str(labs[0]) + ' ~ ' + str(labs[i])],
+                 test_name_dic[str(labs[0]) + ' ~ ' + str(labs[i])]) = (
+                    mini_comparison(dic[key][col_key][ps[0]], dic[key][col_key][ps[i]], key))
                 dic[key][col_key][ps[i]] = np.array(dic[key][col_key][ps[i]]) - np.array(dic[key][col_key][ps[0]])
             dic[key][col_key].pop(ps[0], None)
             name = 'my_films/' + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
             title = key + ': Сравнение' + ' с ' + str(labs[0]) + ' (' + col_key + ')'
-            box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]))
+            box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
+        plt.close('all')
 # rating = pd.read_csv('archive/ratings_small.csv')
 # #print(rating)
 # print('до', rating['movieId'].nunique(), rating['userId'].nunique())
@@ -289,11 +458,11 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8, 9, 10],
-               'size':[5, 10, 15, 20, 25, 30],
+               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat'],
+               'degrees':[2, 4, 7, 10],
+               'size':[5, 10, 20, 30],
                'weighted':[False, True],
-               'series_rate':[0, 1, 2, 3]}
+               'series_rate':[0, 1]}
 #metrics_draw(1, params_grid)
 
 for i in range(0, 6):
