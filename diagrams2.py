@@ -434,28 +434,28 @@ def metrics_draw(param_id, inner_param_grid):
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
                 box_plot_metrics_draw(fin_dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
         plt.close('all')
-# rating = pd.read_csv('archive/ratings_small.csv')
-# #print(rating)
-# print('до', rating['movieId'].nunique(), rating['userId'].nunique())
-# item_user_counts = rating.groupby('movieId')['userId'].nunique()
-# valid_items = item_user_counts[item_user_counts > 2].index
-# rating = rating[rating['movieId'].isin(valid_items)]
-#
-# user_item_counts = rating.groupby('userId')['movieId'].nunique()
-# valid_users = user_item_counts[user_item_counts > 2].index
-# rating = rating[rating['userId'].isin(valid_users)]
-# print('после', rating['movieId'].nunique(), rating['userId'].nunique())
-# movies = pd.read_csv('archive/links_small.csv')
-# metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
-# #print(metadata.head(10))
-# #print(movies.head(10))
-#
-# movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
-# links_dic = dict(zip(movies['movieId'], movies['original_title']))
+rating = pd.read_csv('archive/ratings_small.csv')
+#print(rating)
+print('до', rating['movieId'].nunique(), rating['userId'].nunique())
+item_user_counts = rating.groupby('movieId')['userId'].nunique()
+valid_items = item_user_counts[item_user_counts > 2].index
+rating = rating[rating['movieId'].isin(valid_items)]
 
-rating = pd.read_csv('long_my_films.csv')
-movies = pd.read_csv('map_my_films.csv')
-links_dic = movies[movies.columns[1]].to_dict()
+user_item_counts = rating.groupby('userId')['movieId'].nunique()
+valid_users = user_item_counts[user_item_counts > 2].index
+rating = rating[rating['userId'].isin(valid_users)]
+print('после', rating['movieId'].nunique(), rating['userId'].nunique())
+movies = pd.read_csv('archive/links_small.csv')
+metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
+#print(metadata.head(10))
+#print(movies.head(10))
+
+movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
+links_dic = dict(zip(movies['movieId'], movies['original_title']))
+
+# rating = pd.read_csv('long_my_films.csv')
+# movies = pd.read_csv('map_my_films.csv')
+# links_dic = movies[movies.columns[1]].to_dict()
 
 all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall', 'kendall_hat'],
@@ -464,11 +464,11 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson'],
-               'degrees':[3, 4, 5, 6, 7, 8],
-               'size':[10, 20, 30],
+               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat'],
+               'degrees':[3, 4, 5, 8],
+               'size':[10, 20, 30, 40],
                'weighted':[True, False],
-               'series_rate':[0, 1, 2, 3]}
+               'series_rate':[0, 2]}
 #metrics_draw(1, params_grid)
 
 for i in range(2, 5):
