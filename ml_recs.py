@@ -40,9 +40,13 @@ class Recommend():
         self.k = commit_size
         #model1 = ImplicitALSWrapperModel()
 
+    def user_recs(self, user_id, model_name):
+        user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
 
+        user_recos = self.recos[model_name].query("user_id == @user_id").merge(self.movies, on="item_id")
 
-    def recs_KNN(self, user_id, commit_size = 10, dist_method = 'TF-IDF'):
+        return list(user_recos['title'])
+    def recs_KNN(self, commit_size = 10, dist_method = 'TF-IDF'):
 
         if dist_method == 'TF-IDF':
             recomender = itm_tfidf = TFIDFRecommender(K=commit_size)
@@ -62,12 +66,10 @@ class Recommend():
             filter_viewed=True,
         )
         #print(self.recos['KNN'].head(40))
-        user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
-        #print(user_viewed.query("weight > 0"))
-        user_recos = self.recos['KNN' + ' ' + dist_method].query("user_id == @user_id").merge(self.movies, on="item_id")
-        #print(user_recos.head(10))
-        return list(user_recos['title'])
-    def recs_Random(self, user_id, commit_size = 10):
+        print('KNN ' + dist_method)
+        #return 0
+
+    def recs_Random(self, commit_size = 10):
         self.models['Random'] = RandomModel(random_state=42)
         self.models['Random'].fit(self.dataset)
         self.recos['Random'] = self.models['Random'].recommend(
@@ -77,12 +79,9 @@ class Recommend():
             filter_viewed=True,
         )
         #print(self.recos['Random'].head(10))
-        user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
-        #print(user_viewed.query("weight > 6"))
-        user_recos = self.recos['Random'].query("user_id == @user_id").merge(self.movies, on="item_id")
-        #print(user_recos.sort_values("rank"))
-        return list(user_recos['title'])
-    def recs_Popular(self, user_id, commit_size = 10):
+        print('Random')
+        #return 0
+    def recs_Popular(self, commit_size = 10):
         self.models['Popular'] = PopularModel()
         self.models['Popular'].fit(self.dataset)
         self.recos['Popular'] = self.models['Popular'].recommend(
@@ -91,13 +90,9 @@ class Recommend():
             k=commit_size,
             filter_viewed=True,
         )
-        #print(self.recos['Popular'].head(10))
-        user_viewed = self.rating.query("user_id == @user_id").merge(self.movies, on="item_id")
-        #print(user_viewed.query("weight > 6"))
-        user_recos = self.recos['Popular'].query("user_id == @user_id").merge(self.movies, on="item_id")
-        #print(user_recos.head(10))
-        return list(user_recos['title'])
-    def recs_ALS(self, user_id, commit_size = 10):
+        print('Popular')
+        #return 0
+    def recs_ALS(self, commit_size = 10):
         als_model = AlternatingLeastSquares(
             factors=100,
             regularization=0.01,
@@ -114,8 +109,8 @@ class Recommend():
             k=commit_size,
             filter_viewed=True
         )
-        user_recos = self.recos['ALS'].query("user_id == @user_id").merge(self.movies, on="item_id")
-        return list(user_recos['title'])
+        print('ALS')
+        #return 0
 
     def metrics(self, df_test, model_name = 'Random'):
         metrics_values = {}

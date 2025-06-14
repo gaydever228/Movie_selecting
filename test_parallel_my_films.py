@@ -121,7 +121,7 @@ params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
                'series_rate':[0, 1, 2, 3]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
-step = 1
+
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 print(links_dic)
@@ -147,12 +147,12 @@ for user in rating[Columns.User].unique():
         metrics[cur_string] = metric
         recos_dic[cur_string] = rec
         times[cur_string].append(timess)
-    # metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
-    # metrics_df = metrics_df.T
-    # recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    # metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
-    # recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
-    # step += 1
+    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+    metrics_df = metrics_df.T
+    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
+
 
 for key, item in times.items():
     print(key, np.array(item).mean())

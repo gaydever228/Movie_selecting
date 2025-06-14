@@ -228,4 +228,4 @@ for user in rating['userId'].unique()[[30, 40]]:
 #for key, item in times.items():
 #    print(key, np.array(item).mean())
 times_df = pd.DataFrame.from_dict(times)
-times_df.to_csv('GT/test1/times_mac.csv')
+times_df.to_csv('GT/test1/times.csv')

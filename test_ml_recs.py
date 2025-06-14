@@ -56,8 +56,8 @@ def time_split(df, quant = 0.5):
     print(train_df[Columns.Item].nunique()/df[Columns.Item].nunique())
     return train_df, test_df, pivot_df
 
-def test_ML(ratings, ratings_test, titles, user_id = 0, k = 10, metric = True):
-    print('user_id:', user_id)
+def test_ML(ratings, ratings_test, titles, k = 10, metric = True):
+
     metrics_values = {}
     models_list = ['KNN cosine', 'KNN TF-IDF', 'KNN BM25', 'ALS', 'Random', 'Popular']
 
@@ -67,34 +67,35 @@ def test_ML(ratings, ratings_test, titles, user_id = 0, k = 10, metric = True):
     #print(ratings.head(10))
     time_0 = time.time()
     recs_test = Recommend(ratings, titles, commit_size=k)
-    models_dic = {'KNN cosine': (recs_test.recs_KNN(user_id, commit_size=k, dist_method='cosine'), recs_test.metrics(ratings_test, 'KNN cosine')),
-                  'KNN TF-IDF': (recs_test.recs_KNN(user_id, commit_size=k, dist_method='TF-IDF'), recs_test.metrics(ratings_test, 'KNN TF-IDF')),
-                  'KNN BM25': (recs_test.recs_KNN(user_id, commit_size=k, dist_method='BM25'), recs_test.metrics(ratings_test, 'KNN BM25')),
-                  'ALS': (recs_test.recs_ALS(user_id, commit_size=k), recs_test.metrics(ratings_test, 'ALS')),
-                  'Random': (recs_test.recs_Random(user_id, commit_size=k), recs_test.metrics(ratings_test, 'Random')),
-                  'Popular': (recs_test.recs_Popular(user_id, commit_size=k), recs_test.metrics(ratings_test, 'Popular'))}
+    models_dic = {'KNN cosine': recs_test.recs_KNN(commit_size=k, dist_method='cosine'),
+                  'KNN TF-IDF': recs_test.recs_KNN(commit_size=k, dist_method='TF-IDF'),
+                  'KNN BM25': recs_test.recs_KNN(commit_size=k, dist_method='BM25'),
+                  'ALS': recs_test.recs_ALS(commit_size=k),
+                  'Random': recs_test.recs_Random(commit_size=k),
+                  'Popular': recs_test.recs_Popular(commit_size=k)}
     for mod in models_list:
         time_0 = time.time()
-        recos[mod] = models_dic[mod][0]
+        models_dic[mod]
+
+        for user in tqdm(ratings[Columns.User].unique()):
+            recos[mod] = recs_test.user_recs(user, mod)
+            metrics_values[mod] = recs_test.metrics(ratings_test, mod)
         times[mod] = time.time() - time_0
         print('meh1', mod, times[mod])
-    time_0 = time.time()
-    if metric:
-        for mod in models_list:
-            time_0 = time.time()
-            metrics_values[mod] = models_dic[mod][1]
-            times[mod] = time.time() - time_0
-            print('meh2', mod, times[mod])
-
+    for user in tqdm(ratings[Columns.User].unique()):
         all_metrics = {}
         for key, item in metrics_values.items():
             all_metrics[key] = {}
             for key2, item2 in item.items():
                 print('item2', item2)
-                all_metrics[key][key2] = item2[user_id]
-        return all_metrics, recos, times
-    else:
-        return recos, times
+                all_metrics[key][key2] = item2[user]
+        metrics_df = pd.DataFrame.from_dict(all_metrics, orient='index')
+        metrics_df = metrics_df.T
+        recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos.items()]))
+        metrics_df.to_csv('my_films/test_ML/metrics_user' + str(user) + '.csv', index=True)
+        recos_df.to_csv('my_films/test_ML/recos_' + str(user) + '.csv')
+    return times
+
 
 
 rating = pd.read_csv('long_my_films.csv')
@@ -103,24 +104,9 @@ movies.columns = [Columns.Item, "title"]
 #links_dic = movies[movies.columns[1]].to_dict()
 df_train, df_test, pivo = time_split(rating, quant=0.2)
 
-times = {'KNN cosine':[],
-         'KNN TF-IDF':[],
-         'KNN BM25':[],
-         'ALS':[],
-         'Random':[],
-         'Popular':[]}
-for user in tqdm(rating[Columns.User].unique()):
-    metrics, recos_dic, timess = test_ML(df_train, df_test, movies, user, 10)
-    for key, value in timess.items():
-        times[key].append(value)
-    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
-    metrics_df = metrics_df.T
-    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    # recos_df = pd.DataFrame.from_dict(recos_dic)
-    # print(recos_df)
-    # print(metrics_df)
-    metrics_df.to_csv('my_films/test_ML/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('my_films/test_ML/recos_' + str(user) + '.csv')
+
+
+times = test_ML(df_train, df_test, movies, 10)
 
 times_df = pd.DataFrame.from_dict(times)
-times_df.to_csv('my_films/test_ML/times_mac.csv')
+times_df.to_csv('my_films/test_ML/times.csv')
