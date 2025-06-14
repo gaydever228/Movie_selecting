@@ -87,7 +87,7 @@ def test_ML(ratings, ratings_test, titles, k = 10, metric = True):
         for key, item in metrics_values.items():
             all_metrics[key] = {}
             for key2, item2 in item.items():
-                print('item2', item2)
+                #print('item2', item2)
                 all_metrics[key][key2] = item2[user]
         metrics_df = pd.DataFrame.from_dict(all_metrics, orient='index')
         metrics_df = metrics_df.T
@@ -102,11 +102,11 @@ rating = pd.read_csv('long_my_films.csv')
 movies = pd.read_csv('map_my_films.csv')
 movies.columns = [Columns.Item, "title"]
 #links_dic = movies[movies.columns[1]].to_dict()
-df_train, df_test, pivo = time_split(rating, quant=0.2)
+df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 
 
 times = test_ML(df_train, df_test, movies, 10)
 
-times_df = pd.DataFrame.from_dict(times)
+times_df = pd.DataFrame.from_dict(times, orient="index")
 times_df.to_csv('my_films/test_ML/times.csv')
