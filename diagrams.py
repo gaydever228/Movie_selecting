@@ -8,6 +8,7 @@ from matplotlib.pyplot import figure
 from rich.columns import Columns
 from rectools import Columns
 from scipy import stats
+import re
 
 medianprops = {
         'color': 'blue',  # Цвет линии
@@ -19,7 +20,7 @@ meanprops = {
     'linewidth': 2,        # Толщина линии
     'linestyle': '--'       # Стиль линии (пунктир)
 }
-
+papka = 'my_films/test1/'
 
 def chi_square_test(sample1, sample2):
     """
@@ -171,21 +172,31 @@ def comprehensive_comparison(sample1, sample2, alpha=0.05):
     else:
         conclusion = "отвергаем H0" if p_mann < alpha else "не отвергаем H0"
         print(f"Основной тест (Манн-Уитни): {conclusion}")
-def bar_metrics_draw(labs, list, name, title):
-    fig, ax = plt.subplots(figsize=(16, 9))
-    n = len(list)
-    indices = np.arange(n)
+def bar_metrics_draw(df, name, title, metric):
+    fig, ax = plt.subplots(figsize=(20, 9))
+    x = np.arange(len(df.index))
     width = 0.2
-    colors = ['green'] * n
-    print(list)
-    print(labs)
-    ax.bar(indices, list, color=colors, width=width)
-    # ax.set_xlabel('Категории')
+    colors = ['skyblue', 'lightcoral', 'lightgreen']
+    multiplier = 0
+    for i, column in enumerate(df.columns):
+        offset = width * multiplier
+        bars = ax.bar(x + offset, df[column], width, label=column, color=colors[i], alpha=0.9)
+        multiplier += 1
+    # Настройка осей и подписей
+    #ax.set_xlabel('Строки DataFrame')
+    ax.set_ylabel(metric)
     ax.set_title(title)
-    ax.set_xticks(indices)
-    ax.set_xticklabels(labs)
-    # ax.legend()
+    ax.set_xticks(x + width)  # центрируем подписи между группами полосок
+    labs = []
+    for ind in df.index:
+        labs.append(underscore(ind))
+    ax.set_xticklabels(labs)  # используем имена строк как подписи
+    ax.legend()
+    #ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
+
     plt.close()
     #plt.show()
 def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = None, test_name = None):
@@ -203,7 +214,7 @@ def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = N
         p_text = '\n'.join([f'{key}: p={p_val:.3f}\n{test_name[key]}' for key, p_val in p_values_dict.items()])
         ax.text(0.02, 0.98, p_text, transform=ax.transAxes,
                 ha='left', va='top', fontsize=9,
-                bbox=dict(boxstyle='round,pad=0.3', facecolor='lightgray', alpha=0.7))
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='lightgray', alpha=0.6))
         # for key, p_val in p_values_dict.items():
         #     invisible_line = ax.plot([], [], ' ')[0]  # невидимая линия
         #     legend_handles.append(invisible_line)
@@ -214,6 +225,13 @@ def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = N
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
     plt.close()
     #plt.show()
+
+
+def underscore(s):
+    pattern = r'_([^_]*_[^_]*_[^_]*)$'
+    replacement = r'\n\1'
+
+    return re.sub(pattern, replacement, s)
 def lab_title_make(param_id, p = 0):
     if param_id == 0:
         return p, 'алгоритма выборов'
@@ -339,7 +357,7 @@ def metrics_draw_small(param_id, inner_param_grid):
                         #print(v)
                         dic[key][p].append(v)
 
-        name = 'my_films/' + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
+        name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
         title = 'Значение ' + key + ' в зависимости от ' + title_part
         box_plot_metrics_draw(dic[key], labs, title, name)
         p_dic = {}
@@ -350,7 +368,7 @@ def metrics_draw_small(param_id, inner_param_grid):
                 mini_comparison(dic[key][ps[0]], dic[key][ps[i]], key))
             dic[key][ps[i]] = np.array(dic[key][ps[i]]) - np.array(dic[key][ps[0]])
         dic[key].pop(ps[0], None)
-        name = 'my_films/' + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0])
+        name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0])
         title = key + ': Сравнение' + ' с ' + str(labs[0])
         box_plot_metrics_draw(dic[key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
     plt.close('all')
@@ -426,13 +444,66 @@ def metrics_draw(param_id, inner_param_grid):
                     pflag = 1
                 dic[key][col_key][ps[i]] = np.array(dic[key][col_key][ps[i]]) - np.array(dic[key][col_key][ps[0]])
             dic[key][col_key].pop(ps[0], None)
-            name = 'my_films/' + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
+            name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
             title = key + ': Сравнение' + ' с ' + str(labs[0]) + ' (' + col_key + ')'
             box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
             if pflag == 1:
-                name = 'my_films/' + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id] + '@' + col_key
+                name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id] + '@' + col_key
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
                 box_plot_metrics_draw(fin_dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
+        plt.close('all')
+
+
+def get_top_k(dataframe, k, ascending=[False, False, True]):
+    result = {}
+    i = 0
+    for col in dataframe.columns:
+        sorted_df = dataframe.sort_values(by=col, ascending=ascending[i]).head(k)
+        i += 1
+        result[col] = sorted_df
+        sorted_df.to_csv(papka + 'tops/top_' + str(k) + '_by_' + col + '.csv')
+    return result
+def top_draw(inner_param_grid, top_k = 20):
+    param_grid = deepcopy(inner_param_grid)
+    #print(param_grid)
+    df_dic = {}
+
+    param_values = param_grid.values()
+
+    dic = {'prec': {},
+           'recall': {},
+           'ndcg': {},
+           'serendipity': {},
+           'novelty': {}}
+    for user in rating[Columns.User].unique()[:100]:
+
+        filename = f"my_films/test1/metrics_user{user}.csv"
+        if os.path.exists(filename):
+            df_dic[user] = pd.read_csv(filename)
+
+    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+        print(key)
+        for combination in product(*param_values):
+            col_key= (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+                combination[3]) +
+                          '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                        combination[5]))
+            #print(col_key)
+            dic[key][col_key] = {}
+            user_list = []
+            for user, df in df_dic.items():
+                if col_key in df.columns:
+                    v = df.at[num, col_key]
+                    user_list.append(v)
+            dic[key][col_key] = (np.mean(user_list), np.median(user_list), np.std(user_list))
+
+        df_stats = pd.DataFrame.from_dict(dic[key], orient='index',
+                                    columns=['mean', 'median', 'std'])
+        top_dic = get_top_k(df_stats, top_k)
+        for met in ['mean', 'median', 'std']:
+            name = papka + 'tops/' + key + '_' + met
+            title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
+            bar_metrics_draw(top_dic[met], name, title, key)
         plt.close('all')
 # rating = pd.read_csv('archive/ratings_small.csv')
 # #print(rating)
@@ -464,15 +535,20 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson'],
-               'degrees':[3, 4, 5, 6, 7, 8],
+               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall', 'kendall_hat'],
+               'degrees':[2, 3, 4, 5, 6, 7, 8],
                'size':[10, 20, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 #metrics_draw(1, params_grid)
 
-for i in range(2, 5):
-    metrics_draw(i, params_grid)
+
+top_draw(params_grid, top_k = 5)
+
+# for i in range(2, 5):
+#     metrics_draw(i, params_grid)
+
+
 
 exit()
 

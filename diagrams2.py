@@ -171,23 +171,29 @@ def comprehensive_comparison(sample1, sample2, alpha=0.05):
     else:
         conclusion = "отвергаем H0" if p_mann < alpha else "не отвергаем H0"
         print(f"Основной тест (Манн-Уитни): {conclusion}")
-def bar_metrics_draw(labs, list, name, title):
-    fig, ax = plt.subplots(figsize=(16, 9))
-    n = len(list)
-    indices = np.arange(n)
+def bar_metrics_draw(df, name, title, metric):
+    fig, ax = plt.subplots(figsize=(20, 9))
+    x = np.arange(len(df.index))
     width = 0.2
-    colors = ['green'] * n
-    print(list)
-    print(labs)
-    ax.bar(indices, list, color=colors, width=width)
-    # ax.set_xlabel('Категории')
+    colors = ['skyblue', 'lightcoral', 'lightgreen']
+    multiplier = 0
+    for i, column in enumerate(df.columns):
+        offset = width * multiplier
+        bars = ax.bar(x + offset, df[column], width, label=column, color=colors[i], alpha=0.9)
+        multiplier += 1
+    # Настройка осей и подписей
+    #ax.set_xlabel('Строки DataFrame')
+    ax.set_ylabel(metric)
     ax.set_title(title)
-    ax.set_xticks(indices)
-    ax.set_xticklabels(labs)
-    # ax.legend()
+    ax.set_xticks(x + width)  # центрируем подписи между группами полосок
+    ax.set_xticklabels(df.index)  # используем имена строк как подписи
+    ax.legend()
+    #ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
+
     plt.close()
-    #plt.show()
 def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = None, test_name = None):
     fig, ax = plt.subplots(figsize=(16, 9))
     bp = ax.boxplot(dic.values(), showmeans=True, meanline=True, medianprops=medianprops, meanprops=meanprops)
@@ -434,6 +440,58 @@ def metrics_draw(param_id, inner_param_grid):
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
                 box_plot_metrics_draw(fin_dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
         plt.close('all')
+
+def get_top_k(dataframe, k, ascending=[False, False, True]):
+    result = {}
+    i = 0
+    for col in dataframe.columns:
+        sorted_df = dataframe.sort_values(by=col, ascending=ascending[i]).head(k)
+        i += 1
+        result[col] = sorted_df
+        sorted_df.to_csv(papka + 'tops/top_' + str(k) + '_by_' + col + '.csv')
+    return result
+def top_draw(inner_param_grid, top_k = 20):
+    param_grid = deepcopy(inner_param_grid)
+    #print(param_grid)
+    df_dic = {}
+
+    param_values = param_grid.values()
+
+    dic = {'prec': {},
+           'recall': {},
+           'ndcg': {},
+           'serendipity': {},
+           'novelty': {}}
+    for user in rating[Columns.User].unique()[:100]:
+
+        filename = f"my_films/test1/metrics_user{user}.csv"
+        if os.path.exists(filename):
+            df_dic[user] = pd.read_csv(filename)
+
+    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+        print(key)
+        for combination in product(*param_values):
+            col_key= (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+                combination[3]) +
+                          '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                        combination[5]))
+            #print(col_key)
+            dic[key][col_key] = {}
+            user_list = []
+            for user, df in df_dic.items():
+                if col_key in df.columns:
+                    v = df.at[num, col_key]
+                    user_list.append(v)
+            dic[key][col_key] = (np.mean(user_list), np.median(user_list), np.std(user_list))
+
+        df_stats = pd.DataFrame.from_dict(dic[key], orient='index',
+                                    columns=['mean', 'median', 'std'])
+        top_dic = get_top_k(df_stats, top_k)
+        for met in ['mean', 'median', 'std']:
+            name = papka + 'tops/' + key + '_' + met
+            title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
+            bar_metrics_draw(top_dic[met], name, title, key)
+        plt.close('all')
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
 print('до', rating['movieId'].nunique(), rating['userId'].nunique())
@@ -471,6 +529,6 @@ params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
                'series_rate':[0, 2]}
 #metrics_draw(1, params_grid)
 
-for i in range(2, 5):
+for i in range(0, 5):
     metrics_draw(i, params_grid)
 
