@@ -47,6 +47,7 @@ class Recommend_new(election):
         if ids_to_num is not None:
             self.id_to_num = ids_to_num
             #print(type(self.id_to_num))
+            self.num_to_id = {v: k for k, v in self.id_to_num.items()}
         else:
             self.id_to_num = {}
         self.App_Sets(raiting)
@@ -388,27 +389,42 @@ class Recommend_new(election):
         if self.full_dist:
             voters_nums = {self.id_to_num[id] for id in voters}
             cands_nums = {self.id_to_num[id] for id in cands}
-            dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
-            return dist_matrix
-        met_dic = {'cosine_hat':self.cosine_hat_joblib,
-                   'cosine':self.cosine_joblib,
-                   'jaccar':self.jaccar_joblib,
-                   'pearson':self.pearson_joblib,
-                   'pearson_hat':self.pearson_hat_joblib,
-                   'spearman':self.spearman_joblib,
-                   'spearman_hat':self.spearman_hat_joblib,
-                   'kendall':self.kendall_joblib,
-                   'kendall_hat':self.kendall_hat_joblib}
 
-        dist_matrix = np.zeros((len(cands), len(voters)))
-        sorted_cands = sorted(cands)
-        sorted_voters = sorted(voters)
-        vyzov = met_dic[self.dist_method]
-        for c_1_num, c_1 in enumerate(sorted_cands):
-            for c_2_num, c_2 in enumerate(sorted_voters):
-                _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
-                dist_matrix[c_1_num][c_2_num] = dist
-        return dist_matrix
+            #print('cands',cands, cands_nums)
+            #print('voters', voters, voters_nums)
+            dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
+            #print('dist', dist_matrix)
+            self.dist_matrix = np.square(dist_matrix)
+            cand_arr = []
+            for num in sorted(cands_nums):
+                cand_arr.append(self.num_to_id[num])
+            self.candidates = [np.array(cand_arr), np.array(cand_arr)]
+
+        else:
+            met_dic = {'cosine_hat':self.cosine_hat_joblib,
+                       'cosine':self.cosine_joblib,
+                       'jaccar':self.jaccar_joblib,
+                       'pearson':self.pearson_joblib,
+                       'pearson_hat':self.pearson_hat_joblib,
+                       'spearman':self.spearman_joblib,
+                       'spearman_hat':self.spearman_hat_joblib,
+                       'kendall':self.kendall_joblib,
+                       'kendall_hat':self.kendall_hat_joblib}
+
+            dist_matrix = np.zeros((len(cands), len(voters)))
+            sorted_cands = sorted(cands)
+            sorted_voters = sorted(voters)
+            vyzov = met_dic[self.dist_method]
+            for c_1_num, c_1 in enumerate(sorted_cands):
+                for c_2_num, c_2 in enumerate(sorted_voters):
+                    _, _, dist = vyzov(c_1_num, c_2_num, c_1, c_2)
+                    dist_matrix[c_1_num][c_2_num] = dist
+            self.dist_matrix = np.square(dist_matrix)
+            cand_arr = np.zeros(len(cands), dtype=int)
+            for c in sorted(cands):
+                cand_arr[self.id_to_num[c]] = c
+            self.candidates = [cand_arr, cand_arr]
+
     # def nes_cand_dist_parallel_shit(self, cands, voters):
     #     if self.full_dist:
     #         voters_nums = {self.id_to_num[id] for id in voters}
@@ -476,8 +492,9 @@ class Recommend_new(election):
     #         #   print('BnB recommends', self.candidates[0][id])
     def voting(self, cands, voters, commit_size, rule = 'SNTV'):
         #self.dist_matrix = self.cand_dist[np.ix_(sorted(cand_nums), sorted(voters_nums))]
-        self.candidates = [np.array(sorted(cands)), np.array(sorted(cands))]
-        self.dist_matrix = np.square(self.dist_matrix)
+        #self.candidates = [np.array(sorted(cands)), np.array(sorted(cands))]
+
+        self.nes_cand_dist(cands, voters)
         # print(np.shape(self.dist_matrix))
         self.C = len(cands)
         self.V = len(voters)
@@ -491,7 +508,9 @@ class Recommend_new(election):
         if rule == 'SNTV':
             self.SNTV_rule()
             # print('SNTV:', self.SNTV_rule())
-            # print(self.Score)
+            #print(self.Score)
+            #for id in self.committee_id:
+                #print('SNTV recommends', self.candidates[0][id])
         elif rule == 'BnB':
 
             self.BnB_rule(tol=0.7, level=2)
@@ -501,8 +520,10 @@ class Recommend_new(election):
             #   print('BnB recommends', self.candidates[0][id])
         elif rule == 'STV_basic':
             self.STV_basic()
+            #print(self.Score)
         elif rule == 'STV_star':
             self.STV_star()
+            #print('STV_star reccomends', self.Score)
     def recommendation_voting(self, user_id, commit_size=10, rule='SNTV', weighted = False):
         c_to_v = set()  # множество фильмов, которые будут избирателями
         all_c_to_v = set(
@@ -522,6 +543,7 @@ class Recommend_new(election):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # множество фильмов, которые будут избирателями
 
             self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
+            #print('weights', self.weights)
         else:
             #print('anti rec')
             weights_dic = {}
@@ -531,7 +553,7 @@ class Recommend_new(election):
                 weights_dic[voter] = 1
             for d in range(self.degrees//2):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # избиратели - "плохие" фильмы
-            self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
+            #self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
             #print(self.dist_matrix)
             self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
             # print(self.bad_percent, "% плохих фильмов", len(c_to_v))
@@ -551,7 +573,7 @@ class Recommend_new(election):
             #voters_nums = all_items_num.difference(voters_nums)
             #voters_nums = {self.id_to_num[id] for id in c_to_v}
 
-        self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
+        #self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
         # если series_rate = 0, будет просто единичное голосование
         current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
         i = 1

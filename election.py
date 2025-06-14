@@ -151,18 +151,18 @@ class election:
             self.VoteLists = np.argsort(self.dist_matrix, axis=0)
             #print('after:', self.dist_matrix)
 
-    def meanDist(self):
-        Candists = np.ones(self.C)
-        Candists = Candists*999999
-        closestC = np.zeros(self.C)
-        for i in range(self.C):
-            for j in range(self.C):
-                d = np.sqrt((self.candidates[0][i] - self.candidates[0][j])**2 + (self.candidates[1][i] - self.candidates[1][j])**2)
-                if d < Candists[i] and i != j:
-                    Candists[i] = d
-                    closestC[i] = j
-        self.mD = np.mean(Candists)
-        return self.mD
+    # def meanDist(self):
+    #     Candists = np.ones(self.C)
+    #     Candists = Candists*999999
+    #     closestC = np.zeros(self.C)
+    #     for i in range(self.C):
+    #         for j in range(self.C):
+    #             d = np.sqrt((self.candidates[0][i] - self.candidates[0][j])**2 + (self.candidates[1][i] - self.candidates[1][j])**2)
+    #             if d < Candists[i] and i != j:
+    #                 Candists[i] = d
+    #                 closestC[i] = j
+    #     self.mD = np.mean(Candists)
+    #     return self.mD
     def ComDec(self):
         #Com = np.zeros((2, self.k))
         #j = 0
@@ -262,11 +262,11 @@ class election:
         self.decision = 1 - decision
         #print(self.decision)
         self.ComDec()
-        #self.Calc_Score()
+        self.Calc_Score()
         #self.Calc_Cost()
 
         #self.draw(name = draw_name)
-        return self.Score
+        #return self.Score
     # def SNTV_rule(self, draw_name = 'SNTV'):
     #     PS = np.zeros(self.C)
     #     for e in self.VoteLists.T:
@@ -301,7 +301,7 @@ class election:
         #print('Score: ', self.Score)
         #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
         #self.draw(name =  draw_name)
-        return self.Score
+        #return self.Score
     # def STV_rule_new(self, draw_name = 'STV'):
     #     elected = 0
     #     PS = np.zeros(self.C)
@@ -463,8 +463,8 @@ class election:
         #self.Calc_Score()
         #self.Calc_Cost()
         # self.draw(name =  draw_name)
-
-        return self.Score
+        #self.Calc_Score()
+        #return self.Score
     def STV_basic(self):
         to_elect = self.k
         weights_sum = self.weights.sum()
@@ -543,7 +543,7 @@ class election:
         #self.Calc_Cost()
         # self.draw(name =  draw_name)
 
-        return self.Score
+        #return self.Score
     # def STV_basic_old(self, draw_name = 'STV'):
     #     elected = 0
     #     deleted = []

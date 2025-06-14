@@ -8,6 +8,8 @@ from matplotlib.pyplot import figure
 from rich.columns import Columns
 from rectools import Columns
 from scipy import stats
+import re
+
 papka = 'GT/test1/'
 medianprops = {
         'color': 'blue',  # Цвет линии
@@ -81,7 +83,10 @@ def permutation_test(sample1, sample2, n_permutations=10000, stat_func=None):
     }
 def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05):
     """Комплексное сравнение двух выборок"""
-
+    if len(sample1) != len(sample2):
+        min_len = min(len(sample1), len(sample2))
+        sample1 = sample1[:min_len]
+        sample2 = sample2[:min_len]
     # # Тест Шапиро-Уилка на нормальность
     # _, p_norm1 = stats.shapiro(sample1)
     # _, p_norm2 = stats.shapiro(sample2)
@@ -100,20 +105,20 @@ def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05):
     if normal_dist:
         # Параметрические тесты
         t_stat, p_val = stats.ttest_ind(sample1, sample2, equal_var=equal_var)
-        print(f"t-тест: p={p_val:.4f}")
+        #print(f"t-тест: p={p_val:.4f}")
         return p_val, '(критерий Стьюдента)'
 
     # Непараметрические тесты (всегда)
     if metric != 'novelty':
         u_stat, p_mann = stats.mannwhitneyu(sample1, sample2, alternative='two-sided')
-        print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
+        #print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
         chi2 = chi_square_test(sample1, sample2)
         if p_mann < 0.00001 and chi2['min_expected_freq'] < 5:
             per_test = permutation_test(sample1, sample2)
-            print(f"Перестановочный критерий: p={per_test['p_value']:.4f}")
+            #print(f"Перестановочный критерий: p={per_test['p_value']:.4f}")
             return per_test['p_value'], '(перестановочный критерий)'
         elif p_mann < 0.00001:
-            print(f"Критерий Хи-Квадрат: p={chi2['p_value']:.4f}, n = {chi2['min_expected_freq']}")
+            #print(f"Критерий Хи-Квадрат: p={chi2['p_value']:.4f}, n = {chi2['min_expected_freq']}")
             return chi2['p_value'], '(критерий хи-квадрат)'
         return p_mann, '(критерий Манна-Уитни)'
     else:
@@ -186,7 +191,10 @@ def bar_metrics_draw(df, name, title, metric):
     ax.set_ylabel(metric)
     ax.set_title(title)
     ax.set_xticks(x + width)  # центрируем подписи между группами полосок
-    ax.set_xticklabels(df.index)  # используем имена строк как подписи
+    labs = []
+    for ind in df.index:
+        labs.append(underscore(ind))
+    ax.set_xticklabels(labs)  # используем имена строк как подписи
     ax.legend()
     #ax.grid(True, alpha=0.3)
     plt.tight_layout()
@@ -220,6 +228,11 @@ def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = N
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
     plt.close()
     #plt.show()
+def underscore(s):
+    pattern = r'_([^_]*_[^_]*_[^_]*)$'
+    replacement = r'\n\1'
+
+    return re.sub(pattern, replacement, s)
 def lab_title_make(param_id, p = 0):
     if param_id == 0:
         return p, 'алгоритма выборов'
@@ -316,7 +329,7 @@ def metrics_draw_small(param_id, inner_param_grid):
            'ndcg': {},
            'serendipity': {},
            'novelty': {}}
-    for user in rating[Columns.User].unique()[:100]:
+    for user in rating['userId'].unique()[:110]:
 
         filename = f"{papka}metrics_user{user}.csv"
         if os.path.exists(filename):
@@ -381,7 +394,7 @@ def metrics_draw(param_id, inner_param_grid):
            'ndcg': {},
            'serendipity': {},
            'novelty': {}}
-    for user in rating[Columns.User].unique()[:100]:
+    for user in rating['userId'].unique()[:110]:
 
         filename = f"{papka}metrics_user{user}.csv"
         if os.path.exists(filename):
@@ -415,12 +428,13 @@ def metrics_draw(param_id, inner_param_grid):
                 #print(nonzeros)
                 if nonzeros == 0:
                     skip_flag = True
+
                     break
                 else:
                     dic[key][col_key][p] = user_list
             if skip_flag:
                 continue
-            fin_dic = deepcopy(dic)
+            #fin_dic = deepcopy(dic)
             p_dic = {}
             test_name_dic = {}
             pflag = 0
@@ -430,25 +444,25 @@ def metrics_draw(param_id, inner_param_grid):
                     mini_comparison(dic[key][col_key][ps[0]], dic[key][col_key][ps[i]], key))
                 if pflag == 0 and p_dic[str(labs[0]) + ' ~ ' + str(labs[i])] <= 0.05:
                     pflag = 1
-                dic[key][col_key][ps[i]] = np.array(dic[key][col_key][ps[i]]) - np.array(dic[key][col_key][ps[0]])
-            dic[key][col_key].pop(ps[0], None)
-            name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
-            title = key + ': Сравнение' + ' с ' + str(labs[0]) + ' (' + col_key + ')'
-            box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
+                #dic[key][col_key][ps[i]] = np.array(dic[key][col_key][ps[i]]) - np.array(dic[key][col_key][ps[0]])
+            #dic[key][col_key].pop(ps[0], None)
+            #name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
+            #title = key + ': Сравнение' + ' с ' + str(labs[0]) + ' (' + col_key + ')'
+            #box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
             if pflag == 1:
                 name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id] + '@' + col_key
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
-                box_plot_metrics_draw(fin_dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
+                box_plot_metrics_draw(dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
         plt.close('all')
 
-def get_top_k(dataframe, k, ascending=[False, False, True]):
+def get_top_k(dataframe, k, metric_key, ascending=[False, False, True]):
     result = {}
-    i = 0
+    meh = 0
     for col in dataframe.columns:
-        sorted_df = dataframe.sort_values(by=col, ascending=ascending[i]).head(k)
-        i += 1
+        sorted_df = dataframe.sort_values(by=col, ascending=ascending[meh]).head(k)
+        meh += 1
         result[col] = sorted_df
-        sorted_df.to_csv(papka + 'tops/top_' + str(k) + '_by_' + col + '.csv')
+        sorted_df.to_csv(papka + 'tops/top_' + metric_key + '_' + str(k) + '_by_' + col + '.csv')
     return result
 def top_draw(inner_param_grid, top_k = 20):
     param_grid = deepcopy(inner_param_grid)
@@ -462,9 +476,9 @@ def top_draw(inner_param_grid, top_k = 20):
            'ndcg': {},
            'serendipity': {},
            'novelty': {}}
-    for user in rating[Columns.User].unique()[:100]:
+    for user in rating['userId'].unique()[:110]:
 
-        filename = f"my_films/test1/metrics_user{user}.csv"
+        filename = f"{papka}metrics_user{user}.csv"
         if os.path.exists(filename):
             df_dic[user] = pd.read_csv(filename)
 
@@ -486,7 +500,7 @@ def top_draw(inner_param_grid, top_k = 20):
 
         df_stats = pd.DataFrame.from_dict(dic[key], orient='index',
                                     columns=['mean', 'median', 'std'])
-        top_dic = get_top_k(df_stats, top_k)
+        top_dic = get_top_k(df_stats, top_k, key)
         for met in ['mean', 'median', 'std']:
             name = papka + 'tops/' + key + '_' + met
             title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
@@ -528,7 +542,7 @@ params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
                'weighted':[True, False],
                'series_rate':[0, 2]}
 #metrics_draw(1, params_grid)
-
-for i in range(0, 5):
-    metrics_draw(i, params_grid)
+top_draw(params_grid, top_k = 5)
+# for i in range(0, 6):
+#     metrics_draw(i, params_grid)
 

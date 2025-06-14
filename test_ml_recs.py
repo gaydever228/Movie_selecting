@@ -1,0 +1,126 @@
+from importlib.metadata import metadata
+
+import numpy as np
+from itertools import combinations
+from copy import deepcopy
+from collections import deque
+# библиотеки для симуляции и отрисовки выборов
+import time
+from tqdm import tqdm
+import ast
+import json
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
+from numpy.random import Generator, PCG64
+import pandas as pd
+
+pd.set_option('display.max_columns', 100)
+import math
+from random import sample
+import random
+from itertools import product
+from ml_recs import Recommend
+from joblib import Parallel, delayed
+rng = Generator(PCG64())
+import copy
+from tqdm import tqdm
+from rich.progress import Progress
+import csv
+from scipy.optimize import curve_fit
+from election import election
+from PBF import PBF, BnB, bound, branch
+from Test import Test
+from recsys import Recommend_new
+from rectools import Columns
+from datetime import datetime, timedelta
+
+def time_split(df, quant = 0.5):
+    print("time splitting")
+    train_parts = []
+    test_parts = []
+
+    for user_id, user_df in df.groupby(Columns.User):
+        # Вычисляем квантиль для текущего пользователя
+        split_date = user_df[Columns.Datetime].quantile(quant)
+        # Разделяем на train и test по split_date
+        train_user = user_df[user_df[Columns.Datetime] <= split_date]
+        test_user = user_df[user_df[Columns.Datetime] > split_date]
+        #print(test_user[Columns.Item].nunique()/user_df[Columns.Item].nunique())
+        train_parts.append(train_user)
+        test_parts.append(test_user)
+
+    # Объединяем по всем пользователям
+    train_df = pd.concat(train_parts)
+    test_df = pd.concat(test_parts)
+    pivot_df = train_df.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
+    print(train_df[Columns.Item].nunique()/df[Columns.Item].nunique())
+    return train_df, test_df, pivot_df
+
+def test_ML(ratings, ratings_test, titles, user_id = 0, k = 10, metric = True):
+    print('user_id:', user_id)
+    metrics_values = {}
+    models_list = ['KNN cosine', 'KNN TF-IDF', 'KNN BM25', 'ALS', 'Random', 'Popular']
+
+    recos = {}
+    times = {}
+    print('shape', ratings.shape)
+    #print(ratings.head(10))
+    time_0 = time.time()
+    recs_test = Recommend(ratings, titles, commit_size=k)
+    models_dic = {'KNN cosine': (recs_test.recs_KNN(user_id, commit_size=k, dist_method='cosine'), recs_test.metrics(ratings_test, 'KNN cosine')),
+                  'KNN TF-IDF': (recs_test.recs_KNN(user_id, commit_size=k, dist_method='TF-IDF'), recs_test.metrics(ratings_test, 'KNN TF-IDF')),
+                  'KNN BM25': (recs_test.recs_KNN(user_id, commit_size=k, dist_method='BM25'), recs_test.metrics(ratings_test, 'KNN BM25')),
+                  'ALS': (recs_test.recs_ALS(user_id, commit_size=k), recs_test.metrics(ratings_test, 'ALS')),
+                  'Random': (recs_test.recs_Random(user_id, commit_size=k), recs_test.metrics(ratings_test, 'Random')),
+                  'Popular': (recs_test.recs_Popular(user_id, commit_size=k), recs_test.metrics(ratings_test, 'Popular'))}
+    for mod in models_list:
+        time_0 = time.time()
+        recos[mod] = models_dic[mod][0]
+        times[mod] = time.time() - time_0
+        print('meh1', mod, times[mod])
+    time_0 = time.time()
+    if metric:
+        for mod in models_list:
+            time_0 = time.time()
+            metrics_values[mod] = models_dic[mod][1]
+            times[mod] = time.time() - time_0
+            print('meh2', mod, times[mod])
+
+        all_metrics = {}
+        for key, item in metrics_values.items():
+            all_metrics[key] = {}
+            for key2, item2 in item.items():
+                print('item2', item2)
+                all_metrics[key][key2] = item2[user_id]
+        return all_metrics, recos, times
+    else:
+        return recos, times
+
+
+rating = pd.read_csv('long_my_films.csv')
+movies = pd.read_csv('map_my_films.csv')
+movies.columns = [Columns.Item, "title"]
+#links_dic = movies[movies.columns[1]].to_dict()
+df_train, df_test, pivo = time_split(rating, quant=0.2)
+
+times = {'KNN cosine':[],
+         'KNN TF-IDF':[],
+         'KNN BM25':[],
+         'ALS':[],
+         'Random':[],
+         'Popular':[]}
+for user in tqdm(rating[Columns.User].unique()):
+    metrics, recos_dic, timess = test_ML(df_train, df_test, movies, user, 10)
+    for key, value in timess.items():
+        times[key].append(value)
+    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+    metrics_df = metrics_df.T
+    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    # recos_df = pd.DataFrame.from_dict(recos_dic)
+    # print(recos_df)
+    # print(metrics_df)
+    metrics_df.to_csv('my_films/test_ML/metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv('my_films/test_ML/recos_' + str(user) + '.csv')
+
+times_df = pd.DataFrame.from_dict(times)
+times_df.to_csv('my_films/test_ML/times_mac.csv')

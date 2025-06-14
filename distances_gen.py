@@ -85,37 +85,7 @@ def gen_dist(dist_method):
         #         ids_to_num[params_grid['degrees'][0]])
 
     return dist_method, times
-def safe_to_csv(df, path):
-    def serialize(val):
-        if isinstance(val, (list, dict)):
-            return json.dumps(val)
-        return val
 
-    df_serialized = df.map(serialize)
-    df_serialized.to_csv(path)
-def safe_from_csv(path):
-    def parse_obj(obj):
-        if isinstance(obj, dict):
-            try:
-                return {int(k): v for k, v in obj.items()}
-            except ValueError:
-                return obj
-        return obj
-    def deserialize(val):
-        try:
-            obj = json.loads(val)
-            return parse_obj(obj)
-        except (json.JSONDecodeError, TypeError):
-            try:
-                return int(val)
-            except (ValueError, TypeError):
-                try:
-                    return float(val)
-                except (ValueError, TypeError):
-                    return val
-
-    df = pd.read_csv(path, index_col=0)
-    return df.map(deserialize)
 # rating = pd.read_csv('archive/ratings_small.csv')
 # #print(rating)
 # #rating['movieId'] = rating['movieId'].astype(int)

@@ -77,7 +77,9 @@ def full_test_GT_light(combination, user):
     if combination[1] == 'jaccar':
         cand_dist = pd.read_csv('my_films/gened_dists_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0).to_numpy()
         ids_to_num_df = pd.read_csv('my_films/gened_dists_ids_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0)
+        #print(ids_to_num_df)
         ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
+        #print(ids_to_num)
     else:
         cand_dist = pd.read_csv('my_films/gened_dists_' + combination[1] + '.csv', index_col=0).to_numpy()
         ids_to_num_df = pd.read_csv('my_films/gened_dists_ids_' + combination[1] + '.csv', index_col=0)
@@ -111,21 +113,22 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
+params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
                'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8, 9, 10],
-               'size':[5, 10, 15, 20, 25, 30],
-               'weighted':[False, True],
+               'degrees':[4, 2, 3, 5, 6, 7, 8, 9, 10],
+               'size':[10, 15, 20, 25, 30],
+               'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 step = 1
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
+print(links_dic)
 
 
 
-for user in tqdm(rating[Columns.User].unique()):
+for user in rating[Columns.User].unique():
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
@@ -144,17 +147,15 @@ for user in tqdm(rating[Columns.User].unique()):
         metrics[cur_string] = metric
         recos_dic[cur_string] = rec
         times[cur_string].append(timess)
-    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
-    metrics_df = metrics_df.T
-    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    #recos_df = pd.DataFrame.from_dict(recos_dic)
-    #print(recos_df)
-    #print(metrics_df)
-    metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
-    step += 1
+    # metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+    # metrics_df = metrics_df.T
+    # recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    # metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
+    # recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
+    # step += 1
 
-#for key, item in times.items():
-#    print(key, np.array(item).mean())
+for key, item in times.items():
+    print(key, np.array(item).mean())
+    times[key] = np.array(item).mean()
 times_df = pd.DataFrame.from_dict(times)
 times_df.to_csv('my_films/test1/times_mac.csv')

@@ -21,6 +21,7 @@ meanprops = {
     'linestyle': '--'       # Стиль линии (пунктир)
 }
 papka = 'my_films/test1/'
+papka_ml = 'my_films/test_ML/'
 
 def chi_square_test(sample1, sample2):
     """
@@ -452,16 +453,81 @@ def metrics_draw(param_id, inner_param_grid):
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
                 box_plot_metrics_draw(fin_dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
         plt.close('all')
+def metrics_draw_ml(inner_param_grid):
+    param_grid = deepcopy(inner_param_grid)
+    #print(param_grid)
+    df_dic = {}
+
+    param_values = param_grid.values()
+
+    dic = {'prec': {},
+           'recall': {},
+           'ndcg': {},
+           'serendipity': {},
+           'novelty': {}}
+    models_list = ['KNN default', 'KNN cosine', 'KNN TF-IDF', 'KNN BM25', 'ALS', 'Random', 'Popular']
+    for user in rating[Columns.User].unique()[:100]:
+
+        filename = f"{papka}metrics_user{user}.csv"
+        filename_ml = f"{papka_ml}metrics_user{user}.csv"
+        if os.path.exists(filename) and os.path.exists(filename_ml):
+            df_dic[user] = (pd.read_csv(filename), pd.read_csv(filename_ml))
 
 
-def get_top_k(dataframe, k, ascending=[False, False, True]):
+    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+        print(key)
+        model_metrics = {}
+        for mod in models_list:
+            user_list_ml = []
+            for user, dfs in df_dic.items():
+                user_list_ml.append(dfs[1].at[num, mod])
+            model_metrics[mod] = user_list_ml
+        for combination in product(*param_values):
+            col = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+                combination[3]) +
+                          '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                        combination[5]))
+            dic[key][col] = {}
+            user_list = []
+            for user, dfs in df_dic.items():
+                if col in dfs[0].columns:
+                    # print(df[col][num])
+                    v = dfs[0].at[num, col]
+                    # print(v)
+                    user_list.append(v)
+
+            dic[key][col][col] = user_list
+            dic[key][col].update(model_metrics)
+
+            p_dic = {}
+            test_name_dic = {}
+            pflag = 0
+            for mod in models_list:
+                (p_dic[str(col) + ' ~ ' + mod],
+                 test_name_dic[str(col) + ' ~ ' + mod]) = (
+                    mini_comparison(dic[key][col][col], dic[key][col][mod], key))
+                if p_dic[str(col) + ' ~ ' + mod] <= 0.05 and np.mean(dic[key][col][col] > dic[key][col][mod]):
+                    pflag += 1
+                #difference = np.array(dic[key][col][col]) - np.array(dic[key][col][mod])
+                #name = papka_ml + 'plots/diff/' + key + '_' + mod +'_' + col
+                #title = key + ': Сравнение' + ' с ' + mod
+                #box_plot_metrics_draw({'f':difference}, [col], title, name, models_list[6],
+                #                      {str(col) + ' ~ ' + mod:p_dic[str(col) + ' ~ ' + mod]},
+                #                      {str(col) + ' ~ ' + mod:test_name_dic[str(col) + ' ~ ' + mod]})
+            if pflag >= 3:
+                name = papka_ml + 'plots/' + key + '-' + col
+                title = 'Значение ' + key + ' (' + col + ')'
+                box_plot_metrics_draw(dic[key][col], ['election'] + models_list, title, name, p_values_dict = p_dic, test_name = test_name_dic)
+        plt.close('all')
+
+def get_top_k(dataframe, k, metric_key, ascending=[False, False, True]):
     result = {}
-    i = 0
+    meh = 0
     for col in dataframe.columns:
-        sorted_df = dataframe.sort_values(by=col, ascending=ascending[i]).head(k)
-        i += 1
-        result[col] = sorted_df
-        sorted_df.to_csv(papka + 'tops/top_' + str(k) + '_by_' + col + '.csv')
+        sorted_df = dataframe.sort_values(by=col, ascending=ascending[meh])
+        meh += 1
+        sorted_df.to_csv(papka + 'tops/top_' + metric_key + '_' + str(k) + '_by_' + col + '.csv')
+        result[col] = sorted_df.head(k)
     return result
 def top_draw(inner_param_grid, top_k = 20):
     param_grid = deepcopy(inner_param_grid)
@@ -499,9 +565,62 @@ def top_draw(inner_param_grid, top_k = 20):
 
         df_stats = pd.DataFrame.from_dict(dic[key], orient='index',
                                     columns=['mean', 'median', 'std'])
-        top_dic = get_top_k(df_stats, top_k)
+        top_dic = get_top_k(df_stats, top_k, key)
         for met in ['mean', 'median', 'std']:
             name = papka + 'tops/' + key + '_' + met
+            title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
+            bar_metrics_draw(top_dic[met], name, title, key)
+        plt.close('all')
+def top_draw_ml(inner_param_grid, top_k = 20):
+    param_grid = deepcopy(inner_param_grid)
+    #print(param_grid)
+    df_dic = {}
+
+    param_values = param_grid.values()
+
+    dic = {'prec': {},
+           'recall': {},
+           'ndcg': {},
+           'serendipity': {},
+           'novelty': {}}
+    models_list = ['KNN default', 'KNN cosine', 'KNN TF-IDF', 'KNN BM25', 'ALS', 'Random', 'Popular']
+
+    for user in rating[Columns.User].unique()[:100]:
+
+        filename = f"{papka}metrics_user{user}.csv"
+        filename_ml = f"{papka_ml}metrics_user{user}.csv"
+        if os.path.exists(filename) and os.path.exists(filename_ml):
+            df_dic[user] = (pd.read_csv(filename), pd.read_csv(filename_ml))
+
+    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+        print(key)
+        model_metrics = {}
+        for mod in models_list:
+            dic[key][mod] = {}
+            user_list_ml = []
+            for user, dfs in df_dic.items():
+                user_list_ml.append(dfs[1].at[num, mod])
+            model_metrics[mod] = user_list_ml
+            dic[key][mod] = (np.mean(user_list_ml), np.median(user_list_ml), np.std(user_list_ml))
+        for combination in product(*param_values):
+            col_key= (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+                combination[3]) +
+                          '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                        combination[5]))
+            #print(col_key)
+            dic[key][col_key] = {}
+            user_list = []
+            for user, dfs in df_dic.items():
+                if col_key in dfs[0].columns:
+                    v = dfs[0].at[num, col_key]
+                    user_list.append(v)
+            dic[key][col_key] = (np.mean(user_list), np.median(user_list), np.std(user_list))
+
+        df_stats = pd.DataFrame.from_dict(dic[key], orient='index',
+                                    columns=['mean', 'median', 'std'])
+        top_dic = get_top_k(df_stats, top_k, key)
+        for met in ['mean', 'median', 'std']:
+            name = papka_ml + 'tops/' + key + '_' + met
             title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
             bar_metrics_draw(top_dic[met], name, title, key)
         plt.close('all')
@@ -535,19 +654,21 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall', 'kendall_hat'],
-               'degrees':[2, 3, 4, 5, 6, 7, 8],
-               'size':[10, 20, 30],
-               'weighted':[True, False],
+               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
+               'degrees':[2, 3, 4, 5, 6, 7, 8, 9, 10],
+               'size':[10],
+               'weighted':[False, True],
                'series_rate':[0, 1, 2, 3]}
 #metrics_draw(1, params_grid)
 
 
-top_draw(params_grid, top_k = 5)
+#top_draw(params_grid, top_k = 5)
 
 # for i in range(2, 5):
 #     metrics_draw(i, params_grid)
 
+top_draw_ml(params_grid, top_k = 7)
+#metrics_draw_ml(params_grid)
 
 
 exit()
