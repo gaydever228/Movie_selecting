@@ -20,6 +20,7 @@ from PBF import PBF, BnB, bound, branch
 
 class election:
     def __init__(self, V, C, commit_size = 0, gen = False, distrV = 'normal', distrC = 'normal', boundV = 1, boundC = 1, matrix = None, weights = None):
+        self.committee_id = None
         self.decision = None
         self.Score = None
         self.V = V
@@ -64,6 +65,7 @@ class election:
         PS = np.zeros(self.C)
         for voter, e in enumerate(VoteLists.T):
             PS[e[0]] += self.weights[voter]
+        #print('PS', PS)
         #print(PS)
         sorted_by_PS = np.argsort(PS)
         sorted_matrix = []
@@ -76,6 +78,7 @@ class election:
         self.dist_matrix = np.array(sorted_matrix)
         self.sorted_dist_matrix = np.sort(sorted_matrix, axis=0)
         self.VoteLists = np.argsort(sorted_matrix, axis=0)
+        #print(self.VoteLists.T)
     # def sort_candidates(self):
     #     PS = np.zeros(self.C)
     #     for e in self.VoteLists.T:
@@ -96,6 +99,11 @@ class election:
     #     self.sorted_dist_matrix = np.sort(self.dist_matrix, axis=0)
     #     self.VoteLists = np.argsort(self.dist_matrix, axis=0)
     #     #return sorted_matrix
+    def add_matrices_mini(self, distances):
+        self.VoteLists = np.argsort(distances, axis=0)
+        self.sorted_dist_matrix = np.sort(distances, axis=0)
+    def add_matrices_micro(self, distances):
+        self.VoteLists = np.argsort(distances, axis=0)
     def delete_max(self, level  = 2):
         #print('before:', self.dist_matrix)
         #print(self.VoteLists)
@@ -103,16 +111,17 @@ class election:
         PS = np.zeros(self.C)
         #CN = deepcopy(self.candidates)
         Cand = np.arange(self.C)
-        for e in self.VoteLists.T:
-            PS[e[0]] += 1
+        V_w = self.weights.sum()
+        for voter, e in enumerate(self.VoteLists.T):
+            PS[e[0]] += self.weights[voter]
             for i in range(self.C - self.k):
                 if level == 0 and np.count_nonzero(anti_PS==0) < self.k:
                     break
-                anti_PS[e[-i - 1]] += 1
+                anti_PS[e[-i - 1]] += self.weights[voter]
         #print(PS, anti_PS)
         # level 1
-        if self.V in anti_PS:
-            remove1 = np.where(anti_PS == self.V)[0]
+        if V_w in anti_PS:
+            remove1 = np.where(anti_PS == V_w)[0]
             #print(remove1)
             # not_remove = np.where(PS != 0)[0]
             # remove1 = remove1[~np.isin(remove1, not_remove)]
@@ -127,8 +136,8 @@ class election:
             #self.make_matrix()
             self.VoteLists = np.argsort(self.dist_matrix, axis=0)
             PS = np.zeros(self.C)
-            for e in self.VoteLists.T:
-                PS[e[0]] += 1
+            for voter, e in enumerate(self.VoteLists.T):
+                PS[e[0]] += self.weights[voter]
 
         # level 2
         if level > 1:
@@ -167,6 +176,7 @@ class election:
         #Com = np.zeros((2, self.k))
         #j = 0
         self.committee_id = []
+
         for i in range(self.C):
             if self.decision[i] == 1:
                 #Com[0][j] = self.candidates[0][i]
@@ -174,6 +184,7 @@ class election:
                 self.committee_id.append(i)
                 #j += 1
         self.committee_id = np.array(self.committee_id)
+        #print(self.decision)
         #print('ids: ',  self.committee_id)
         #self.committee = Com
     def Calc_Score_old(self):
@@ -284,11 +295,17 @@ class election:
     #     #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
     #     #self.draw(name =  draw_name)
     #     return self.Score
-    def SNTV_rule(self, draw_name = 'SNTV'):
+    def SNTV_rule_big(self, draw_name = 'SNTV'):
         PS = np.zeros(self.C)
+        #print(self.VoteLists.T)
         for voter, e in enumerate(self.VoteLists.T):
             PS[e[0]] += self.weights[voter]
-        #print('PS', PS)
+        #print('PS2', PS)
+        if np.count_nonzero(PS) < self.k:
+            for voter, e in enumerate(self.VoteLists.T):
+                for pok in range(1, 4):
+                    PS[e[pok]] += self.weights[voter]/(3**pok)
+            #print('PS3', PS)
         top = np.argsort(-PS)
         dec = np.zeros(self.C)
         for cand in top[:self.k]:
@@ -302,6 +319,19 @@ class election:
         #print('second: ', self.Calc_Score2(), self.Calc_Cost2())
         #self.draw(name =  draw_name)
         #return self.Score
+    def SNTV_rule(self):
+        PS = np.zeros(self.C)
+        #print(self.VoteLists.T)
+        for voter, e in enumerate(self.VoteLists.T):
+            PS[e[0]] += self.weights[voter]
+        #print('PS2', PS)
+        if np.count_nonzero(PS) < self.k:
+            for voter, e in enumerate(self.VoteLists.T):
+                for pok in range(1, 4):
+                    PS[e[pok]] += self.weights[voter]/(3**pok)
+        top = np.argsort(-PS)
+        self.committee_id = np.array(top[:self.k])
+
     # def STV_rule_new(self, draw_name = 'STV'):
     #     elected = 0
     #     PS = np.zeros(self.C)
@@ -386,6 +416,164 @@ class election:
     #     return self.Score
     def STV_star(self):
         deleted = []
+        committee_id = []
+        to_elect = self.k
+        #print('COM SIZE', self.k)
+        weights_sum = self.weights.sum()
+        Votes = copy.deepcopy(self.VoteLists.T)
+        STV_weights = copy.deepcopy(self.weights)
+        dec = np.zeros(self.C)
+        quota = weights_sum / (to_elect + 1)
+        flag = 0
+        while to_elect > 0:
+            PS = np.zeros(self.C)
+            if flag == 1:
+                PS[deleted] = None
+            for voter, e in enumerate(Votes):
+                PS[e[0]] += STV_weights[voter]
+            if len(PS[~np.isnan(PS)]) == to_elect:
+                 for i in range(to_elect):
+                    c = np.nanargmax(PS)
+                    committee_id.append(c)
+                    PS[c] = None
+                 break
+            if len(Votes) < to_elect:
+                PS = np.zeros(self.C)
+                if flag == 1:
+                    PS[deleted] = None
+                for voter, e in enumerate(Votes):
+                    for l in range(min(len(e), 10)):
+                        PS[e[l]] += STV_weights[voter]/(2**l)
+                for i in range(to_elect):
+                    c = np.nanargmax(PS)
+                    committee_id.append(c)
+                    PS[c] = None
+                break
+            #print('quota', quota)
+            #print(to_elect)
+            #print('V', len(Votes))
+            #if len(PS[~np.isnan(PS)]) < 30:
+            #    print('PS', PS[~np.isnan(PS)])
+
+            c = np.nanargmax(PS)
+            if PS[c] >= quota:
+                committee_id.append(c)
+                # новые значения
+                to_elect -= 1
+                if to_elect == 0:
+                    break
+                #print(to_elect)
+                ind = np.where(Votes == c)
+                #print('ind', ind)
+                need = np.where(ind[1] == 0)
+                for_remove = ind[0][need]
+                # удаление избирателей, у которых первый в списке
+                Votes = np.delete(Votes, for_remove, 0)
+                STV_weights = np.delete(STV_weights, for_remove)
+                # удаление кандидата
+                ind = np.where(Votes == c)
+                # print('ind', ind)
+                Votes1 = []
+                for i in range(len(Votes)):
+                    Votes1.append(np.delete(Votes[i], ind[1][i]))
+                Votes = np.array(Votes1)
+
+                quota = quota - (PS[c] - quota)/to_elect
+                weights_sum -= PS[c]
+            else:
+                c = np.nanargmin(PS)
+                ind = np.where(Votes == c)
+                Votes1 = []
+                for i in range(len(Votes)):
+                    Votes1.append(np.delete(Votes[i], ind[1][i]))
+                Votes = np.array(Votes1)
+            deleted.append(c)
+            flag = 1
+        self.committee_id = np.array(committee_id)
+        #self.Calc_Cost()
+        # self.draw(name =  draw_name)
+        #return self.Score
+    def STV_basic(self):
+        to_elect = self.k
+        weights_sum = self.weights.sum()
+        committee_id = []
+        #print(weights_sum)
+        Votes = copy.deepcopy(self.VoteLists.T)
+        STV_weights = copy.deepcopy(self.weights)
+        dec = np.zeros(self.C)
+        quota = weights_sum / (to_elect + 1)
+        #print('quota', quota)
+        PS = np.zeros(self.C)
+        for voter, e in enumerate(Votes):
+            PS[e[0]] += STV_weights[voter]
+        while to_elect > 0:
+            if len(PS[~np.isnan(PS)]) == to_elect or len(Votes) < to_elect:
+                 for i in range(to_elect):
+                    c = np.nanargmax(PS)
+                    committee_id.append(c)
+                    PS[c] = None
+                 break
+
+
+            #print(np.nansum(PS))
+            #print(to_elect)
+            c = np.nanargmax(PS)
+            if PS[c] >= quota - 0.001:
+                committee_id.append(c)
+                # новые значения
+                to_elect -= 1
+                if to_elect == 0:
+                    break
+                ind = np.where(Votes == c)
+                need = np.where(ind[1] == 0)
+                for_remove = ind[0][need]
+
+                # перераспределение голосов среди вторых кандидатов
+                for voter in for_remove:
+                    PS[Votes[voter][1]] += STV_weights[voter] * (PS[c] - quota)/len(for_remove)
+                    #print(STV_weights[voter],'*(', PS[c],'-',quota,')/',len(for_remove))
+                    #print(voter, Votes[voter][1], PS[Votes[voter][1]])
+
+                # удаление кандидата
+                Votes1 = []
+                for i in range(len(Votes)):
+                    Votes1.append(np.delete(Votes[i], ind[1][i]))
+                Votes = np.array(Votes1)
+
+            else:
+                c = np.nanargmin(PS)
+                ind = np.where(Votes == c)
+                need = np.where(ind[1] == 0)
+                #print("need", need)
+                for_remove = ind[0][need]
+                #print("for remove", for_remove)
+                # Votes = np.delete(Votes, for_remove, 0)
+                debug_sum = 0
+                for voter in for_remove:
+                    PS[Votes[voter][1]] += STV_weights[voter]*(PS[c]/len(for_remove))
+                    debug_sum += STV_weights[voter]
+                    #print(voter, Votes[voter][1], PS[Votes[voter][1]])
+                # if debug_sum > PS[c]:
+                #     print(debug_sum, 'and', PS[c])
+                #     print(for_remove)
+                #     print(Votes[for_remove])
+                #     print('PS', PS)
+                #print(STV_weights)
+                Votes1 = []
+                for i in range(len(Votes)):
+                    Votes1.append(np.delete(Votes[i], ind[1][i]))
+                Votes = np.array(Votes1)
+            #print('Votes', Votes)
+            PS[c] = None
+
+        self.committee_id = np.array(committee_id)
+        #self.Calc_Score()
+        #self.Calc_Cost()
+        # self.draw(name =  draw_name)
+
+        #return self.Score
+    def STV_star_big(self):
+        deleted = []
         to_elect = self.k
         #print('COM SIZE', self.k)
         weights_sum = self.weights.sum()
@@ -460,12 +648,11 @@ class election:
             flag = 1
         self.decision = dec
         self.ComDec()
-        #self.Calc_Score()
+        self.Calc_Score()
         #self.Calc_Cost()
         # self.draw(name =  draw_name)
-        #self.Calc_Score()
         #return self.Score
-    def STV_basic(self):
+    def STV_basic_big(self):
         to_elect = self.k
         weights_sum = self.weights.sum()
         #print(weights_sum)

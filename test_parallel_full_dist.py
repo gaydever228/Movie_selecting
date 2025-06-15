@@ -83,8 +83,8 @@ def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id
     #times['recommendation_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
     print('recommendation_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
     if metric:
-        metrics = recs_test.metrics(df_test, df_train, user_id)
-        return metrics, recos
+        metrics, weighted_recos = recs_test.metrics(df_test, df_train, user_id)
+        return metrics, recos, weighted_recos
     else:
         return recos, times
 def full_test_GT_light(combination, user):
@@ -103,7 +103,7 @@ def full_test_GT_light(combination, user):
     config = dict(zip(params_keys, combination))
     print(cur_string)
     time_0 = time.time()
-    metric, rec = test_GT_light(df_train, df_test, links_dic, pivo,
+    metric, rec, weighted_rec = test_GT_light(df_train, df_test, links_dic, pivo,
                                 cand_dist,
                                 ids_to_num,
                                 user_id=user,
@@ -221,8 +221,8 @@ for user in rating['userId'].unique()[[30, 40]]:
     #recos_df = pd.DataFrame.from_dict(recos_dic)
     #print(recos_df)
     #print(metrics_df)
-    metrics_df.to_csv('GT/test1/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('GT/test1/recos_' + str(user) + '.csv')
+    metrics_df.to_csv('GT/test2/metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv('GT/test2/recos_' + str(user) + '.csv')
     step += 1
 
 #for key, item in times.items():

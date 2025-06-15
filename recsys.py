@@ -31,6 +31,7 @@ from Test import Test
 class Recommend_new(election):
     def __init__(self, links, raiting, pivo, degrees = 4, remove_rate = 1, series_rate = 2, dist_method = 'jaccar',
                  weights = None, full_dist = False, ids_to_num = None, cand_dist_matrix = None):
+        self.quantiles = None
         self.candidates = None
         self.recos = None
         self.pivo = pivo
@@ -71,6 +72,8 @@ class Recommend_new(election):
         #print("степеней", self.degrees, ", квантили:", arr)
         quantiles = raiting.groupby(Columns.User)[Columns.Weight].quantile(arr)
         quantiles = quantiles.unstack()
+        self.quantiles = quantiles
+        #print('quants',quantiles)
         step = 1
         for user in raiting[Columns.User].unique():
             #print("App_Sets, user", user, "Step", step,"/",self.U)
@@ -394,12 +397,13 @@ class Recommend_new(election):
             #print('voters', voters, voters_nums)
             dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
             #print('dist', dist_matrix)
-            self.dist_matrix = np.square(dist_matrix)
+            #self.dist_matrix = np.square(dist_matrix)
+            self.dist_matrix = dist_matrix
             cand_arr = []
             for num in sorted(cands_nums):
                 cand_arr.append(self.num_to_id[num])
             self.candidates = [np.array(cand_arr), np.array(cand_arr)]
-
+            self.weights = np.array([self.weights_dic[self.num_to_id[num]] for num in sorted(voters_nums)])
         else:
             met_dic = {'cosine_hat':self.cosine_hat_joblib,
                        'cosine':self.cosine_joblib,
@@ -493,15 +497,20 @@ class Recommend_new(election):
     def voting(self, cands, voters, commit_size, rule = 'SNTV'):
         #self.dist_matrix = self.cand_dist[np.ix_(sorted(cand_nums), sorted(voters_nums))]
         #self.candidates = [np.array(sorted(cands)), np.array(sorted(cands))]
-
+        #print('CANDIDATES:')
+        #for c in sorted(cands):
+        #    print(c, self.links[c])
+        #print('cands?', sorted(cands))
         self.nes_cand_dist(cands, voters)
+        #print('cands!', sorted(set(self.candidates[0])))
         # print(np.shape(self.dist_matrix))
         self.C = len(cands)
         self.V = len(voters)
         self.k = commit_size
         self.decision = None
         self.Score = None
-        self.add_matrices(self.dist_matrix)
+        self.add_matrices_micro(self.dist_matrix)
+        #print('cands!!!', sorted(set(self.candidates[0])))
         # print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
         self.k = min(self.k, len(cands))
         #self.weights = weights
@@ -512,7 +521,7 @@ class Recommend_new(election):
             #for id in self.committee_id:
                 #print('SNTV recommends', self.candidates[0][id])
         elif rule == 'BnB':
-
+            self.add_matrices(self.dist_matrix)
             self.BnB_rule(tol=0.7, level=2)
             # print('BnB:', self.BnB_rule(tol = 0.7, level=2))
             # print(self.Cost)
@@ -532,44 +541,45 @@ class Recommend_new(election):
         all_items_set = set(self.raiting[Columns.Item])  # множество вообще всех фильмов
         c_to_c = all_items_set - all_c_to_v  # множество фильмов, из которых будем выбирать
         if weighted:
-            weights_dic = {}
+            self.weights_dic = {}
             # voters_nums = {self.id_to_num[id] for id in c_to_v}
             # cands_nums = {self.id_to_num[id] for id in c_to_c}
             for voter in sorted(all_c_to_v):
                 for d in range(self.degrees // 2, self.degrees):
                     if voter in self.user_approval_sets[user_id][d]:
-                        weights_dic[voter] =1 + d - self.degrees//2
+                        self.weights_dic[voter] =1 + d - self.degrees//2
             for d in range(self.degrees // 2, self.degrees):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # множество фильмов, которые будут избирателями
 
-            self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
+
             #print('weights', self.weights)
         else:
             #print('anti rec')
-            weights_dic = {}
+            self.weights_dic = {}
             # voters_nums = {self.id_to_num[id] for id in c_to_v}
             # cands_nums = {self.id_to_num[id] for id in c_to_c}
             for voter in sorted(all_c_to_v):
-                weights_dic[voter] = 1
+                self.weights_dic[voter] = 1
             for d in range(self.degrees//2):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # избиратели - "плохие" фильмы
             #self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
             #print(self.dist_matrix)
-            self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
+
             # print(self.bad_percent, "% плохих фильмов", len(c_to_v))
             # print("кандидатов", len(c_to_c))
             #voters_nums = {self.id_to_num[id] for id in c_to_v}
             #cands_nums = {self.id_to_num[id] for id in c_to_c}
+
             self.voting(c_to_c, c_to_v, commit_size * self.remove_rate, rule)
+
             #print(self.committee_id)
-            # print('anti-reccomendations are:')
+            #print('anti-reccomendations are:')
             for id in self.committee_id:
                 c_to_c.remove(self.candidates[0][id])
             #self.dist_matrix = np.delete(self.dist_matrix, self.committee_id, axis=0)
                 #cands_nums.remove(id)
 
             c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
-            self.weights = np.array([weights_dic[voter] for voter in sorted(c_to_v)])
             #voters_nums = all_items_num.difference(voters_nums)
             #voters_nums = {self.id_to_num[id] for id in c_to_v}
 
@@ -582,7 +592,7 @@ class Recommend_new(election):
             self.voting(c_to_c, c_to_v, current_commit_size, rule)
             # print("step %d:" % i)
             c_to_c = {self.candidates[0][id] for id in self.committee_id}
-            self.dist_matrix = self.dist_matrix[self.committee_id]
+            #self.dist_matrix = self.dist_matrix[self.committee_id]
             #cands_nums = set(self.committee_id)
             current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
             i += 1
@@ -590,7 +600,7 @@ class Recommend_new(election):
         # cands_nums = {self.id_to_num[id] for id in c_to_c}
         self.voting(c_to_c, c_to_v, commit_size, rule)
         recos_list = []
-        # print('reccomendations are:')
+        #print('reccomendations are:')
         i = 1
         for id in self.committee_id:
             recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]]])
@@ -625,8 +635,27 @@ class Recommend_new(election):
                                                                                    prev_interactions=df_train,
                                                                                    catalog=catalog)[user_id]
         metrics_values['novelty'] = metrics["novelty@" + str(k)].calc_per_user(reco=self.recos, prev_interactions=df_train)[user_id]
+        self.recos = self.recos.merge(df_test[[Columns.User, Columns.Item, Columns.Weight]],
+                           on=[Columns.User, Columns.Item],
+                           how='left')
+        self.recos[Columns.Weight] = self.recos[Columns.Weight].fillna(0)
+        #print(recos)
+        #median_value = df_train[df_train[Columns.User] == user_id][Columns.Weight].median()
+        quants = self.quantiles.loc[user_id]
+
+        qarr = []
+        for row in self.recos[Columns.Weight]:
+            #print(row)
+            v = 0.5 if row > 0 else 0
+            #print(v)
+            for q in quants:
+                if row > q:
+                    v+= 1
+            qarr.append(v)
+        self.recos['weighted weight'] = qarr
+        metrics_values['weighted prec'] = np.mean(qarr)/(self.degrees - 1)
         #print(f"serendipity10: {metrics_values['serendipity@10']}")
-        return metrics_values
+        return metrics_values, self.recos[['title', Columns.Weight, 'weighted weight']]
 
 
 
@@ -807,7 +836,7 @@ class Reccomend(election):
         self.decision = None
         self.Score = None
 
-        self.add_matrices(self.dist_matrix)
+        self.add_matrices_micro(self.dist_matrix)
         #print(self.dist_matrix, self.candidates[0], len(c_to_c), len(c_to_v))
         self.k = min(self.k, len(c_to_c))
         if rule == 'SNTV':
@@ -815,6 +844,7 @@ class Reccomend(election):
             #print('SNTV:', self.SNTV_rule())
             #print(self.Score)
         elif rule == 'BnB':
+            self.add_matrices(self.dist_matrix)
             self.BnB_rule(tol=0.7, level=2)
             #print('BnB:', self.BnB_rule(tol = 0.7, level=2))
             #print(self.Cost)

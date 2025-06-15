@@ -662,12 +662,13 @@ params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
 #metrics_draw(1, params_grid)
 
 
-#top_draw(params_grid, top_k = 5)
+top_draw(params_grid, top_k = 5)
 
-# for i in range(2, 5):
-#     metrics_draw(i, params_grid)
+for i in range(6):
+    metrics_draw(i, params_grid)
 
-top_draw_ml(params_grid, top_k = 7)
+
+#top_draw_ml(params_grid, top_k = 7)
 #metrics_draw_ml(params_grid)
 
 

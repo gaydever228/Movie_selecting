@@ -54,8 +54,7 @@ def time_split(df, quant = 0.5):
     pivot_df = train_df.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
     print(train_df[Columns.Item].nunique()/df[Columns.Item].nunique())
     return train_df, test_df, pivot_df
-def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id = 0, size = 10, degrees = 4,
-                  weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
+def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id = 0, size = 10, degrees = 4, series = True, weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
     times = {}
 
 
@@ -97,13 +96,14 @@ def full_test_GT_light(combination, user):
                                 user_id=user,
                                 metric=True, **config)
     timess = time.time() - time_0
-    print weighted_rec
+    print(weighted_rec)
+    print(metric)
     return metric, rec, timess, cur_string
 
 
 rating = pd.read_csv('long_my_films.csv')
 movies = pd.read_csv('map_my_films.csv')
-
+rating = rating.iloc[:, 1:]
 links_dic = movies[movies.columns[1]].to_dict()
 
 times = {}
@@ -115,12 +115,12 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
-               'degrees':[4, 2, 3, 5, 6, 7, 8, 9, 10],
-               'size':[10, 15, 20, 25, 30],
-               'weighted':[True, False],
-               'series_rate':[0, 1, 2, 3]}
+params_grid = {'rule':['STV_star'],
+               'dist_method':['jaccar'],
+               'degrees':[3],
+               'size':[10],
+               'weighted':[True],
+               'series_rate':[0]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 
@@ -130,7 +130,7 @@ print(links_dic)
 
 
 
-for user in rating[Columns.User].unique():
+for user in rating[Columns.User].unique()[9:10]:
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
@@ -149,15 +149,15 @@ for user in rating[Columns.User].unique():
         metrics[cur_string] = metric
         recos_dic[cur_string] = rec
         times[cur_string].append(timess)
-    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
-    metrics_df = metrics_df.T
-    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
+    # metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+    # metrics_df = metrics_df.T
+    # recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    # metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
+    # recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
 
 
-for key, item in times.items():
-    print(key, np.array(item).mean())
-    times[key] = np.array(item).mean()
-times_df = pd.DataFrame.from_dict(times)
-times_df.to_csv('my_films/test1/times_mac.csv')
+# for key, item in times.items():
+#     print(key, np.array(item).mean())
+#     times[key] = np.array(item).mean()
+# times_df = pd.DataFrame.from_dict(times)
+# times_df.to_csv('my_films/test1/times_mac.csv')
