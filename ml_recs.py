@@ -134,5 +134,36 @@ class Recommend():
         catalog = self.rating[Columns.Item].unique()
         metrics_values['serendipity'] = metrics["serendipity@" + str(k)].calc_per_user(reco=self.recos[model_name], interactions=df_test, prev_interactions=self.rating, catalog=catalog)
         metrics_values['novelty'] = metrics["novelty@" + str(k)].calc_per_user(reco=self.recos[model_name], prev_interactions=self.rating)
-        #print(f"serendipity10: {metrics_values['serendipity@10']}")
+
+        self.recos[model_name] = self.recos[model_name].merge(df_test[[Columns.User, Columns.Item, Columns.Weight]],
+                                      on=[Columns.User, Columns.Item],
+                                      how='left')
+        #print(self.recos[model_name].head(40))
+        #print(self.recos[model_name][Columns.Weight])
+        self.recos[model_name][Columns.Weight] = self.recos[model_name][Columns.Weight].fillna(0)
+        arr = np.linspace(1 / 4, 1, 4)
+        quantiles = self.rating.groupby(Columns.User)[Columns.Weight].quantile(arr)
+        quantiles = quantiles.unstack()
+        qarr = []
+        qarr_dic = {}
+        for user in self.rating[Columns.User].unique():
+            qarr_dic[user] = []
+        for index, row in self.recos[model_name].iterrows():
+            #print(row)
+            quants = quantiles.loc[row[Columns.User]]
+
+            v = 0.5 if row[Columns.Weight] > 0 else 0
+            # print(v)
+            for q in quants:
+                if row[Columns.Weight] > q:
+                    v += 1
+            qarr.append(v)
+            qarr_dic[row[Columns.User]].append(v)
+        metrics_values['weighted prec'] = {}
+        for user in self.rating[Columns.User].unique():
+            metrics_values['weighted prec'][user] = np.mean(qarr_dic[user]) / 3
+        self.recos[model_name]['weighted weight'] = qarr
+
+        # print(f"serendipity10: {metrics_values['serendipity@10']}")
+        #return metrics_values, self.recos[model_name][[Columns.User, 'title', Columns.Weight, 'weighted weight']]
         return metrics_values

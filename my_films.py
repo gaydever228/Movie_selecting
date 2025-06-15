@@ -18,10 +18,6 @@ unique_titles = df_long['title'].unique()
 title_to_id = {title: i for i, title in enumerate(unique_titles)}
 df_long[Columns.Item] = df_long['title'].map(title_to_id)
 
-# Если в таблице есть колонка с временными метками — добавим:
-# Например, если в оригинальном df был timestamp, можно отдельно сопоставить:
-# df_long['timestamp'] = ...
-
 # Создаём timestamp по возрастанию movie_id
 date_str = '2016-09-30'
 
