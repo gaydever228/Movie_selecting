@@ -86,7 +86,7 @@ class Recommend_new(election):
             #print(f"User {user}:")
             for idx, row in user_weights.iterrows():
                 weight = row[Columns.Weight]
-                item = row['item_id']
+                item = int(row['item_id'])
                 #print(f"  Item {row[Columns.Item]} (weight={weight}):")
                 if item not in self.approval_sets:
                     self.approval_sets[item] = {}
@@ -522,7 +522,7 @@ class Recommend_new(election):
                 #print('SNTV recommends', self.candidates[0][id])
         elif rule == 'BnB':
             self.add_matrices(self.dist_matrix)
-            self.BnB_rule(tol=0.7, level=2)
+            self.BnB_rule(tol=1, level=2)
             # print('BnB:', self.BnB_rule(tol = 0.7, level=2))
             # print(self.Cost)
             # for id in self.committee_id:
@@ -545,10 +545,10 @@ class Recommend_new(election):
             # voters_nums = {self.id_to_num[id] for id in c_to_v}
             # cands_nums = {self.id_to_num[id] for id in c_to_c}
             for voter in sorted(all_c_to_v):
-                for d in range(self.degrees // 2, self.degrees):
+                for d in range(1, self.degrees):
                     if voter in self.user_approval_sets[user_id][d]:
-                        self.weights_dic[voter] =1 + d - self.degrees//2
-            for d in range(self.degrees // 2, self.degrees):
+                        self.weights_dic[voter] =d
+            for d in range(1, self.degrees):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # множество фильмов, которые будут избирателями
 
 
@@ -560,28 +560,19 @@ class Recommend_new(election):
             # cands_nums = {self.id_to_num[id] for id in c_to_c}
             for voter in sorted(all_c_to_v):
                 self.weights_dic[voter] = 1
-            for d in range(self.degrees//2):
+            for d in range(self.degrees):
                 c_to_v.update(self.user_approval_sets[user_id][d])  # избиратели - "плохие" фильмы
-            #self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
-            #print(self.dist_matrix)
+            #
+            #
+            # self.voting(c_to_c, c_to_v, commit_size * self.remove_rate, rule)
+            #
+            # for id in self.committee_id:
+            #     c_to_c.remove(self.candidates[0][id])
+            # #self.dist_matrix = np.delete(self.dist_matrix, self.committee_id, axis=0)
+            #     #cands_nums.remove(id)
+            #
+            # c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
 
-            # print(self.bad_percent, "% плохих фильмов", len(c_to_v))
-            # print("кандидатов", len(c_to_c))
-            #voters_nums = {self.id_to_num[id] for id in c_to_v}
-            #cands_nums = {self.id_to_num[id] for id in c_to_c}
-
-            self.voting(c_to_c, c_to_v, commit_size * self.remove_rate, rule)
-
-            #print(self.committee_id)
-            #print('anti-reccomendations are:')
-            for id in self.committee_id:
-                c_to_c.remove(self.candidates[0][id])
-            #self.dist_matrix = np.delete(self.dist_matrix, self.committee_id, axis=0)
-                #cands_nums.remove(id)
-
-            c_to_v = all_c_to_v.difference(c_to_v)  # множество фильмов, которые будут избирателями
-            #voters_nums = all_items_num.difference(voters_nums)
-            #voters_nums = {self.id_to_num[id] for id in c_to_v}
 
         #self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
         # если series_rate = 0, будет просто единичное голосование

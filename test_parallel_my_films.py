@@ -114,12 +114,12 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
-               'degrees':[4, 2, 3, 5, 6, 7, 8, 9, 10],
-               'size':[10, 15, 20, 25, 30],
-               'weighted':[True, False],
-               'series_rate':[0, 1, 2, 3]}
+params_grid = {'rule':['BnB'],
+               'dist_method':['jaccar'],
+               'degrees':[4],
+               'size':[10],
+               'weighted':[True],
+               'series_rate':[3]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 
@@ -152,8 +152,8 @@ for user in rating[Columns.User].unique():
     metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
     metrics_df = metrics_df.T
     recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    metrics_df.to_csv('my_films/test1/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('my_films/test1/recos_' + str(user) + '.csv')
+    metrics_df.to_csv('my_films/test2/metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv('my_films/test2/recos_' + str(user) + '.csv')
 
 
 for key, item in times.items():

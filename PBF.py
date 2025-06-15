@@ -6,6 +6,7 @@ from collections import deque
 import time
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
+from numpy.ma.core import empty
 from numpy.random import Generator, PCG64
 import math
 from random import sample
@@ -31,7 +32,7 @@ class PBF:
         for i in range(self.n):
             self.vars.append(i+1)
         self.dic = {}
-        self.inverted_flag = False
+        #self.inverted_flag = False
 
         # if 2*p < self.n:
         #     matrix = self.invert(matrix)
@@ -50,12 +51,12 @@ class PBF:
         #print(self.dic)
         self.from_matrix(matrix)
 
-    def invert(self, matrix):
-        matrix = np.array(matrix)
-        max_el = np.max(matrix)
-        new_matrix = -matrix + max_el
-        self.inverted_flag = True
-        return new_matrix
+    # def invert(self, matrix):
+    #     matrix = np.array(matrix)
+    #     max_el = np.max(matrix)
+    #     new_matrix = -matrix + max_el
+    #     self.inverted_flag = True
+    #     return new_matrix
 
     def add_coef(self, term, c):
         t = frozenset(term)
@@ -130,7 +131,7 @@ class PBF:
         high = 0
         num_nonzero = 0
         for term, coef in self.dic.items():
-            if coef != 0:
+            if coef != 0 and term is not empty:
                 num_nonzero += 1
                 high += coef
         mc = high/num_nonzero
@@ -153,6 +154,7 @@ def branch(current, prohibited, divider, B, curval):
 
 def bound(polynome, p, ff, current, prohibited, divider, B, curval):
     zeros_count = polynome.n - np.count_nonzero(current)
+    #print('mkUltra', polynome.n, np.count_nonzero(current))
     if B == 0 and (zeros_count == p or ff):
         val = polynome.calc(current)
     else:
@@ -243,7 +245,7 @@ def BnB(matrix, p, tol=0, depth=True, weights = None):
     # if 2*p < len(matrix):
     #     p = len(matrix) - p
     polynome.truncate()
-    # polynome.print()
+    #polynome.print()
     if tol > 0:
         polynome.approx(tol=tol)
     useless = polynome.useless()
@@ -262,10 +264,14 @@ def BnB(matrix, p, tol=0, depth=True, weights = None):
     highest = polynome.calc(np.ones(len(matrix)))
     start = polynome.calc(init_vars)
     #print(lowest, start)
-
+    feasible_flag = False
+    if lowest == start:
+        lowest += 1
+        if (polynome.n - np.count_nonzero(state)) == p:
+            feasible_flag = True
     queue = deque()
     queue.append([init_vars, 0, 0, 0, start])
-    feasible_flag = False
+
     total_iterations = 1200000 * len(matrix)
     count = 0
     with tqdm(total=total_iterations) as pbar:
@@ -284,13 +290,14 @@ def BnB(matrix, p, tol=0, depth=True, weights = None):
                 #print(curr, useless)
                 if polynome.n - np.count_nonzero(curr[0]) == p:
                     feasible_flag = True
+                    #print('feasible')
                     stop_flag = True
                     if curr[4] < lowest:
                         lowest = curr[4]
                         state = curr[0]
                 continue
             curr, stop_flag, feasible = bound(polynome, p, feasible_flag, *curr)
-            # print('ветвление номер: ', count, ', текущее состояние: ', curr, stop_flag, feasible)
+            #print('ветвление номер: ', count, ', текущее состояние: ', curr, stop_flag, feasible)
             if curr[4] >= lowest:
                 stop_flag = True
             if stop_flag:
@@ -310,8 +317,8 @@ def BnB(matrix, p, tol=0, depth=True, weights = None):
             pbar.update(1)
             # pbar.set_postfix({'lowest': lowest})
             # print('очередь: ', queue)
-    if polynome.inverted_flag:
-        state = 1 - state
+    # if polynome.inverted_flag:
+    #     state = 1 - state
     #print(count, 'итераций заняла оптимизация')
     #print('оптимум:', state)
     #print('сумма расстояний:', lowest)

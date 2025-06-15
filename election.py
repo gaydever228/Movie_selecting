@@ -105,7 +105,7 @@ class election:
     def add_matrices_micro(self, distances):
         self.VoteLists = np.argsort(distances, axis=0)
     def delete_max(self, level  = 2):
-        #print('before:', self.dist_matrix)
+        #print('before:', len(self.dist_matrix))
         #print(self.VoteLists)
         anti_PS = np.zeros(self.C)
         PS = np.zeros(self.C)
@@ -158,7 +158,7 @@ class election:
             self.add_matrices(self.dist_matrix)
             #self.make_matrix()
             self.VoteLists = np.argsort(self.dist_matrix, axis=0)
-            #print('after:', self.dist_matrix)
+            #print('after:', len(self.dist_matrix))
 
     # def meanDist(self):
     #     Candists = np.ones(self.C)
@@ -269,11 +269,14 @@ class election:
     #     return self.Score
     def BnB_rule(self, tol = 0.2, level = 2, depth = True, draw_name = 'BnB'):
         self.delete_max(level = level)
+        #print('com_size', self.k)
+        #print(self.weights)
         decision = BnB(self.dist_matrix, self.k, tol = tol, depth = depth, weights=self.weights)
         self.decision = 1 - decision
-        #print(self.decision)
+        #print(self.decision, len(self.decision))
         self.ComDec()
-        self.Calc_Score()
+        #print(self.committee_id)
+        #self.Calc_Score()
         #self.Calc_Cost()
 
         #self.draw(name = draw_name)
