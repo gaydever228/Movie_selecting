@@ -402,7 +402,7 @@ def metrics_draw(param_id, inner_param_grid):
            'serendipity': {},
            'novelty': {},
            'weighted prec': {}}
-    for user in rating['userId'].unique()[:100]:
+    for user in rating['userId'].unique()[:140]:
 
         filename = f"{papka}metrics_user{user}.csv"
         if os.path.exists(filename) and user not in user_blacklist:
@@ -662,24 +662,24 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV', 'STV_star'],
-               'dist_method':['jaccar', 'cosine', 'pearson', 'pearson_hat', 'spearman'],
-               'degrees':[4, 5, 7],
+params_grid = {'rule':['SNTV'],
+               'dist_method':['cosine'],
+               'degrees':[7],
                'size':[10],
-               'weighted':[False, True],
-               'series_rate':[0, 1]}
+               'weighted':[False],
+               'series_rate':[0]}
 
 
 user_blacklist = set()
 # user_blacklist_bad = {1, 2, 3, 11, 25, 29, 33, 43, 50, 51, 53, 55, 57, 64, 66, 67, 68}
 # user_blacklist_ml = {8, 15, 32, 36, 37, 44, 56, 58}
 
-top_draw(params_grid, top_k = 5)
+#top_draw(params_grid, top_k = 5)
 top_draw_ml(params_grid, top_k = 5)
 metrics_draw_ml(params_grid)
-for i in range(3):
-    metrics_draw(i, params_grid)
-
+#for i in range(2):
+#    metrics_draw(i, params_grid)
+#metrics_draw(5, params_grid)
 
 
 
