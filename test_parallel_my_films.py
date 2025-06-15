@@ -114,12 +114,12 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['BnB'],
-               'dist_method':['jaccar'],
-               'degrees':[4],
-               'size':[10],
-               'weighted':[True],
-               'series_rate':[3]}
+params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
+               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
+               'degrees':[4, 2, 3, 5, 6, 7, 8, 9, 10],
+               'size':[10, 15, 20, 25, 30],
+               'weighted':[True, False],
+               'series_rate':[0, 1, 2, 3]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 
@@ -159,5 +159,5 @@ for user in rating[Columns.User].unique():
 for key, item in times.items():
     #print(key, np.array(item).mean())
     times[key] = np.array(item).mean()
-times_df = pd.DataFrame.from_dict(times)
-times_df.to_csv('my_films/test1/times_mac.csv')
+times_df = pd.DataFrame.from_dict(times, orient="index")
+times_df.to_csv('my_films/test2/times_mac.csv')

@@ -10,7 +10,8 @@ from rectools import Columns
 from scipy import stats
 import re
 
-papka = 'GT/test1/'
+papka = 'GT/test2/'
+papka_ml = 'GT/test_ml/'
 medianprops = {
         'color': 'blue',  # Цвет линии
         'linewidth': 2,  # Толщина линии
@@ -21,7 +22,6 @@ meanprops = {
     'linewidth': 2,        # Толщина линии
     'linestyle': '--'       # Стиль линии (пунктир)
 }
-
 
 def chi_square_test(sample1, sample2):
     """
@@ -83,10 +83,7 @@ def permutation_test(sample1, sample2, n_permutations=10000, stat_func=None):
     }
 def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05):
     """Комплексное сравнение двух выборок"""
-    if len(sample1) != len(sample2):
-        min_len = min(len(sample1), len(sample2))
-        sample1 = sample1[:min_len]
-        sample2 = sample2[:min_len]
+
     # # Тест Шапиро-Уилка на нормальность
     # _, p_norm1 = stats.shapiro(sample1)
     # _, p_norm2 = stats.shapiro(sample2)
@@ -109,22 +106,22 @@ def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05):
         return p_val, '(критерий Стьюдента)'
 
     # Непараметрические тесты (всегда)
-    if metric != 'novelty':
-        u_stat, p_mann = stats.mannwhitneyu(sample1, sample2, alternative='two-sided')
-        #print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
-        chi2 = chi_square_test(sample1, sample2)
-        if p_mann < 0.00001 and chi2['min_expected_freq'] < 5:
-            per_test = permutation_test(sample1, sample2)
-            #print(f"Перестановочный критерий: p={per_test['p_value']:.4f}")
-            return per_test['p_value'], '(перестановочный критерий)'
-        elif p_mann < 0.00001:
-            #print(f"Критерий Хи-Квадрат: p={chi2['p_value']:.4f}, n = {chi2['min_expected_freq']}")
-            return chi2['p_value'], '(критерий хи-квадрат)'
-        return p_mann, '(критерий Манна-Уитни)'
-    else:
-        ks_stat, p_ks = stats.ks_2samp(sample1, sample2)
-        #print(f"Критерий Колмогорова-Смирнова: p={p_ks:.4f}")
-        return p_ks, '(критерий Колмогорова-Смирнова)'
+
+    u_stat, p_mann = stats.mannwhitneyu(sample1, sample2, alternative='two-sided')
+    #print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
+    chi2 = chi_square_test(sample1, sample2)
+    if p_mann < 0.001 and chi2['min_expected_freq'] < 5:
+        per_test = permutation_test(sample1, sample2)
+        #print(f"Перестановочный критерий: p={per_test['p_value']:.4f}")
+        return per_test['p_value'], '(перестановочный критерий)'
+    elif p_mann < 0.001:
+        #print(f"Критерий Хи-Квадрат: p={chi2['p_value']:.4f}, n = {chi2['min_expected_freq']}")
+        return chi2['p_value'], '(критерий хи-квадрат)'
+    return p_mann, '(критерий Манна-Уитни)'
+
+    # ks_stat, p_ks = stats.ks_2samp(sample1, sample2)
+    # #print(f"Критерий Колмогорова-Смирнова: p={p_ks:.4f}")
+    # return p_ks, '(критерий Колмогорова-Смирнова)'
 def comprehensive_comparison(sample1, sample2, alpha=0.05):
     """Комплексное сравнение двух выборок"""
 
@@ -176,15 +173,21 @@ def comprehensive_comparison(sample1, sample2, alpha=0.05):
     else:
         conclusion = "отвергаем H0" if p_mann < alpha else "не отвергаем H0"
         print(f"Основной тест (Манн-Уитни): {conclusion}")
-def bar_metrics_draw(df, name, title, metric):
+def bar_metrics_draw(df, name, title, metric, met = 'mean'):
     fig, ax = plt.subplots(figsize=(20, 9))
     x = np.arange(len(df.index))
     width = 0.2
-    colors = ['skyblue', 'lightcoral', 'lightgreen']
+    colors = ['royalblue', 'indianred', 'limegreen']
     multiplier = 0
+
+    alphs = {}
+    for column in df.columns:
+        alphs[column] = 0.4
+    if met is not None:
+        alphs[met] = 0.95
     for i, column in enumerate(df.columns):
         offset = width * multiplier
-        bars = ax.bar(x + offset, df[column], width, label=column, color=colors[i], alpha=0.9)
+        bars = ax.bar(x + offset, df[column], width, label=column, color=colors[i], alpha=alphs[column])
         multiplier += 1
     # Настройка осей и подписей
     #ax.set_xlabel('Строки DataFrame')
@@ -202,6 +205,7 @@ def bar_metrics_draw(df, name, title, metric):
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
 
     plt.close()
+    #plt.show()
 def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = None, test_name = None):
     fig, ax = plt.subplots(figsize=(16, 9))
     bp = ax.boxplot(dic.values(), showmeans=True, meanline=True, medianprops=medianprops, meanprops=meanprops)
@@ -217,7 +221,7 @@ def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = N
         p_text = '\n'.join([f'{key}: p={p_val:.3f}\n{test_name[key]}' for key, p_val in p_values_dict.items()])
         ax.text(0.02, 0.98, p_text, transform=ax.transAxes,
                 ha='left', va='top', fontsize=9,
-                bbox=dict(boxstyle='round,pad=0.3', facecolor='lightgray', alpha=0.7))
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='lightgray', alpha=0.6))
         # for key, p_val in p_values_dict.items():
         #     invisible_line = ax.plot([], [], ' ')[0]  # невидимая линия
         #     legend_handles.append(invisible_line)
@@ -228,6 +232,8 @@ def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = N
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
     plt.close()
     #plt.show()
+
+
 def underscore(s):
     pattern = r'_([^_]*_[^_]*_[^_]*)$'
     replacement = r'\n\1'
@@ -328,11 +334,12 @@ def metrics_draw_small(param_id, inner_param_grid):
            'recall': {},
            'ndcg': {},
            'serendipity': {},
-           'novelty': {}}
-    for user in rating['userId'].unique()[:110]:
+           'novelty': {},
+           'weighted prec': {}}
+    for user in rating['userId'].unique()[:100]:
 
         filename = f"{papka}metrics_user{user}.csv"
-        if os.path.exists(filename):
+        if os.path.exists(filename) and user not in user_blacklist:
             df_dic[user] = pd.read_csv(filename)
 
     labs = []
@@ -340,7 +347,7 @@ def metrics_draw_small(param_id, inner_param_grid):
         labs.append(lab_title_make(param_id, p)[0])
     #print(labs)
     title_part = lab_title_make(param_id)[1]
-    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+    for num, key in enumerate(dic.keys()):
         dic[key] = {}
         for p in ps:
             dic[key][p] = []
@@ -393,11 +400,12 @@ def metrics_draw(param_id, inner_param_grid):
            'recall': {},
            'ndcg': {},
            'serendipity': {},
-           'novelty': {}}
-    for user in rating['userId'].unique()[:110]:
+           'novelty': {},
+           'weighted prec': {}}
+    for user in rating['userId'].unique()[:140]:
 
         filename = f"{papka}metrics_user{user}.csv"
-        if os.path.exists(filename):
+        if os.path.exists(filename) and user not in user_blacklist:
             df_dic[user] = pd.read_csv(filename)
 
     labs = []
@@ -405,7 +413,7 @@ def metrics_draw(param_id, inner_param_grid):
         labs.append(lab_title_make(param_id, p)[0])
 
     title_part = lab_title_make(param_id)[1]
-    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+    for num, key in enumerate(dic.keys()):
         print(key)
         for combination in product(*param_values):
             skip_flag = False
@@ -428,7 +436,6 @@ def metrics_draw(param_id, inner_param_grid):
                 #print(nonzeros)
                 if nonzeros == 0:
                     skip_flag = True
-
                     break
                 else:
                     dic[key][col_key][p] = user_list
@@ -445,24 +452,91 @@ def metrics_draw(param_id, inner_param_grid):
                 if pflag == 0 and p_dic[str(labs[0]) + ' ~ ' + str(labs[i])] <= 0.05:
                     pflag = 1
                 #dic[key][col_key][ps[i]] = np.array(dic[key][col_key][ps[i]]) - np.array(dic[key][col_key][ps[0]])
-            #dic[key][col_key].pop(ps[0], None)
-            #name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
-            #title = key + ': Сравнение' + ' с ' + str(labs[0]) + ' (' + col_key + ')'
-            #box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
+            # dic[key][col_key].pop(ps[0], None)
+            # name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0]) + '@' + col_key
+            # title = key + ': Сравнение' + ' с ' + str(labs[0]) + ' (' + col_key + ')'
+            # box_plot_metrics_draw(dic[key][col_key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
             if pflag == 1:
                 name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id] + '@' + col_key
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
                 box_plot_metrics_draw(dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
+        plt.close('all')
+def metrics_draw_ml(inner_param_grid):
+    param_grid = deepcopy(inner_param_grid)
+    #print(param_grid)
+    df_dic = {}
+
+    param_values = param_grid.values()
+
+    dic = {'prec': {},
+           'recall': {},
+           'ndcg': {},
+           'serendipity': {},
+           'novelty': {},
+           'weighted prec': {}}
+    models_list = ['KNN TF-IDF', 'ALS', 'Random', 'Popular']
+    for user in rating['userId'].unique()[:100]:
+
+        filename = f"{papka}metrics_user{user}.csv"
+        filename_ml = f"{papka_ml}metrics_user{user}.csv"
+        if os.path.exists(filename) and os.path.exists(filename_ml) and user not in user_blacklist:
+            df_dic[user] = (pd.read_csv(filename), pd.read_csv(filename_ml))
+
+
+    for num, key in enumerate(dic.keys()):
+        print(key)
+        model_metrics = {}
+        for mod in models_list:
+            user_list_ml = []
+            for user, dfs in df_dic.items():
+                user_list_ml.append(dfs[1].at[num, mod])
+            model_metrics[mod] = user_list_ml
+        for combination in product(*param_values):
+            col = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+                combination[3]) +
+                          '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                        combination[5]))
+            dic[key][col] = {}
+            user_list = []
+            for user, dfs in df_dic.items():
+                if col in dfs[0].columns:
+                    # print(df[col][num])
+                    v = dfs[0].at[num, col]
+                    # print(v)
+                    user_list.append(v)
+
+            dic[key][col][col] = user_list
+            dic[key][col].update(model_metrics)
+
+            p_dic = {}
+            test_name_dic = {}
+            pflag = 0
+            for mod in models_list:
+                (p_dic[str(col) + ' ~ ' + mod],
+                 test_name_dic[str(col) + ' ~ ' + mod]) = (
+                    mini_comparison(dic[key][col][col], dic[key][col][mod], key))
+                if p_dic[str(col) + ' ~ ' + mod] <= 0.05 and np.mean(dic[key][col][col] > dic[key][col][mod]):
+                    pflag += 1
+                #difference = np.array(dic[key][col][col]) - np.array(dic[key][col][mod])
+                #name = papka_ml + 'plots/diff/' + key + '_' + mod +'_' + col
+                #title = key + ': Сравнение' + ' с ' + mod
+                #box_plot_metrics_draw({'f':difference}, [col], title, name, models_list[6],
+                #                      {str(col) + ' ~ ' + mod:p_dic[str(col) + ' ~ ' + mod]},
+                #                      {str(col) + ' ~ ' + mod:test_name_dic[str(col) + ' ~ ' + mod]})
+            if pflag >= 1:
+                name = papka_ml + 'plots/' + key + '-' + col
+                title = 'Значение ' + key + ' (' + col + ')'
+                box_plot_metrics_draw(dic[key][col], ['election'] + models_list, title, name, p_values_dict = p_dic, test_name = test_name_dic)
         plt.close('all')
 
 def get_top_k(dataframe, k, metric_key, ascending=[False, False, True]):
     result = {}
     meh = 0
     for col in dataframe.columns:
-        sorted_df = dataframe.sort_values(by=col, ascending=ascending[meh]).head(k)
+        sorted_df = dataframe.sort_values(by=col, ascending=ascending[meh])
         meh += 1
-        result[col] = sorted_df
         sorted_df.to_csv(papka + 'tops/top_' + metric_key + '_' + str(k) + '_by_' + col + '.csv')
+        result[col] = sorted_df.head(k)
     return result
 def top_draw(inner_param_grid, top_k = 20):
     param_grid = deepcopy(inner_param_grid)
@@ -475,14 +549,15 @@ def top_draw(inner_param_grid, top_k = 20):
            'recall': {},
            'ndcg': {},
            'serendipity': {},
-           'novelty': {}}
-    for user in rating['userId'].unique()[:110]:
+           'novelty': {},
+           'weighted prec': {}}
+    for user in rating['userId'].unique()[:100]:
 
         filename = f"{papka}metrics_user{user}.csv"
-        if os.path.exists(filename):
+        if os.path.exists(filename) and user not in user_blacklist:
             df_dic[user] = pd.read_csv(filename)
 
-    for num, key in enumerate(['prec', 'recall', 'ndcg', 'serendipity', 'novelty']):
+    for num, key in enumerate(dic.keys()):
         print(key)
         for combination in product(*param_values):
             col_key= (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
@@ -506,6 +581,61 @@ def top_draw(inner_param_grid, top_k = 20):
             title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
             bar_metrics_draw(top_dic[met], name, title, key)
         plt.close('all')
+def top_draw_ml(inner_param_grid, top_k = 20):
+    param_grid = deepcopy(inner_param_grid)
+    #print(param_grid)
+    df_dic = {}
+
+    param_values = param_grid.values()
+
+    dic = {'prec': {},
+           'recall': {},
+           'ndcg': {},
+           'serendipity': {},
+           'novelty': {},
+           'weighted prec':{}}
+    models_list = ['KNN TF-IDF', 'ALS', 'Random', 'Popular']
+
+    for user in rating['userId'].unique()[:100]:
+
+        filename = f"{papka}metrics_user{user}.csv"
+        filename_ml = f"{papka_ml}metrics_user{user}.csv"
+        if os.path.exists(filename) and os.path.exists(filename_ml) and user not in user_blacklist:
+            df_dic[user] = (pd.read_csv(filename), pd.read_csv(filename_ml))
+
+    for num, key in enumerate(dic.keys()):
+        print(key)
+        model_metrics = {}
+        for mod in models_list:
+            dic[key][mod] = {}
+            user_list_ml = []
+            for user, dfs in df_dic.items():
+                user_list_ml.append(dfs[1].at[num, mod])
+            model_metrics[mod] = user_list_ml
+            dic[key][mod] = (np.mean(user_list_ml), np.median(user_list_ml), np.std(user_list_ml))
+        for combination in product(*param_values):
+            col_key= (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
+                combination[3]) +
+                          '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(
+                        combination[5]))
+            #print(col_key)
+            dic[key][col_key] = {}
+            user_list = []
+            for user, dfs in df_dic.items():
+                if col_key in dfs[0].columns:
+                    v = dfs[0].at[num, col_key]
+                    user_list.append(v)
+            dic[key][col_key] = (np.mean(user_list), np.median(user_list), np.std(user_list))
+
+        df_stats = pd.DataFrame.from_dict(dic[key], orient='index',
+                                    columns=['mean', 'median', 'std'])
+        top_dic = get_top_k(df_stats, top_k, key)
+        for met in ['mean', 'median', 'std']:
+            name = papka_ml + 'tops/' + key + '_' + met
+            title = 'top ' + str(top_k) + ' ' + key + ' by ' + met
+            bar_metrics_draw(top_dic[met], name, title, key, met = met)
+        plt.close('all')
+
 rating = pd.read_csv('archive/ratings_small.csv')
 #print(rating)
 print('до', rating['movieId'].nunique(), rating['userId'].nunique())
@@ -525,9 +655,6 @@ metadata = pd.read_csv('archive/movies_metadata.csv', low_memory=False)
 movies['original_title'] = metadata['original_title'].reindex(movies.index, fill_value='unknown')
 links_dic = dict(zip(movies['movieId'], movies['original_title']))
 
-# rating = pd.read_csv('long_my_films.csv')
-# movies = pd.read_csv('map_my_films.csv')
-# links_dic = movies[movies.columns[1]].to_dict()
 
 all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall', 'kendall_hat'],
@@ -535,14 +662,28 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
-               'dist_method':['jaccar', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat'],
-               'degrees':[3, 4, 5, 8],
-               'size':[10, 20, 30, 40],
-               'weighted':[True, False],
-               'series_rate':[0, 2]}
-#metrics_draw(1, params_grid)
-top_draw(params_grid, top_k = 5)
-# for i in range(0, 6):
-#     metrics_draw(i, params_grid)
+params_grid = {'rule':['SNTV'],
+               'dist_method':['cosine'],
+               'degrees':[7],
+               'size':[10],
+               'weighted':[False],
+               'series_rate':[0]}
+
+
+user_blacklist = set()
+# user_blacklist_bad = {1, 2, 3, 11, 25, 29, 33, 43, 50, 51, 53, 55, 57, 64, 66, 67, 68}
+# user_blacklist_ml = {8, 15, 32, 36, 37, 44, 56, 58}
+
+#top_draw(params_grid, top_k = 5)
+top_draw_ml(params_grid, top_k = 5)
+metrics_draw_ml(params_grid)
+#for i in range(2):
+#    metrics_draw(i, params_grid)
+#metrics_draw(5, params_grid)
+
+
+
+
+
+
 
