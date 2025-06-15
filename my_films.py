@@ -37,8 +37,8 @@ total_movies = len(unique_titles)
 movie_id_to_time = {}
 for us in range(df.shape[0]):
     for id in range(total_movies):
-        #fraction = np.random.random() * ((np.sqrt(id) + np.random.random())/np.sqrt(total_movies))
-        fraction = np.random.random()
+        fraction = np.random.random() * np.sqrt((np.sqrt(id) + np.random.random())/np.sqrt(total_movies))
+        #fraction = np.random.random()
 
         movie_id_to_time[(id,us)] = time1 + fraction*diff
         print(movie_id_to_time[(id,us)])
