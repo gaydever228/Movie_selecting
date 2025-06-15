@@ -1,0 +1,1828 @@
+,SNTV_jaccar_deg=2_size=10_weighted_rate=0,SNTV_jaccar_deg=2_size=10_weighted_rate=2,SNTV_jaccar_deg=2_size=10_antirec_rate=0,SNTV_jaccar_deg=2_size=10_antirec_rate=2,SNTV_jaccar_deg=5_size=10_weighted_rate=0,SNTV_jaccar_deg=5_size=10_weighted_rate=2,SNTV_jaccar_deg=5_size=10_antirec_rate=0,SNTV_jaccar_deg=5_size=10_antirec_rate=2,SNTV_cosine_deg=2_size=10_weighted_rate=0,SNTV_cosine_deg=2_size=10_weighted_rate=2,SNTV_cosine_deg=2_size=10_antirec_rate=0,SNTV_cosine_deg=2_size=10_antirec_rate=2,SNTV_cosine_deg=5_size=10_weighted_rate=0,SNTV_cosine_deg=5_size=10_weighted_rate=2,SNTV_cosine_deg=5_size=10_antirec_rate=0,SNTV_cosine_deg=5_size=10_antirec_rate=2,SNTV_cosine_hat_deg=2_size=10_weighted_rate=0,SNTV_cosine_hat_deg=2_size=10_weighted_rate=2,SNTV_cosine_hat_deg=2_size=10_antirec_rate=0,SNTV_cosine_hat_deg=2_size=10_antirec_rate=2,SNTV_cosine_hat_deg=5_size=10_weighted_rate=0,SNTV_cosine_hat_deg=5_size=10_weighted_rate=2,SNTV_cosine_hat_deg=5_size=10_antirec_rate=0,SNTV_cosine_hat_deg=5_size=10_antirec_rate=2,SNTV_pearson_deg=2_size=10_weighted_rate=0,SNTV_pearson_deg=2_size=10_weighted_rate=2,SNTV_pearson_deg=2_size=10_antirec_rate=0,SNTV_pearson_deg=2_size=10_antirec_rate=2,SNTV_pearson_deg=5_size=10_weighted_rate=0,SNTV_pearson_deg=5_size=10_weighted_rate=2,SNTV_pearson_deg=5_size=10_antirec_rate=0,SNTV_pearson_deg=5_size=10_antirec_rate=2,SNTV_spearman_deg=2_size=10_weighted_rate=0,SNTV_spearman_deg=2_size=10_weighted_rate=2,SNTV_spearman_deg=2_size=10_antirec_rate=0,SNTV_spearman_deg=2_size=10_antirec_rate=2,SNTV_spearman_deg=5_size=10_weighted_rate=0,SNTV_spearman_deg=5_size=10_weighted_rate=2,SNTV_spearman_deg=5_size=10_antirec_rate=0,SNTV_spearman_deg=5_size=10_antirec_rate=2,SNTV_spearman_hat_deg=2_size=10_weighted_rate=0,SNTV_spearman_hat_deg=2_size=10_weighted_rate=2,SNTV_spearman_hat_deg=2_size=10_antirec_rate=0,SNTV_spearman_hat_deg=2_size=10_antirec_rate=2,SNTV_spearman_hat_deg=5_size=10_weighted_rate=0,SNTV_spearman_hat_deg=5_size=10_weighted_rate=2,SNTV_spearman_hat_deg=5_size=10_antirec_rate=0,SNTV_spearman_hat_deg=5_size=10_antirec_rate=2,STV_star_jaccar_deg=2_size=10_weighted_rate=0,STV_star_jaccar_deg=2_size=10_weighted_rate=2,STV_star_jaccar_deg=2_size=10_antirec_rate=0,STV_star_jaccar_deg=2_size=10_antirec_rate=2,STV_star_jaccar_deg=5_size=10_weighted_rate=0,STV_star_jaccar_deg=5_size=10_weighted_rate=2,STV_star_jaccar_deg=5_size=10_antirec_rate=0,STV_star_jaccar_deg=5_size=10_antirec_rate=2,STV_star_cosine_deg=2_size=10_weighted_rate=0,STV_star_cosine_deg=2_size=10_weighted_rate=2,STV_star_cosine_deg=2_size=10_antirec_rate=0,STV_star_cosine_deg=2_size=10_antirec_rate=2,STV_star_cosine_deg=5_size=10_weighted_rate=0,STV_star_cosine_deg=5_size=10_weighted_rate=2,STV_star_cosine_deg=5_size=10_antirec_rate=0,STV_star_cosine_deg=5_size=10_antirec_rate=2,STV_star_cosine_hat_deg=2_size=10_weighted_rate=0,STV_star_cosine_hat_deg=2_size=10_weighted_rate=2,STV_star_cosine_hat_deg=2_size=10_antirec_rate=0,STV_star_cosine_hat_deg=2_size=10_antirec_rate=2,STV_star_cosine_hat_deg=5_size=10_weighted_rate=0,STV_star_cosine_hat_deg=5_size=10_weighted_rate=2,STV_star_cosine_hat_deg=5_size=10_antirec_rate=0,STV_star_cosine_hat_deg=5_size=10_antirec_rate=2,STV_star_pearson_deg=2_size=10_weighted_rate=0,STV_star_pearson_deg=2_size=10_weighted_rate=2,STV_star_pearson_deg=2_size=10_antirec_rate=0,STV_star_pearson_deg=2_size=10_antirec_rate=2,STV_star_pearson_deg=5_size=10_weighted_rate=0,STV_star_pearson_deg=5_size=10_weighted_rate=2,STV_star_pearson_deg=5_size=10_antirec_rate=0,STV_star_pearson_deg=5_size=10_antirec_rate=2,STV_star_spearman_deg=2_size=10_weighted_rate=0,STV_star_spearman_deg=2_size=10_weighted_rate=2,STV_star_spearman_deg=2_size=10_antirec_rate=0,STV_star_spearman_deg=2_size=10_antirec_rate=2,STV_star_spearman_deg=5_size=10_weighted_rate=0,STV_star_spearman_deg=5_size=10_weighted_rate=2,STV_star_spearman_deg=5_size=10_antirec_rate=0,STV_star_spearman_deg=5_size=10_antirec_rate=2,STV_star_spearman_hat_deg=2_size=10_weighted_rate=0,STV_star_spearman_hat_deg=2_size=10_weighted_rate=2,STV_star_spearman_hat_deg=2_size=10_antirec_rate=0,STV_star_spearman_hat_deg=2_size=10_antirec_rate=2,STV_star_spearman_hat_deg=5_size=10_weighted_rate=0,STV_star_spearman_hat_deg=5_size=10_weighted_rate=2,STV_star_spearman_hat_deg=5_size=10_antirec_rate=0,STV_star_spearman_hat_deg=5_size=10_antirec_rate=2,STV_basic_jaccar_deg=2_size=10_weighted_rate=0,STV_basic_jaccar_deg=2_size=10_weighted_rate=2,STV_basic_jaccar_deg=2_size=10_antirec_rate=0,STV_basic_jaccar_deg=2_size=10_antirec_rate=2,STV_basic_jaccar_deg=5_size=10_weighted_rate=0,STV_basic_jaccar_deg=5_size=10_weighted_rate=2,STV_basic_jaccar_deg=5_size=10_antirec_rate=0,STV_basic_jaccar_deg=5_size=10_antirec_rate=2,STV_basic_cosine_deg=2_size=10_weighted_rate=0,STV_basic_cosine_deg=2_size=10_weighted_rate=2,STV_basic_cosine_deg=2_size=10_antirec_rate=0,STV_basic_cosine_deg=2_size=10_antirec_rate=2,STV_basic_cosine_deg=5_size=10_weighted_rate=0,STV_basic_cosine_deg=5_size=10_weighted_rate=2,STV_basic_cosine_deg=5_size=10_antirec_rate=0,STV_basic_cosine_deg=5_size=10_antirec_rate=2,STV_basic_cosine_hat_deg=2_size=10_weighted_rate=0,STV_basic_cosine_hat_deg=2_size=10_weighted_rate=2,STV_basic_cosine_hat_deg=2_size=10_antirec_rate=0,STV_basic_cosine_hat_deg=2_size=10_antirec_rate=2,STV_basic_cosine_hat_deg=5_size=10_weighted_rate=0,STV_basic_cosine_hat_deg=5_size=10_weighted_rate=2,STV_basic_cosine_hat_deg=5_size=10_antirec_rate=0,STV_basic_cosine_hat_deg=5_size=10_antirec_rate=2,STV_basic_pearson_deg=2_size=10_weighted_rate=0,STV_basic_pearson_deg=2_size=10_weighted_rate=2,STV_basic_pearson_deg=2_size=10_antirec_rate=0,STV_basic_pearson_deg=2_size=10_antirec_rate=2,STV_basic_pearson_deg=5_size=10_weighted_rate=0,STV_basic_pearson_deg=5_size=10_weighted_rate=2,STV_basic_pearson_deg=5_size=10_antirec_rate=0,STV_basic_pearson_deg=5_size=10_antirec_rate=2,STV_basic_spearman_deg=2_size=10_weighted_rate=0,STV_basic_spearman_deg=2_size=10_weighted_rate=2,STV_basic_spearman_deg=2_size=10_antirec_rate=0,STV_basic_spearman_deg=2_size=10_antirec_rate=2,STV_basic_spearman_deg=5_size=10_weighted_rate=0,STV_basic_spearman_deg=5_size=10_weighted_rate=2,STV_basic_spearman_deg=5_size=10_antirec_rate=0,STV_basic_spearman_deg=5_size=10_antirec_rate=2,STV_basic_spearman_hat_deg=2_size=10_weighted_rate=0,STV_basic_spearman_hat_deg=2_size=10_weighted_rate=2,STV_basic_spearman_hat_deg=2_size=10_antirec_rate=0,STV_basic_spearman_hat_deg=2_size=10_antirec_rate=2,STV_basic_spearman_hat_deg=5_size=10_weighted_rate=0,STV_basic_spearman_hat_deg=5_size=10_weighted_rate=2,STV_basic_spearman_hat_deg=5_size=10_antirec_rate=0,STV_basic_spearman_hat_deg=5_size=10_antirec_rate=2,BnB_jaccar_deg=2_size=10_weighted_rate=0,BnB_jaccar_deg=2_size=10_weighted_rate=2,BnB_jaccar_deg=2_size=10_antirec_rate=0,BnB_jaccar_deg=2_size=10_antirec_rate=2,BnB_jaccar_deg=5_size=10_weighted_rate=0,BnB_jaccar_deg=5_size=10_weighted_rate=2,BnB_jaccar_deg=5_size=10_antirec_rate=0,BnB_jaccar_deg=5_size=10_antirec_rate=2,BnB_cosine_deg=2_size=10_weighted_rate=0,BnB_cosine_deg=2_size=10_weighted_rate=2,BnB_cosine_deg=2_size=10_antirec_rate=0,BnB_cosine_deg=2_size=10_antirec_rate=2,BnB_cosine_deg=5_size=10_weighted_rate=0,BnB_cosine_deg=5_size=10_weighted_rate=2,BnB_cosine_deg=5_size=10_antirec_rate=0,BnB_cosine_deg=5_size=10_antirec_rate=2,BnB_cosine_hat_deg=2_size=10_weighted_rate=0,BnB_cosine_hat_deg=2_size=10_weighted_rate=2,BnB_cosine_hat_deg=2_size=10_antirec_rate=0,BnB_cosine_hat_deg=2_size=10_antirec_rate=2,BnB_cosine_hat_deg=5_size=10_weighted_rate=0,BnB_cosine_hat_deg=5_size=10_weighted_rate=2,BnB_cosine_hat_deg=5_size=10_antirec_rate=0,BnB_cosine_hat_deg=5_size=10_antirec_rate=2,BnB_pearson_deg=2_size=10_weighted_rate=0,BnB_pearson_deg=2_size=10_weighted_rate=2,BnB_pearson_deg=2_size=10_antirec_rate=0,BnB_pearson_deg=2_size=10_antirec_rate=2,BnB_pearson_deg=5_size=10_weighted_rate=0,BnB_pearson_deg=5_size=10_weighted_rate=2,BnB_pearson_deg=5_size=10_antirec_rate=0,BnB_pearson_deg=5_size=10_antirec_rate=2,BnB_spearman_deg=2_size=10_weighted_rate=0,BnB_spearman_deg=2_size=10_weighted_rate=2,BnB_spearman_deg=2_size=10_antirec_rate=0,BnB_spearman_deg=2_size=10_antirec_rate=2,BnB_spearman_deg=5_size=10_weighted_rate=0,BnB_spearman_deg=5_size=10_weighted_rate=2,BnB_spearman_deg=5_size=10_antirec_rate=0,BnB_spearman_deg=5_size=10_antirec_rate=2,BnB_spearman_hat_deg=2_size=10_weighted_rate=0,BnB_spearman_hat_deg=2_size=10_weighted_rate=2,BnB_spearman_hat_deg=2_size=10_antirec_rate=0,BnB_spearman_hat_deg=2_size=10_antirec_rate=2,BnB_spearman_hat_deg=5_size=10_weighted_rate=0,BnB_spearman_hat_deg=5_size=10_weighted_rate=2,BnB_spearman_hat_deg=5_size=10_antirec_rate=0,BnB_spearman_hat_deg=5_size=10_antirec_rate=2
+0,"Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Чужой
+Alien, 1979","Семь
+Se7en, 1995","Чужой
+Alien, 1979","Семь
+Se7en, 1995","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Зеленая миля
+The Green Mile, 1999","Назад в будущее
+Back to the Future, 1985","Мементо (2000)
+Memento","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Мементо (2000)
+Memento","Билли Мэдисон
+Billy Madison, 1995","Назад в будущее
+Back to the Future, 1985","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",Курьер (1986),"Терминатор (1984)
+The Terminator","Чужой
+Alien, 1979","Назад в будущее
+Back to the Future, 1985",Курьер (1986),"Терминатор (1984)
+The Terminator","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Люди в чёрном
+Men in Black, 1997","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Люди в чёрном
+Men in Black, 1997","Бешеные псы (1991)
+Reservoir Dogs","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995",Мастер и Маргарита (2023),"Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995",Мастер и Маргарита (2023),"Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Чужой
+Alien, 1979","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Семь
+Se7en, 1995","Семь
+Se7en, 1995","Зеленая миля
+The Green Mile, 1999","Джокер (2019)
+Joker","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Мементо (2000)
+Memento","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Мементо (2000)
+Memento","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Терминатор (1984)
+The Terminator","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Чужой
+Alien, 1979","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Семь
+Se7en, 1995","Чужой
+Alien, 1979","Зеленая миля
+The Green Mile, 1999","Джокер (2019)
+Joker","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Мементо (2000)
+Memento","Мементо (2000)
+Memento","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Мементо (2000)
+Memento","Мементо (2000)
+Memento","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Паразиты
+Gisaengchung, 2019","Мачо и ботан (2012)
+21 Jump Street","Виды доброты (2024)
+Kinds of Kindness","Бешеные псы (1991)
+Reservoir Dogs","Залечь на дно в Брюгге (2007)
+In Bruges","Дилер (1996)
+Pusher","Головоломка 2 (2024)
+Inside Out 2","Паразиты
+Gisaengchung, 2019","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Остров проклятых
+Shutter Island, 2009","Мертвец (1995)
+Dead Man","Зеленая миля
+The Green Mile, 1999","Бойцовский клуб
+Fight Club, 1999","Остров проклятых
+Shutter Island, 2009","Мертвец (1995)
+Dead Man","Зеленая миля
+The Green Mile, 1999","Перелом (2007)
+Fracture","Образцовый самец (2001)
+Zoolander","Чужой
+Alien, 1979","Образцовый самец (2001)
+Zoolander","Фарго (1995)
+Fargo","Образцовый самец (2001)
+Zoolander","Чужой
+Alien, 1979","Железный человек (2008)
+Iron Man",Курьер (1986),"Папа, сдохни (2018)","Форрест Гамп
+Forrest Gump, 1994","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",Курьер (1986),"Папа, сдохни (2018)","Форрест Гамп
+Forrest Gump, 1994","Звездный десант (1997)
+Starship Troopers","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Место под соснами (2012)
+The Place Beyond the Pines","Отступники
+The Departed, 2006","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Место под соснами (2012)
+The Place Beyond the Pines","Нечто (1982)
+The Thing","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Грязь (2013)
+Filth","Врожденный порок (2014)
+Inherent Vice","Врожденный порок (2014)
+Inherent Vice","Врожденный порок (2014)
+Inherent Vice","Грязь (2013)
+Filth","Врожденный порок (2014)
+Inherent Vice"
+1,"Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Побег из Шоушенка
+The Shawshank Redemption, 1994","Чужой
+Alien, 1979","Бешеные псы (1991)
+Reservoir Dogs","Паразиты
+Gisaengchung, 2019","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Большой Лебовски (1998)
+The Big Lebowski","Билли Мэдисон
+Billy Madison, 1995","Зеленая миля
+The Green Mile, 1999",Мастер и Маргарита (2023),Мастер и Маргарита (2023),"Билли Мэдисон
+Billy Madison, 1995","Зеленая миля
+The Green Mile, 1999","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Ночь на Земле (1991)
+Night on Earth","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Назад в будущее
+Back to the Future, 1985","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Назад в будущее
+Back to the Future, 1985","Игры разума
+A Beautiful Mind, 2001","Чужой
+Alien, 1979","Папа, сдохни (2018)","Люди в чёрном
+Men in Black, 1997","Назад в будущее
+Back to the Future, 1985","Чужой
+Alien, 1979","Папа, сдохни (2018)","Нечто (1982)
+The Thing","Фарго (1995)
+Fargo","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Билли Мэдисон
+Billy Madison, 1995","Мементо (2000)
+Memento",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Билли Мэдисон
+Billy Madison, 1995","Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Зеленая миля
+The Green Mile, 1999","Вонка (2023)
+Wonka","Побег из Шоушенка
+The Shawshank Redemption, 1994","Залечь на дно в Брюгге (2007)
+In Bruges","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Бойцовский клуб
+Fight Club, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Бойцовский клуб
+Fight Club, 1999","Звездный десант (1997)
+Starship Troopers","Залечь на дно в Брюгге (2007)
+In Bruges","Билли Мэдисон
+Billy Madison, 1995","Залечь на дно в Брюгге (2007)
+In Bruges","Звездный десант (1997)
+Starship Troopers","Зеленая миля
+The Green Mile, 1999","Билли Мэдисон
+Billy Madison, 1995","Залечь на дно в Брюгге (2007)
+In Bruges","Мертвые не умирают (2019)
+The Dead Don't Die","Мертвые не умирают (2019)
+The Dead Don't Die","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Игры разума
+A Beautiful Mind, 2001","Чужой
+Alien, 1979","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Крик (1996)
+Scream","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Терминатор (1984)
+The Terminator","Крик (1996)
+Scream","Бешеные псы (1991)
+Reservoir Dogs","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",Мастер и Маргарита (2023),"Мементо (2000)
+Memento",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",Мастер и Маргарита (2023),"Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Зеленая миля
+The Green Mile, 1999","Вонка (2023)
+Wonka","Форрест Гамп
+Forrest Gump, 1994","Нечто (1982)
+The Thing","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Игры разума
+A Beautiful Mind, 2001","Бойцовский клуб
+Fight Club, 1999","Бойцовский клуб
+Fight Club, 1999","Бойцовский клуб
+Fight Club, 1999","Игры разума
+A Beautiful Mind, 2001","Звездный десант (1997)
+Starship Troopers","Большой Лебовски (1998)
+The Big Lebowski","Билли Мэдисон
+Billy Madison, 1995","Залечь на дно в Брюгге (2007)
+In Bruges",Мастер и Маргарита (2023),"Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Залечь на дно в Брюгге (2007)
+In Bruges","Мертвые не умирают (2019)
+The Dead Don't Die","Отступники
+The Departed, 2006","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Конклав (2024)
+Conclave","Игры разума
+A Beautiful Mind, 2001","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Конклав (2024)
+Conclave","Залечь на дно в Брюгге (2007)
+In Bruges","Нечто (1982)
+The Thing","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Залечь на дно в Брюгге (2007)
+In Bruges","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Мачо и ботан (2012)
+21 Jump Street","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Джон Уик 4 (2023)
+John Wick: Chapter 4","Шоу Трумана
+The Truman Show, 1998","Железный человек (2008)
+Iron Man","Нечто (1982)
+The Thing","Мачо и ботан (2012)
+21 Jump Street","Нечто (1982)
+The Thing","Железный человек (2008)
+Iron Man","Отступники
+The Departed, 2006","Выживут только любовники (2013)
+Only Lovers Left Alive","Апокалипсис сегодня (1979)
+Apocalypse Now","Бойцовский клуб
+Fight Club, 1999","Мертвец (1995)
+Dead Man","Выживут только любовники (2013)
+Only Lovers Left Alive","Апокалипсис сегодня (1979)
+Apocalypse Now","Билли Мэдисон
+Billy Madison, 1995","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Такие разные близнецы (2011)
+Jack and Jill","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Такие разные близнецы (2011)
+Jack and Jill","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Бешеные псы (1991)
+Reservoir Dogs","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Одержимость
+Whiplash, 2013","Отступники
+The Departed, 2006","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Одержимость
+Whiplash, 2013","Железный человек (2008)
+Iron Man","Место под соснами (2012)
+The Place Beyond the Pines","Полу-Нельсон (2006)
+Half Nelson","Папа, сдохни (2018)","Серый человек (2022)
+The Gray Man","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Папа, сдохни (2018)","
+Бременские музыканты (2023)","Врожденный порок (2014)
+Inherent Vice","Только бог простит (2012)
+Only God Forgives","Ловушка (2024)
+Trap","Грязь (2013)
+Filth","Серый человек (2022)
+The Gray Man","Только бог простит (2012)
+Only God Forgives","Ловушка (2024)
+Trap"
+2,"Чужой
+Alien, 1979",О чём ещё говорят мужчины (2011),"Зомби по имени Шон (2004)
+Shaun of the Dead",О чём ещё говорят мужчины (2011),"Паразиты
+Gisaengchung, 2019","Терминатор (1984)
+The Terminator","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Чужой
+Alien, 1979","Бойцовский клуб
+Fight Club, 1999","Зеленая миля
+The Green Mile, 1999","Бойцовский клуб
+Fight Club, 1999","Игры разума
+A Beautiful Mind, 2001","Бойцовский клуб
+Fight Club, 1999","Зеленая миля
+The Green Mile, 1999","Бойцовский клуб
+Fight Club, 1999","Игры разума
+A Beautiful Mind, 2001","Назад в будущее
+Back to the Future, 1985","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers","Залечь на дно в Брюгге (2007)
+In Bruges","Звездный десант (1997)
+Starship Troopers",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979",Курьер (1986),"Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth","Чужой
+Alien, 1979",Курьер (1986),"Игры разума
+A Beautiful Mind, 2001","Отступники
+The Departed, 2006","Каскадёры (2024)
+The Fall Guy","Терминатор (1984)
+The Terminator","Чужой
+Alien, 1979","Игры разума
+A Beautiful Mind, 2001","Каскадёры (2024)
+The Fall Guy","Терминатор (1984)
+The Terminator","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Грязь (2013)
+Filth","
+Бременские музыканты (2023)","Только бог простит (2012)
+Only God Forgives","Нечто (1982)
+The Thing","Мементо (2000)
+Memento","
+Бременские музыканты (2023)","Только бог простит (2012)
+Only God Forgives","Чужой
+Alien, 1979","Чужой
+Alien, 1979",О чём ещё говорят мужчины (2011),О чём ещё говорят мужчины (2011),"Чужой
+Alien, 1979","Чужой
+Alien, 1979","Чужой
+Alien, 1979","Зеленая миля
+The Green Mile, 1999","Бойцовский клуб
+Fight Club, 1999","Бойцовский клуб
+Fight Club, 1999","Бешеные псы (1991)
+Reservoir Dogs","Побег из Шоушенка
+The Shawshank Redemption, 1994","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Бешеные псы (1991)
+Reservoir Dogs","Побег из Шоушенка
+The Shawshank Redemption, 1994","Залечь на дно в Брюгге (2007)
+In Bruges","Звездный десант (1997)
+Starship Troopers",Мастер и Маргарита (2023),"Мементо (2000)
+Memento",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers",Мастер и Маргарита (2023),"Мементо (2000)
+Memento","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Люди в чёрном
+Men in Black, 1997","Чужой
+Alien, 1979","Отступники
+The Departed, 2006","Игры разума
+A Beautiful Mind, 2001","Люди в чёрном
+Men in Black, 1997","Грязь (2013)
+Filth","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","
+Бременские музыканты (2023)","
+Бременские музыканты (2023)","Чокнутый (2006)
+Delirious","Мементо (2000)
+Memento","
+Бременские музыканты (2023)","
+Бременские музыканты (2023)","Чужой
+Alien, 1979","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",О чём ещё говорят мужчины (2011),О чём ещё говорят мужчины (2011),"Бешеные псы (1991)
+Reservoir Dogs","Остров проклятых
+Shutter Island, 2009","Джокер (2019)
+Joker","Чужой
+Alien, 1979","Бойцовский клуб
+Fight Club, 1999","Отступники
+The Departed, 2006","Бешеные псы (1991)
+Reservoir Dogs","Бойцовский клуб
+Fight Club, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Люди в чёрном
+Men in Black, 1997","Бешеные псы (1991)
+Reservoir Dogs","Бойцовский клуб
+Fight Club, 1999","Большой Лебовски (1998)
+The Big Lebowski","Звездный десант (1997)
+Starship Troopers",Мастер и Маргарита (2023),"Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),Мастер и Маргарита (2023),"Терминатор (1984)
+The Terminator","Ночь на Земле (1991)
+Night on Earth","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Игры разума
+A Beautiful Mind, 2001","Ночь на Земле (1991)
+Night on Earth","Крик (1996)
+Scream","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Игры разума
+A Beautiful Mind, 2001","Крик (1996)
+Scream","Отступники
+The Departed, 2006","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","
+Бременские музыканты (2023)",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Человек на Луне (2018)
+First Man","
+Бременские музыканты (2023)",Мастер и Маргарита (2023),"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Шоу Трумана
+The Truman Show, 1998","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Паразиты
+Gisaengchung, 2019","Субстанция (2024)
+The Substance","Форрест Гамп
+Forrest Gump, 1994","Бешеные псы (1991)
+Reservoir Dogs","Полу-Нельсон (2006)
+Half Nelson","Паразиты
+Gisaengchung, 2019","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Полу-Нельсон (2006)
+Half Nelson","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Зона интересов (2023)
+The Zone of Interest","
+Бременские музыканты (2023)","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Бешеные псы (1991)
+Reservoir Dogs","Зона интересов (2023)
+The Zone of Interest","
+Бременские музыканты (2023)","Мертвые не умирают (2019)
+The Dead Don't Die","Железный человек (2008)
+Iron Man","Полу-Нельсон (2006)
+Half Nelson","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",Курьер (1986),"Серый человек (2022)
+The Gray Man","Полу-Нельсон (2006)
+Half Nelson","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Чужой
+Alien, 1979","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Конклав (2024)
+Conclave","Железный человек (2008)
+Iron Man","Серый человек (2022)
+The Gray Man","Терминатор (1984)
+The Terminator","Конклав (2024)
+Conclave","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",Мастер и Маргарита (2023),"Чужой: Ромул (2024)
+Alien: Romulus","Фарго (1995)
+Fargo","Нечто (1982)
+The Thing","
+Бременские музыканты (2023)","Чужой: Ромул (2024)
+Alien: Romulus","Фарго (1995)
+Fargo"
+3,О чём ещё говорят мужчины (2011),"Чужой
+Alien, 1979",О чём ещё говорят мужчины (2011),"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Семь
+Se7en, 1995","Король говорит!
+The King's Speech, 2010","Побег из Шоушенка
+The Shawshank Redemption, 1994","Терминатор (1984)
+The Terminator","Зеленая миля
+The Green Mile, 1999","Бойцовский клуб
+Fight Club, 1999","Терминатор (1984)
+The Terminator","Отступники
+The Departed, 2006","Зеленая миля
+The Green Mile, 1999","Отступники
+The Departed, 2006","Терминатор (1984)
+The Terminator","Отступники
+The Departed, 2006","Большой Лебовски (1998)
+The Big Lebowski","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Звездный десант (1997)
+Starship Troopers","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Звездный десант (1997)
+Starship Troopers","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Отступники
+The Departed, 2006","Назад в будущее
+Back to the Future, 1985","Форрест Гамп
+Forrest Gump, 1994","Отступники
+The Departed, 2006","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Игры разума
+A Beautiful Mind, 2001","Форрест Гамп
+Forrest Gump, 1994","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Назад в будущее
+Back to the Future, 1985","Бешеные псы (1991)
+Reservoir Dogs","Клик: С пультом по жизни
+Click, 2006","Назад в будущее
+Back to the Future, 1985","Отступники
+The Departed, 2006","Бешеные псы (1991)
+Reservoir Dogs","Клик: С пультом по жизни
+Click, 2006","Мементо (2000)
+Memento","Нечто (1982)
+The Thing","Мементо (2000)
+Memento","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Грязь (2013)
+Filth","
+Бременские музыканты (2023)","Мементо (2000)
+Memento","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",О чём ещё говорят мужчины (2011),О чём ещё говорят мужчины (2011),"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Зеленая миля
+The Green Mile, 1999","Паразиты
+Gisaengchung, 2019","Король говорит!
+The King's Speech, 2010","Джокер (2019)
+Joker","Король говорит!
+The King's Speech, 2010","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Побег из Шоушенка
+The Shawshank Redemption, 1994","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Отступники
+The Departed, 2006","Побег из Шоушенка
+The Shawshank Redemption, 1994","Терминатор (1984)
+The Terminator","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Звездный десант (1997)
+Starship Troopers","Звездный десант (1997)
+Starship Troopers","Залечь на дно в Брюгге (2007)
+In Bruges","Чужой
+Alien, 1979","Звездный десант (1997)
+Starship Troopers","Звездный десант (1997)
+Starship Troopers","Чужой
+Alien, 1979","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Копы в глубоком запасе (2010)
+The Other Guys","Терминатор (1984)
+The Terminator","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Копы в глубоком запасе (2010)
+The Other Guys","Терминатор (1984)
+The Terminator","Полу-Нельсон (2006)
+Half Nelson","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Крик (1996)
+Scream","Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth","Люди в чёрном
+Men in Black, 1997","Крик (1996)
+Scream","Мементо (2000)
+Memento","Грязь (2013)
+Filth","Только бог простит (2012)
+Only God Forgives","Только бог простит (2012)
+Only God Forgives","
+Бременские музыканты (2023)","
+Бременские музыканты (2023)","Только бог простит (2012)
+Only God Forgives","Только бог простит (2012)
+Only God Forgives",О чём ещё говорят мужчины (2011),О чём ещё говорят мужчины (2011),"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Зеленая миля
+The Green Mile, 1999","Залечь на дно в Брюгге (2007)
+In Bruges","Паразиты
+Gisaengchung, 2019","Бешеные псы (1991)
+Reservoir Dogs","Зеленая миля
+The Green Mile, 1999","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Бойцовский клуб
+Fight Club, 1999","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Побег из Шоушенка
+The Shawshank Redemption, 1994","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Залечь на дно в Брюгге (2007)
+In Bruges","Залечь на дно в Брюгге (2007)
+In Bruges","Звездный десант (1997)
+Starship Troopers","Билли Мэдисон
+Billy Madison, 1995","Большой Лебовски (1998)
+The Big Lebowski","Большой Лебовски (1998)
+The Big Lebowski","Звездный десант (1997)
+Starship Troopers","Билли Мэдисон
+Billy Madison, 1995","Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth","Копы в глубоком запасе (2010)
+The Other Guys","Копы в глубоком запасе (2010)
+The Other Guys",Курьер (1986),"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.","Копы в глубоком запасе (2010)
+The Other Guys","Копы в глубоком запасе (2010)
+The Other Guys","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Конклав (2024)
+Conclave","Терминатор (1984)
+The Terminator","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Конклав (2024)
+Conclave","Терминатор (1984)
+The Terminator","Серый человек (2022)
+The Gray Man","Серый человек (2022)
+The Gray Man","Залечь на дно в Брюгге (2007)
+In Bruges","Фарго (1995)
+Fargo","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","500 дней лета (2009)
+(500) Days of Summer","Залечь на дно в Брюгге (2007)
+In Bruges","Фарго (1995)
+Fargo","Паразиты
+Gisaengchung, 2019","Большой Лебовски (1998)
+The Big Lebowski","Паразиты
+Gisaengchung, 2019","Зомби по имени Шон (2004)
+Shaun of the Dead","Король говорит!
+The King's Speech, 2010","Бешеные псы (1991)
+Reservoir Dogs","Остров проклятых
+Shutter Island, 2009","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Мертвец (1995)
+Dead Man","Игры разума
+A Beautiful Mind, 2001","Паразиты
+Gisaengchung, 2019","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Мертвец (1995)
+Dead Man","Железный человек (2008)
+Iron Man","Паразиты
+Gisaengchung, 2019","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Чужой
+Alien, 1979",Мастер и Маргарита (2023),"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Мементо (2000)
+Memento","Фарго (1995)
+Fargo","
+Бременские музыканты (2023)","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Мементо (2000)
+Memento","Полу-Нельсон (2006)
+Half Nelson","Чужой
+Alien, 1979","Форрест Гамп
+Forrest Gump, 1994","Как поймать монстра (2014)
+Lost River","Железный человек (2008)
+Iron Man","Игры разума
+A Beautiful Mind, 2001","Форрест Гамп
+Forrest Gump, 1994","Как поймать монстра (2014)
+Lost River","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Ночь на Земле (1991)
+Night on Earth","Чужой: Ромул (2024)
+Alien: Romulus","Назад в будущее
+Back to the Future, 1985","Люди в чёрном
+Men in Black, 1997","Ночь на Земле (1991)
+Night on Earth","Чужой: Ромул (2024)
+Alien: Romulus","Грязь (2013)
+Filth","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Фарго (1995)
+Fargo","Чужой: Ромул (2024)
+Alien: Romulus.1","
+Бременские музыканты (2023)","Чужой: Ромул (2024)
+Alien: Romulus.1","Фарго (1995)
+Fargo","Чужой: Ромул (2024)
+Alien: Romulus.1"
+4,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Паразиты
+Gisaengchung, 2019","Чужой
+Alien, 1979","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Железный человек (2008)
+Iron Man","Паразиты
+Gisaengchung, 2019","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Отступники
+The Departed, 2006","Форрест Гамп
+Forrest Gump, 1994","Терминатор (1984)
+The Terminator","Отступники
+The Departed, 2006","Игры разума
+A Beautiful Mind, 2001","Форрест Гамп
+Forrest Gump, 1994","Терминатор (1984)
+The Terminator","Залечь на дно в Брюгге (2007)
+In Bruges","Терминатор (1984)
+The Terminator","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Терминатор (1984)
+The Terminator","Чужой
+Alien, 1979","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Ла-Ла Ленд
+La La Land, 2016","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Бешеные псы (1991)
+Reservoir Dogs","Ла-Ла Ленд
+La La Land, 2016","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Бешеные псы (1991)
+Reservoir Dogs","Большой Лебовски (1998)
+The Big Lebowski","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Чужой
+Alien, 1979","Игры разума
+A Beautiful Mind, 2001","Ночь на Земле (1991)
+Night on Earth","Фарго (1995)
+Fargo","Мементо (2000)
+Memento","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","
+Бременские музыканты (2023)","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","
+Бременские музыканты (2023)","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Король говорит!
+The King's Speech, 2010","Терминатор (1984)
+The Terminator","Король говорит!
+The King's Speech, 2010","Чужой
+Alien, 1979","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",Курьер (1986),"Бешеные псы (1991)
+Reservoir Dogs","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator",Курьер (1986),"Бешеные псы (1991)
+Reservoir Dogs","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Большой Лебовски (1998)
+The Big Lebowski","Залечь на дно в Брюгге (2007)
+In Bruges","Билли Мэдисон
+Billy Madison, 1995","Зеленая миля
+The Green Mile, 1999",Мастер и Маргарита (2023),"Залечь на дно в Брюгге (2007)
+In Bruges","Билли Мэдисон
+Billy Madison, 1995","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016",День радио (2008),"Клик: С пультом по жизни
+Click, 2006","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Игры разума
+A Beautiful Mind, 2001",День радио (2008),"Клик: С пультом по жизни
+Click, 2006","Большой Лебовски (1998)
+The Big Lebowski","Большой Лебовски (1998)
+The Big Lebowski","Конклав (2024)
+Conclave","Ночь на Земле (1991)
+Night on Earth","Назад в будущее
+Back to the Future, 1985","Люди в чёрном
+Men in Black, 1997","Конклав (2024)
+Conclave","Ночь на Земле (1991)
+Night on Earth","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Мементо (2000)
+Memento","Мементо (2000)
+Memento","Фарго (1995)
+Fargo","Нечто (1982)
+The Thing","Нечто (1982)
+The Thing","Мементо (2000)
+Memento","Фарго (1995)
+Fargo","Мачо и ботан (2012)
+21 Jump Street","Чужой
+Alien, 1979","Молчание ягнят
+The Silence of the Lambs, 1990","Молчание ягнят
+The Silence of the Lambs, 1990","Терминатор (1984)
+The Terminator","Шоу Трумана
+The Truman Show, 1998","Король говорит!
+The King's Speech, 2010","Король говорит!
+The King's Speech, 2010","Паразиты
+Gisaengchung, 2019","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs","Люди в чёрном
+Men in Black, 1997","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Игры разума
+A Beautiful Mind, 2001","Бешеные псы (1991)
+Reservoir Dogs",Мастер и Маргарита (2023),"Поймай меня, если сможешь
+Catch Me If You Can, 2002","Залечь на дно в Брюгге (2007)
+In Bruges",Мастер и Маргарита (2023),"Фарго (1995)
+Fargo","Залечь на дно в Брюгге (2007)
+In Bruges","Залечь на дно в Брюгге (2007)
+In Bruges",Мастер и Маргарита (2023),"Чужой
+Alien, 1979","Мертвые не умирают (2019)
+The Dead Don't Die",День радио (2008),"Назад в будущее
+Back to the Future, 1985","Отступники
+The Departed, 2006","Бешеные псы (1991)
+Reservoir Dogs",День радио (2008),"Назад в будущее
+Back to the Future, 1985","Полу-Нельсон (2006)
+Half Nelson","Чужой: Ромул (2024)
+Alien: Romulus","Клик: С пультом по жизни
+Click, 2006","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Форрест Гамп
+Forrest Gump, 1994","Клик: С пультом по жизни
+Click, 2006","Бешеные псы (1991)
+Reservoir Dogs","Ловушка (2024)
+Trap","Мементо (2000)
+Memento","
+Мемуары Улитки (2024)
+Memoir of a Snail","
+Бременские музыканты (2023)","Пленницы (2013)
+Prisoners","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","
+Мемуары Улитки (2024)
+Memoir of a Snail","
+Бременские музыканты (2023)","Большой Лебовски (1998)
+The Big Lebowski","Мачо и ботан (2012)
+21 Jump Street","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Джон Уик 4 (2023)
+John Wick: Chapter 4","Нечто (1982)
+The Thing","Терминатор (1984)
+The Terminator","Побег из Шоушенка
+The Shawshank Redemption, 1994","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Апокалипсис сегодня (1979)
+Apocalypse Now","Копы в глубоком запасе (2010)
+The Other Guys","Терминатор (1984)
+The Terminator","Отступники
+The Departed, 2006","Апокалипсис сегодня (1979)
+Apocalypse Now","Копы в глубоком запасе (2010)
+The Other Guys","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Звездный десант (1997)
+Starship Troopers","Бешеные псы (1991)
+Reservoir Dogs","Зеленая миля
+The Green Mile, 1999","Чужой
+Alien, 1979","Звездный десант (1997)
+Starship Troopers","Бешеные псы (1991)
+Reservoir Dogs","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Чужой: Ромул (2024)
+Alien: Romulus","Ла-Ла Ленд
+La La Land, 2016","Чужой
+Alien, 1979","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Ла-Ла Ленд
+La La Land, 2016","Чужой
+Alien, 1979","Место под соснами (2012)
+The Place Beyond the Pines","Чужой: Ромул (2024)
+Alien: Romulus","Серый человек (2022)
+The Gray Man","Каскадёры (2024)
+The Fall Guy","Игры разума
+A Beautiful Mind, 2001","Чужой
+Alien, 1979","Серый человек (2022)
+The Gray Man","Каскадёры (2024)
+The Fall Guy","Фарго (1995)
+Fargo","Серый человек (2022)
+The Gray Man","Врожденный порок (2014)
+Inherent Vice","Человек на Луне (2018)
+First Man","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Нечто (1982)
+The Thing","Врожденный порок (2014)
+Inherent Vice","Человек на Луне (2018)
+First Man"
+5,"Паразиты
+Gisaengchung, 2019","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Пленницы (2013)
+Prisoners","Залечь на дно в Брюгге (2007)
+In Bruges","Мачо и ботан (2012)
+21 Jump Street","Зеленая миля
+The Green Mile, 1999","Выживут только любовники (2013)
+Only Lovers Left Alive","Паразиты
+Gisaengchung, 2019","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Остров проклятых
+Shutter Island, 2009","Апокалипсис сегодня (1979)
+Apocalypse Now","Игры разума
+A Beautiful Mind, 2001","Терминатор (1984)
+The Terminator","Остров проклятых
+Shutter Island, 2009","Апокалипсис сегодня (1979)
+Apocalypse Now","Терминатор (1984)
+The Terminator","Залечь на дно в Брюгге (2007)
+In Bruges","
+Бременские музыканты (2023)",Мастер и Маргарита (2023),"Чужой
+Alien, 1979","Бешеные псы (1991)
+Reservoir Dogs","
+Бременские музыканты (2023)",Мастер и Маргарита (2023),Курьер (1986),"Игры разума
+A Beautiful Mind, 2001","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Одержимость
+Whiplash, 2013",Курьер (1986),"Достучаться до небес
+Knockin' on Heaven's Door, 1997","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Одержимость
+Whiplash, 2013","Ночь на Земле (1991)
+Night on Earth","Большой Лебовски (1998)
+The Big Lebowski","Назад в будущее
+Back to the Future, 1985",Курьер (1986),"Полу-Нельсон (2006)
+Half Nelson","Люди в чёрном
+Men in Black, 1997","Назад в будущее
+Back to the Future, 1985",Курьер (1986),"Чокнутый (2006)
+Delirious","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Грязь (2013)
+Filth","Вне закона (1986)
+Down by Law","Чокнутый (2006)
+Delirious","Грязь (2013)
+Filth","Грязь (2013)
+Filth","Вне закона (1986)
+Down by Law","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Мачо и ботан (2012)
+21 Jump Street","Залечь на дно в Брюгге (2007)
+In Bruges","Мачо и ботан (2012)
+21 Jump Street","Паразиты
+Gisaengchung, 2019","Паразиты
+Gisaengchung, 2019","Игры разума
+A Beautiful Mind, 2001","Форрест Гамп
+Forrest Gump, 1994","Отступники
+The Departed, 2006","Бойцовский клуб
+Fight Club, 1999","Игры разума
+A Beautiful Mind, 2001","Форрест Гамп
+Forrest Gump, 1994","Фарго (1995)
+Fargo","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Фарго (1995)
+Fargo","Залечь на дно в Брюгге (2007)
+In Bruges","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),Курьер (1986),Курьер (1986),Курьер (1986),Курьер (1986),"Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson",Курьер (1986),Курьер (1986),"Место под соснами (2012)
+The Place Beyond the Pines","Место под соснами (2012)
+The Place Beyond the Pines","Терминатор (1984)
+The Terminator","Папа, сдохни (2018)","Люди в чёрном
+Men in Black, 1997","Игры разума
+A Beautiful Mind, 2001","Терминатор (1984)
+The Terminator","Папа, сдохни (2018)","Чокнутый (2006)
+Delirious","Врожденный порок (2014)
+Inherent Vice","Звездный десант (1997)
+Starship Troopers","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Грязь (2013)
+Filth","Грязь (2013)
+Filth","Звездный десант (1997)
+Starship Troopers","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Паразиты
+Gisaengchung, 2019","Побег из Шоушенка
+The Shawshank Redemption, 1994","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Круэлла (2021)
+Cruella","Чужой
+Alien, 1979","Форрест Гамп
+Forrest Gump, 1994","Субстанция (2024)
+The Substance","Мачо и ботан (2012)
+21 Jump Street","Зеленая миля
+The Green Mile, 1999","Игры разума
+A Beautiful Mind, 2001","Форрест Гамп
+Forrest Gump, 1994","Паразиты
+Gisaengchung, 2019","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Паразиты
+Gisaengchung, 2019","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator","Назад в будущее
+Back to the Future, 1985","Залечь на дно в Брюгге (2007)
+In Bruges","Звездный десант (1997)
+Starship Troopers","Терминатор (1984)
+The Terminator","Назад в будущее
+Back to the Future, 1985",Курьер (1986),Курьер (1986),"Терминатор (1984)
+The Terminator","Одержимость
+Whiplash, 2013","Бешеные псы (1991)
+Reservoir Dogs","Отступники
+The Departed, 2006","Терминатор (1984)
+The Terminator","Одержимость
+Whiplash, 2013","Серый человек (2022)
+The Gray Man","Чужой
+Alien, 1979","Ночь на Земле (1991)
+Night on Earth","Клик: С пультом по жизни
+Click, 2006","Полу-Нельсон (2006)
+Half Nelson","Круто сваренные (1992)
+Lat sau san taam","Ночь на Земле (1991)
+Night on Earth","Клик: С пультом по жизни
+Click, 2006","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Крик (1996)
+Scream","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Зеленая миля
+The Green Mile, 1999","Молчание ягнят
+The Silence of the Lambs, 1990","Терминатор (1984)
+The Terminator","Король говорит!
+The King's Speech, 2010","Семь
+Se7en, 1995","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Игры разума
+A Beautiful Mind, 2001","Мертвец (1995)
+Dead Man","Зеленая миля
+The Green Mile, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Игры разума
+A Beautiful Mind, 2001","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Большой Лебовски (1998)
+The Big Lebowski","Билли Мэдисон
+Billy Madison, 1995","
+Бременские музыканты (2023)","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Большой Лебовски (1998)
+The Big Lebowski","Зеленая миля
+The Green Mile, 1999","
+Бременские музыканты (2023)","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Игры разума
+A Beautiful Mind, 2001","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Звездный десант (1997)
+Starship Troopers","Конклав (2024)
+Conclave","Полу-Нельсон (2006)
+Half Nelson","Ночь на Земле (1991)
+Night on Earth","Отступники
+The Departed, 2006","Конклав (2024)
+Conclave","Полу-Нельсон (2006)
+Half Nelson","Врожденный порок (2014)
+Inherent Vice","
+Бременские музыканты (2023)","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Мементо (2000)
+Memento","Фарго (1995)
+Fargo","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Мементо (2000)
+Memento"
+6,"Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Паразиты
+Gisaengchung, 2019","Побег из Шоушенка
+The Shawshank Redemption, 1994","Нечто (1982)
+The Thing","Паразиты
+Gisaengchung, 2019","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Отступники
+The Departed, 2006","Паразиты
+Gisaengchung, 2019","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Побег из Шоушенка
+The Shawshank Redemption, 1994","Терминатор (1984)
+The Terminator","Мертвец (1995)
+Dead Man","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Побег из Шоушенка
+The Shawshank Redemption, 1994","Фарго (1995)
+Fargo","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Образцовый самец (2001)
+Zoolander","Фарго (1995)
+Fargo","Большой Лебовски (1998)
+The Big Lebowski","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Образцовый самец (2001)
+Zoolander","Игры разума
+A Beautiful Mind, 2001","Ла-Ла Ленд
+La La Land, 2016","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Чужой
+Alien, 1979","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Ночь на Земле (1991)
+Night on Earth","Место под соснами (2012)
+The Place Beyond the Pines","Место под соснами (2012)
+The Place Beyond the Pines","Отступники
+The Departed, 2006","Люди в чёрном
+Men in Black, 1997","Игры разума
+A Beautiful Mind, 2001","Ночь на Земле (1991)
+Night on Earth","Отступники
+The Departed, 2006","Люди в чёрном
+Men in Black, 1997","Грязь (2013)
+Filth","Врожденный порок (2014)
+Inherent Vice","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Фарго (1995)
+Fargo","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Фарго (1995)
+Fargo","Паразиты
+Gisaengchung, 2019","Паразиты
+Gisaengchung, 2019","Шоу Трумана
+The Truman Show, 1998","Шоу Трумана
+The Truman Show, 1998","Железный человек (2008)
+Iron Man","Побег из Шоушенка
+The Shawshank Redemption, 1994","Субстанция (2024)
+The Substance","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Остров проклятых
+Shutter Island, 2009",Курьер (1986),"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Игры разума
+A Beautiful Mind, 2001","Остров проклятых
+Shutter Island, 2009",Курьер (1986),"Чужой
+Alien, 1979","Фарго (1995)
+Fargo","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Бешеные псы (1991)
+Reservoir Dogs","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Одержимость
+Whiplash, 2013","Дилер (1996)
+Pusher","Полу-Нельсон (2006)
+Half Nelson","Чужой
+Alien, 1979","Одержимость
+Whiplash, 2013","Дилер (1996)
+Pusher","Чужой
+Alien, 1979","Полу-Нельсон (2006)
+Half Nelson","Звездный десант (1997)
+Starship Troopers","Чужой
+Alien, 1979","Ночь на Земле (1991)
+Night on Earth","Чужой
+Alien, 1979","Звездный десант (1997)
+Starship Troopers","Чужой
+Alien, 1979","Врожденный порок (2014)
+Inherent Vice","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Чокнутый (2006)
+Delirious","Грязь (2013)
+Filth","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Чокнутый (2006)
+Delirious","Грязь (2013)
+Filth","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Паразиты
+Gisaengchung, 2019","Шоу Трумана
+The Truman Show, 1998","Чужой
+Alien, 1979","Нечто (1982)
+The Thing","Назад в будущее
+Back to the Future, 1985","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Терминатор (1984)
+The Terminator","Паразиты
+Gisaengchung, 2019","Люди в чёрном
+Men in Black, 1997","Форрест Гамп
+Forrest Gump, 1994","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Форрест Гамп
+Forrest Gump, 1994","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Большой Лебовски (1998)
+The Big Lebowski","Звездный десант (1997)
+Starship Troopers","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Большой Лебовски (1998)
+The Big Lebowski","Звездный десант (1997)
+Starship Troopers","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Ночь на Земле (1991)
+Night on Earth","Терминатор (1984)
+The Terminator","Ночь на Земле (1991)
+Night on Earth",Курьер (1986),"Ночь на Земле (1991)
+Night on Earth","Терминатор (1984)
+The Terminator","Звездный десант (1997)
+Starship Troopers","Большой Лебовски (1998)
+The Big Lebowski","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Большой Лебовски (1998)
+The Big Lebowski","На посту!
+Au poste!, 2018","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Грязь (2013)
+Filth","Чокнутый (2006)
+Delirious","Только бог простит (2012)
+Only God Forgives","Только бог простит (2012)
+Only God Forgives","Бешеные псы (1991)
+Reservoir Dogs","Залечь на дно в Брюгге (2007)
+In Bruges","Только бог простит (2012)
+Only God Forgives","Только бог простит (2012)
+Only God Forgives","Зеленая миля
+The Green Mile, 1999","Молчание ягнят
+The Silence of the Lambs, 1990","Зомби по имени Шон (2004)
+Shaun of the Dead","Круэлла (2021)
+Cruella","Залечь на дно в Брюгге (2007)
+In Bruges","Мачо и ботан (2012)
+21 Jump Street","Паразиты
+Gisaengchung, 2019","Чужой
+Alien, 1979","Отступники
+The Departed, 2006","Полу-Нельсон (2006)
+Half Nelson","Бойцовский клуб
+Fight Club, 1999","Терминатор (1984)
+The Terminator","Отступники
+The Departed, 2006","Игры разума
+A Beautiful Mind, 2001","Бойцовский клуб
+Fight Club, 1999","Терминатор (1984)
+The Terminator","Залечь на дно в Брюгге (2007)
+In Bruges","
+Бременские музыканты (2023)","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Залечь на дно в Брюгге (2007)
+In Bruges","Залечь на дно в Брюгге (2007)
+In Bruges",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Залечь на дно в Брюгге (2007)
+In Bruges","Ночь на Земле (1991)
+Night on Earth","Серый человек (2022)
+The Gray Man","Терминатор (1984)
+The Terminator",Курьер (1986),"Ночь на Земле (1991)
+Night on Earth","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator",Курьер (1986),"Большой Лебовски (1998)
+The Big Lebowski","Серый человек (2022)
+The Gray Man","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Полу-Нельсон (2006)
+Half Nelson","Игры разума
+A Beautiful Mind, 2001","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Серый человек (2022)
+The Gray Man","Ловушка (2024)
+Trap","Чужой: Ромул (2024)
+Alien: Romulus.1","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Чужой: Ромул (2024)
+Alien: Romulus.1","Грязь (2013)
+Filth","Чужой: Ромул (2024)
+Alien: Romulus.1","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux"
+7,"Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Король говорит!
+The King's Speech, 2010","Побег из Шоушенка
+The Shawshank Redemption, 1994","Остров проклятых
+Shutter Island, 2009","Побег из Шоушенка
+The Shawshank Redemption, 1994","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Зеленая миля
+The Green Mile, 1999","Остров проклятых
+Shutter Island, 2009","Мертвец (1995)
+Dead Man","Бойцовский клуб
+Fight Club, 1999","Зеленая миля
+The Green Mile, 1999","Остров проклятых
+Shutter Island, 2009","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Назад в будущее
+Back to the Future, 1985","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Зеленая миля
+The Green Mile, 1999","Назад в будущее
+Back to the Future, 1985","Ночь на Земле (1991)
+Night on Earth","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Назад в будущее
+Back to the Future, 1985","Форрест Гамп
+Forrest Gump, 1994","Игры разума
+A Beautiful Mind, 2001","Отступники
+The Departed, 2006","Назад в будущее
+Back to the Future, 1985","Форрест Гамп
+Forrest Gump, 1994","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Отступники
+The Departed, 2006","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Врожденный порок (2014)
+Inherent Vice","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Вне закона (1986)
+Down by Law","Мементо (2000)
+Memento","Чужой: Ромул (2024)
+Alien: Romulus.1","Нечто (1982)
+The Thing","Вне закона (1986)
+Down by Law","Мементо (2000)
+Memento","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Круэлла (2021)
+Cruella","Зомби по имени Шон (2004)
+Shaun of the Dead","Мачо и ботан (2012)
+21 Jump Street","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Залечь на дно в Брюгге (2007)
+In Bruges","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Терминатор (1984)
+The Terminator","Копы в глубоком запасе (2010)
+The Other Guys","Бойцовский клуб
+Fight Club, 1999","Мертвец (1995)
+Dead Man","Терминатор (1984)
+The Terminator","Копы в глубоком запасе (2010)
+The Other Guys","Билли Мэдисон
+Billy Madison, 1995","Бешеные псы (1991)
+Reservoir Dogs","Такие разные близнецы (2011)
+Jack and Jill","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Бешеные псы (1991)
+Reservoir Dogs","Большой Лебовски (1998)
+The Big Lebowski","Такие разные близнецы (2011)
+Jack and Jill","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Терминатор (1984)
+The Terminator","Полу-Нельсон (2006)
+Half Nelson",Курьер (1986),Курьер (1986),"Терминатор (1984)
+The Terminator","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Чужой
+Alien, 1979","Каскадёры (2024)
+The Fall Guy","Звездный десант (1997)
+Starship Troopers","Чужой: Ромул (2024)
+Alien: Romulus","Назад в будущее
+Back to the Future, 1985","Каскадёры (2024)
+The Fall Guy","Звездный десант (1997)
+Starship Troopers","
+Бременские музыканты (2023)",Мастер и Маргарита (2023),Мастер и Маргарита (2023),"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",Мастер и Маргарита (2023),"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Мачо и ботан (2012)
+21 Jump Street","Круэлла (2021)
+Cruella","Шоу Трумана
+The Truman Show, 1998","Паразиты
+Gisaengchung, 2019","Терминатор (1984)
+The Terminator","Железный человек (2008)
+Iron Man","Нечто (1982)
+The Thing","Игры разума
+A Beautiful Mind, 2001","Зеленая миля
+The Green Mile, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Шоу Трумана
+The Truman Show, 1998","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Чужой
+Alien, 1979","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Люди в чёрном
+Men in Black, 1997","Звездный десант (1997)
+Starship Troopers","Люди в чёрном
+Men in Black, 1997","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Люди в чёрном
+Men in Black, 1997","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016",Курьер (1986),"Отступники
+The Departed, 2006","Ла-Ла Ленд
+La La Land, 2016","Терминатор (1984)
+The Terminator",Курьер (1986),"Отступники
+The Departed, 2006","Чужой
+Alien, 1979","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Место под соснами (2012)
+The Place Beyond the Pines","Назад в будущее
+Back to the Future, 1985","Отступники
+The Departed, 2006","Люди в чёрном
+Men in Black, 1997","Место под соснами (2012)
+The Place Beyond the Pines","Чужой: Ромул (2024)
+Alien: Romulus.1","Ловушка (2024)
+Trap",Мастер и Маргарита (2023),Гидравлика (2010),"Нечто (1982)
+The Thing","Нечто (1982)
+The Thing",Мастер и Маргарита (2023),Гидравлика (2010),О чём ещё говорят мужчины (2011),"Зеленая миля
+The Green Mile, 1999",О чём ещё говорят мужчины (2011),О чём ещё говорят мужчины (2011),"Мачо и ботан (2012)
+21 Jump Street","Железный человек (2008)
+Iron Man","Чужой
+Alien, 1979","Мачо и ботан (2012)
+21 Jump Street","Бойцовский клуб
+Fight Club, 1999","Железный человек (2008)
+Iron Man","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Железный человек (2008)
+Iron Man","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers","Ловушка (2024)
+Trap",Мастер и Маргарита (2023),"
+Бременские музыканты (2023)","Звездный десант (1997)
+Starship Troopers","Ловушка (2024)
+Trap",Мастер и Маргарита (2023),Курьер (1986),"Отступники
+The Departed, 2006","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Серый человек (2022)
+The Gray Man","Ночь на Земле (1991)
+Night on Earth","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Серый человек (2022)
+The Gray Man","Игры разума
+A Beautiful Mind, 2001","Люди в чёрном
+Men in Black, 1997","Чужой
+Alien, 1979","Люди в чёрном
+Men in Black, 1997","Ночь на Земле (1991)
+Night on Earth","Люди в чёрном
+Men in Black, 1997","Чужой
+Alien, 1979","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","
+Бременские музыканты (2023)","
+Бременские музыканты (2023)","Ловушка (2024)
+Trap","Фарго (1995)
+Fargo","
+Бременские музыканты (2023)","
+Бременские музыканты (2023)"
+8,"Большой Лебовски (1998)
+The Big Lebowski","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Зомби по имени Шон (2004)
+Shaun of the Dead","Железный человек (2008)
+Iron Man","Субстанция (2024)
+The Substance","Пленницы (2013)
+Prisoners","Король говорит!
+The King's Speech, 2010","Терминатор (1984)
+The Terminator","Мертвец (1995)
+Dead Man","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Одержимость
+Whiplash, 2013","Железный человек (2008)
+Iron Man","Полу-Нельсон (2006)
+Half Nelson","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Одержимость
+Whiplash, 2013","Чужой
+Alien, 1979","Фарго (1995)
+Fargo","Образцовый самец (2001)
+Zoolander","Пленницы (2013)
+Prisoners","Звездный десант (1997)
+Starship Troopers","Залечь на дно в Брюгге (2007)
+In Bruges","Образцовый самец (2001)
+Zoolander","Пленницы (2013)
+Prisoners","Железный человек (2008)
+Iron Man",Курьер (1986),"Ла-Ла Ленд
+La La Land, 2016","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Бешеные псы (1991)
+Reservoir Dogs","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Клик: С пультом по жизни
+Click, 2006","Чужой
+Alien, 1979","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Клик: С пультом по жизни
+Click, 2006","Чужой
+Alien, 1979","Серый человек (2022)
+The Gray Man",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","
+Бременские музыканты (2023)","Чужой: Ромул (2024)
+Alien: Romulus.1","Звездный десант (1997)
+Starship Troopers","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Большой Лебовски (1998)
+The Big Lebowski","Большой Лебовски (1998)
+The Big Lebowski","Мачо и ботан (2012)
+21 Jump Street","Круэлла (2021)
+Cruella","Залечь на дно в Брюгге (2007)
+In Bruges","Паразиты
+Gisaengchung, 2019","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Железный человек (2008)
+Iron Man","Паразиты
+Gisaengchung, 2019","Мертвец (1995)
+Dead Man","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Паразиты
+Gisaengchung, 2019","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Билли Мэдисон
+Billy Madison, 1995","
+Бременские музыканты (2023)","Образцовый самец (2001)
+Zoolander","Терминатор (1984)
+The Terminator","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","
+Бременские музыканты (2023)","Образцовый самец (2001)
+Zoolander","Железный человек (2008)
+Iron Man","Чужой
+Alien, 1979","Не говори никому (2024)
+Speak No Evil","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016","Не говори никому (2024)
+Speak No Evil","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Звездный десант (1997)
+Starship Troopers","Железный человек (2008)
+Iron Man","Чужой: Ромул (2024)
+Alien: Romulus","Каскадёры (2024)
+The Fall Guy","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Чужой: Ромул (2024)
+Alien: Romulus","Каскадёры (2024)
+The Fall Guy","Серый человек (2022)
+The Gray Man","
+Бременские музыканты (2023)","Серый человек (2022)
+The Gray Man","Мементо (2000)
+Memento",Мастер и Маргарита (2023),"Чужой: Ромул (2024)
+Alien: Romulus.1","Серый человек (2022)
+The Gray Man","Мементо (2000)
+Memento","Побег из Шоушенка
+The Shawshank Redemption, 1994","Форрест Гамп
+Forrest Gump, 1994","Мачо и ботан (2012)
+21 Jump Street","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Побег из Шоушенка
+The Shawshank Redemption, 1994","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Семь
+Se7en, 1995","Субстанция (2024)
+The Substance","Отступники
+The Departed, 2006","Терминатор (1984)
+The Terminator","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Бешеные псы (1991)
+Reservoir Dogs","Образцовый самец (2001)
+Zoolander","Зеленая миля
+The Green Mile, 1999","Назад в будущее
+Back to the Future, 1985","Отступники
+The Departed, 2006","Образцовый самец (2001)
+Zoolander","Зеленая миля
+The Green Mile, 1999","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Одержимость
+Whiplash, 2013",Курьер (1986),"Мертвые не умирают (2019)
+The Dead Don't Die","Копы в глубоком запасе (2010)
+The Other Guys","Одержимость
+Whiplash, 2013",Курьер (1986),"Чужой: Ромул (2024)
+Alien: Romulus","Полу-Нельсон (2006)
+Half Nelson","Каскадёры (2024)
+The Fall Guy","Крик (1996)
+Scream","Серый человек (2022)
+The Gray Man","Типа крутые легавые (2007)
+Hot Fuzz","Каскадёры (2024)
+The Fall Guy","Крик (1996)
+Scream","Чокнутый (2006)
+Delirious","Чужой: Ромул (2024)
+Alien: Romulus.1","Мементо (2000)
+Memento","Залечь на дно в Брюгге (2007)
+In Bruges","Отступники
+The Departed, 2006","Бешеные псы (1991)
+Reservoir Dogs","Мементо (2000)
+Memento","Залечь на дно в Брюгге (2007)
+In Bruges","Чужой
+Alien, 1979",О чём ещё говорят мужчины (2011),"Чужой
+Alien, 1979","Чужой
+Alien, 1979","Побег из Шоушенка
+The Shawshank Redemption, 1994","Чужой
+Alien, 1979","Бешеные псы (1991)
+Reservoir Dogs","Семь
+Se7en, 1995","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Бойцовский клуб
+Fight Club, 1999","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers",Мастер и Маргарита (2023),"Залечь на дно в Брюгге (2007)
+In Bruges",Мастер и Маргарита (2023),"Звездный десант (1997)
+Starship Troopers","Чужой: Ромул (2024)
+Alien: Romulus","Ночь на Земле (1991)
+Night on Earth","Не говори никому (2024)
+Speak No Evil","Бешеные псы (1991)
+Reservoir Dogs","Ла-Ла Ленд
+La La Land, 2016","Бешеные псы (1991)
+Reservoir Dogs","Не говори никому (2024)
+Speak No Evil","Бешеные псы (1991)
+Reservoir Dogs","Чужой: Ромул (2024)
+Alien: Romulus","Отступники
+The Departed, 2006","Каскадёры (2024)
+The Fall Guy","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Назад в будущее
+Back to the Future, 1985","Каскадёры (2024)
+The Fall Guy","Бешеные псы (1991)
+Reservoir Dogs","Ловушка (2024)
+Trap","Фарго (1995)
+Fargo",Мастер и Маргарита (2023),Мастер и Маргарита (2023),Мастер и Маргарита (2023),Мастер и Маргарита (2023),Мастер и Маргарита (2023),Мастер и Маргарита (2023)
+9,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Большой Лебовски (1998)
+The Big Lebowski","Пленницы (2013)
+Prisoners",День выборов (2009),"Бешеные псы (1991)
+Reservoir Dogs","Залечь на дно в Брюгге (2007)
+In Bruges","Нечто (1982)
+The Thing","Бешеные псы (1991)
+Reservoir Dogs","Мертвец (1995)
+Dead Man","Терминатор (1984)
+The Terminator","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Бешеные псы (1991)
+Reservoir Dogs","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Чужой
+Alien, 1979","Полу-Нельсон (2006)
+Half Nelson","Апокалипсис сегодня (1979)
+Apocalypse Now","Клик: С пультом по жизни
+Click, 2006","Железный человек (2008)
+Iron Man",Курьер (1986),"Апокалипсис сегодня (1979)
+Apocalypse Now","Клик: С пультом по жизни
+Click, 2006","Железный человек (2008)
+Iron Man","Чужой
+Alien, 1979","Дилер (1996)
+Pusher","Отступники
+The Departed, 2006","Серый человек (2022)
+The Gray Man","Серый человек (2022)
+The Gray Man","Дилер (1996)
+Pusher","Отступники
+The Departed, 2006","
+Бременские музыканты (2023)","
+Бременские музыканты (2023)","Фарго (1995)
+Fargo","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Врожденный порок (2014)
+Inherent Vice","Врожденный порок (2014)
+Inherent Vice","Фарго (1995)
+Fargo","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Виды доброты (2024)
+Kinds of Kindness","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","Субстанция (2024)
+The Substance","Нечто (1982)
+The Thing","Смертельное оружие (1987)
+Lethal Weapon","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Мертвец (1995)
+Dead Man","Полу-Нельсон (2006)
+Half Nelson","Железный человек (2008)
+Iron Man","Полу-Нельсон (2006)
+Half Nelson","Мертвец (1995)
+Dead Man",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Чужой
+Alien, 1979","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Большой Лебовски (1998)
+The Big Lebowski","Фарго (1995)
+Fargo","Чужой
+Alien, 1979","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Чужой: Ромул (2024)
+Alien: Romulus","Железный человек (2008)
+Iron Man","Дилер (1996)
+Pusher","Чужой
+Alien, 1979","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Дилер (1996)
+Pusher","Чужой
+Alien, 1979","Чужой: Ромул (2024)
+Alien: Romulus","Звездный десант (1997)
+Starship Troopers","Чужой
+Alien, 1979","Как поймать монстра (2014)
+Lost River","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Чужой
+Alien, 1979","Как поймать монстра (2014)
+Lost River","Ловушка (2024)
+Trap","Серый человек (2022)
+The Gray Man","Чужой: Ромул (2024)
+Alien: Romulus.1","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Чужой: Ромул (2024)
+Alien: Romulus.1","Врожденный порок (2014)
+Inherent Vice","Чужой: Ромул (2024)
+Alien: Romulus.1","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Большой Лебовски (1998)
+The Big Lebowski","Большой Лебовски (1998)
+The Big Lebowski","Виды доброты (2024)
+Kinds of Kindness","Зомби по имени Шон (2004)
+Shaun of the Dead","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Отступники
+The Departed, 2006","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Семь
+Se7en, 1995","Железный человек (2008)
+Iron Man","Железный человек (2008)
+Iron Man","Паразиты
+Gisaengchung, 2019","Одержимость
+Whiplash, 2013","Джокер (2019)
+Joker","Джокер (2019)
+Joker","Паразиты
+Gisaengchung, 2019","Одержимость
+Whiplash, 2013","Бешеные псы (1991)
+Reservoir Dogs","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Такие разные близнецы (2011)
+Jack and Jill","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Такие разные близнецы (2011)
+Jack and Jill","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Серый человек (2022)
+The Gray Man","Чужой: Ромул (2024)
+Alien: Romulus","Чужой
+Alien, 1979","Клик: С пультом по жизни
+Click, 2006","Достучаться до небес
+Knockin' on Heaven's Door, 1997","Чужой
+Alien, 1979","Чужой
+Alien, 1979","Клик: С пультом по жизни
+Click, 2006","Место под соснами (2012)
+The Place Beyond the Pines","Серый человек (2022)
+The Gray Man","Чужой: Ромул (2024)
+Alien: Romulus","Чужой
+Alien, 1979","Чужой: Ромул (2024)
+Alien: Romulus","Мертвец (1995)
+Dead Man","Чужой: Ромул (2024)
+Alien: Romulus","Чужой
+Alien, 1979","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Грязь (2013)
+Filth","Чокнутый (2006)
+Delirious","Звездный десант (1997)
+Starship Troopers","Пункт назначения. Аквапарк (2019)
+Aquaslash","Отступники
+The Departed, 2006","Чокнутый (2006)
+Delirious","Звездный десант (1997)
+Starship Troopers","Молчание ягнят
+The Silence of the Lambs, 1990","Чужой
+Alien, 1979","Молчание ягнят
+The Silence of the Lambs, 1990","Зеленая миля
+The Green Mile, 1999","Чужой
+Alien, 1979","Семь
+Se7en, 1995","Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare","Паразиты
+Gisaengchung, 2019","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","
+Бременские музыканты (2023)","Залечь на дно в Брюгге (2007)
+In Bruges","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Серый человек (2022)
+The Gray Man","Мертвые не умирают (2019)
+The Dead Don't Die","Бешеные псы (1991)
+Reservoir Dogs","Терминатор (1984)
+The Terminator","Чужой
+Alien, 1979","Назад в будущее
+Back to the Future, 1985","Бешеные псы (1991)
+Reservoir Dogs","Терминатор (1984)
+The Terminator","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Бешеные псы (1991)
+Reservoir Dogs","Бешеные псы (1991)
+Reservoir Dogs","Чужой
+Alien, 1979","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995"

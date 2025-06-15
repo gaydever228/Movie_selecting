@@ -1,0 +1,1883 @@
+,SNTV_jaccar_deg=2_size=10_weighted_rate=0,SNTV_jaccar_deg=2_size=10_weighted_rate=2,SNTV_jaccar_deg=2_size=10_antirec_rate=0,SNTV_jaccar_deg=2_size=10_antirec_rate=2,SNTV_jaccar_deg=5_size=10_weighted_rate=0,SNTV_jaccar_deg=5_size=10_weighted_rate=2,SNTV_jaccar_deg=5_size=10_antirec_rate=0,SNTV_jaccar_deg=5_size=10_antirec_rate=2,SNTV_cosine_deg=2_size=10_weighted_rate=0,SNTV_cosine_deg=2_size=10_weighted_rate=2,SNTV_cosine_deg=2_size=10_antirec_rate=0,SNTV_cosine_deg=2_size=10_antirec_rate=2,SNTV_cosine_deg=5_size=10_weighted_rate=0,SNTV_cosine_deg=5_size=10_weighted_rate=2,SNTV_cosine_deg=5_size=10_antirec_rate=0,SNTV_cosine_deg=5_size=10_antirec_rate=2,SNTV_cosine_hat_deg=2_size=10_weighted_rate=0,SNTV_cosine_hat_deg=2_size=10_weighted_rate=2,SNTV_cosine_hat_deg=2_size=10_antirec_rate=0,SNTV_cosine_hat_deg=2_size=10_antirec_rate=2,SNTV_cosine_hat_deg=5_size=10_weighted_rate=0,SNTV_cosine_hat_deg=5_size=10_weighted_rate=2,SNTV_cosine_hat_deg=5_size=10_antirec_rate=0,SNTV_cosine_hat_deg=5_size=10_antirec_rate=2,SNTV_pearson_deg=2_size=10_weighted_rate=0,SNTV_pearson_deg=2_size=10_weighted_rate=2,SNTV_pearson_deg=2_size=10_antirec_rate=0,SNTV_pearson_deg=2_size=10_antirec_rate=2,SNTV_pearson_deg=5_size=10_weighted_rate=0,SNTV_pearson_deg=5_size=10_weighted_rate=2,SNTV_pearson_deg=5_size=10_antirec_rate=0,SNTV_pearson_deg=5_size=10_antirec_rate=2,SNTV_spearman_deg=2_size=10_weighted_rate=0,SNTV_spearman_deg=2_size=10_weighted_rate=2,SNTV_spearman_deg=2_size=10_antirec_rate=0,SNTV_spearman_deg=2_size=10_antirec_rate=2,SNTV_spearman_deg=5_size=10_weighted_rate=0,SNTV_spearman_deg=5_size=10_weighted_rate=2,SNTV_spearman_deg=5_size=10_antirec_rate=0,SNTV_spearman_deg=5_size=10_antirec_rate=2,SNTV_spearman_hat_deg=2_size=10_weighted_rate=0,SNTV_spearman_hat_deg=2_size=10_weighted_rate=2,SNTV_spearman_hat_deg=2_size=10_antirec_rate=0,SNTV_spearman_hat_deg=2_size=10_antirec_rate=2,SNTV_spearman_hat_deg=5_size=10_weighted_rate=0,SNTV_spearman_hat_deg=5_size=10_weighted_rate=2,SNTV_spearman_hat_deg=5_size=10_antirec_rate=0,SNTV_spearman_hat_deg=5_size=10_antirec_rate=2,STV_star_jaccar_deg=2_size=10_weighted_rate=0,STV_star_jaccar_deg=2_size=10_weighted_rate=2,STV_star_jaccar_deg=2_size=10_antirec_rate=0,STV_star_jaccar_deg=2_size=10_antirec_rate=2,STV_star_jaccar_deg=5_size=10_weighted_rate=0,STV_star_jaccar_deg=5_size=10_weighted_rate=2,STV_star_jaccar_deg=5_size=10_antirec_rate=0,STV_star_jaccar_deg=5_size=10_antirec_rate=2,STV_star_cosine_deg=2_size=10_weighted_rate=0,STV_star_cosine_deg=2_size=10_weighted_rate=2,STV_star_cosine_deg=2_size=10_antirec_rate=0,STV_star_cosine_deg=2_size=10_antirec_rate=2,STV_star_cosine_deg=5_size=10_weighted_rate=0,STV_star_cosine_deg=5_size=10_weighted_rate=2,STV_star_cosine_deg=5_size=10_antirec_rate=0,STV_star_cosine_deg=5_size=10_antirec_rate=2,STV_star_cosine_hat_deg=2_size=10_weighted_rate=0,STV_star_cosine_hat_deg=2_size=10_weighted_rate=2,STV_star_cosine_hat_deg=2_size=10_antirec_rate=0,STV_star_cosine_hat_deg=2_size=10_antirec_rate=2,STV_star_cosine_hat_deg=5_size=10_weighted_rate=0,STV_star_cosine_hat_deg=5_size=10_weighted_rate=2,STV_star_cosine_hat_deg=5_size=10_antirec_rate=0,STV_star_cosine_hat_deg=5_size=10_antirec_rate=2,STV_star_pearson_deg=2_size=10_weighted_rate=0,STV_star_pearson_deg=2_size=10_weighted_rate=2,STV_star_pearson_deg=2_size=10_antirec_rate=0,STV_star_pearson_deg=2_size=10_antirec_rate=2,STV_star_pearson_deg=5_size=10_weighted_rate=0,STV_star_pearson_deg=5_size=10_weighted_rate=2,STV_star_pearson_deg=5_size=10_antirec_rate=0,STV_star_pearson_deg=5_size=10_antirec_rate=2,STV_star_spearman_deg=2_size=10_weighted_rate=0,STV_star_spearman_deg=2_size=10_weighted_rate=2,STV_star_spearman_deg=2_size=10_antirec_rate=0,STV_star_spearman_deg=2_size=10_antirec_rate=2,STV_star_spearman_deg=5_size=10_weighted_rate=0,STV_star_spearman_deg=5_size=10_weighted_rate=2,STV_star_spearman_deg=5_size=10_antirec_rate=0,STV_star_spearman_deg=5_size=10_antirec_rate=2,STV_star_spearman_hat_deg=2_size=10_weighted_rate=0,STV_star_spearman_hat_deg=2_size=10_weighted_rate=2,STV_star_spearman_hat_deg=2_size=10_antirec_rate=0,STV_star_spearman_hat_deg=2_size=10_antirec_rate=2,STV_star_spearman_hat_deg=5_size=10_weighted_rate=0,STV_star_spearman_hat_deg=5_size=10_weighted_rate=2,STV_star_spearman_hat_deg=5_size=10_antirec_rate=0,STV_star_spearman_hat_deg=5_size=10_antirec_rate=2,STV_basic_jaccar_deg=2_size=10_weighted_rate=0,STV_basic_jaccar_deg=2_size=10_weighted_rate=2,STV_basic_jaccar_deg=2_size=10_antirec_rate=0,STV_basic_jaccar_deg=2_size=10_antirec_rate=2,STV_basic_jaccar_deg=5_size=10_weighted_rate=0,STV_basic_jaccar_deg=5_size=10_weighted_rate=2,STV_basic_jaccar_deg=5_size=10_antirec_rate=0,STV_basic_jaccar_deg=5_size=10_antirec_rate=2,STV_basic_cosine_deg=2_size=10_weighted_rate=0,STV_basic_cosine_deg=2_size=10_weighted_rate=2,STV_basic_cosine_deg=2_size=10_antirec_rate=0,STV_basic_cosine_deg=2_size=10_antirec_rate=2,STV_basic_cosine_deg=5_size=10_weighted_rate=0,STV_basic_cosine_deg=5_size=10_weighted_rate=2,STV_basic_cosine_deg=5_size=10_antirec_rate=0,STV_basic_cosine_deg=5_size=10_antirec_rate=2,STV_basic_cosine_hat_deg=2_size=10_weighted_rate=0,STV_basic_cosine_hat_deg=2_size=10_weighted_rate=2,STV_basic_cosine_hat_deg=2_size=10_antirec_rate=0,STV_basic_cosine_hat_deg=2_size=10_antirec_rate=2,STV_basic_cosine_hat_deg=5_size=10_weighted_rate=0,STV_basic_cosine_hat_deg=5_size=10_weighted_rate=2,STV_basic_cosine_hat_deg=5_size=10_antirec_rate=0,STV_basic_cosine_hat_deg=5_size=10_antirec_rate=2,STV_basic_pearson_deg=2_size=10_weighted_rate=0,STV_basic_pearson_deg=2_size=10_weighted_rate=2,STV_basic_pearson_deg=2_size=10_antirec_rate=0,STV_basic_pearson_deg=2_size=10_antirec_rate=2,STV_basic_pearson_deg=5_size=10_weighted_rate=0,STV_basic_pearson_deg=5_size=10_weighted_rate=2,STV_basic_pearson_deg=5_size=10_antirec_rate=0,STV_basic_pearson_deg=5_size=10_antirec_rate=2,STV_basic_spearman_deg=2_size=10_weighted_rate=0,STV_basic_spearman_deg=2_size=10_weighted_rate=2,STV_basic_spearman_deg=2_size=10_antirec_rate=0,STV_basic_spearman_deg=2_size=10_antirec_rate=2,STV_basic_spearman_deg=5_size=10_weighted_rate=0,STV_basic_spearman_deg=5_size=10_weighted_rate=2,STV_basic_spearman_deg=5_size=10_antirec_rate=0,STV_basic_spearman_deg=5_size=10_antirec_rate=2,STV_basic_spearman_hat_deg=2_size=10_weighted_rate=0,STV_basic_spearman_hat_deg=2_size=10_weighted_rate=2,STV_basic_spearman_hat_deg=2_size=10_antirec_rate=0,STV_basic_spearman_hat_deg=2_size=10_antirec_rate=2,STV_basic_spearman_hat_deg=5_size=10_weighted_rate=0,STV_basic_spearman_hat_deg=5_size=10_weighted_rate=2,STV_basic_spearman_hat_deg=5_size=10_antirec_rate=0,STV_basic_spearman_hat_deg=5_size=10_antirec_rate=2,BnB_jaccar_deg=2_size=10_weighted_rate=0,BnB_jaccar_deg=2_size=10_weighted_rate=2,BnB_jaccar_deg=2_size=10_antirec_rate=0,BnB_jaccar_deg=2_size=10_antirec_rate=2,BnB_jaccar_deg=5_size=10_weighted_rate=0,BnB_jaccar_deg=5_size=10_weighted_rate=2,BnB_jaccar_deg=5_size=10_antirec_rate=0,BnB_jaccar_deg=5_size=10_antirec_rate=2,BnB_cosine_deg=2_size=10_weighted_rate=0,BnB_cosine_deg=2_size=10_weighted_rate=2,BnB_cosine_deg=2_size=10_antirec_rate=0,BnB_cosine_deg=2_size=10_antirec_rate=2,BnB_cosine_deg=5_size=10_weighted_rate=0,BnB_cosine_deg=5_size=10_weighted_rate=2,BnB_cosine_deg=5_size=10_antirec_rate=0,BnB_cosine_deg=5_size=10_antirec_rate=2,BnB_cosine_hat_deg=2_size=10_weighted_rate=0,BnB_cosine_hat_deg=2_size=10_weighted_rate=2,BnB_cosine_hat_deg=2_size=10_antirec_rate=0,BnB_cosine_hat_deg=2_size=10_antirec_rate=2,BnB_cosine_hat_deg=5_size=10_weighted_rate=0,BnB_cosine_hat_deg=5_size=10_weighted_rate=2,BnB_cosine_hat_deg=5_size=10_antirec_rate=0,BnB_cosine_hat_deg=5_size=10_antirec_rate=2,BnB_pearson_deg=2_size=10_weighted_rate=0,BnB_pearson_deg=2_size=10_weighted_rate=2,BnB_pearson_deg=2_size=10_antirec_rate=0,BnB_pearson_deg=2_size=10_antirec_rate=2,BnB_pearson_deg=5_size=10_weighted_rate=0,BnB_pearson_deg=5_size=10_weighted_rate=2,BnB_pearson_deg=5_size=10_antirec_rate=0,BnB_pearson_deg=5_size=10_antirec_rate=2,BnB_spearman_deg=2_size=10_weighted_rate=0,BnB_spearman_deg=2_size=10_weighted_rate=2,BnB_spearman_deg=2_size=10_antirec_rate=0,BnB_spearman_deg=2_size=10_antirec_rate=2,BnB_spearman_deg=5_size=10_weighted_rate=0,BnB_spearman_deg=5_size=10_weighted_rate=2,BnB_spearman_deg=5_size=10_antirec_rate=0,BnB_spearman_deg=5_size=10_antirec_rate=2,BnB_spearman_hat_deg=2_size=10_weighted_rate=0,BnB_spearman_hat_deg=2_size=10_weighted_rate=2,BnB_spearman_hat_deg=2_size=10_antirec_rate=0,BnB_spearman_hat_deg=2_size=10_antirec_rate=2,BnB_spearman_hat_deg=5_size=10_weighted_rate=0,BnB_spearman_hat_deg=5_size=10_weighted_rate=2,BnB_spearman_hat_deg=5_size=10_antirec_rate=0,BnB_spearman_hat_deg=5_size=10_antirec_rate=2
+0,"Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","
+Мемуары Улитки (2024)
+Memoir of a Snail","Криминальное чтиво
+Pulp Fiction, 1994","Билли Мэдисон
+Billy Madison, 1995",Мастер и Маргарита (2023),"Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995",Мастер и Маргарита (2023),"Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Остров проклятых
+Shutter Island, 2009","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Отступники
+The Departed, 2006","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Отступники
+The Departed, 2006","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Джон Уик 4 (2023)
+John Wick: Chapter 4","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Общество мертвых поэтов (1989)
+Dead Poets Society","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Пленницы (2013)
+Prisoners","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","
+Мемуары Улитки (2024)
+Memoir of a Snail","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Остров проклятых
+Shutter Island, 2009","Ла-Ла Ленд
+La La Land, 2016","Полу-Нельсон (2006)
+Half Nelson","Ла-Ла Ленд
+La La Land, 2016","Остров проклятых
+Shutter Island, 2009","Ла-Ла Ленд
+La La Land, 2016","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Ночь на Земле (1991)
+Night on Earth","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Ночь на Земле (1991)
+Night on Earth","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Криминальное чтиво
+Pulp Fiction, 1994","
+Мемуары Улитки (2024)
+Memoir of a Snail","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Бесславные ублюдки
+Inglourious Basterds, 2009","Бесславные ублюдки
+Inglourious Basterds, 2009","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Джон Уик 4 (2023)
+John Wick: Chapter 4","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Джон Уик 4 (2023)
+John Wick: Chapter 4","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Пункт назначения. Аквапарк (2019)
+Aquaslash","Не говори никому (2024)
+Speak No Evil","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Джанго освобожденный
+Django Unchained, 2012","Большой куш
+Snatch, 2000",День выборов (2009),День выборов (2009),"Мартовские иды (2011)
+The Ides of March","Железный человек (2008)
+Iron Man","Семь
+Se7en, 1995","Отступники
+The Departed, 2006","Каскадёры (2024)
+The Fall Guy","Неогранённые алмазы (2019)
+Uncut Gems","Семь
+Se7en, 1995","Отступники
+The Departed, 2006","Максин XXX (2024)
+MaXXXine","Чужой: Ромул (2024)
+Alien: Romulus.1","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","
+Мемуары Улитки (2024)
+Memoir of a Snail","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",О чём ещё говорят мужчины (2011),"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One","Яйцеголовые
+Coneheads, 1993","Мимино
+1977","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Яйцеголовые
+Coneheads, 1993","Мимино
+1977","Анора (2024)
+Anora",Гидравлика (2010),"Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Максин XXX (2024)
+MaXXXine","Максин XXX (2024)
+MaXXXine","Анора (2024)
+Anora","Фарго (1995)
+Fargo","На посту!
+Au poste!, 2018","На посту!
+Au poste!, 2018","Анора (2024)
+Anora","Фарго (1995)
+Fargo"
+1,"Остров проклятых
+Shutter Island, 2009","Мертвые не умирают (2019)
+The Dead Don't Die","Остров проклятых
+Shutter Island, 2009","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Большой куш
+Snatch, 2000","Пленницы (2013)
+Prisoners","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Ловушка (2024)
+Trap","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator","Ловушка (2024)
+Trap","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Апокалипсис сегодня (1979)
+Apocalypse Now","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009",X (2022),X (2022),"Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Остров проклятых
+Shutter Island, 2009","Мертвые не умирают (2019)
+The Dead Don't Die","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Побег из Шоушенка
+The Shawshank Redemption, 1994","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Мертвец (1995)
+Dead Man","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Терминатор (1984)
+The Terminator","
+Мемуары Улитки (2024)
+Memoir of a Snail","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Бесславные ублюдки
+Inglourious Basterds, 2009","Бесславные ублюдки
+Inglourious Basterds, 2009","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Чужой: Ромул (2024)
+Alien: Romulus.1",X (2022),"Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Остров проклятых
+Shutter Island, 2009","Зеленая миля
+The Green Mile, 1999","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Ночь на Земле (1991)
+Night on Earth","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Ловушка (2024)
+Trap","Билли Мэдисон
+Billy Madison, 1995","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Ловушка (2024)
+Trap","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Место под соснами (2012)
+The Place Beyond the Pines","Неогранённые алмазы (2019)
+Uncut Gems","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Полу-Нельсон (2006)
+Half Nelson","Люди в чёрном
+Men in Black, 1997","Место под соснами (2012)
+The Place Beyond the Pines","Апокалипсис сегодня (1979)
+Apocalypse Now","Полу-Нельсон (2006)
+Half Nelson","Люди в чёрном
+Men in Black, 1997",X (2022),X (2022),"Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Платформа 2 (2024)
+El hoyo 2","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Ловушка (2024)
+Trap","Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan","Яйцеголовые
+Coneheads, 1993","Яйцеголовые
+Coneheads, 1993","Большой куш
+Snatch, 2000","Джанго освобожденный
+Django Unchained, 2012","Большой куш
+Snatch, 2000","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Чужой
+Alien, 1979","Звездный десант (1997)
+Starship Troopers","Общество мертвых поэтов (1989)
+Dead Poets Society","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Звездный десант (1997)
+Starship Troopers","Дом большой мамочки (2000)
+Big Momma's House","Общество мертвых поэтов (1989)
+Dead Poets Society","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Джон Уик 4 (2023)
+John Wick: Chapter 4","Сотни бобров (2024)
+Hundreds of Beavers","Зеленая миля
+The Green Mile, 1999","Зона интересов (2023)
+The Zone of Interest","Не говори никому (2021)
+Gæsterne","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Зеленая миля
+The Green Mile, 1999","Зона интересов (2023)
+The Zone of Interest","Как поймать монстра (2014)
+Lost River","Телохранитель киллера (2017)
+The Hitman's Bodyguard","Ла-Ла Ленд
+La La Land, 2016","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Ла-Ла Ленд
+La La Land, 2016","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One","Типа крутые легавые (2007)
+Hot Fuzz","Один дома
+Home Alone, 1990","Один дома
+Home Alone, 1990","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Отступники
+The Departed, 2006","Один дома
+Home Alone, 1990","Один дома
+Home Alone, 1990","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","
+Мемуары Улитки (2024)
+Memoir of a Snail","Фарго (1995)
+Fargo","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",День радио (2003),"Мертвец (1995)
+Dead Man","Фарго (1995)
+Fargo","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux"
+2,"Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Большой куш
+Snatch, 2000","Яйцеголовые
+Coneheads, 1993","Пленницы (2013)
+Prisoners","Пленницы (2013)
+Prisoners","Джанго освобожденный
+Django Unchained, 2012","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995",Мастер и Маргарита (2023),"Билли Мэдисон
+Billy Madison, 1995","
+Мемуары Улитки (2024)
+Memoir of a Snail","Криминальное чтиво
+Pulp Fiction, 1994",Мастер и Маргарита (2023),"Билли Мэдисон
+Billy Madison, 1995","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Игры разума
+A Beautiful Mind, 2001","Большой куш
+Snatch, 2000","Ла-Ла Ленд
+La La Land, 2016","Мимино
+1977","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Большой куш
+Snatch, 2000","Ла-Ла Ленд
+La La Land, 2016","Бесславные ублюдки
+Inglourious Basterds, 2009","Люди в чёрном
+Men in Black, 1997","Большой куш
+Snatch, 2000","Бесславные ублюдки
+Inglourious Basterds, 2009","Бесславные ублюдки
+Inglourious Basterds, 2009","Апокалипсис сегодня (1979)
+Apocalypse Now","Большой куш
+Snatch, 2000","Бесславные ублюдки
+Inglourious Basterds, 2009","Джон Уик 4 (2023)
+John Wick: Chapter 4","Чужой: Ромул (2024)
+Alien: Romulus.1","Поймай меня, если сможешь
+Catch Me If You Can, 2002",X (2022),"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Джон Уик 4 (2023)
+John Wick: Chapter 4","Поймай меня, если сможешь
+Catch Me If You Can, 2002",X (2022),"Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Пленницы (2013)
+Prisoners","Пленницы (2013)
+Prisoners","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Общество мертвых поэтов (1989)
+Dead Poets Society","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Мертвец (1995)
+Dead Man","Отступники
+The Departed, 2006","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Криминальное чтиво
+Pulp Fiction, 1994","Криминальное чтиво
+Pulp Fiction, 1994",Мастер и Маргарита (2023),"Ловушка (2024)
+Trap","
+Мемуары Улитки (2024)
+Memoir of a Snail","Виды доброты (2024)
+Kinds of Kindness",Мастер и Маргарита (2023),"Ловушка (2024)
+Trap","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001","Ла-Ла Ленд
+La La Land, 2016","Мертвец (1995)
+Dead Man","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001","Бесславные ублюдки
+Inglourious Basterds, 2009","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Чужой: Ромул (2024)
+Alien: Romulus.1","Полночь с дьяволом (2023)
+Late Night with the Devil","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Платформа 2 (2024)
+El hoyo 2","Джон Уик 4 (2023)
+John Wick: Chapter 4","Полночь с дьяволом (2023)
+Late Night with the Devil","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Платформа 2 (2024)
+El hoyo 2","Паразиты
+Gisaengchung, 2019","Джанго освобожденный
+Django Unchained, 2012","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Пункт назначения (2000)
+Final Destination","Мимино
+1977","Мимино
+1977","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Один дома
+Home Alone, 1990","Зеленая миля
+The Green Mile, 1999","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Терминатор (1984)
+The Terminator","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Зона интересов (2023)
+The Zone of Interest","Общество мертвых поэтов (1989)
+Dead Poets Society","Зеленая миля
+The Green Mile, 1999",Мастер и Маргарита (2023),"Зона интересов (2023)
+The Zone of Interest","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016","Мартовские иды (2011)
+The Ides of March","Мертвец (1995)
+Dead Man","Ла-Ла Ленд
+La La Land, 2016","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Люди в чёрном
+Men in Black, 1997","Игры разума
+A Beautiful Mind, 2001","Мартовские иды (2011)
+The Ides of March","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Люди в чёрном
+Men in Black, 1997","Игры разума
+A Beautiful Mind, 2001","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",X (2022),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Как поймать монстра (2014)
+Lost River","Чужой: Ромул (2024)
+Alien: Romulus.1","Мертвые не умирают (2019)
+The Dead Don't Die","Мертвые не умирают (2019)
+The Dead Don't Die","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Пункт назначения (2000)
+Final Destination","Дом большой мамочки (2000)
+Big Momma's House","Мертвые не умирают (2019)
+The Dead Don't Die",Гидравлика (2010),"Мимино
+1977","Общество мертвых поэтов (1989)
+Dead Poets Society","Отступники
+The Departed, 2006","Армагеддец (2013)
+The World's End","Мимино
+1977","Общество мертвых поэтов (1989)
+Dead Poets Society","Круто сваренные (1992)
+Lat sau san taam",Мастер и Маргарита (2023),"Криминальное чтиво
+Pulp Fiction, 1994","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",Мастер и Маргарита (2023),"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Криминальное чтиво
+Pulp Fiction, 1994","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Анора (2024)
+Anora","Максин XXX (2024)
+MaXXXine","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Дом большой мамочки (2000)
+Big Momma's House",Гидравлика (2010),"Сотни бобров (2024)
+Hundreds of Beavers","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Неогранённые алмазы (2019)
+Uncut Gems","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Неогранённые алмазы (2019)
+Uncut Gems","На посту!
+Au poste!, 2018","Гладиатор 2 (2024)
+Gladiator II","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","
+Небриллиантовая рука (2024)","Полночь с дьяволом (2023)
+Late Night with the Devil","Платформа 2 (2024)
+El hoyo 2","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","
+Небриллиантовая рука (2024)"
+3,"Копы в глубоком запасе (2010)
+The Other Guys","Копы в глубоком запасе (2010)
+The Other Guys","Красота по-американски (1999)
+American Beauty","Общество мертвых поэтов (1989)
+Dead Poets Society","Дом большой мамочки (2000)
+Big Momma's House","Виды доброты (2024)
+Kinds of Kindness","Достать ножи
+Knives Out, 2019","Один дома
+Home Alone, 1990","Мимино
+1977","Мимино
+1977","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth","Круто сваренные (1992)
+Lat sau san taam","Зеленая миля
+The Green Mile, 1999","Терминатор (1984)
+The Terminator","Криминальное чтиво
+Pulp Fiction, 1994","
+Мемуары Улитки (2024)
+Memoir of a Snail","Зеленая миля
+The Green Mile, 1999","Терминатор (1984)
+The Terminator","Ла-Ла Ленд
+La La Land, 2016","Мимино
+1977","Интерстеллар
+Interstellar, 2014","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Ла-Ла Ленд
+La La Land, 2016","Мимино
+1977","Интерстеллар
+Interstellar, 2014","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Игры разума
+A Beautiful Mind, 2001","Бесславные ублюдки
+Inglourious Basterds, 2009","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995",X (2022),"Поймай меня, если сможешь
+Catch Me If You Can, 2002",X (2022),"Платформа 2 (2024)
+El hoyo 2",X (2022),"Поймай меня, если сможешь
+Catch Me If You Can, 2002","Копы в глубоком запасе (2010)
+The Other Guys","Копы в глубоком запасе (2010)
+The Other Guys","Красота по-американски (1999)
+American Beauty","Платформа 2 (2024)
+El hoyo 2","Виды доброты (2024)
+Kinds of Kindness","Виды доброты (2024)
+Kinds of Kindness","Пленницы (2013)
+Prisoners","Терминатор (1984)
+The Terminator","Один дома
+Home Alone, 1990","Один дома
+Home Alone, 1990","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth","Зона интересов (2023)
+The Zone of Interest","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Ловушка (2024)
+Trap","
+Мемуары Улитки (2024)
+Memoir of a Snail","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Мимино
+1977","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Мимино
+1977","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Люди в чёрном
+Men in Black, 1997","Американская история X (1998)
+American History X","Ночь на Земле (1991)
+Night on Earth","Общество мертвых поэтов (1989)
+Dead Poets Society","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Ночь на Земле (1991)
+Night on Earth","Общество мертвых поэтов (1989)
+Dead Poets Society",X (2022),"Билли Мэдисон
+Billy Madison, 1995","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4","Платформа 2 (2024)
+El hoyo 2","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4","Копы в глубоком запасе (2010)
+The Other Guys","Копы в глубоком запасе (2010)
+The Other Guys","Паразиты
+Gisaengchung, 2019","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Зеленая миля
+The Green Mile, 1999","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Один дома
+Home Alone, 1990","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Полу-Нельсон (2006)
+Half Nelson","Один дома
+Home Alone, 1990","Зеленая миля
+The Green Mile, 1999","Побег из Шоушенка
+The Shawshank Redemption, 1994","Полу-Нельсон (2006)
+Half Nelson","Один дома
+Home Alone, 1990","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Интерстеллар
+Interstellar, 2014","Криминальное чтиво
+Pulp Fiction, 1994","Терминатор (1984)
+The Terminator","Мимино
+1977","Мимино
+1977","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Игры разума
+A Beautiful Mind, 2001","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Бесславные ублюдки
+Inglourious Basterds, 2009","Неогранённые алмазы (2019)
+Uncut Gems","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Джон Уик 4 (2023)
+John Wick: Chapter 4","
+Небриллиантовая рука (2024)","Фарго (1995)
+Fargo",Мастер и Маргарита (2023),"Полночь с дьяволом (2023)
+Late Night with the Devil","Полночь с дьяволом (2023)
+Late Night with the Devil","Фарго (1995)
+Fargo",Мастер и Маргарита (2023),"Не говори никому (2024)
+Speak No Evil","Ловушка (2024)
+Trap","Американская история X (1998)
+American History X","Американская история X (1998)
+American History X","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Дом большой мамочки (2000)
+Big Momma's House","Как поймать монстра (2014)
+Lost River","Американская история X (1998)
+American History X","Как поймать монстра (2014)
+Lost River","Один дома
+Home Alone, 1990","Армагеддец (2013)
+The World's End","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Отступники
+The Departed, 2006","Один дома
+Home Alone, 1990","Армагеддец (2013)
+The World's End","
+Мемуары Улитки (2024)
+Memoir of a Snail","Человек на Луне (2018)
+First Man","Платформа 2 (2024)
+El hoyo 2","
+Мемуары Улитки (2024)
+Memoir of a Snail","Платформа 2 (2024)
+El hoyo 2","Платформа 2 (2024)
+El hoyo 2","Платформа 2 (2024)
+El hoyo 2","
+Мемуары Улитки (2024)
+Memoir of a Snail",Гидравлика (2010),Гидравлика (2010),"Большой куш
+Snatch, 2000","Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Большой куш
+Snatch, 2000","Неогранённые алмазы (2019)
+Uncut Gems","Сотни бобров (2024)
+Hundreds of Beavers","Максин XXX (2024)
+MaXXXine","Большой куш
+Snatch, 2000",X (2022),"Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Большой куш
+Snatch, 2000",X (2022),"Гладиатор 2 (2024)
+Gladiator II","На посту!
+Au poste!, 2018",X (2022),"Платформа 2 (2024)
+El hoyo 2","Платформа 2 (2024)
+El hoyo 2","Полночь с дьяволом (2023)
+Late Night with the Devil",X (2022),"Платформа 2 (2024)
+El hoyo 2"
+4,"Мертвые не умирают (2019)
+The Dead Don't Die","Игра на понижение (2015)
+The Big Short","Общество мертвых поэтов (1989)
+Dead Poets Society","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Виды доброты (2024)
+Kinds of Kindness","Дом большой мамочки (2000)
+Big Momma's House","Один дома
+Home Alone, 1990","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Полу-Нельсон (2006)
+Half Nelson","Мимино
+1977","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Полу-Нельсон (2006)
+Half Nelson","Билли Мэдисон
+Billy Madison, 1995","Ловушка (2024)
+Trap",Майор Гром: Игра (2024),"Зона интересов (2023)
+The Zone of Interest","Ночь на Земле (1991)
+Night on Earth",Мастер и Маргарита (2023),Майор Гром: Игра (2024),"Зона интересов (2023)
+The Zone of Interest","Мимино
+1977","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006",X (2022),X (2022),"Отступники
+The Departed, 2006","Апокалипсис сегодня (1979)
+Apocalypse Now",X (2022),X (2022),"Отступники
+The Departed, 2006","Апокалипсис сегодня (1979)
+Apocalypse Now","
+Небриллиантовая рука (2024)","На посту!
+Au poste!, 2018","Полночь с дьяволом (2023)
+Late Night with the Devil","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Джон Уик 4 (2023)
+John Wick: Chapter 4","Зона интересов (2023)
+The Zone of Interest","Полночь с дьяволом (2023)
+Late Night with the Devil","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Игра на понижение (2015)
+The Big Short","Игра на понижение (2015)
+The Big Short","Мертвые не умирают (2019)
+The Dead Don't Die","Копы в глубоком запасе (2010)
+The Other Guys","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Терминатор (1984)
+The Terminator","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Мимино
+1977","Мимино
+1977","Один дома
+Home Alone, 1990","Полу-Нельсон (2006)
+Half Nelson","Мимино
+1977","Американская история X (1998)
+American History X","Один дома
+Home Alone, 1990","Полу-Нельсон (2006)
+Half Nelson","Билли Мэдисон
+Billy Madison, 1995","Ночь на Земле (1991)
+Night on Earth",Майор Гром: Игра (2024),"Зона интересов (2023)
+The Zone of Interest","Криминальное чтиво
+Pulp Fiction, 1994","Ловушка (2024)
+Trap",Майор Гром: Игра (2024),"Зона интересов (2023)
+The Zone of Interest","Мимино
+1977","Ла-Ла Ленд
+La La Land, 2016","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Мимино
+1977","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Билли Мэдисон
+Billy Madison, 1995","На посту!
+Au poste!, 2018","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",X (2022),"
+Небриллиантовая рука (2024)","Зона интересов (2023)
+The Zone of Interest","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",X (2022),"Игра на понижение (2015)
+The Big Short","Игра на понижение (2015)
+The Big Short","Яйцеголовые
+Coneheads, 1993","Общество мертвых поэтов (1989)
+Dead Poets Society","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Форрест Гамп
+Forrest Gump, 1994","Виды доброты (2024)
+Kinds of Kindness","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Один дома
+Home Alone, 1990","Отступники
+The Departed, 2006","Люди в чёрном
+Men in Black, 1997","Форрест Гамп
+Forrest Gump, 1994","Один дома
+Home Alone, 1990","Отступники
+The Departed, 2006","
+Мемуары Улитки (2024)
+Memoir of a Snail","Ловушка (2024)
+Trap","Зеленая миля
+The Green Mile, 1999",Мастер и Маргарита (2023),"Люди в чёрном
+Men in Black, 1997","Побег из Шоушенка
+The Shawshank Redemption, 1994","Зеленая миля
+The Green Mile, 1999",Мастер и Маргарита (2023),"Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson",X (2022),X (2022),"Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Люди в чёрном
+Men in Black, 1997","Отступники
+The Departed, 2006","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","
+Небриллиантовая рука (2024)","Чужой: Ромул (2024)
+Alien: Romulus.1","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Фарго (1995)
+Fargo","Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice","
+Небриллиантовая рука (2024)","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Фарго (1995)
+Fargo","Мертвые не умирают (2019)
+The Dead Don't Die","Побег из Шоушенка
+The Shawshank Redemption, 1994","Игра на понижение (2015)
+The Big Short","Игра на понижение (2015)
+The Big Short","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Терминатор (1984)
+The Terminator","Звездный десант (1997)
+Starship Troopers","Каскадёры (2024)
+The Fall Guy","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Армагеддец (2013)
+The World's End","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Сотни бобров (2024)
+Hundreds of Beavers","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Зона интересов (2023)
+The Zone of Interest","Платформа 2 (2024)
+El hoyo 2","
+Мемуары Улитки (2024)
+Memoir of a Snail","Криминальное чтиво
+Pulp Fiction, 1994","Зона интересов (2023)
+The Zone of Interest","Платформа 2 (2024)
+El hoyo 2","Полу-Нельсон (2006)
+Half Nelson","Игры разума
+A Beautiful Mind, 2001","Дом большой мамочки (2000)
+Big Momma's House","Яйцеголовые
+Coneheads, 1993","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Дом большой мамочки (2000)
+Big Momma's House","Яйцеголовые
+Coneheads, 1993","Полу-Нельсон (2006)
+Half Nelson","Бесславные ублюдки
+Inglourious Basterds, 2009","Дом большой мамочки (2000)
+Big Momma's House","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Бесславные ублюдки
+Inglourious Basterds, 2009","Дом большой мамочки (2000)
+Big Momma's House","Игры разума
+A Beautiful Mind, 2001","
+Небриллиантовая рука (2024)","
+Небриллиантовая рука (2024)","Платформа 2 (2024)
+El hoyo 2",Мастер и Маргарита (2023),"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Платформа 2 (2024)
+El hoyo 2",Мастер и Маргарита (2023)
+5,"Игра на понижение (2015)
+The Big Short","Остров проклятых
+Shutter Island, 2009","Достать ножи
+Knives Out, 2019","Большой куш
+Snatch, 2000","Большой куш
+Snatch, 2000","Джанго освобожденный
+Django Unchained, 2012","Общество мертвых поэтов (1989)
+Dead Poets Society","Терминатор (1984)
+The Terminator","Один дома
+Home Alone, 1990","Один дома
+Home Alone, 1990","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Большой куш
+Snatch, 2000","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Большой куш
+Snatch, 2000","Ловушка (2024)
+Trap","Сотни бобров (2024)
+Hundreds of Beavers","Зона интересов (2023)
+The Zone of Interest","Ночь на Земле (1991)
+Night on Earth","Ловушка (2024)
+Trap","Ловушка (2024)
+Trap","Зона интересов (2023)
+The Zone of Interest","Ночь на Земле (1991)
+Night on Earth","Полу-Нельсон (2006)
+Half Nelson","Ла-Ла Ленд
+La La Land, 2016","Один дома
+Home Alone, 1990","Большой куш
+Snatch, 2000","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Ла-Ла Ленд
+La La Land, 2016","Один дома
+Home Alone, 1990","Большой куш
+Snatch, 2000","Апокалипсис сегодня (1979)
+Apocalypse Now","Бесславные ублюдки
+Inglourious Basterds, 2009","Игры разума
+A Beautiful Mind, 2001","Большой куш
+Snatch, 2000","Апокалипсис сегодня (1979)
+Apocalypse Now","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Большой куш
+Snatch, 2000","Чужой: Ромул (2024)
+Alien: Romulus.1","
+Небриллиантовая рука (2024)","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","
+Небриллиантовая рука (2024)",X (2022),"Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Мертвые не умирают (2019)
+The Dead Don't Die","Остров проклятых
+Shutter Island, 2009","Яйцеголовые
+Coneheads, 1993","Красота по-американски (1999)
+American Beauty","Большой куш
+Snatch, 2000","Большой куш
+Snatch, 2000","Виды доброты (2024)
+Kinds of Kindness","Виды доброты (2024)
+Kinds of Kindness","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Общество мертвых поэтов (1989)
+Dead Poets Society","Один дома
+Home Alone, 1990","Отступники
+The Departed, 2006","Интерстеллар
+Interstellar, 2014","Общество мертвых поэтов (1989)
+Dead Poets Society","Один дома
+Home Alone, 1990","Ловушка (2024)
+Trap","Билли Мэдисон
+Billy Madison, 1995","Дюна: Часть вторая (2024)
+Dune: Part Two","Зеленая миля
+The Green Mile, 1999","Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Дюна: Часть вторая (2024)
+Dune: Part Two","Зеленая миля
+The Green Mile, 1999","Полу-Нельсон (2006)
+Half Nelson","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Неогранённые алмазы (2019)
+Uncut Gems","Яйцеголовые
+Coneheads, 1993","Мертвец (1995)
+Dead Man","Отступники
+The Departed, 2006","Неогранённые алмазы (2019)
+Uncut Gems","Яйцеголовые
+Coneheads, 1993",X (2022),X (2022),"Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001",X (2022),X (2022),"Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","
+Небриллиантовая рука (2024)","Платформа 2 (2024)
+El hoyo 2","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Секреты Лос-Анджелеса (1997)
+L.A. Confidential",X (2022),X (2022),"Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Мертвые не умирают (2019)
+The Dead Don't Die","Мертвые не умирают (2019)
+The Dead Don't Die","Мертвые не умирают (2019)
+The Dead Don't Die","Паразиты
+Gisaengchung, 2019","Игры разума
+A Beautiful Mind, 2001","Общество мертвых поэтов (1989)
+Dead Poets Society","Пункт назначения (2000)
+Final Destination","Виды доброты (2024)
+Kinds of Kindness","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Мертвец (1995)
+Dead Man","Побег из Шоушенка
+The Shawshank Redemption, 1994","Остров проклятых
+Shutter Island, 2009","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Мертвец (1995)
+Dead Man","Ловушка (2024)
+Trap","Побег из Шоушенка
+The Shawshank Redemption, 1994",Майор Гром: Игра (2024),"Криминальное чтиво
+Pulp Fiction, 1994","Зеленая миля
+The Green Mile, 1999","Форрест Гамп
+Forrest Gump, 1994",Майор Гром: Игра (2024),"Криминальное чтиво
+Pulp Fiction, 1994","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Ла-Ла Ленд
+La La Land, 2016","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Игры разума
+A Beautiful Mind, 2001","Игры разума
+A Beautiful Mind, 2001","Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Чужой: Ромул (2024)
+Alien: Romulus.1","Побег из Шоушенка
+The Shawshank Redemption, 1994","Полночь с дьяволом (2023)
+Late Night with the Devil",X (2022),"Дневник памяти (2004)
+The Notebook","Чужой: Ромул (2024)
+Alien: Romulus.1","Полночь с дьяволом (2023)
+Late Night with the Devil",X (2022),"Игра на понижение (2015)
+The Big Short","Остров проклятых
+Shutter Island, 2009","Платформа 2 (2024)
+El hoyo 2","Платформа 2 (2024)
+El hoyo 2","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Виды доброты (2024)
+Kinds of Kindness","Побег из Шоушенка
+The Shawshank Redemption, 1994","Мертвец (1995)
+Dead Man","Интерстеллар
+Interstellar, 2014","Армагеддец (2013)
+The World's End","Мимино
+1977","Мертвец (1995)
+Dead Man","Интерстеллар
+Interstellar, 2014","Армагеддец (2013)
+The World's End","Мимино
+1977","Терминатор (1984)
+The Terminator","
+Мемуары Улитки (2024)
+Memoir of a Snail","Ловушка (2024)
+Trap",Майор Гром: Игра (2024),"Человек на Луне (2018)
+First Man","Круто сваренные (1992)
+Lat sau san taam","Ловушка (2024)
+Trap",Майор Гром: Игра (2024),"Мертвец (1995)
+Dead Man","Ла-Ла Ленд
+La La Land, 2016","Неогранённые алмазы (2019)
+Uncut Gems","Остров проклятых
+Shutter Island, 2009","Мертвец (1995)
+Dead Man","Ла-Ла Ленд
+La La Land, 2016","Неогранённые алмазы (2019)
+Uncut Gems","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Неогранённые алмазы (2019)
+Uncut Gems","Остров проклятых
+Shutter Island, 2009","Люди в чёрном
+Men in Black, 1997","Люди в чёрном
+Men in Black, 1997","Неогранённые алмазы (2019)
+Uncut Gems","Остров проклятых
+Shutter Island, 2009","Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Гладиатор 2 (2024)
+Gladiator II",X (2022),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang"
+6,"Паразиты
+Gisaengchung, 2019","Паразиты
+Gisaengchung, 2019","Паразиты
+Gisaengchung, 2019","Побег из Шоушенка
+The Shawshank Redemption, 1994","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Пленницы (2013)
+Prisoners","Достать ножи
+Knives Out, 2019","Место под соснами (2012)
+The Place Beyond the Pines","Апокалипсис сегодня (1979)
+Apocalypse Now","Один дома
+Home Alone, 1990","Семь
+Se7en, 1995","Один дома
+Home Alone, 1990","Мимино
+1977","Один дома
+Home Alone, 1990","Семь
+Se7en, 1995","Круэлла (2021)
+Cruella","Зона интересов (2023)
+The Zone of Interest","Ночь на Земле (1991)
+Night on Earth","Криминальное чтиво
+Pulp Fiction, 1994",Мастер и Маргарита (2023),"Ночь на Земле (1991)
+Night on Earth","Ночь на Земле (1991)
+Night on Earth","Криминальное чтиво
+Pulp Fiction, 1994","Зеленая миля
+The Green Mile, 1999","Апокалипсис сегодня (1979)
+Apocalypse Now","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001","Мимино
+1977","Американская история X (1998)
+American History X","Один дома
+Home Alone, 1990","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Один дома
+Home Alone, 1990","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Полночь с дьяволом (2023)
+Late Night with the Devil","Полночь с дьяволом (2023)
+Late Night with the Devil","Гладиатор 2 (2024)
+Gladiator II","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Полночь с дьяволом (2023)
+Late Night with the Devil","Паразиты
+Gisaengchung, 2019","Паразиты
+Gisaengchung, 2019","Игра на понижение (2015)
+The Big Short","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Джанго освобожденный
+Django Unchained, 2012","Джанго освобожденный
+Django Unchained, 2012","Пункт назначения (2000)
+Final Destination",День выборов (2009),"Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Мимино
+1977","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Круэлла (2021)
+Cruella","Ловушка (2024)
+Trap","Зона интересов (2023)
+The Zone of Interest","Криминальное чтиво
+Pulp Fiction, 1994",Мастер и Маргарита (2023),Мастер и Маргарита (2023),"Зона интересов (2023)
+The Zone of Interest","Криминальное чтиво
+Pulp Fiction, 1994","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Яйцеголовые
+Coneheads, 1993","Один дома
+Home Alone, 1990","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Яйцеголовые
+Coneheads, 1993","Один дома
+Home Alone, 1990","Американская история X (1998)
+American History X","Бесславные ублюдки
+Inglourious Basterds, 2009","Неогранённые алмазы (2019)
+Uncut Gems","Бесславные ублюдки
+Inglourious Basterds, 2009","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Отступники
+The Departed, 2006","Неогранённые алмазы (2019)
+Uncut Gems","Бесславные ублюдки
+Inglourious Basterds, 2009","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Гладиатор 2 (2024)
+Gladiator II","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Фарго (1995)
+Fargo","Фарго (1995)
+Fargo","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999",День выборов (2009),"Игра на понижение (2015)
+The Big Short","Зомби по имени Шон (2004)
+Shaun of the Dead","Большой куш
+Snatch, 2000","Терминатор (1984)
+The Terminator","Один дома
+Home Alone, 1990","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Семь
+Se7en, 1995","Полу-Нельсон (2006)
+Half Nelson","Криминальное чтиво
+Pulp Fiction, 1994","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Семь
+Se7en, 1995","Полу-Нельсон (2006)
+Half Nelson","Побег из Шоушенка
+The Shawshank Redemption, 1994","Зеленая миля
+The Green Mile, 1999","Ловушка (2024)
+Trap","Чужой: Ромул (2024)
+Alien: Romulus.1","Большой куш
+Snatch, 2000","Дюна: Часть вторая (2024)
+Dune: Part Two","Ловушка (2024)
+Trap","Чужой: Ромул (2024)
+Alien: Romulus.1","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Мертвец (1995)
+Dead Man","Дом большой мамочки (2000)
+Big Momma's House","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Ла-Ла Ленд
+La La Land, 2016","Мертвец (1995)
+Dead Man","Дом большой мамочки (2000)
+Big Momma's House","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Игры разума
+A Beautiful Mind, 2001","Отступники
+The Departed, 2006","Апокалипсис сегодня (1979)
+Apocalypse Now","Бесславные ублюдки
+Inglourious Basterds, 2009","Игры разума
+A Beautiful Mind, 2001","Отступники
+The Departed, 2006","Побег из Шоушенка
+The Shawshank Redemption, 1994","Зеленая миля
+The Green Mile, 1999",X (2022),"Полночь с дьяволом (2023)
+Late Night with the Devil","Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland","Побег из Шоушенка
+The Shawshank Redemption, 1994",X (2022),"Полночь с дьяволом (2023)
+Late Night with the Devil","Остров проклятых
+Shutter Island, 2009","Игра на понижение (2015)
+The Big Short","Копы в глубоком запасе (2010)
+The Other Guys",День выборов (2009),"Пленницы (2013)
+Prisoners","Дом большой мамочки (2000)
+Big Momma's House","Джанго освобожденный
+Django Unchained, 2012","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Мимино
+1977","Мертвец (1995)
+Dead Man","Остров проклятых
+Shutter Island, 2009","Интерстеллар
+Interstellar, 2014","Мимино
+1977","Мимино
+1977","Остров проклятых
+Shutter Island, 2009","Интерстеллар
+Interstellar, 2014","Криминальное чтиво
+Pulp Fiction, 1994","Криминальное чтиво
+Pulp Fiction, 1994","Чужой: Ромул (2024)
+Alien: Romulus.1","Терминатор (1984)
+The Terminator","Ловушка (2024)
+Trap","Ловушка (2024)
+Trap","Чужой: Ромул (2024)
+Alien: Romulus.1","Терминатор (1984)
+The Terminator","Игры разума
+A Beautiful Mind, 2001","Мертвец (1995)
+Dead Man","Отступники
+The Departed, 2006","Ла-Ла Ленд
+La La Land, 2016","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Мимино
+1977","Отступники
+The Departed, 2006","Ла-Ла Ленд
+La La Land, 2016","Игры разума
+A Beautiful Mind, 2001",X (2022),"Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Отступники
+The Departed, 2006","Ночь на Земле (1991)
+Night on Earth",X (2022),"Билли Мэдисон
+Billy Madison, 1995","Джон Уик 4 (2023)
+John Wick: Chapter 4","Полночь с дьяволом (2023)
+Late Night with the Devil",X (2022),"Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4","Полночь с дьяволом (2023)
+Late Night with the Devil"
+7,"Криминальное чтиво
+Pulp Fiction, 1994","Криминальное чтиво
+Pulp Fiction, 1994","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Остров проклятых
+Shutter Island, 2009","Джанго освобожденный
+Django Unchained, 2012","Большой куш
+Snatch, 2000","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Джанго освобожденный
+Django Unchained, 2012","Апокалипсис сегодня (1979)
+Apocalypse Now","Место под соснами (2012)
+The Place Beyond the Pines","Большой куш
+Snatch, 2000","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Один дома
+Home Alone, 1990","Большой куш
+Snatch, 2000","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Круто сваренные (1992)
+Lat sau san taam","Круэлла (2021)
+Cruella","Криминальное чтиво
+Pulp Fiction, 1994","Зеленая миля
+The Green Mile, 1999","Платформа 2 (2024)
+El hoyo 2","Не говори никому (2021)
+Gæsterne","Криминальное чтиво
+Pulp Fiction, 1994","Зеленая миля
+The Green Mile, 1999","Апокалипсис сегодня (1979)
+Apocalypse Now","Зеленая миля
+The Green Mile, 1999","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Интерстеллар
+Interstellar, 2014","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Интерстеллар
+Interstellar, 2014","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Место под соснами (2012)
+The Place Beyond the Pines","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Интерстеллар
+Interstellar, 2014","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Интерстеллар
+Interstellar, 2014","На посту!
+Au poste!, 2018","Зомби по имени Шон (2004)
+Shaun of the Dead","Платформа 2 (2024)
+El hoyo 2","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Платформа 2 (2024)
+El hoyo 2","На посту!
+Au poste!, 2018","Платформа 2 (2024)
+El hoyo 2","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2","Криминальное чтиво
+Pulp Fiction, 1994","Бедные-несчастные (2023)
+Poor Things","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Яйцеголовые
+Coneheads, 1993","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Место под соснами (2012)
+The Place Beyond the Pines","Пункт назначения (2000)
+Final Destination","Место под соснами (2012)
+The Place Beyond the Pines","Американская история X (1998)
+American History X","Семь
+Se7en, 1995","Семь
+Se7en, 1995","Армагеддец (2013)
+The World's End","Апокалипсис сегодня (1979)
+Apocalypse Now","Семь
+Se7en, 1995","Семь
+Se7en, 1995","Люди в чёрном
+Men in Black, 1997","Круто сваренные (1992)
+Lat sau san taam","Платформа 2 (2024)
+El hoyo 2","Ночь на Земле (1991)
+Night on Earth","Круэлла (2021)
+Cruella","Криминальное чтиво
+Pulp Fiction, 1994","Платформа 2 (2024)
+El hoyo 2","Ночь на Земле (1991)
+Night on Earth","Отступники
+The Departed, 2006","Американская история X (1998)
+American History X","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Отступники
+The Departed, 2006","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Ла-Ла Ленд
+La La Land, 2016","Место под соснами (2012)
+The Place Beyond the Pines","Один дома
+Home Alone, 1990","Один дома
+Home Alone, 1990","Отступники
+The Departed, 2006","Круто сваренные (1992)
+Lat sau san taam","Один дома
+Home Alone, 1990","Один дома
+Home Alone, 1990","Платформа 2 (2024)
+El hoyo 2","Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish","Платформа 2 (2024)
+El hoyo 2","Полночь с дьяволом (2023)
+Late Night with the Devil","Полночь с дьяволом (2023)
+Late Night with the Devil","На посту!
+Au poste!, 2018","Платформа 2 (2024)
+El hoyo 2","Полночь с дьяволом (2023)
+Late Night with the Devil","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Игра на понижение (2015)
+The Big Short","Достать ножи
+Knives Out, 2019","Один дома
+Home Alone, 1990","Пленницы (2013)
+Prisoners","Достать ножи
+Knives Out, 2019","Терминатор (1984)
+The Terminator","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Отступники
+The Departed, 2006","Семь
+Se7en, 1995","Форрест Гамп
+Forrest Gump, 1994","Отступники
+The Departed, 2006","Отступники
+The Departed, 2006","Семь
+Se7en, 1995","Зеленая миля
+The Green Mile, 1999","Форрест Гамп
+Forrest Gump, 1994","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Зеленая миля
+The Green Mile, 1999","Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991","Билли Мэдисон
+Billy Madison, 1995","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Мимино
+1977","Мертвец (1995)
+Dead Man","Мимино
+1977","Мимино
+1977","Мимино
+1977","Мертвец (1995)
+Dead Man","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Отступники
+The Departed, 2006","Общество мертвых поэтов (1989)
+Dead Poets Society",X (2022),"Люди в чёрном
+Men in Black, 1997","Отступники
+The Departed, 2006","Общество мертвых поэтов (1989)
+Dead Poets Society","Зеленая миля
+The Green Mile, 1999","Форрест Гамп
+Forrest Gump, 1994","Джон Уик 4 (2023)
+John Wick: Chapter 4","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Клуб «Завтрак» (1985)
+The Breakfast Club","Зеленая миля
+The Green Mile, 1999","Джон Уик 4 (2023)
+John Wick: Chapter 4","Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang","Общество мертвых поэтов (1989)
+Dead Poets Society","Мертвые не умирают (2019)
+The Dead Don't Die","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Достать ножи
+Knives Out, 2019","Дом большой мамочки (2000)
+Big Momma's House","Пленницы (2013)
+Prisoners","Место под соснами (2012)
+The Place Beyond the Pines","Общество мертвых поэтов (1989)
+Dead Poets Society","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Интерстеллар
+Interstellar, 2014","Мертвец (1995)
+Dead Man","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Человек на Луне (2018)
+First Man","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Криминальное чтиво
+Pulp Fiction, 1994",Мастер и Маргарита (2023),"Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Мимино
+1977","Полу-Нельсон (2006)
+Half Nelson","Интерстеллар
+Interstellar, 2014","Общество мертвых поэтов (1989)
+Dead Poets Society","Мимино
+1977","Мертвец (1995)
+Dead Man","Интерстеллар
+Interstellar, 2014","Общество мертвых поэтов (1989)
+Dead Poets Society",X (2022),"Полу-Нельсон (2006)
+Half Nelson","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society",X (2022),X (2022),"Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4",Мастер и Маргарита (2023),"Джон Уик 4 (2023)
+John Wick: Chapter 4","Джон Уик 4 (2023)
+John Wick: Chapter 4","
+Небриллиантовая рука (2024)",Мастер и Маргарита (2023),"Джон Уик 4 (2023)
+John Wick: Chapter 4"
+8,X (2022),"Как поймать монстра (2014)
+Lost River","Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008","Паразиты
+Gisaengchung, 2019","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Терминатор (1984)
+The Terminator","Общество мертвых поэтов (1989)
+Dead Poets Society","Американская история X (1998)
+American History X","Американская история X (1998)
+American History X","Общество мертвых поэтов (1989)
+Dead Poets Society","Один дома
+Home Alone, 1990","Армагеддец (2013)
+The World's End","Армагеддец (2013)
+The World's End","Общество мертвых поэтов (1989)
+Dead Poets Society","Один дома
+Home Alone, 1990","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","
+Мемуары Улитки (2024)
+Memoir of a Snail","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Дюна: Часть вторая (2024)
+Dune: Part Two","Платформа 2 (2024)
+El hoyo 2","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Место под соснами (2012)
+The Place Beyond the Pines","Отступники
+The Departed, 2006","Игры разума
+A Beautiful Mind, 2001","Один дома
+Home Alone, 1990","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Игры разума
+A Beautiful Mind, 2001","Один дома
+Home Alone, 1990","Американская история X (1998)
+American History X","Мимино
+1977","Люди в чёрном
+Men in Black, 1997","Игры разума
+A Beautiful Mind, 2001","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Люди в чёрном
+Men in Black, 1997","Игры разума
+A Beautiful Mind, 2001","Полночь с дьяволом (2023)
+Late Night with the Devil","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",Мастер и Маргарита (2023),"Платформа 2 (2024)
+El hoyo 2","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Поймай меня, если сможешь
+Catch Me If You Can, 2002",Мастер и Маргарита (2023),"Платформа 2 (2024)
+El hoyo 2",X (2022),"Криминальное чтиво
+Pulp Fiction, 1994","Копы в глубоком запасе (2010)
+The Other Guys",День выборов (2009),"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Место под соснами (2012)
+The Place Beyond the Pines","Американская история X (1998)
+American History X","Место под соснами (2012)
+The Place Beyond the Pines","Мимино
+1977","Общество мертвых поэтов (1989)
+Dead Poets Society","Зеленая миля
+The Green Mile, 1999","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Мимино
+1977","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Круэлла (2021)
+Cruella","
+Мемуары Улитки (2024)
+Memoir of a Snail","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Платформа 2 (2024)
+El hoyo 2","Круэлла (2021)
+Cruella","
+Мемуары Улитки (2024)
+Memoir of a Snail","Дэдпул и Росомаха (2024)
+Deadpool & Wolverine","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Мимино
+1977","Мимино
+1977","Дом большой мамочки (2000)
+Big Momma's House","Апокалипсис сегодня (1979)
+Apocalypse Now","Мимино
+1977","Мимино
+1977","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Мимино
+1977","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Дом большой мамочки (2000)
+Big Momma's House","Дом большой мамочки (2000)
+Big Momma's House","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","На посту!
+Au poste!, 2018","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Платформа 2 (2024)
+El hoyo 2","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Гладиатор 2 (2024)
+Gladiator II","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Платформа 2 (2024)
+El hoyo 2","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Платформа 2 (2024)
+El hoyo 2",День выборов (2009),"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Виды доброты (2024)
+Kinds of Kindness","Пленницы (2013)
+Prisoners","Пленницы (2013)
+Prisoners","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Большой куш
+Snatch, 2000","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001","Мертвец (1995)
+Dead Man","Большой куш
+Snatch, 2000","Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003","Форрест Гамп
+Forrest Gump, 1994","Интерстеллар
+Interstellar, 2014","Чужой: Ромул (2024)
+Alien: Romulus.1","Виды доброты (2024)
+Kinds of Kindness","Паразиты
+Gisaengchung, 2019","Платформа 2 (2024)
+El hoyo 2","Чужой: Ромул (2024)
+Alien: Romulus.1","Виды доброты (2024)
+Kinds of Kindness","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Неогранённые алмазы (2019)
+Uncut Gems","Мимино
+1977","Мертвец (1995)
+Dead Man","Поймай меня, если сможешь
+Catch Me If You Can, 2002","Неогранённые алмазы (2019)
+Uncut Gems","Мимино
+1977","Форрест Гамп
+Forrest Gump, 1994","Форрест Гамп
+Forrest Gump, 1994","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Как поймать монстра (2014)
+Lost River","Побег из Шоушенка
+The Shawshank Redemption, 1994","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Форрест Гамп
+Forrest Gump, 1994","Интерстеллар
+Interstellar, 2014","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Джон Уик 4 (2023)
+John Wick: Chapter 4","Платформа 2 (2024)
+El hoyo 2","Форрест Гамп
+Forrest Gump, 1994","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Джон Уик 4 (2023)
+John Wick: Chapter 4","Копы в глубоком запасе (2010)
+The Other Guys","Общество мертвых поэтов (1989)
+Dead Poets Society","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Виды доброты (2024)
+Kinds of Kindness","Виды доброты (2024)
+Kinds of Kindness","Как поймать монстра (2014)
+Lost River","Пленницы (2013)
+Prisoners","Интерстеллар
+Interstellar, 2014","Мимино
+1977","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Интерстеллар
+Interstellar, 2014","Полу-Нельсон (2006)
+Half Nelson","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator",Мастер и Маргарита (2023),"Ловушка (2024)
+Trap","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995",Мастер и Маргарита (2023),"Ловушка (2024)
+Trap","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Ла-Ла Ленд
+La La Land, 2016","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Апокалипсис сегодня (1979)
+Apocalypse Now","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Бесславные ублюдки
+Inglourious Basterds, 2009","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Билли Мэдисон
+Billy Madison, 1995",X (2022),"Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1"
+9,"Как поймать монстра (2014)
+Lost River","Бедные-несчастные (2023)
+Poor Things",День выборов (2009),"Достать ножи
+Knives Out, 2019","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",День выборов (2009),"Большой куш
+Snatch, 2000","Зеленая миля
+The Green Mile, 1999","Зеленая миля
+The Green Mile, 1999","Мимино
+1977","Общество мертвых поэтов (1989)
+Dead Poets Society","Апокалипсис сегодня (1979)
+Apocalypse Now","Апокалипсис сегодня (1979)
+Apocalypse Now","Мимино
+1977","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Общество мертвых поэтов (1989)
+Dead Poets Society","Ловушка (2024)
+Trap","Платформа 2 (2024)
+El hoyo 2","Общество мертвых поэтов (1989)
+Dead Poets Society","Круэлла (2021)
+Cruella","Ловушка (2024)
+Trap","Платформа 2 (2024)
+El hoyo 2","Бешеные псы (1991)
+Reservoir Dogs","Место под соснами (2012)
+The Place Beyond the Pines","Мертвец (1995)
+Dead Man","Общество мертвых поэтов (1989)
+Dead Poets Society","Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Мертвец (1995)
+Dead Man","Общество мертвых поэтов (1989)
+Dead Poets Society","Место под соснами (2012)
+The Place Beyond the Pines","Ла-Ла Ленд
+La La Land, 2016","Общество мертвых поэтов (1989)
+Dead Poets Society","Люди в чёрном
+Men in Black, 1997","Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems","Общество мертвых поэтов (1989)
+Dead Poets Society","Люди в чёрном
+Men in Black, 1997","Платформа 2 (2024)
+El hoyo 2","Платформа 2 (2024)
+El hoyo 2","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Джон Уик 4 (2023)
+John Wick: Chapter 4","Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Как поймать монстра (2014)
+Lost River","Как поймать монстра (2014)
+Lost River","Платформа 2 (2024)
+El hoyo 2","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Дом большой мамочки (2000)
+Big Momma's House","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Остров проклятых
+Shutter Island, 2009","Остров проклятых
+Shutter Island, 2009","Мертвец (1995)
+Dead Man","Мимино
+1977","Апокалипсис сегодня (1979)
+Apocalypse Now","Один дома
+Home Alone, 1990","Мертвец (1995)
+Dead Man","Мимино
+1977","Круто сваренные (1992)
+Lat sau san taam","Люди в чёрном
+Men in Black, 1997","Ловушка (2024)
+Trap","Платформа 2 (2024)
+El hoyo 2","Дюна: Часть вторая (2024)
+Dune: Part Two","Общество мертвых поэтов (1989)
+Dead Poets Society","Ловушка (2024)
+Trap","Платформа 2 (2024)
+El hoyo 2","Место под соснами (2012)
+The Place Beyond the Pines","Отступники
+The Departed, 2006","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Неогранённые алмазы (2019)
+Uncut Gems","Бешеные псы (1991)
+Reservoir Dogs","Мертвец (1995)
+Dead Man","Мертвец (1995)
+Dead Man","Мимино
+1977","Ла-Ла Ленд
+La La Land, 2016",X (2022),X (2022),"Неогранённые алмазы (2019)
+Uncut Gems","Неогранённые алмазы (2019)
+Uncut Gems",X (2022),X (2022),"Зомби по имени Шон (2004)
+Shaun of the Dead","Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","На посту!
+Au poste!, 2018","Полночь с дьяволом (2023)
+Late Night with the Devil",Мастер и Маргарита (2023),"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux","Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001","Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001","Достать ножи
+Knives Out, 2019","Большой куш
+Snatch, 2000","Джанго освобожденный
+Django Unchained, 2012","Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)","Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Достать ножи
+Knives Out, 2019","Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001","Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001","Мертвец (1995)
+Dead Man","Большой куш
+Snatch, 2000","Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991","Мимино
+1977","Мертвец (1995)
+Dead Man","Большой куш
+Snatch, 2000","Интерстеллар
+Interstellar, 2014","Остров проклятых
+Shutter Island, 2009","Зона интересов (2023)
+The Zone of Interest","Ночь на Земле (1991)
+Night on Earth","Джанго освобожденный
+Django Unchained, 2012","Ловушка (2024)
+Trap","Зона интересов (2023)
+The Zone of Interest","Ночь на Земле (1991)
+Night on Earth","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Дом большой мамочки (2000)
+Big Momma's House","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Апокалипсис сегодня (1979)
+Apocalypse Now","Зеленая миля
+The Green Mile, 1999","Дом большой мамочки (2000)
+Big Momma's House","Таксист (1976)
+Taxi Driver
+(с робертом де ниро)","Интерстеллар
+Interstellar, 2014","Интерстеллар
+Interstellar, 2014","Дом большой мамочки (2000)
+Big Momma's House",X (2022),"Дом большой мамочки (2000)
+Big Momma's House","Зеленая миля
+The Green Mile, 1999","Дом большой мамочки (2000)
+Big Momma's House",X (2022),"Интерстеллар
+Interstellar, 2014","Остров проклятых
+Shutter Island, 2009","Платформа 2 (2024)
+El hoyo 2","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Виды доброты (2024)
+Kinds of Kindness","Остров проклятых
+Shutter Island, 2009","Платформа 2 (2024)
+El hoyo 2","Секреты Лос-Анджелеса (1997)
+L.A. Confidential","Побег из Шоушенка
+The Shawshank Redemption, 1994","Копы в глубоком запасе (2010)
+The Other Guys","Большой куш
+Snatch, 2000","Общество мертвых поэтов (1989)
+Dead Poets Society","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Побег из Шоушенка
+The Shawshank Redemption, 1994","Виды доброты (2024)
+Kinds of Kindness","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Назад в будущее
+Back to the Future, 1985","Ловушка (2024)
+Trap","Ловушка (2024)
+Trap","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Терминатор (1984)
+The Terminator","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Ла-Ла Ленд
+La La Land, 2016","Мимино
+1977","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Игры разума
+A Beautiful Mind, 2001","Бесславные ублюдки
+Inglourious Basterds, 2009","Апокалипсис сегодня (1979)
+Apocalypse Now","Остров проклятых
+Shutter Island, 2009","Дом большой мамочки (2000)
+Big Momma's House","Полу-Нельсон (2006)
+Half Nelson","Полу-Нельсон (2006)
+Half Nelson","Остров проклятых
+Shutter Island, 2009","Дом большой мамочки (2000)
+Big Momma's House","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995","Чужой: Ромул (2024)
+Alien: Romulus.1","Чужой: Ромул (2024)
+Alien: Romulus.1","Билли Мэдисон
+Billy Madison, 1995","Билли Мэдисон
+Billy Madison, 1995"
