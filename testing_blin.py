@@ -130,7 +130,7 @@ print(links_dic)
 
 
 
-for user in rating[Columns.User].unique()[9:10]:
+for user in rating[Columns.User].unique()[14:15]:
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(

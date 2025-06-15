@@ -74,7 +74,6 @@ def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id
     else:
         return recos, times
 def full_test_GT_light(combination, user):
-
     if combination[1] == 'jaccar':
         cand_dist = pd.read_csv('my_films/gened_dists_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0).to_numpy()
         ids_to_num_df = pd.read_csv('my_films/gened_dists_ids_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0)
@@ -89,7 +88,7 @@ def full_test_GT_light(combination, user):
                 combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(combination[3]) +
                 '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(combination[5]))
     config = dict(zip(params_keys, combination))
-    print(cur_string)
+    #print(cur_string)
     time_0 = time.time()
     metric, rec, weighted_rec = test_GT_light(df_train, df_test, links_dic, pivo,
                                 cand_dist,
@@ -97,7 +96,7 @@ def full_test_GT_light(combination, user):
                                 user_id=user,
                                 metric=True, **config)
     timess = time.time() - time_0
-    print weighted_rec
+    #print(weighted_rec)
     return metric, rec, timess, cur_string
 
 
@@ -126,12 +125,13 @@ params_values = params_grid.values()
 
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
-print(links_dic)
+#print(links_dic)
 
 
 
 for user in rating[Columns.User].unique():
     tests = []
+    print(user)
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
             combination[3]) +
@@ -140,7 +140,7 @@ for user in rating[Columns.User].unique():
         times[cur_string] = []
         tests.append(combination)
 
-    results = Parallel(n_jobs=-1)(
+    results = Parallel(n_jobs=-1, verbose=1)(
         delayed(full_test_GT_light)(combination, user)
         for combination in tests
     )
@@ -157,7 +157,7 @@ for user in rating[Columns.User].unique():
 
 
 for key, item in times.items():
-    print(key, np.array(item).mean())
+    #print(key, np.array(item).mean())
     times[key] = np.array(item).mean()
 times_df = pd.DataFrame.from_dict(times)
 times_df.to_csv('my_films/test1/times_mac.csv')

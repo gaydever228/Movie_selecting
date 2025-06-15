@@ -660,12 +660,25 @@ params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star'],
                'weighted':[False, True],
                'series_rate':[0, 1, 2, 3]}
 #metrics_draw(1, params_grid)
+df_dic = {}
+for user in rating[Columns.User].unique()[:100]:
 
-
-top_draw(params_grid, top_k = 5)
-
-for i in range(6):
-    metrics_draw(i, params_grid)
+    filename = f"{papka}metrics_user{user}.csv"
+    if os.path.exists(filename):
+        df_dic[user] = pd.read_csv(filename)
+for num in range(5):
+    print(num)
+    user_list = []
+    for user, df in df_dic.items():
+        for col_key in df.columns[1:]:
+            v = df.at[num, col_key]
+            #print(v)
+            user_list.append(v)
+    print(np.array(user_list).mean())
+# top_draw(params_grid, top_k = 5)
+#
+# for i in range(6):
+#     metrics_draw(i, params_grid)
 
 
 #top_draw_ml(params_grid, top_k = 7)
