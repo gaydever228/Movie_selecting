@@ -577,16 +577,15 @@ class Recommend_new(election):
         #self.dist_matrix = self.nes_cand_dist(c_to_c, c_to_v)
         # если series_rate = 0, будет просто единичное голосование
         current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
-        i = 1
-        while current_commit_size > commit_size:
-            #cands_nums = {self.id_to_num[id] for id in c_to_c}
+        #cands_nums = {self.id_to_num[id] for id in c_to_c}
+        if current_commit_size > commit_size:
             self.voting(c_to_c, c_to_v, current_commit_size, rule)
             # print("step %d:" % i)
             c_to_c = {self.candidates[0][id] for id in self.committee_id}
-            #self.dist_matrix = self.dist_matrix[self.committee_id]
-            #cands_nums = set(self.committee_id)
-            current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
-            i += 1
+        #self.dist_matrix = self.dist_matrix[self.committee_id]
+        #cands_nums = set(self.committee_id)
+        #current_commit_size = max(min(int(commit_size*((4/3)**self.series_rate)), (3*len(c_to_c))//4), commit_size)
+        #i += 1
         # voters_nums = {self.id_to_num[id] for id in c_to_v}
         # cands_nums = {self.id_to_num[id] for id in c_to_c}
         self.voting(c_to_c, c_to_v, commit_size, rule)
