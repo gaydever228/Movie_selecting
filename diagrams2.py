@@ -81,47 +81,55 @@ def permutation_test(sample1, sample2, n_permutations=10000, stat_func=None):
         'n_permutations': n_permutations,
         'test_name': 'Permutation test'
     }
-def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05):
+def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05, alt = None):
     """Комплексное сравнение двух выборок"""
-
-    # # Тест Шапиро-Уилка на нормальность
+    comp_dic = {'greater':'>', 'less':'<', 'two-sided':'><'}
+    # # Тест на нормальность
     # _, p_norm1 = stats.shapiro(sample1)
     # _, p_norm2 = stats.shapiro(sample2)
-    _, p_norm1 = stats.normaltest(sample1)
-    _, p_norm2 = stats.normaltest(sample2)
-    #print(p_norm1, p_norm2)
+    if len(sample1) < 20:
+        normal_dist = False
+    else:
+        _, p_norm1 = stats.normaltest(sample1)
+        _, p_norm2 = stats.normaltest(sample2)
+        #print(p_norm1, p_norm2)
 
-    normal_dist = (p_norm1 > alpha) and (p_norm2 > alpha)
+        normal_dist = (p_norm1 > alpha) and (p_norm2 > alpha)
 
-    # Тест Левена на равенство дисперсий
-    _, p_var = stats.levene(sample1, sample2)
-
-    equal_var = p_var > alpha
+    # # Тест Левена на равенство дисперсий
+    # _, p_var = stats.levene(sample1, sample2)
+    #
+    # equal_var = p_var > alpha
 
 
     if normal_dist:
-        # Параметрические тесты
-        t_stat, p_val = stats.ttest_ind(sample1, sample2, equal_var=equal_var)
-        #print(f"t-тест: p={p_val:.4f}")
-        return p_val, '(критерий Стьюдента)'
+        if alt is None:
+            _, t_pvalue_greater = stats.ttest_rel(sample1, sample2, alternative='greater')
+            _, t_pvalue_less = stats.ttest_rel(sample1, sample2, alternative='less')
+            #t_p_value = min(t_pvalue_greater, t_pvalue_less)
+            if t_pvalue_greater < t_pvalue_less:
+                return t_pvalue_greater, '(парный критерий Стьюдента (>))'
+            else:
+                return t_pvalue_less, '(парный критерий Стьюдента (<))'
+        else:
+            _, t_pvalue = stats.ttest_rel(sample1, sample2, alternative=alt)
+            return t_pvalue, '(парный критерий Стьюдента (' + comp_dic[alt] + '))'
+
 
     # Непараметрические тесты (всегда)
+    if alt is None:
+        wilcox_greater = stats.wilcoxon(sample1, sample2, alternative='greater')
+        wilcox_less = stats.wilcoxon(sample1, sample2, alternative='less')
+        #print(wilcox_less, wilcox_greater)
+        if wilcox_greater[1] < wilcox_less[1]:
+            return wilcox_greater[1], '(критерий Уилкоксона (>))'
+        else:
+            return wilcox_less[1], '(критерий Уилкоксона (<))'
+    else:
+        wilcox = stats.wilcoxon(sample1, sample2, alternative=alt)
+        return wilcox[1], '(критерий Уилкоксона (' + comp_dic[alt] + '))'
 
-    u_stat, p_mann = stats.mannwhitneyu(sample1, sample2, alternative='two-sided')
-    #print(f"Критерий Манна-Уитни: p={p_mann:.4f}")
-    chi2 = chi_square_test(sample1, sample2)
-    if p_mann < 0.001 and chi2['min_expected_freq'] < 5:
-        per_test = permutation_test(sample1, sample2)
-        #print(f"Перестановочный критерий: p={per_test['p_value']:.4f}")
-        return per_test['p_value'], '(перестановочный критерий)'
-    elif p_mann < 0.001:
-        #print(f"Критерий Хи-Квадрат: p={chi2['p_value']:.4f}, n = {chi2['min_expected_freq']}")
-        return chi2['p_value'], '(критерий хи-квадрат)'
-    return p_mann, '(критерий Манна-Уитни)'
 
-    # ks_stat, p_ks = stats.ks_2samp(sample1, sample2)
-    # #print(f"Критерий Колмогорова-Смирнова: p={p_ks:.4f}")
-    # return p_ks, '(критерий Колмогорова-Смирнова)'
 def comprehensive_comparison(sample1, sample2, alpha=0.05):
     """Комплексное сравнение двух выборок"""
 
@@ -402,7 +410,7 @@ def metrics_draw(param_id, inner_param_grid):
            'serendipity': {},
            'novelty': {},
            'weighted prec': {}}
-    for user in rating['userId'].unique()[:140]:
+    for user in rating['userId'].unique()[:150]:
 
         filename = f"{papka}metrics_user{user}.csv"
         if os.path.exists(filename) and user not in user_blacklist:
@@ -461,7 +469,7 @@ def metrics_draw(param_id, inner_param_grid):
                 title = 'Значение ' + key + ' в зависимости от ' + title_part + ' (' + col_key + ')'
                 box_plot_metrics_draw(dic[key][col_key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
         plt.close('all')
-def metrics_draw_ml(inner_param_grid):
+def metrics_draw_ml(inner_param_grid, alt = None):
     param_grid = deepcopy(inner_param_grid)
     #print(param_grid)
     df_dic = {}
@@ -475,14 +483,15 @@ def metrics_draw_ml(inner_param_grid):
            'novelty': {},
            'weighted prec': {}}
     models_list = ['KNN TF-IDF', 'ALS', 'Random', 'Popular']
-    for user in rating['userId'].unique()[:100]:
-
+    for user in rating['userId'].unique()[41:140]:
+        #print(user)
         filename = f"{papka}metrics_user{user}.csv"
         filename_ml = f"{papka_ml}metrics_user{user}.csv"
+        #print(filename, filename_ml)
         if os.path.exists(filename) and os.path.exists(filename_ml) and user not in user_blacklist:
             df_dic[user] = (pd.read_csv(filename), pd.read_csv(filename_ml))
 
-
+    #print(df_dic)
     for num, key in enumerate(dic.keys()):
         print(key)
         model_metrics = {}
@@ -500,7 +509,7 @@ def metrics_draw_ml(inner_param_grid):
             user_list = []
             for user, dfs in df_dic.items():
                 if col in dfs[0].columns:
-                    # print(df[col][num])
+                    #print(dfs[0][col][num])
                     v = dfs[0].at[num, col]
                     # print(v)
                     user_list.append(v)
@@ -512,11 +521,15 @@ def metrics_draw_ml(inner_param_grid):
             test_name_dic = {}
             pflag = 0
             for mod in models_list:
+                #print(np.mean(dic[key][col][col]), dic[key][col][mod])
+                #print(len(dic[key][col][col]), len(dic[key][col][mod]))
                 (p_dic[str(col) + ' ~ ' + mod],
                  test_name_dic[str(col) + ' ~ ' + mod]) = (
-                    mini_comparison(dic[key][col][col], dic[key][col][mod], key))
-                if p_dic[str(col) + ' ~ ' + mod] <= 0.05 and np.mean(dic[key][col][col] > dic[key][col][mod]):
+                    mini_comparison(dic[key][col][col], dic[key][col][mod], key, alt = alt))
+                #print(p_dic[str(col) + ' ~ ' + mod])
+                if p_dic[str(col) + ' ~ ' + mod] <= 0.05 and np.mean(dic[key][col][col]) > np.mean(dic[key][col][mod]):
                     pflag += 1
+                    #print(col, mod)
                 #difference = np.array(dic[key][col][col]) - np.array(dic[key][col][mod])
                 #name = papka_ml + 'plots/diff/' + key + '_' + mod +'_' + col
                 #title = key + ': Сравнение' + ' с ' + mod
@@ -663,7 +676,7 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV'],
-               'dist_method':['cosine'],
+               'dist_method':['jaccar', 'cosine', 'pearson', 'spearman'],
                'degrees':[7],
                'size':[10],
                'weighted':[False],
@@ -675,11 +688,11 @@ user_blacklist = set()
 # user_blacklist_ml = {8, 15, 32, 36, 37, 44, 56, 58}
 
 #top_draw(params_grid, top_k = 5)
-top_draw_ml(params_grid, top_k = 5)
-metrics_draw_ml(params_grid)
+#top_draw_ml(params_grid, top_k = 5)
+#metrics_draw_ml(params_grid)
 #for i in range(2):
 #    metrics_draw(i, params_grid)
-#metrics_draw(5, params_grid)
+metrics_draw(1, params_grid)
 
 
 
