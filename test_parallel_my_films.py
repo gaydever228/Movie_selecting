@@ -97,14 +97,17 @@ def full_test_GT_light(combination, user):
                                 metric=True, **config)
     timess = time.time() - time_0
     #print(weighted_rec)
-    return metric, rec, timess, cur_string
+    return metric, weighted_rec, timess, cur_string
 
 
 rating = pd.read_csv('long_my_films.csv')
 movies = pd.read_csv('map_my_films.csv')
 
 links_dic = movies[movies.columns[1]].to_dict()
-
+movies = pd.DataFrame({
+    Columns.Item: list(links_dic.keys()),
+    'title': list(links_dic.values())
+})
 times = {}
 metrics = {}
 recos_dic = {}
@@ -114,12 +117,12 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar', 'cosine', 'cosine_hat', 'pearson', 'pearson_hat', 'spearman', 'spearman_hat', 'kendall_hat', 'kendall'],
-               'degrees':[4, 2, 3, 5, 6, 7, 8, 9, 10],
-               'size':[10, 15, 20, 25, 30],
-               'weighted':[True, False],
-               'series_rate':[0, 1, 2, 3]}
+params_grid = {'rule':['STV_star', 'SNTV'],
+               'dist_method':['jaccar', 'cosine', 'kendall'],
+               'degrees':[7],
+               'size':[10],
+               'weighted':[True],
+               'series_rate':[0, 1]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 
@@ -127,9 +130,22 @@ df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 #print(links_dic)
 
+# full_test_GT_light(['STV_basic', 'jaccar', 7, 10, False, 0], 0)
+# exit()
+models_list = ['KNN cosine', 'KNN TF-IDF', 'KNN BM25', 'ALS', 'Random', 'Popular']
 
-
-for user in rating[Columns.User].unique():
+recos_ml_dic = {}
+recs_test = Recommend(df_train, movies, commit_size=10)
+models_dic = {'KNN cosine': recs_test.recs_KNN(commit_size=10, dist_method='cosine'),
+              'KNN TF-IDF': recs_test.recs_KNN(commit_size=10, dist_method='TF-IDF'),
+              'KNN BM25': recs_test.recs_KNN(commit_size=10, dist_method='BM25'),
+              'ALS': recs_test.recs_ALS(commit_size=10),
+              'Random': recs_test.recs_Random(commit_size=10),
+              'Popular': recs_test.recs_Popular(commit_size=10)}
+for mod in models_list:
+    models_dic[mod]
+    _, recos_ml_dic[mod] = recs_test.metrics(df_test, mod)
+for user in rating[Columns.User].unique()[:100]:
     tests = []
     print(user)
     for combination in product(*params_values):
@@ -144,20 +160,36 @@ for user in rating[Columns.User].unique():
         delayed(full_test_GT_light)(combination, user)
         for combination in tests
     )
+    recos_list = []
+    recos_keys_list = []
 
     for metric, rec, timess, cur_string in results:
         metrics[cur_string] = metric
         recos_dic[cur_string] = rec
+        recos_list.append(rec)
+        recos_keys_list.append(cur_string)
         times[cur_string].append(timess)
-    metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
-    metrics_df = metrics_df.T
-    recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
-    metrics_df.to_csv('my_films/test2/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('my_films/test2/recos_' + str(user) + '.csv')
 
 
-for key, item in times.items():
-    #print(key, np.array(item).mean())
-    times[key] = np.array(item).mean()
-times_df = pd.DataFrame.from_dict(times, orient="index")
-times_df.to_csv('my_films/test2/times_mac.csv')
+    for mod in models_list:
+        rec_ml_df = recos_ml_dic[mod]
+        rec_ml_df = rec_ml_df[rec_ml_df[Columns.User] == user]
+        rec_ml_df = rec_ml_df.reset_index(drop=True)
+        rec_ml_df = rec_ml_df.drop(Columns.User, axis=1)
+        recos_list.append(rec_ml_df)
+        recos_keys_list.append(mod)
+
+
+    user_recos = pd.concat(recos_list, axis=1, keys=recos_keys_list)
+    #metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
+    #metrics_df = metrics_df.T
+    #recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
+    #metrics_df.to_csv('my_films/test4/metrics_user' + str(user) + '.csv', index=True)
+    user_recos.to_csv('my_films/test4/recos_' + str(user) + '.csv')
+
+
+# for key, item in times.items():
+#     #print(key, np.array(item).mean())
+#     times[key] = np.array(item).mean()
+# times_df = pd.DataFrame.from_dict(times, orient="index")
+# times_df.to_csv('my_films/test4/times_mac.csv')

@@ -181,6 +181,30 @@ def comprehensive_comparison(sample1, sample2, alpha=0.05):
     else:
         conclusion = "отвергаем H0" if p_mann < alpha else "не отвергаем H0"
         print(f"Основной тест (Манн-Уитни): {conclusion}")
+def bar_times_draw(data, labs, name):
+    fig, ax = plt.subplots(figsize=(18, 9))
+
+    bars = plt.bar(labs, data, color=['lightcoral', 'peachpuff', 'deeppink', 'aquamarine', 'darkseagreen'])
+    x = np.arange(len(df.index))
+    width = 0.2
+    multiplier = 0
+    for bar, value in zip(bars, data):
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.01,
+                 f'{value:.3f} c', ha='center', va='bottom', fontweight='bold')
+
+    #ax.set_xlabel('Строки DataFrame')
+    ax.set_ylabel('Время, с')
+    ax.set_title('Время, затрачиваемое алгоритмами на построение рекомендаций')
+    #ax.set_xticks(x + width)  # центрируем подписи между группами полосок
+
+    ax.set_xticklabels(labs)  # используем имена строк как подписи
+    ax.legend()
+    #ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+    #plt.show()
+    plt.savefig('time_papka/' + name + '.png', dpi=300, bbox_inches='tight')
+
+    plt.close()
 def bar_metrics_draw(df, name, title, metric, met = 'mean'):
     fig, ax = plt.subplots(figsize=(20, 9))
     x = np.arange(len(df.index))
@@ -257,7 +281,7 @@ def lab_title_make(param_id, p = 0):
     elif param_id == 3:
         return 'k = ' + str(p), 'количества рекомендаций'
     elif param_id == 4:
-        return 'взвешанное среднее' * p + 'антирекомендации' * (1 - p), 'метода устранения демократии'
+        return 'взвешенное среднее' * p + 'антирекомендации' * (1 - p), 'метода устранения демократии'
     elif param_id == 5:
         if p == 0:
             return 'одиночные выборы', 'количества выборов'
@@ -344,7 +368,7 @@ def metrics_draw_small(param_id, inner_param_grid):
            'serendipity': {},
            'novelty': {},
            'weighted prec': {}}
-    for user in rating['userId'].unique()[:100]:
+    for user in rating['userId'].unique()[:150]:
 
         filename = f"{papka}metrics_user{user}.csv"
         if os.path.exists(filename) and user not in user_blacklist:
@@ -372,23 +396,17 @@ def metrics_draw_small(param_id, inner_param_grid):
                         v = df.at[num, col]
                         #print(v)
                         dic[key][p].append(v)
-
-        name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
-        title = 'Значение ' + key + ' в зависимости от ' + title_part
-        box_plot_metrics_draw(dic[key], labs, title, name)
         p_dic = {}
         test_name_dic = {}
         for i in range(1, len(ps)):
             (p_dic[str(labs[0]) + ' ~ ' + str(labs[i])],
              test_name_dic[str(labs[0]) + ' ~ ' + str(labs[i])]) = (
                 mini_comparison(dic[key][ps[0]], dic[key][ps[i]], key))
-            dic[key][ps[i]] = np.array(dic[key][ps[i]]) - np.array(dic[key][ps[0]])
-        dic[key].pop(ps[0], None)
-        name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0])
-        title = key + ': Сравнение' + ' с ' + str(labs[0])
-        box_plot_metrics_draw(dic[key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
+            # dic[key][ps[i]] = np.array(dic[key][ps[i]]) - np.array(dic[key][ps[0]])
+        name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
+        title = 'Значение ' + key + ' в зависимости от ' + title_part
+        box_plot_metrics_draw(dic[key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
     plt.close('all')
-
 def metrics_draw(param_id, inner_param_grid):
     param_grid = deepcopy(inner_param_grid)
     #print(param_grid)
@@ -687,15 +705,81 @@ user_blacklist = set()
 # user_blacklist_bad = {1, 2, 3, 11, 25, 29, 33, 43, 50, 51, 53, 55, 57, 64, 66, 67, 68}
 # user_blacklist_ml = {8, 15, 32, 36, 37, 44, 56, 58}
 
-#top_draw(params_grid, top_k = 5)
+#top_draw(params_grid, top_k = 7)
+filename = 'time_papka/times.csv'
+df = pd.read_csv(filename)
+rates = {0:[], 1:[], 2:[], 3:[]}
+weighted_ar = []
+antirec_ar = []
+times = []
+labs = []
+# for index, row in df.iterrows():
+#     unnamed_value = row['Unnamed: 0']
+#     #print(row)
+#     if 'rate=0' in unnamed_value:
+#         rates[0].append(row['0'])
+#     elif 'rate=1' in unnamed_value:
+#         rates[1].append(row['0'])
+#     elif 'rate=2' in unnamed_value:
+#         rates[2].append(row['0'])
+#     elif 'rate=3' in unnamed_value:
+#         rates[3].append(row['0'])
+# for key, value in rates.items():
+#     times.append(np.mean(value))
+#     labs.append('g=' + str(key))
+#
+# bar_times_draw(times, labs, 'time_series')
+
+stv_basic = []
+stv_star = []
+sntv = []
+for index, row in df.iterrows():
+    unnamed_value = row['Unnamed: 0']
+    #print(row)
+    if 'STV_basic' in unnamed_value:
+        stv_basic.append(row['0'])
+    elif 'STV_star' in unnamed_value:
+        stv_star.append(row['0'])
+    elif 'SNTV' in unnamed_value:
+        sntv.append(row['0'])
+times = [np.mean(stv_basic), np.mean(stv_star), np.mean(sntv), 0.9699091911315918, 0.7990360260009766]
+labs = ['STV', 'STV*', 'SNTV', 'KNN', 'ALS']
+bar_times_draw(times, labs, 'time_campare')
+exit()
 #top_draw_ml(params_grid, top_k = 5)
 #metrics_draw_ml(params_grid)
-for i in range(4, 6):
-    metrics_draw(i, params_grid)
-#metrics_draw(1, params_grid)
+#for i in range(4, 6):
+#    metrics_draw(i, params_grid)
+metrics_draw(4, params_grid)
+metrics_draw_small(4, params_grid)
 
+name = papka + 'tops/top_novelty_5_by_std.csv'
+df = pd.read_csv(name)
+weighted = ([], [], [])
+antirec = ([], [], [])
+for index, row in df.iterrows():
+    unnamed_value = row['Unnamed: 0']
+    #print(unnamed_value)
+    if 'weighted' in unnamed_value:
+        weighted[2].append(row['std'])
+        weighted[1].append(row['median'])
+        weighted[0].append(row['mean'])
+    else:
+        antirec[2].append(row['std'])
+        antirec[1].append(row['median'])
+        antirec[0].append(row['mean'])
 
+#weighted = np.array(weighted)
+#antirec = np.array(antirec)
+print('weighted std is', np.std(weighted[2]))
+print('antirec std is', np.std(antirec[2]))
 
+print('weighted median is', np.std(weighted[1]))
+print('antirec median is', np.std(antirec[1]))
+
+print('weighted mean is', np.std(weighted[0]))
+print('antirec mean is', np.std(antirec[0]))
+#metrics_draw_small(1, params_grid)
 
 
 

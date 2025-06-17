@@ -396,12 +396,15 @@ class Recommend_new(election):
             #print('cands',cands, cands_nums)
             #print('voters', voters, voters_nums)
             dist_matrix = self.cand_dist[np.ix_(sorted(cands_nums), sorted(voters_nums))]
+            self.voters_list = []
             #print('dist', dist_matrix)
             #self.dist_matrix = np.square(dist_matrix)
             self.dist_matrix = dist_matrix
             cand_arr = []
             for num in sorted(cands_nums):
                 cand_arr.append(self.num_to_id[num])
+            for num in sorted(voters_nums):
+                self.voters_list.append(self.num_to_id[num])
             self.candidates = [np.array(cand_arr), np.array(cand_arr)]
             self.weights = np.array([self.weights_dic[self.num_to_id[num]] for num in sorted(voters_nums)])
         else:
@@ -495,12 +498,15 @@ class Recommend_new(election):
     #         #for id in self.committee_id:
     #         #   print('BnB recommends', self.candidates[0][id])
     def voting(self, cands, voters, commit_size, rule = 'SNTV'):
+
         #self.dist_matrix = self.cand_dist[np.ix_(sorted(cand_nums), sorted(voters_nums))]
         #self.candidates = [np.array(sorted(cands)), np.array(sorted(cands))]
         #print('CANDIDATES:')
         #for c in sorted(cands):
         #    print(c, self.links[c])
         #print('cands?', sorted(cands))
+        # for v in sorted(voters):
+        #     print(v, self.links[v])
         self.nes_cand_dist(cands, voters)
         #print('cands!', sorted(set(self.candidates[0])))
         # print(np.shape(self.dist_matrix))
@@ -593,9 +599,16 @@ class Recommend_new(election):
         #print('reccomendations are:')
         i = 1
         for id in self.committee_id:
-            recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]]])
+            nearest_id = np.nanargmin(self.dist_matrix[id, :])
+            nearest = self.voters_list[nearest_id]
+            recos_list.append([user_id, self.candidates[0][id], i, self.links[self.candidates[0][id]],
+                               self.links[nearest], nearest])
+            # print(self.candidates[0][id])
+
+
+            # print("он близок к", voters[nearest], self.dist_matrix[id, nearest])
             i += 1
-        self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title"])
+        self.recos = pd.DataFrame(recos_list, columns=[Columns.User, Columns.Item, Columns.Rank, "title", "nearest", "nearest_id"])
         #print(self.recos)
         return list(self.recos['title'])
 
@@ -628,13 +641,24 @@ class Recommend_new(election):
         self.recos = self.recos.merge(df_test[[Columns.User, Columns.Item, Columns.Weight]],
                            on=[Columns.User, Columns.Item],
                            how='left')
-        self.recos[Columns.Weight] = self.recos[Columns.Weight].fillna(0)
+
+        self.recos = self.recos.merge(
+            df_train[[Columns.User, Columns.Item, Columns.Weight]],
+            left_on=[Columns.User, 'nearest_id'],
+            right_on=[Columns.User, Columns.Item],
+            how='left'
+        )
+        self.recos = self.recos.drop(columns=['item_id_y'])
+        #print(self.recos.head(10))
+        self.recos['weight_x'] = self.recos['weight_x'].fillna(0)
+
+        self.recos['weight_y'] = self.recos['weight_y'].fillna(0)
         #print(recos)
         #median_value = df_train[df_train[Columns.User] == user_id][Columns.Weight].median()
         quants = self.quantiles.loc[user_id]
 
         qarr = []
-        for row in self.recos[Columns.Weight]:
+        for row in self.recos['weight_x']:
             #print(row)
             v = 0.5 if row > 0 else 0
             #print(v)
@@ -645,7 +669,13 @@ class Recommend_new(election):
         self.recos['weighted weight'] = qarr
         metrics_values['weighted prec'] = np.mean(qarr)/(self.degrees - 1)
         #print(f"serendipity10: {metrics_values['serendipity@10']}")
-        return metrics_values, self.recos[['title', Columns.Weight, 'weighted weight']]
+        self.recos = self.recos.rename(columns={
+            'title':'рекомендации',
+            'weight_x': 'реальная оценка',
+            'nearest': 'ближайший сосед',
+            'weight_y': 'оценка соседа'
+        })
+        return metrics_values, self.recos[['рекомендации', 'реальная оценка', 'ближайший сосед', 'оценка соседа']]
 
 
 

@@ -138,6 +138,7 @@ class Recommend():
         self.recos[model_name] = self.recos[model_name].merge(df_test[[Columns.User, Columns.Item, Columns.Weight]],
                                       on=[Columns.User, Columns.Item],
                                       how='left')
+        self.recos[model_name] = self.recos[model_name].merge(self.movies, on="item_id")
         #print(self.recos[model_name].head(40))
         #print(self.recos[model_name][Columns.Weight])
         self.recos[model_name][Columns.Weight] = self.recos[model_name][Columns.Weight].fillna(0)
@@ -166,4 +167,8 @@ class Recommend():
 
         # print(f"serendipity10: {metrics_values['serendipity@10']}")
         #return metrics_values, self.recos[model_name][[Columns.User, 'title', Columns.Weight, 'weighted weight']]
-        return metrics_values
+        self.recos[model_name] = self.recos[model_name].rename(columns={
+            'title':'рекомендации',
+            Columns.Weight: 'реальная оценка'
+        })
+        return metrics_values, self.recos[model_name][[Columns.User, 'рекомендации', 'реальная оценка']]

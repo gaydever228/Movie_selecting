@@ -242,7 +242,27 @@ def box_plot_metrics_draw(dic, xlabs, title, name, ref = None, p_values_dict = N
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')
     plt.close()
     #plt.show()
+def bar_times_draw(data, labs, title, times):
+    fig, ax = plt.subplots(figsize=(18, 9))
 
+    bars = plt.bar(labs, data, color=['red', 'blue', 'green', 'orange', 'purple'])
+    x = np.arange(len(df.index))
+    width = 0.2
+    multiplier = 0
+
+    #ax.set_xlabel('Строки DataFrame')
+    ax.set_ylabel('Время, с')
+    ax.set_title('Время, затрачиваемое алгоритмами на построение рекомендаций')
+    #ax.set_xticks(x + width)  # центрируем подписи между группами полосок
+
+    ax.set_xticklabels(labs)  # используем имена строк как подписи
+    ax.legend()
+    #ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+
+    plt.savefig('time_papka/time_campare.png', dpi=300, bbox_inches='tight')
+
+    plt.close()
 
 def underscore(s):
     pattern = r'_([^_]*_[^_]*_[^_]*)$'
@@ -259,7 +279,7 @@ def lab_title_make(param_id, p = 0):
     elif param_id == 3:
         return 'k = ' + str(p), 'количества рекомендаций'
     elif param_id == 4:
-        return 'взвешанное среднее' * p + 'антирекомендации' * (1 - p), 'метода устранения демократии'
+        return 'взвешенное среднее' * p + 'антирекомендации' * (1 - p), 'метода устранения демократии'
     elif param_id == 5:
         if p == 0:
             return 'одиночные выборы', 'количества выборов'
@@ -704,6 +724,7 @@ user_blacklist = set()
 # user_blacklist_ml = {8, 15, 32, 36, 37, 44, 56, 58}
 
 #top_draw(params_grid, top_k = 7)
+
 #top_draw_ml(params_grid, top_k = 10)
 #metrics_draw_ml(params_grid, alt = 'two-sided')
 #metrics_draw(4, params_grid)
@@ -734,7 +755,7 @@ print('antirec median is', np.std(antirec[1]))
 
 print('weighted mean is', np.std(weighted[0]))
 print('antirec mean is', np.std(antirec[0]))
-metrics_draw_small(1, params_grid)
+metrics_draw_small(4, params_grid)
 exit()
 
 

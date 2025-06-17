@@ -32,7 +32,7 @@ from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
 
-papka = 'GT/test3/'
+papka = 'GT/test4/'
 def time_split(df, quant = 0.5):
     print("time splitting")
     train_parts = []
@@ -67,11 +67,12 @@ def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id
     #print('generation distances_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
     time_0 = time.time()
     recos = recs_test.recommendation_voting(user_id, size, rule = rule, weighted = weighted)
+    time_voting = time.time() - time_0
     #times['recommendation_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
     #print('recommendation_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
 
     metrics, weighted_recos = recs_test.metrics(df_test, df_train, user_id)
-    return metrics, recos, weighted_recos, time.time() - time_0
+    return metrics, recos, weighted_recos, time_voting
 
 def full_test_GT_light(combination, user):
     if combination[1] == 'jaccar':
@@ -156,8 +157,8 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['STV_star', 'SNTV'],
-               'dist_method':['jaccar', 'cosine', 'pearson', 'spearman', 'kendall'],
+params_grid = {'rule':['STV_basic', 'STV_star', 'SNTV'],
+               'dist_method':['jaccar', 'cosine'],
                'degrees':[7],
                'size':[10],
                'weighted':[False, True],
@@ -168,7 +169,7 @@ step = 1
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 
-for user in rating['userId'].unique()[:100]:
+for user in rating['userId'].unique()[100:120]:
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
