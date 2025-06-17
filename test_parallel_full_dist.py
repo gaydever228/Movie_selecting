@@ -32,7 +32,7 @@ from recsys import Recommend_new
 from rectools import Columns
 from datetime import datetime, timedelta
 
-papka = 'GT/test2/'
+papka = 'GT/test3/'
 def time_split(df, quant = 0.5):
     print("time splitting")
     train_parts = []
@@ -60,7 +60,7 @@ def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id
     times = {}
 
 
-    time_0 = time.time()
+    #time_0 = time.time()
     recs_test = Recommend_new(links, df_train, pivo, degrees = degrees, remove_rate = 1, series_rate = series_rate,
                               dist_method=dist_method, full_dist=True, ids_to_num=ids_to_num, cand_dist_matrix=cand_dist)
     #times['generation distances_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
@@ -69,11 +69,10 @@ def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id
     recos = recs_test.recommendation_voting(user_id, size, rule = rule, weighted = weighted)
     #times['recommendation_' + weighted*'weighted' + '_' + rule] = time.time() - time_0
     #print('recommendation_' + weighted*'weighted' + '_' + rule + ':', time.time() - time_0)
-    if metric:
-        metrics, weighted_recos = recs_test.metrics(df_test, df_train, user_id)
-        return metrics, recos, weighted_recos
-    else:
-        return recos, times
+
+    metrics, weighted_recos = recs_test.metrics(df_test, df_train, user_id)
+    return metrics, recos, weighted_recos, time.time() - time_0
+
 def full_test_GT_light(combination, user):
     if combination[1] == 'jaccar':
         cand_dist = pd.read_csv('GT/gened_dists_' + combination[1] + '_' + str(combination[2]) + '.csv', index_col=0).to_numpy()
@@ -90,13 +89,11 @@ def full_test_GT_light(combination, user):
                 '_weighted_' * combination[4] + '_antirec_' * (1 - combination[4]) + 'rate=' + str(combination[5]))
     config = dict(zip(params_keys, combination))
     #print(cur_string)
-    time_0 = time.time()
-    metric, rec, weighted_rec = test_GT_light(df_train, df_test, links_dic, pivo,
+    metric, rec, weighted_rec, timess = test_GT_light(df_train, df_test, links_dic, pivo,
                                 cand_dist,
                                 ids_to_num,
                                 user_id=user,
                                 metric=True, **config)
-    timess = time.time() - time_0
     #print(weighted_rec)
     return metric, rec, timess, cur_string
 
@@ -163,7 +160,7 @@ params_grid = {'rule':['STV_star', 'SNTV'],
                'dist_method':['jaccar', 'cosine', 'pearson', 'spearman', 'kendall'],
                'degrees':[7],
                'size':[10],
-               'weighted':[False],
+               'weighted':[False, True],
                'series_rate':[0, 1, 2, 3]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
@@ -171,25 +168,7 @@ step = 1
 df_train, df_test, pivo = time_split(rating, quant=0.75)
 
 
-#cand_dist_df = safe_from_csv('GT/gened_dists.csv')
-#ids_to_num_df = safe_from_csv('GT/gened_dists_ids.csv')
-
-# for col in cand_dist_df.columns:
-#     print('trans', col)
-#     cand_dist_df[col] = cand_dist_df[col].apply(lambda x: ast.literal_eval(x))
-#     ids_to_num_df[col] = ids_to_num_df[col].apply(lambda x: ast.literal_eval(x))
-
-
-# cand_dist = pd.read_csv('GT/gened_dists_jaccar_2.csv', index_col=0).to_numpy()
-# ids_to_num_df = pd.read_csv('GT/gened_dists_ids_jaccar_2.csv', index_col=0)
-# ids_to_num = ids_to_num_df[ids_to_num_df.columns[0]].to_dict()
-# print(cand_dist)
-# print(type(cand_dist))
-# print(ids_to_num)
-# print(type(ids_to_num))
-# print('dicted')
-# exit()
-for user in rating['userId'].unique()[30:100]:
+for user in rating['userId'].unique()[:100]:
     tests = []
     for combination in product(*params_values):
         cur_string = (combination[0] + '_' + combination[1] + '_deg=' + str(combination[2]) + '_size=' + str(
@@ -214,12 +193,12 @@ for user in rating['userId'].unique()[30:100]:
     #recos_df = pd.DataFrame.from_dict(recos_dic)
     #print(recos_df)
     #print(metrics_df)
-    metrics_df.to_csv('GT/test2/metrics_user' + str(user) + '.csv', index=True)
-    recos_df.to_csv('GT/test2/recos_' + str(user) + '.csv')
+    metrics_df.to_csv(papka + 'metrics_user' + str(user) + '.csv', index=True)
+    recos_df.to_csv(papka + 'recos_' + str(user) + '.csv')
     step += 1
 
 for key, item in times.items():
     #print(key, np.array(item).mean())
     times[key] = np.array(item).mean()
 times_df = pd.DataFrame.from_dict(times, orient="index" )
-times_df.to_csv('GT/test2/times.csv')
+times_df.to_csv(papka + 'times.csv')

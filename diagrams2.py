@@ -10,7 +10,7 @@ from rectools import Columns
 from scipy import stats
 import re
 
-papka = 'GT/test2/'
+papka = 'GT/test3/'
 papka_ml = 'GT/test_ml/'
 medianprops = {
         'color': 'blue',  # Цвет линии
@@ -675,12 +675,12 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'size':[10, 15, 20, 25, 30],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
-params_grid = {'rule':['SNTV'],
-               'dist_method':['jaccar', 'cosine', 'pearson', 'spearman'],
+params_grid = {'rule':['STV_star', 'SNTV'],
+               'dist_method':['jaccar', 'cosine', 'pearson', 'spearman', 'kendall'],
                'degrees':[7],
                'size':[10],
-               'weighted':[False],
-               'series_rate':[0]}
+               'weighted':[False, True],
+               'series_rate':[0, 1, 2, 3]}
 
 
 user_blacklist = set()
@@ -690,9 +690,9 @@ user_blacklist = set()
 #top_draw(params_grid, top_k = 5)
 #top_draw_ml(params_grid, top_k = 5)
 #metrics_draw_ml(params_grid)
-#for i in range(2):
-#    metrics_draw(i, params_grid)
-metrics_draw(1, params_grid)
+for i in range(4, 6):
+    metrics_draw(i, params_grid)
+#metrics_draw(1, params_grid)
 
 
 

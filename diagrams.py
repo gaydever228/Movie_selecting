@@ -20,7 +20,7 @@ meanprops = {
     'linewidth': 2,        # Толщина линии
     'linestyle': '--'       # Стиль линии (пунктир)
 }
-papka = 'my_films/test2/'
+papka = 'my_films/test3/'
 papka_ml = 'my_films/test_ML/'
 
 def chi_square_test(sample1, sample2):
@@ -87,6 +87,8 @@ def mini_comparison(sample1, sample2, metric = 'prec', alpha=0.05, alt = None):
     # # Тест на нормальность
     # _, p_norm1 = stats.shapiro(sample1)
     # _, p_norm2 = stats.shapiro(sample2)
+    if np.all((np.array(sample1) - np.array(sample2)) == 0):
+        return 1, '(выборки равны)'
     if len(sample1) < 20:
         normal_dist = False
     else:
@@ -372,21 +374,18 @@ def metrics_draw_small(param_id, inner_param_grid):
                         v = df.at[num, col]
                         #print(v)
                         dic[key][p].append(v)
-
-        name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
-        title = 'Значение ' + key + ' в зависимости от ' + title_part
-        box_plot_metrics_draw(dic[key], labs, title, name)
         p_dic = {}
         test_name_dic = {}
         for i in range(1, len(ps)):
             (p_dic[str(labs[0]) + ' ~ ' + str(labs[i])],
              test_name_dic[str(labs[0]) + ' ~ ' + str(labs[i])]) = (
                 mini_comparison(dic[key][ps[0]], dic[key][ps[i]], key))
-            dic[key][ps[i]] = np.array(dic[key][ps[i]]) - np.array(dic[key][ps[0]])
-        dic[key].pop(ps[0], None)
-        name = papka + dic_params[param_id] + '_plots/diff/' + key + '-no ' + dic_params[param_id] + '=' + str(ps[0])
-        title = key + ': Сравнение' + ' с ' + str(labs[0])
-        box_plot_metrics_draw(dic[key], labs[1:], title, name, str(labs[0]), p_dic, test_name_dic)
+            # dic[key][ps[i]] = np.array(dic[key][ps[i]]) - np.array(dic[key][ps[0]])
+        name = papka + dic_params[param_id] + '_plots/' + key + '-' + dic_params[param_id]
+        title = 'Значение ' + key + ' в зависимости от ' + title_part
+        box_plot_metrics_draw(dic[key], labs, title, name, p_values_dict = p_dic, test_name = test_name_dic)
+        p_dic = {}
+        test_name_dic = {}
     plt.close('all')
 
 def metrics_draw(param_id, inner_param_grid):
@@ -677,10 +676,10 @@ all_params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic', 'BnB'],
                'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 params_grid = {'rule':['SNTV', 'STV_star', 'STV_basic'],
-               'dist_method':['jaccar'],
+               'dist_method':['jaccar', 'cosine', 'pearson', 'spearman', 'kendall'],
                'degrees':[7],
                'size':[10],
-               'weighted':[False, True],
+               'weighted':[True, False],
                'series_rate':[0, 1, 2, 3]}
 
 # df_dic = {}
@@ -707,11 +706,35 @@ user_blacklist = set()
 #top_draw(params_grid, top_k = 7)
 #top_draw_ml(params_grid, top_k = 10)
 #metrics_draw_ml(params_grid, alt = 'two-sided')
-metrics_draw(5, params_grid)
+#metrics_draw(4, params_grid)
 
+name = papka + 'tops/top_novelty_10_by_std.csv'
+df = pd.read_csv(name)
+weighted = ([], [], [])
+antirec = ([], [], [])
+for index, row in df.iterrows():
+    unnamed_value = row['Unnamed: 0']
+    #print(unnamed_value)
+    if 'weighted' in unnamed_value:
+        weighted[2].append(row['std'])
+        weighted[1].append(row['median'])
+        weighted[0].append(row['mean'])
+    else:
+        antirec[2].append(row['std'])
+        antirec[1].append(row['median'])
+        antirec[0].append(row['mean'])
 
+#weighted = np.array(weighted)
+#antirec = np.array(antirec)
+print('weighted std is', np.std(weighted[2]))
+print('antirec std is', np.std(antirec[2]))
 
+print('weighted median is', np.std(weighted[1]))
+print('antirec median is', np.std(antirec[1]))
 
+print('weighted mean is', np.std(weighted[0]))
+print('antirec mean is', np.std(antirec[0]))
+metrics_draw_small(1, params_grid)
 exit()
 
 
