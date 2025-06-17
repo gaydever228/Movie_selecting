@@ -1,0 +1,287 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Паразиты
+Gisaengchung, 2019",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Одержимость
+Whiplash, 2013",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",5.0,"Одержимость
+Whiplash, 2013",0.0,Чужие (1986),0.0,"Джанго освобожденный
+Django Unchained, 2012",0.0
+1,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Одержимость
+Whiplash, 2013",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Одержимость
+Whiplash, 2013",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",9.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,День радио (2008),7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Одержимость
+Whiplash, 2013",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Одержимость
+Whiplash, 2013",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",9.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Вонка (2023)
+Wonka",0.0,"Одержимость
+Whiplash, 2013",0.0
+2,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,День радио (2008),7.0,"Вне закона (1986)
+Down by Law",0.0,"21 грамм (2003)
+21 Grams",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,День радио (2008),7.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,"Начало
+Inception, 2010",9.0,"Одержимость
+Whiplash, 2013",0.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0,"Достать ножи
+Knives Out, 2019",0.0,"Американская история X (1998)
+American History X",0.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Достать ножи
+Knives Out, 2019",0.0
+3,"Терминатор (1984)
+The Terminator",7.0,"Леон
+Léon, 1994",9.0,"Терминатор (1984)
+The Terminator",7.0,"Леон
+Léon, 1994",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Вне закона (1986)
+Down by Law",0.0,"21 грамм (2003)
+21 Grams",7.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Начало
+Inception, 2010",9.0,"Терминатор (1984)
+The Terminator",7.0,"Леон
+Léon, 1994",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",0.0,День радио (2008),7.0,"Пришельцы в Америке (2001)
+Just Visiting",0.0,День радио (2008),7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Круэлла (2021)
+Cruella",0.0,"Оппенгеймер (2023)
+Oppenheimer",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Драйв (2011)
+Drive",0.0
+4,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Начало
+Inception, 2010",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Начало
+Inception, 2010",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Пришельцы в Америке (2001)
+Just Visiting",0.0,День радио (2008),7.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",9.0,"Терминатор (1984)
+The Terminator",7.0,"Леон
+Léon, 1994",9.0,День выборов (2009),10.0,О чём говорят мужчины (2010),10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Вонка (2023)
+Wonka",0.0,"21 грамм (2003)
+21 Grams",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,День радио (2008),7.0,"Американская история X (1998)
+American History X",0.0,"Достать ножи
+Knives Out, 2019",0.0,"Барби (2023)
+Barbie",0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,Майор Гром: Игра (2024),5.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0
+5,"Нечто (1982)
+The Thing",8.0,"Чужой
+Alien, 1979",8.0,"Нечто (1982)
+The Thing",8.0,"Чужой
+Alien, 1979",8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Американская история X (1998)
+American History X",0.0,"Красота по-американски (1999)
+American Beauty",8.0,"Мертвец (1995)
+Dead Man",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",6.0,"Чужой
+Alien, 1979",8.0,"Нечто (1982)
+The Thing",8.0,"Чужой
+Alien, 1979",8.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Начало
+Inception, 2010",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Американская история X (1998)
+American History X",0.0,"Красота по-американски (1999)
+American Beauty",8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Мертвец (1995)
+Dead Man",0.0,"Тайное окно (2004)
+Secret Window",8.0,"На посту!
+Au poste!, 2018",0.0,Мастер и Маргарита (2023),6.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Перелом (2007)
+Fracture",8.0,"Папа, сдохни (2018)",0.0,"Терминатор (1984)
+The Terminator",7.0
+6,День выборов (2009),10.0,О чём говорят мужчины (2010),10.0,День выборов (2009),10.0,О чём говорят мужчины (2010),10.0,"Терминатор (1984)
+The Terminator",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",6.0,"Чужой
+Alien, 1979",8.0,"Пэрл (2022)
+Pearl",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,О чём говорят мужчины (2010),10.0,"Нечто (1982)
+The Thing",8.0,"Чужой
+Alien, 1979",8.0,"Терминатор (1984)
+The Terminator",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",9.0,"Пэрл (2022)
+Pearl",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Не говори никому (2021)
+Gæsterne",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Терминатор (1984)
+The Terminator",7.0,"Фарго (1995)
+Fargo",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",5.0
+7,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,О чём говорят мужчины (2010),10.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,О чём говорят мужчины (2010),10.0,"Американская история X (1998)
+American History X",0.0,"Красота по-американски (1999)
+American Beauty",8.0,"Терминатор (1984)
+The Terminator",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",9.0,"Пришельцы в Америке (2001)
+Just Visiting",0.0,День радио (2008),7.0,День выборов (2009),10.0,О чём говорят мужчины (2010),10.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,О чём говорят мужчины (2010),10.0,"Американская история X (1998)
+American History X",0.0,"Красота по-американски (1999)
+American Beauty",8.0,"Терминатор (1984)
+The Terminator",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"21 грамм (2003)
+21 Grams",7.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"21 грамм (2003)
+21 Grams",7.0,Курьер (1986),0.0,"Терминатор (1984)
+The Terminator",7.0,"Одержимость
+Whiplash, 2013",0.0,"Субстанция (2024)
+The Substance",8.0,"Неогранённые алмазы (2019)
+Uncut Gems",0.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0
+8,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",8.0,"Драйв (2011)
+Drive",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Хранители (2009)
+Watchmen",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",8.0,"Папа, сдохни (2018)",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,"Начало
+Inception, 2010",9.0,"Вонка (2023)
+Wonka",0.0,"21 грамм (2003)
+21 Grams",7.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Чокнутый (2006)
+Delirious",0.0,"21 грамм (2003)
+21 Grams",7.0,"Папа, сдохни (2018)",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",0.0,День радио (2008),7.0,"Между нами музыка (2015)
+Song to Song",0.0,"Американская история X (1998)
+American History X",0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Только бог простит (2012)
+Only God Forgives",0.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0
+9,"Драйв (2011)
+Drive",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,Курьер (1986),0.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Вонка (2023)
+Wonka",0.0,"21 грамм (2003)
+21 Grams",7.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",5.0,"Начало
+Inception, 2010",9.0,"Драйв (2011)
+Drive",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",8.0,"Папа, сдохни (2018)",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Пэрл (2022)
+Pearl",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Вонка (2023)
+Wonka",0.0,"21 грамм (2003)
+21 Grams",7.0,"Чокнутый (2006)
+Delirious",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",5.0,,,"Круэлла (2021)
+Cruella",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0

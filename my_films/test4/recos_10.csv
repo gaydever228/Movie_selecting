@@ -1,0 +1,309 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Армагеддец (2013)
+The World's End",8.0,"Мертвец (1995)
+Dead Man",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Вне закона (1986)
+Down by Law",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Вне закона (1986)
+Down by Law",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Вне закона (1986)
+Down by Law",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Человек на Луне (2018)
+First Man",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0
+1,"Армагеддец (2013)
+The World's End",8.0,"Мертвец (1995)
+Dead Man",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",7.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Круэлла (2021)
+Cruella",6.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0
+2,"Чужой
+Alien, 1979",0.0,"Нечто (1982)
+The Thing",8.0,"Чужой
+Alien, 1979",0.0,"Нечто (1982)
+The Thing",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Вне закона (1986)
+Down by Law",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Чужой
+Alien, 1979",0.0,"Нечто (1982)
+The Thing",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Джанго освобожденный
+Django Unchained, 2012",9.0
+3,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Не говори никому (2021)
+Gæsterne",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",9.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Чужой
+Alien, 1979",0.0,"Нечто (1982)
+The Thing",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Не говори никому (2021)
+Gæsterne",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Драйв (2011)
+Drive",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0
+4,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Не говори никому (2021)
+Gæsterne",6.0,"Мстители: Финал (2019)
+Avengers: Endgame",7.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Молчание ягнят
+The Silence of the Lambs, 1990",9.0,"Только бог простит (2012)
+Only God Forgives",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",7.0
+5,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",8.0,"На посту!
+Au poste!, 2018",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Чужой
+Alien, 1979",0.0,Курьер (1986),9.0,"Чужой
+Alien, 1979",0.0
+6,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",9.0,"Армагеддец (2013)
+The World's End",8.0,"Мертвец (1995)
+Dead Man",10.0,"Драйв (2011)
+Drive",8.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Чужой
+Alien, 1979",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Чужой
+Alien, 1979",0.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,Наша Russia: Яйца судьбы (2010),0.0
+7,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Начало
+Inception, 2010",8.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",9.0,"Начало
+Inception, 2010",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Драйв (2011)
+Drive",8.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",0.0,"Вне закона (1986)
+Down by Law",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",10.0,"Драйв (2011)
+Drive",8.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Терминатор (1984)
+The Terminator",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Останься (2005)
+Stay",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",0.0,"Достать ножи
+Knives Out, 2019",8.0
+8,День радио (2008),0.0,"Мимино
+1977",8.0,День радио (2008),0.0,"Мимино
+1977",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Тайное окно (2004)
+Secret Window",0.0,"На посту!
+Au poste!, 2018",10.0,"Армагеддец (2013)
+The World's End",8.0,"Мертвец (1995)
+Dead Man",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",9.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",9.0,"Пэрл (2022)
+Pearl",0.0,"Мертвец (1995)
+Dead Man",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Достать ножи
+Knives Out, 2019",8.0,"Достать ножи
+Knives Out, 2019",8.0,"
+Небриллиантовая рука (2024)",0.0,"Пришельцы в Америке (2001)
+Just Visiting",0.0,"Драйв (2011)
+Drive",8.0
+9,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Терминал (2004)
+The Terminal",9.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Терминал (2004)
+The Terminal",9.0,"Драйв (2011)
+Drive",8.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Пэрл (2022)
+Pearl",0.0,"Мертвец (1995)
+Dead Man",10.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",8.0,"Здесь курят (2005)
+Thank You for Smoking",9.0,День радио (2003),0.0,"Мимино
+1977",8.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",9.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",9.0,"Пчеловод (2024)
+The Beekeeper",0.0,"На посту!
+Au poste!, 2018",10.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Фанатик (2001)
+The Believer",9.0,"Драйв (2011)
+Drive",8.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Драйв (2011)
+Drive",8.0,"Терминатор (1984)
+The Terminator",0.0

@@ -1,0 +1,299 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,Курьер (1986),0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Один дома
+Home Alone, 1990",5.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Один дома
+Home Alone, 1990",5.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Интерстеллар
+Interstellar, 2014",0.0
+1,"Один дома
+Home Alone, 1990",5.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Один дома
+Home Alone, 1990",5.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Один дома
+Home Alone, 1990",5.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",0.0,"1+1
+Intouchables, 2011",0.0
+2,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"1+1
+Intouchables, 2011",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"1+1
+Intouchables, 2011",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,Курьер (1986),0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Красота по-американски (1999)
+American Beauty",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"1+1
+Intouchables, 2011",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"1+1
+Intouchables, 2011",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",10.0,"1+1
+Intouchables, 2011",0.0,"1+1
+Intouchables, 2011",0.0,"1+1
+Intouchables, 2011",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"На посту!
+Au poste!, 2018",0.0,"Один дома
+Home Alone, 1990",5.0
+3,"1+1
+Intouchables, 2011",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"1+1
+Intouchables, 2011",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"1+1
+Intouchables, 2011",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Аватар
+Avatar, 2009",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Один дома
+Home Alone, 1990",5.0,Майор Гром: Игра (2024),0.0,"Назад в будущее
+Back to the Future, 1985",0.0
+4,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Начало
+Inception, 2010",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Аватар
+Avatar, 2009",0.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0
+5,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,О чём ещё говорят мужчины (2011),0.0,"Остров проклятых
+Shutter Island, 2009",10.0,О чём ещё говорят мужчины (2011),0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Начало
+Inception, 2010",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"1+1
+Intouchables, 2011",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,О чём ещё говорят мужчины (2011),0.0,"Остров проклятых
+Shutter Island, 2009",10.0,О чём ещё говорят мужчины (2011),0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Начало
+Inception, 2010",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",0.0,"Аватар
+Avatar, 2009",0.0
+6,"Красота по-американски (1999)
+American Beauty",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Начало
+Inception, 2010",0.0,"Максин XXX (2024)
+MaXXXine",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+7,"Терминал (2004)
+The Terminal",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Терминал (2004)
+The Terminal",0.0,"Тайное окно (2004)
+Secret Window",8.0,Курьер (1986),0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,Курьер (1986),0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Пэрл (2022)
+Pearl",0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,Курьер (1986),0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Пятый элемент
+The Fifth Element, 1997",9.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Один дома
+Home Alone, 1990",5.0,"Один дома
+Home Alone, 1990",5.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Человек на Луне (2018)
+First Man",0.0,"Начало
+Inception, 2010",0.0
+8,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Зеленая миля
+The Green Mile, 1999",10.0,"Пэрл (2022)
+Pearl",0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Круэлла (2021)
+Cruella",9.0,Курьер (1986),0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Субстанция (2024)
+The Substance",10.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Субстанция (2024)
+The Substance",10.0,"Шоу Трумана
+The Truman Show, 1998",10.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Начало
+Inception, 2010",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Конклав (2024)
+Conclave",0.0,"Шоу Трумана
+The Truman Show, 1998",10.0
+9,"Пэрл (2022)
+Pearl",0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Пэрл (2022)
+Pearl",0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Субстанция (2024)
+The Substance",10.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Субстанция (2024)
+The Substance",10.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Круэлла (2021)
+Cruella",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Тайное окно (2004)
+Secret Window",8.0,Курьер (1986),0.0,"Пункт назначения (2000)
+Final Destination",9.0,Курьер (1986),0.0,"Пункт назначения (2000)
+Final Destination",9.0,"Аватар
+Avatar, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Грязь (2013)
+Filth",0.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Леон
+Léon, 1994",0.0

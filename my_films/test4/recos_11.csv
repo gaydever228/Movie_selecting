@@ -1,0 +1,315 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Пятый элемент
+The Fifth Element, 1997",0.0,"Семь
+Se7en, 1995",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0
+1,"Паразиты
+Gisaengchung, 2019",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Паразиты
+Gisaengchung, 2019",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Паразиты
+Gisaengchung, 2019",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Паразиты
+Gisaengchung, 2019",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Пункт назначения (2000)
+Final Destination",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Джокер (2019)
+Joker",6.0,"Джокер (2019)
+Joker",6.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Титаник (1997)
+Titanic",0.0
+2,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Начало
+Inception, 2010",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Титаник (1997)
+Titanic",0.0,День радио (2003),0.0,"Назад в будущее
+Back to the Future, 1985",0.0
+3,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Семь
+Se7en, 1995",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Пятый элемент
+The Fifth Element, 1997",0.0,"Семь
+Se7en, 1995",7.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Семь
+Se7en, 1995",7.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Семь
+Se7en, 1995",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Пятый элемент
+The Fifth Element, 1997",0.0,"Семь
+Se7en, 1995",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Титаник (1997)
+Titanic",0.0,"Титаник (1997)
+Titanic",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",0.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Джокер (2019)
+Joker",6.0
+4,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Семь
+Se7en, 1995",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",7.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",7.0,"Пункт назначения (2000)
+Final Destination",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Семь
+Se7en, 1995",7.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",7.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Пятый элемент
+The Fifth Element, 1997",0.0,"Семь
+Se7en, 1995",7.0,"Пункт назначения (2000)
+Final Destination",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Аватар
+Avatar, 2009",0.0,"Люди в чёрном
+Men in Black, 1997",0.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0,"Головоломка (2015)
+Inside Out",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0
+5,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Семь
+Se7en, 1995",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Аватар
+Avatar, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Аватар
+Avatar, 2009",0.0
+6,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",7.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Пункт назначения (2000)
+Final Destination",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Семь
+Se7en, 1995",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",0.0,"Люди в чёрном
+Men in Black, 1997",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",0.0
+7,"Мачо и ботан (2012)
+21 Jump Street",0.0,"Один дома
+Home Alone, 1990",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Мачо и ботан (2012)
+21 Jump Street",0.0,"Один дома
+Home Alone, 1990",7.0,"Мачо и ботан (2012)
+21 Jump Street",0.0,"Один дома
+Home Alone, 1990",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Джокер (2019)
+Joker",6.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+8,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Мачо и ботан (2012)
+21 Jump Street",0.0,"Один дома
+Home Alone, 1990",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Семь
+Se7en, 1995",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",0.0,"Семь
+Se7en, 1995",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",0.0,"Семь
+Se7en, 1995",7.0,"Аватар
+Avatar, 2009",0.0,"Интерстеллар
+Interstellar, 2014",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",0.0,"Чужой
+Alien, 1979",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Начало
+Inception, 2010",0.0
+9,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",0.0,"Семь
+Se7en, 1995",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",0.0,"Семь
+Se7en, 1995",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Один дома
+Home Alone, 1990",7.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",7.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Семь
+Se7en, 1995",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Леон
+Léon, 1994",0.0,"Леон
+Léon, 1994",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Леон
+Léon, 1994",0.0

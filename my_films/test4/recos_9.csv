@@ -1,0 +1,309 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",6.0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",6.0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Один дома
+Home Alone, 1990",6.0,"Паразиты
+Gisaengchung, 2019",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Один дома
+Home Alone, 1990",6.0
+1,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Дилер (1996)
+Pusher",8.0,"Паразиты
+Gisaengchung, 2019",9.0,"Остров проклятых
+Shutter Island, 2009",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Паразиты
+Gisaengchung, 2019",9.0,"Остров проклятых
+Shutter Island, 2009",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Паразиты
+Gisaengchung, 2019",9.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Титаник (1997)
+Titanic",0.0,"Молчание ягнят
+The Silence of the Lambs, 1990",0.0,"Только бог простит (2012)
+Only God Forgives",0.0,"Титаник (1997)
+Titanic",0.0
+2,"Нечто (1982)
+The Thing",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Интерстеллар
+Interstellar, 2014",5.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",7.0,"Нечто (1982)
+The Thing",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Дилер (1996)
+Pusher",8.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Интерстеллар
+Interstellar, 2014",5.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Один дома
+Home Alone, 1990",6.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Титаник (1997)
+Titanic",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",0.0,"Люди в чёрном
+Men in Black, 1997",5.0
+3,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Дилер (1996)
+Pusher",8.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",5.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Паразиты
+Gisaengchung, 2019",9.0,"Остров проклятых
+Shutter Island, 2009",5.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",7.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",5.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Паразиты
+Gisaengchung, 2019",9.0,"Остров проклятых
+Shutter Island, 2009",5.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Фарго (1995)
+Fargo",7.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0
+4,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Интерстеллар
+Interstellar, 2014",5.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",8.0,"Вне закона (1986)
+Down by Law",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Нечто (1982)
+The Thing",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Интерстеллар
+Interstellar, 2014",5.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",7.0,"Один дома
+Home Alone, 1990",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Каскадёры (2024)
+The Fall Guy",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0
+5,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",5.0,"Нечто (1982)
+The Thing",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Останься (2005)
+Stay",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Вне закона (1986)
+Down by Law",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",8.0,"Психо (1960)
+Psycho",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Психо (1960)
+Psycho",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Останься (2005)
+Stay",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Паразиты
+Gisaengchung, 2019",9.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Билли Мэдисон
+Billy Madison, 1995",0.0,"Паразиты
+Gisaengchung, 2019",9.0
+6,"Психо (1960)
+Psycho",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Психо (1960)
+Psycho",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"Останься (2005)
+Stay",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Чужой
+Alien, 1979",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Чужой
+Alien, 1979",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Интерстеллар
+Interstellar, 2014",5.0,"Останься (2005)
+Stay",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Титаник (1997)
+Titanic",0.0,"Фанатик (2001)
+The Believer",0.0,"Останься (2005)
+Stay",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"21 грамм (2003)
+21 Grams",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0
+7,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Большой куш
+Snatch, 2000",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Интерстеллар
+Interstellar, 2014",5.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",5.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Славные парни (2016)
+The Nice Guys",7.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",8.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Останься (2005)
+Stay",0.0,Наша Russia: Яйца судьбы (2010),0.0,"Люди в чёрном
+Men in Black, 1997",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,Наша Russia: Яйца судьбы (2010),0.0
+8,"Нечто (2011)
+The Thing",0.0,"Отступники
+The Departed, 2006",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Интерстеллар
+Interstellar, 2014",5.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Не говори никому (2021)
+Gæsterne",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Субстанция (2024)
+The Substance",0.0,"Головоломка (2015)
+Inside Out",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",5.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Интерстеллар
+Interstellar, 2014",5.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Чужой
+Alien, 1979",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Чужой
+Alien, 1979",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Титаник (1997)
+Titanic",0.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0
+9,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",6.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",6.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",8.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",8.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",8.0,"Субстанция (2024)
+The Substance",0.0,"Головоломка (2015)
+Inside Out",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Останься (2005)
+Stay",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Ворон (2024)
+The Crow",0.0,"Типа крутые легавые (2007)
+Hot Fuzz",8.0,"Вне закона (1986)
+Down by Law",0.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",1.0,"Терминатор (1984)
+The Terminator",6.0,"Хранители (2009)
+Watchmen",6.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0

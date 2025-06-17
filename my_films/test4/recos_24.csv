@@ -1,0 +1,303 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Вне закона (1986)
+Down by Law",0.0,"Мертвец (1995)
+Dead Man",9.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Крик (1996)
+Scream",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,X (2022),9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Железный человек (2008)
+Iron Man",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Отступники
+The Departed, 2006",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0
+1,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Терминатор (1984)
+The Terminator",8.0,"Тайное окно (2004)
+Secret Window",0.0,"Мертвец (1995)
+Dead Man",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,День радио (2003),0.0,"Зеленая миля
+The Green Mile, 1999",0.0
+2,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Вне закона (1986)
+Down by Law",0.0,"Мертвец (1995)
+Dead Man",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Здесь курят (2005)
+Thank You for Smoking",0.0,"Железный человек (2008)
+Iron Man",7.0
+3,"Игры разума
+A Beautiful Mind, 2001",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Крик (1996)
+Scream",9.0,"Нечто (2011)
+The Thing",0.0,"Чужой
+Alien, 1979",10.0,"Нечто (1982)
+The Thing",10.0,"Чужой
+Alien, 1979",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Паразиты
+Gisaengchung, 2019",0.0,"Остров проклятых
+Shutter Island, 2009",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Отступники
+The Departed, 2006",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,Гитлер капут! (2008),0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0
+4,"Нечто (1982)
+The Thing",10.0,"Чужой
+Alien, 1979",10.0,"Нечто (1982)
+The Thing",10.0,"Чужой
+Alien, 1979",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Нечто (2011)
+The Thing",0.0,"Чужой
+Alien, 1979",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Терминатор (1984)
+The Terminator",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Нечто (1982)
+The Thing",10.0,"Чужой
+Alien, 1979",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,Курьер (1986),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Крик (1996)
+Scream",9.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",0.0,"Крик (1996)
+Scream",9.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0
+5,"Паразиты
+Gisaengchung, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Пункт назначения (2000)
+Final Destination",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",9.0,Майор Гром: Игра (2024),0.0,"Нечто (2011)
+The Thing",0.0,"Паразиты
+Gisaengchung, 2019",0.0
+6,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Паразиты
+Gisaengchung, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,Курьер (1986),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,Курьер (1986),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Не говори никому (2021)
+Gæsterne",0.0,"Мертвец (1995)
+Dead Man",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,X (2022),9.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",9.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Терминал (2004)
+The Terminal",0.0,"Начало
+Inception, 2010",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Тайное окно (2004)
+Secret Window",0.0,"Мертвец (1995)
+Dead Man",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Терминатор (1984)
+The Terminator",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",8.0,Чужие (1986),8.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",0.0,"Ла-Ла Ленд
+La La Land, 2016",0.0
+7,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Дилер (1996)
+Pusher",0.0,"Мертвец (1995)
+Dead Man",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Начало
+Inception, 2010",8.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Терминатор (1984)
+The Terminator",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,Курьер (1986),0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Дилер (1996)
+Pusher",0.0,"Мертвец (1995)
+Dead Man",9.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Вонка (2023)
+Wonka",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0
+8,"Дилер (1996)
+Pusher",0.0,"Мертвец (1995)
+Dead Man",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Терминал (2004)
+The Terminal",0.0,"Начало
+Inception, 2010",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,X (2022),9.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Дилер (1996)
+Pusher",0.0,"Мертвец (1995)
+Dead Man",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",8.0,"Драйв (2011)
+Drive",10.0,"Терминал (2004)
+The Terminal",0.0,"Начало
+Inception, 2010",8.0,"Анора (2024)
+Anora",0.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",8.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Хранители (2009)
+Watchmen",6.0,"Не говори никому (2021)
+Gæsterne",0.0,"Головоломка (2015)
+Inside Out",0.0
+9,Курьер (1986),0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",9.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,Чужие (1986),8.0,"Американская история X (1998)
+American History X",10.0,"Терминал (2004)
+The Terminal",0.0,"Начало
+Inception, 2010",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Американская история X (1998)
+American History X",10.0,"500 дней лета (2009)
+(500) Days of Summer",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",9.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,Курьер (1986),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",8.0,"Драйв (2011)
+Drive",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,X (2022),9.0,"Звездный десант (1997)
+Starship Troopers",10.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,Курьер (1986),0.0,"Железный человек (2008)
+Iron Man",7.0,"Головоломка (2015)
+Inside Out",0.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Одержимость
+Whiplash, 2013",0.0

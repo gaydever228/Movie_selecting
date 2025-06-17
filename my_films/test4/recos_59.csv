@@ -1,0 +1,303 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Интерстеллар
+Interstellar, 2014",10.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Интерстеллар
+Interstellar, 2014",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Интерстеллар
+Interstellar, 2014",10.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Интерстеллар
+Interstellar, 2014",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Трасса 60
+Interstate 60, 2001",0.0,"Чокнутый (2006)
+Delirious",0.0,"Назад в будущее
+Back to the Future, 1985",7.0
+1,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",10.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",10.0,"Отступники
+The Departed, 2006",0.0,"Семь
+Se7en, 1995",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Врожденный порок (2014)
+Inherent Vice",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0
+2,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",8.0,"Мимино
+1977",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",8.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Американская история X (1998)
+American History X",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Железный человек (2008)
+Iron Man",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Образцовый самец (2001)
+Zoolander",0.0,"Железный человек (2008)
+Iron Man",0.0
+3,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Американская история X (1998)
+American History X",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Хранители (2009)
+Watchmen",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Железный человек (2008)
+Iron Man",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",7.0,День радио (2008),0.0,"Невезучие (2003)
+Tais-toi!",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0
+4,"Мертвец (1995)
+Dead Man",0.0,О чём говорят мужчины (2010),8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Трасса 60
+Interstate 60, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Трасса 60
+Interstate 60, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Американская история X (1998)
+American History X",9.0,"Дилер (1996)
+Pusher",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",9.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",9.0,"Трасса 60
+Interstate 60, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Трасса 60
+Interstate 60, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Вне закона (1986)
+Down by Law",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Американская история X (1998)
+American History X",9.0,"Отступники
+The Departed, 2006",0.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Фарго (1995)
+Fargo",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0
+5,"Назад в будущее
+Back to the Future, 1985",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Вне закона (1986)
+Down by Law",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Клик: С пультом по жизни
+Click, 2006",6.0,"Терминал (2004)
+The Terminal",8.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",7.0,"Начало
+Inception, 2010",10.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Мимино
+1977",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Славные парни (2016)
+The Nice Guys",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Трасса 60
+Interstate 60, 2001",0.0,День радио (2008),0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Такие разные близнецы (2011)
+Jack and Jill",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",7.0
+6,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Вне закона (1986)
+Down by Law",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Одержимость
+Whiplash, 2013",10.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",7.0,"Начало
+Inception, 2010",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Хранители (2009)
+Watchmen",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Мимино
+1977",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",9.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,Наша Russia: Яйца судьбы (2010),0.0
+7,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",7.0,"Начало
+Inception, 2010",10.0,Курьер (1986),0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,Курьер (1986),0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Славные парни (2016)
+The Nice Guys",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Хранители (2009)
+Watchmen",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Одержимость
+Whiplash, 2013",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,Курьер (1986),0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Славные парни (2016)
+The Nice Guys",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Вне закона (1986)
+Down by Law",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Образцовый самец (2001)
+Zoolander",0.0,"Фарго (1995)
+Fargo",0.0,"Головоломка (2015)
+Inside Out",0.0
+8,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",7.0,"Начало
+Inception, 2010",10.0,"Мертвец (1995)
+Dead Man",0.0,О чём говорят мужчины (2010),8.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Клик: С пультом по жизни
+Click, 2006",6.0,"Терминал (2004)
+The Terminal",8.0,"Мимино
+1977",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Мертвец (1995)
+Dead Man",0.0,О чём говорят мужчины (2010),8.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Достать ножи
+Knives Out, 2019",0.0
+9,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Одержимость
+Whiplash, 2013",10.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",9.0,"Славные парни (2016)
+The Nice Guys",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Головоломка 2 (2024)
+Inside Out 2",0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,Курьер (1986),0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",0.0,"Американская история X (1998)
+American History X",9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,Наша Russia: Яйца судьбы (2010),0.0,"Головоломка (2015)
+Inside Out",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Головоломка (2015)
+Inside Out",0.0,"Драйв (2011)
+Drive",7.0

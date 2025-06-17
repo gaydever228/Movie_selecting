@@ -1,0 +1,312 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,Курьер (1986),8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Отступники
+The Departed, 2006",9.0,"Большой куш
+Snatch, 2000",7.0,"Отступники
+The Departed, 2006",9.0,"Большой куш
+Snatch, 2000",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,День радио (2003),8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,День радио (2003),8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,Курьер (1986),8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,Курьер (1986),8.0,"Отступники
+The Departed, 2006",9.0,"Большой куш
+Snatch, 2000",7.0,"Отступники
+The Departed, 2006",9.0,"Большой куш
+Snatch, 2000",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,День радио (2003),8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,День радио (2003),8.0,"Отступники
+The Departed, 2006",9.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Аватар
+Avatar, 2009",3.0,"Отступники
+The Departed, 2006",9.0,"Серый человек (2022)
+The Gray Man",5.0,"Аватар
+Avatar, 2009",3.0
+1,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,Курьер (1986),8.0,"Аватар
+Avatar, 2009",3.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Паразиты
+Gisaengchung, 2019",9.0,"Отступники
+The Departed, 2006",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Отступники
+The Departed, 2006",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Аватар
+Avatar, 2009",3.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Аватар
+Avatar, 2009",3.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Отступники
+The Departed, 2006",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Страсти Христовы
+The Passion of the Christ, 2004",8.0,"Трасса 60
+Interstate 60, 2001",5.0,"Аватар
+Avatar, 2009",3.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Конклав (2024)
+Conclave",0.0,"Ла-Ла Ленд
+La La Land, 2016",10.0
+2,"Отступники
+The Departed, 2006",9.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Отступники
+The Departed, 2006",9.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Аватар
+Avatar, 2009",3.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Страсти Христовы
+The Passion of the Christ, 2004",8.0,"21 грамм (2003)
+21 Grams",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Отступники
+The Departed, 2006",9.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Отступники
+The Departed, 2006",9.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,Курьер (1986),8.0,"21 грамм (2003)
+21 Grams",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Трасса 60
+Interstate 60, 2001",5.0,"Аватар
+Avatar, 2009",3.0,"Головоломка (2015)
+Inside Out",9.0
+3,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",9.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Большой куш
+Snatch, 2000",7.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"21 грамм (2003)
+21 Grams",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",9.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",9.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Большой куш
+Snatch, 2000",7.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Паразиты
+Gisaengchung, 2019",9.0,"Залечь на дно в Брюгге (2007)
+In Bruges",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Отступники
+The Departed, 2006",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Головоломка (2015)
+Inside Out",9.0,"Головоломка (2015)
+Inside Out",9.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",0.0,"Драйв (2011)
+Drive",6.0
+4,"Смертельное оружие (1987)
+Lethal Weapon",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Паразиты
+Gisaengchung, 2019",9.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Большой куш
+Snatch, 2000",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,Курьер (1986),8.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Паразиты
+Gisaengchung, 2019",9.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Большой куш
+Snatch, 2000",7.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Страсти Христовы
+The Passion of the Christ, 2004",8.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,Курьер (1986),8.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Трасса 60
+Interstate 60, 2001",5.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Фарго (1995)
+Fargo",8.0,"Оппенгеймер (2023)
+Oppenheimer",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0
+5,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Дилер (1996)
+Pusher",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Терминатор (1984)
+The Terminator",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Одержимость
+Whiplash, 2013",9.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,Курьер (1986),8.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Страсти Христовы
+The Passion of the Christ, 2004",8.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Дилер (1996)
+Pusher",8.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Одержимость
+Whiplash, 2013",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Одержимость
+Whiplash, 2013",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Залечь на дно в Брюгге (2007)
+In Bruges",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Полу-Нельсон (2006)
+Half Nelson",5.0,О чём говорят мужчины (2010),5.0,"Мементо (2000)
+Memento",8.0,"Человек на Луне (2018)
+First Man",7.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0
+6,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Дилер (1996)
+Pusher",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Одержимость
+Whiplash, 2013",9.0,"Человек на Луне (2018)
+First Man",7.0,"Не говори никому (2021)
+Gæsterne",6.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Большой куш
+Snatch, 2000",7.0,"Смертельное оружие (1987)
+Lethal Weapon",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Дилер (1996)
+Pusher",8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Терминатор (1984)
+The Terminator",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Терминатор (1984)
+The Terminator",7.0,"Фарго (1995)
+Fargo",8.0,"Американская история X (1998)
+American History X",8.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Большой куш
+Snatch, 2000",7.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Каскадёры (2024)
+The Fall Guy",0.0,"Драйв (2011)
+Drive",6.0,"Крик (1996)
+Scream",5.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0
+7,"Аватар
+Avatar, 2009",3.0,"Начало
+Inception, 2010",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Терминатор (1984)
+The Terminator",7.0,День выборов (2009),5.0,"Мимино
+1977",7.0,"Залечь на дно в Брюгге (2007)
+In Bruges",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Игра на понижение (2015)
+The Big Short",7.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Человек на Луне (2018)
+First Man",7.0,"Не говори никому (2021)
+Gæsterne",6.0,"Человек на Луне (2018)
+First Man",7.0,"Не говори никому (2021)
+Gæsterne",6.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",0.0,"Барби (2023)
+Barbie",0.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Трасса 60
+Interstate 60, 2001",5.0
+8,"Игра на понижение (2015)
+The Big Short",7.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Пэрл (2022)
+Pearl",6.0,"Полу-Нельсон (2006)
+Half Nelson",5.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Полу-Нельсон (2006)
+Half Nelson",5.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",0.0,"Страсти Христовы
+The Passion of the Christ, 2004",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Одержимость
+Whiplash, 2013",9.0,"Полу-Нельсон (2006)
+Half Nelson",5.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Залечь на дно в Брюгге (2007)
+In Bruges",7.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Пчеловод (2024)
+The Beekeeper",0.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",8.0,"Каскадёры (2024)
+The Fall Guy",0.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Аватар
+Avatar, 2009",3.0,"Фарго (1995)
+Fargo",8.0,"Круэлла (2021)
+Cruella",5.0,"Пункт назначения (2000)
+Final Destination",5.0,"Драйв (2011)
+Drive",6.0,"Барби (2023)
+Barbie",0.0
+9,"Не говори никому (2024)
+Speak No Evil",0.0,"Пэрл (2022)
+Pearl",6.0,"Игра на понижение (2015)
+The Big Short",7.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Человек на Луне (2018)
+First Man",7.0,"Не говори никому (2021)
+Gæsterne",6.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Залечь на дно в Брюгге (2007)
+In Bruges",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Ла-Ла Ленд
+La La Land, 2016",10.0,"Одержимость
+Whiplash, 2013",9.0,"Игра на понижение (2015)
+The Big Short",7.0,"Мартовские иды (2011)
+The Ides of March",8.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Полу-Нельсон (2006)
+Half Nelson",5.0,"Мартовские иды (2011)
+The Ides of March",8.0,"21 грамм (2003)
+21 Grams",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",7.0,"Трасса 60
+Interstate 60, 2001",5.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Человек на Луне (2018)
+First Man",7.0,"Фанатик (2001)
+The Believer",5.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Не говори никому (2024)
+Speak No Evil",0.0,X (2022),5.0,"Отступники
+The Departed, 2006",9.0

@@ -1,0 +1,327 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Начало
+Inception, 2010",0.0,"Начало
+Inception, 2010",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Один дома
+Home Alone, 1990",7.0
+1,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Титаник (1997)
+Titanic",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Отступники
+The Departed, 2006",0.0,"Титаник (1997)
+Titanic",0.0
+2,"Психо (1960)
+Psycho",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,О чём говорят мужчины (2010),0.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",7.0,О чём говорят мужчины (2010),0.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",7.0,"Психо (1960)
+Psycho",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Психо (1960)
+Psycho",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Не говори никому (2021)
+Gæsterne",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Железный человек (2008)
+Iron Man",0.0,"Один дома
+Home Alone, 1990",7.0,"Дневник памяти (2004)
+The Notebook",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0
+3,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Психо (1960)
+Psycho",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",7.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",7.0,О чём говорят мужчины (2010),0.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",7.0,"Человек на Луне (2018)
+First Man",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Один дома
+Home Alone, 1990",7.0,"Один дома
+Home Alone, 1990",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",6.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+4,"Один дома
+Home Alone, 1990",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Леон
+Léon, 1994",7.0,"Человек на Луне (2018)
+First Man",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"На посту!
+Au poste!, 2018",0.0,"Оленья кожа (2019)
+Le daim",7.0,"На посту!
+Au poste!, 2018",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Человек на Луне (2018)
+First Man",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Паразиты
+Gisaengchung, 2019",7.0,О чём говорят мужчины (2010),0.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Титаник (1997)
+Titanic",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Начало
+Inception, 2010",0.0
+5,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Человек на Луне (2018)
+First Man",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Паразиты
+Gisaengchung, 2019",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",9.0,"Не говори никому (2021)
+Gæsterne",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Человек на Луне (2018)
+First Man",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Максин XXX (2024)
+MaXXXine",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0
+6,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Паразиты
+Gisaengchung, 2019",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Не говори никому (2021)
+Gæsterne",0.0,"Оленья кожа (2019)
+Le daim",7.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Грязь (2013)
+Filth",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Между нами музыка (2015)
+Song to Song",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Вонка (2023)
+Wonka",0.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Терминал (2004)
+The Terminal",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0
+7,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Человек на Луне (2018)
+First Man",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Человек на Луне (2018)
+First Man",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Титаник (1997)
+Titanic",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Остров проклятых
+Shutter Island, 2009",0.0
+8,"Типа крутые легавые (2007)
+Hot Fuzz",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Один дома
+Home Alone, 1990",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Леон
+Léon, 1994",7.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Между нами музыка (2015)
+Song to Song",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Леон
+Léon, 1994",7.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Начало
+Inception, 2010",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Американская история X (1998)
+American History X",0.0,"Железный человек (2008)
+Iron Man",0.0
+9,"Между нами музыка (2015)
+Song to Song",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",0.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Человек на Луне (2018)
+First Man",0.0,"Серый человек (2022)
+The Gray Man",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Один дома
+Home Alone, 1990",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Семь
+Se7en, 1995",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Железный человек (2008)
+Iron Man",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Славные парни (2016)
+The Nice Guys",0.0,"Последний бойскаут (1991)
+The Last Boy Scout",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",5.0

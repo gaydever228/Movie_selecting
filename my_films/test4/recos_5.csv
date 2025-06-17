@@ -1,0 +1,298 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",8.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,Гидравлика (2010),0.0,"Интерстеллар
+Interstellar, 2014",0.0
+1,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Славные парни (2016)
+The Nice Guys",8.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,День радио (2003),0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Король говорит!
+The King's Speech, 2010",7.0,"Начало
+Inception, 2010",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Аватар
+Avatar, 2009",0.0,"Образцовый самец (2001)
+Zoolander",0.0,"Мимино
+1977",0.0,"Аватар
+Avatar, 2009",0.0
+2,"Остров проклятых
+Shutter Island, 2009",0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",7.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Король говорит!
+The King's Speech, 2010",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Король говорит!
+The King's Speech, 2010",7.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",6.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Здесь курят (2005)
+Thank You for Smoking",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Аватар
+Avatar, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0
+3,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",6.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Начало
+Inception, 2010",0.0,"Леон
+Léon, 1994",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",8.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",6.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Начало
+Inception, 2010",0.0,"Железный человек (2008)
+Iron Man",0.0,"Пэрл (2022)
+Pearl",0.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Начало
+Inception, 2010",0.0
+4,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Начало
+Inception, 2010",0.0,"Леон
+Léon, 1994",8.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,День радио (2003),0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Начало
+Inception, 2010",0.0,"Леон
+Léon, 1994",8.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Здесь курят (2005)
+Thank You for Smoking",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Максин XXX (2024)
+MaXXXine",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Начало
+Inception, 2010",0.0,"Аватар
+Avatar, 2009",0.0,"Субстанция (2024)
+The Substance",0.0,"Остров проклятых
+Shutter Island, 2009",0.0
+5,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,День радио (2003),0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Мертвец (1995)
+Dead Man",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Начало
+Inception, 2010",0.0,"Леон
+Léon, 1994",8.0,"Мертвец (1995)
+Dead Man",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,День радио (2003),0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Славные парни (2016)
+The Nice Guys",8.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Зеленая миля
+The Green Mile, 1999",0.0
+6,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",6.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Мертвец (1995)
+Dead Man",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Здесь курят (2005)
+Thank You for Smoking",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",8.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Психо (1960)
+Psycho",9.0,"Славные парни (2016)
+The Nice Guys",8.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Железный человек (2008)
+Iron Man",0.0
+7,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Психо (1960)
+Psycho",9.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Максин XXX (2024)
+MaXXXine",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",7.0,"Отступники
+The Departed, 2006",8.0,"Дилер (1996)
+Pusher",0.0,Курьер (1986),9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",9.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Максин XXX (2024)
+MaXXXine",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,Курьер (1986),9.0,"Одержимость
+Whiplash, 2013",0.0,"Одержимость
+Whiplash, 2013",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",6.0,"Нечто (1982)
+The Thing",9.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0
+8,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Психо (1960)
+Psycho",9.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,Курьер (1986),9.0,"Максин XXX (2024)
+MaXXXine",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",8.0,"Дилер (1996)
+Pusher",0.0,Курьер (1986),9.0,День радио (2003),0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,Курьер (1986),9.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,Курьер (1986),9.0,"Мертвец (1995)
+Dead Man",0.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"На посту!
+Au poste!, 2018",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Остров проклятых
+Shutter Island, 2009",0.0,"500 дней лета (2009)
+(500) Days of Summer",7.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0
+9,"Вне закона (1986)
+Down by Law",7.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",8.0,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,Курьер (1986),9.0,"Здесь курят (2005)
+Thank You for Smoking",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,Курьер (1986),9.0,"Пленницы (2013)
+Prisoners",8.0,"Зодиак (2007)
+Zodiac",8.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Психо (1960)
+Psycho",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Психо (1960)
+Psycho",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Ночь на Земле (1991)
+Night on Earth",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",9.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0

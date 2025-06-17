@@ -1,0 +1,300 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Американская история X (1998)
+American History X",10.0,Курьер (1986),9.0,"Американская история X (1998)
+American History X",10.0,Курьер (1986),9.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Американская история X (1998)
+American History X",10.0,Курьер (1986),9.0,"Американская история X (1998)
+American History X",10.0,Курьер (1986),9.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Чокнутый (2006)
+Delirious",8.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Титаник (1997)
+Titanic",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",9.0,"Такие разные близнецы (2011)
+Jack and Jill",3.0,"Титаник (1997)
+Titanic",0.0
+1,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Американская история X (1998)
+American History X",10.0,"Большой куш
+Snatch, 2000",10.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Американская история X (1998)
+American History X",10.0,"Большой куш
+Snatch, 2000",10.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Вне закона (1986)
+Down by Law",10.0,"Титаник (1997)
+Titanic",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Джокер (2019)
+Joker",0.0,"Джокер (2019)
+Joker",0.0,"
+Небриллиантовая рука (2024)",0.0,"Джокер (2019)
+Joker",0.0
+2,"Армагеддец (2013)
+The World's End",10.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",9.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Терминал (2004)
+The Terminal",10.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Терминал (2004)
+The Terminal",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Вне закона (1986)
+Down by Law",10.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Американская история X (1998)
+American History X",10.0,"Титаник (1997)
+Titanic",0.0,"Железный человек (2008)
+Iron Man",7.0,"Титаник (1997)
+Titanic",0.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",7.0,"Железный человек (2008)
+Iron Man",7.0
+3,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Терминал (2004)
+The Terminal",10.0,"Армагеддец (2013)
+The World's End",10.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",9.0,"Американская история X (1998)
+American History X",10.0,"Большой куш
+Snatch, 2000",10.0,"Чокнутый (2006)
+Delirious",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Мертвец (1995)
+Dead Man",10.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Мертвец (1995)
+Dead Man",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Терминал (2004)
+The Terminal",10.0,"Американская история X (1998)
+American History X",10.0,"Большой куш
+Snatch, 2000",10.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Американская история X (1998)
+American History X",10.0,"Фарго (1995)
+Fargo",9.0,"Джокер (2019)
+Joker",0.0,"Джокер (2019)
+Joker",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Армагеддец (2013)
+The World's End",10.0,"Чужой: Ромул (2024)
+Alien: Romulus.1",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0
+4,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Джокер (2019)
+Joker",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Вне закона (1986)
+Down by Law",10.0,"Американская история X (1998)
+American History X",10.0,"Фарго (1995)
+Fargo",9.0,"Армагеддец (2013)
+The World's End",10.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",9.0,"Армагеддец (2013)
+The World's End",10.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",8.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Большой куш
+Snatch, 2000",10.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Американская история X (1998)
+American History X",10.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",9.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,Майор Гром: Игра (2024),0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0
+5,"Мартовские иды (2011)
+The Ides of March",7.0,"Король говорит!
+The King's Speech, 2010",8.0,"Мартовские иды (2011)
+The Ides of March",7.0,"Король говорит!
+The King's Speech, 2010",8.0,"Чокнутый (2006)
+Delirious",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Джокер (2019)
+Joker",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Американская история X (1998)
+American History X",10.0,"Фарго (1995)
+Fargo",9.0,"Чокнутый (2006)
+Delirious",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Паразиты
+Gisaengchung, 2019",7.0,"Мартовские иды (2011)
+The Ides of March",7.0,"Король говорит!
+The King's Speech, 2010",8.0,"Джокер (2019)
+Joker",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Чокнутый (2006)
+Delirious",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",7.0,"Вне закона (1986)
+Down by Law",10.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Нечто (2011)
+The Thing",8.0,"Мертвые не умирают (2019)
+The Dead Don't Die",9.0,"Чужой
+Alien, 1979",0.0
+6,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Паразиты
+Gisaengchung, 2019",7.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Каскадёры (2024)
+The Fall Guy",6.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Титаник (1997)
+Titanic",0.0,"Один дома
+Home Alone, 1990",7.0,"Чокнутый (2006)
+Delirious",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Джокер (2019)
+Joker",0.0,"Бойцовский клуб
+Fight Club, 1999",8.0,"Американская история X (1998)
+American History X",10.0,"Фарго (1995)
+Fargo",9.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Чужой
+Alien, 1979",0.0,"Чокнутый (2006)
+Delirious",8.0,"Драйв (2011)
+Drive",5.0,"Чокнутый (2006)
+Delirious",8.0,Мастер и Маргарита (2023),0.0,"Драйв (2011)
+Drive",5.0
+7,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Паразиты
+Gisaengchung, 2019",7.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Чокнутый (2006)
+Delirious",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",10.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"Вне закона (1986)
+Down by Law",10.0,"Джокер (2019)
+Joker",0.0,"Достать ножи
+Knives Out, 2019",8.0,"Джокер (2019)
+Joker",0.0,"Достать ножи
+Knives Out, 2019",8.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Хранители (2009)
+Watchmen",8.0,"Такие разные близнецы (2011)
+Jack and Jill",3.0,"Мачо и ботан (2012)
+21 Jump Street",8.0,"Чужой
+Alien, 1979",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",0.0,"Драйв (2011)
+Drive",5.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",9.0
+8,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Каскадёры (2024)
+The Fall Guy",6.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,Курьер (1986),9.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",10.0,"Смертельное оружие (1987)
+Lethal Weapon",9.0,"Король говорит!
+The King's Speech, 2010",8.0,"Такие разные близнецы (2011)
+Jack and Jill",3.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",9.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"На посту!
+Au poste!, 2018",9.0,"Каскадёры (2024)
+The Fall Guy",6.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Каскадёры (2024)
+The Fall Guy",6.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Железный человек (2008)
+Iron Man",7.0,"Останься (2005)
+Stay",8.0,"Останься (2005)
+Stay",8.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0
+9,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",10.0,"Драйв (2011)
+Drive",5.0,"Форрест Гамп
+Forrest Gump, 1994",10.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",10.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"На посту!
+Au poste!, 2018",9.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",7.0,"Вне закона (1986)
+Down by Law",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Хранители (2009)
+Watchmen",8.0,День радио (2008),0.0,День радио (2003),7.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Нечто (1982)
+The Thing",10.0,"Здесь курят (2005)
+Thank You for Smoking",8.0,"На посту!
+Au poste!, 2018",9.0,"Такие разные близнецы (2011)
+Jack and Jill",3.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",9.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Однажды в Ирландии (2011)
+The Guard",7.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",7.0,"Вне закона (1986)
+Down by Law",10.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Чужой
+Alien, 1979",0.0,"Бешеные псы (1991)
+Reservoir Dogs",10.0,"Чужой
+Alien, 1979",0.0,"Анора (2024)
+Anora",0.0,"Барби (2023)
+Barbie",8.0

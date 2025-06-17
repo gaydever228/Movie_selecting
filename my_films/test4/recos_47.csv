@@ -1,0 +1,309 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Интерстеллар
+Interstellar, 2014",0.0,"Начало
+Inception, 2010",6.0,"Интерстеллар
+Interstellar, 2014",0.0,"Начало
+Inception, 2010",6.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Интерстеллар
+Interstellar, 2014",0.0,"Начало
+Inception, 2010",6.0,"Интерстеллар
+Interstellar, 2014",0.0,"Начало
+Inception, 2010",6.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"21 грамм (2003)
+21 Grams",0.0,"Интерстеллар
+Interstellar, 2014",0.0
+1,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Вне закона (1986)
+Down by Law",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Вне закона (1986)
+Down by Law",0.0,"Терминал (2004)
+The Terminal",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",7.0,"Терминатор (1984)
+The Terminator",6.0,"Вне закона (1986)
+Down by Law",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"Большой куш
+Snatch, 2000",0.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Большой куш
+Snatch, 2000",0.0,"Крик (1996)
+Scream",3.0,"Зеленая миля
+The Green Mile, 1999",0.0
+2,"Вне закона (1986)
+Down by Law",0.0,"Терминал (2004)
+The Terminal",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Большой куш
+Snatch, 2000",0.0,"Большой куш
+Snatch, 2000",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"
+Бременские музыканты (2023)",3.0,"Джанго освобожденный
+Django Unchained, 2012",0.0
+3,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",6.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Вне закона (1986)
+Down by Law",0.0,"Терминал (2004)
+The Terminal",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",9.0,"Молчание ягнят
+The Silence of the Lambs, 1990",7.0,"Король говорит!
+The King's Speech, 2010",0.0,"Ла-Ла Ленд
+La La Land, 2016",0.0
+4,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Вне закона (1986)
+Down by Law",0.0,"Терминал (2004)
+The Terminal",9.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Не говори никому (2021)
+Gæsterne",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",8.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Вне закона (1986)
+Down by Law",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"На посту!
+Au poste!, 2018",0.0,"Одержимость
+Whiplash, 2013",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",9.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",9.0,"Большой куш
+Snatch, 2000",0.0
+5,"Хранители (2009)
+Watchmen",5.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",8.0,"Отступники
+The Departed, 2006",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Отступники
+The Departed, 2006",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",6.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",6.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Мимино
+1977",0.0,День выборов (2009),6.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",6.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",7.0,"Терминатор (1984)
+The Terminator",6.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Нечто (2011)
+The Thing",0.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Чужой
+Alien, 1979",6.0
+6,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",6.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,День радио (2008),5.0,"Не говори никому (2021)
+Gæsterne",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",7.0,"Терминатор (1984)
+The Terminator",6.0,"Вне закона (1986)
+Down by Law",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",6.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Нечто (1982)
+The Thing",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",9.0,"На посту!
+Au poste!, 2018",0.0,"Мимино
+1977",0.0,"Одержимость
+Whiplash, 2013",0.0
+7,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",7.0,"Перелом (2007)
+Fracture",8.0,"Мертвец (1995)
+Dead Man",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Нечто (1982)
+The Thing",9.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,Курьер (1986),0.0,"Достать ножи
+Knives Out, 2019",9.0,Курьер (1986),0.0,"Достать ножи
+Knives Out, 2019",9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Нечто (1982)
+The Thing",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"На посту!
+Au poste!, 2018",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Вне закона (1986)
+Down by Law",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Страсти Христовы
+The Passion of the Christ, 2004",4.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Семь
+Se7en, 1995",0.0
+8,"Мертвец (1995)
+Dead Man",0.0,"Здесь курят (2005)
+Thank You for Smoking",10.0,Курьер (1986),0.0,"Достать ножи
+Knives Out, 2019",9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Нечто (1982)
+The Thing",9.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Большой куш
+Snatch, 2000",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",7.0,"Терминатор (1984)
+The Terminator",6.0,"Одержимость
+Whiplash, 2013",0.0,"Игры разума
+A Beautiful Mind, 2001",9.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",8.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",6.0,"Мимино
+1977",0.0,День выборов (2009),6.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Невезучие (2003)
+Tais-toi!",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",9.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",0.0,X (2022),0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",9.0
+9,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",7.0,"Нечто (1982)
+The Thing",9.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Пришельцы в Америке (2001)
+Just Visiting",7.0,"Мимино
+1977",0.0,День выборов (2009),6.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Типа крутые легавые (2007)
+Hot Fuzz",7.0,"Нечто (1982)
+The Thing",9.0,"Типа крутые легавые (2007)
+Hot Fuzz",7.0,"Нечто (1982)
+The Thing",9.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",5.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",9.0,"Драйв (2011)
+Drive",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Начало
+Inception, 2010",6.0,"Не говори никому (2021)
+Gæsterne",0.0,"Красота по-американски (1999)
+American Beauty",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0

@@ -1,0 +1,297 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Славные парни (2016)
+The Nice Guys",7.0,"Большой куш
+Snatch, 2000",10.0,"Славные парни (2016)
+The Nice Guys",7.0,"Большой куш
+Snatch, 2000",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Интерстеллар
+Interstellar, 2014",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Психо (1960)
+Psycho",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Интерстеллар
+Interstellar, 2014",0.0,"Зона интересов (2023)
+The Zone of Interest",0.0,"Интерстеллар
+Interstellar, 2014",0.0
+1,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,Курьер (1986),9.0,"Американская история X (1998)
+American History X",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Психо (1960)
+Psycho",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Большой куш
+Snatch, 2000",10.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Начало
+Inception, 2010",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Джокер (2019)
+Joker",7.0,"Мементо (2000)
+Memento",0.0,"Фанатик (2001)
+The Believer",0.0,"Джокер (2019)
+Joker",7.0
+2,"Славные парни (2016)
+The Nice Guys",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,Курьер (1986),9.0,"Американская история X (1998)
+American History X",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Большой куш
+Snatch, 2000",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Начало
+Inception, 2010",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",5.0,"Мартовские иды (2011)
+The Ides of March",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+3,Курьер (1986),9.0,"Американская история X (1998)
+American History X",8.0,"Славные парни (2016)
+The Nice Guys",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Психо (1960)
+Psycho",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Паразиты
+Gisaengchung, 2019",0.0,"Леон
+Léon, 1994",9.0,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Одержимость
+Whiplash, 2013",0.0,"Мертвец (1995)
+Dead Man",6.0,"Начало
+Inception, 2010",0.0
+4,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Начало
+Inception, 2010",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",9.0,"Начало
+Inception, 2010",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",9.0,"Начало
+Inception, 2010",0.0,"Американская история X (1998)
+American History X",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Начало
+Inception, 2010",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",9.0,"Начало
+Inception, 2010",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",9.0,"Звездный десант (1997)
+Starship Troopers",7.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",9.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Джокер (2019)
+Joker",7.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"500 дней лета (2009)
+(500) Days of Summer",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0
+5,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Нечто (1982)
+The Thing",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Начало
+Inception, 2010",0.0,"Американская история X (1998)
+American History X",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Славные парни (2016)
+The Nice Guys",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Мертвец (1995)
+Dead Man",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Американская история X (1998)
+American History X",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Начало
+Inception, 2010",0.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",8.0,"На посту!
+Au poste!, 2018",0.0,"Остров проклятых
+Shutter Island, 2009",0.0
+6,"Паразиты
+Gisaengchung, 2019",0.0,"Леон
+Léon, 1994",9.0,"Паразиты
+Gisaengchung, 2019",0.0,"Леон
+Léon, 1994",9.0,"Мертвец (1995)
+Dead Man",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Мертвец (1995)
+Dead Man",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",8.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Место под соснами (2012)
+The Place Beyond the Pines",8.0,"Славные парни (2016)
+The Nice Guys",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Леон
+Léon, 1994",9.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",5.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Психо (1960)
+Psycho",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Паразиты
+Gisaengchung, 2019",0.0
+7,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",8.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Психо (1960)
+Psycho",0.0,"Чужой
+Alien, 1979",8.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Максин XXX (2024)
+MaXXXine",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Отступники
+The Departed, 2006",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Останься (2005)
+Stay",0.0,Майор Гром: Игра (2024),0.0,"Последний бойскаут (1991)
+The Last Boy Scout",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0
+8,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Вне закона (1986)
+Down by Law",0.0,"Мимино
+1977",8.0,"Психо (1960)
+Psycho",0.0,"Чужой
+Alien, 1979",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Американская история X (1998)
+American History X",8.0,X (2022),0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Типа крутые легавые (2007)
+Hot Fuzz",0.0,"Нечто (1982)
+The Thing",9.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Нечто (1982)
+The Thing",9.0,"Психо (1960)
+Psycho",0.0,"Чужой
+Alien, 1979",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Американская история X (1998)
+American History X",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,Курьер (1986),9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",5.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",8.0,Курьер (1986),9.0,"Бедные-несчастные (2023)
+Poor Things",0.0,Наша Russia: Яйца судьбы (2010),8.0
+9,"Типа крутые легавые (2007)
+Hot Fuzz",0.0,"Нечто (1982)
+The Thing",9.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Нечто (1982)
+The Thing",9.0,"Нечто (2011)
+The Thing",7.0,"Чужой
+Alien, 1979",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Американская история X (1998)
+American History X",8.0,Курьер (1986),9.0,"Американская история X (1998)
+American History X",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",0.0,"Нечто (1982)
+The Thing",9.0,"Мертвец (1995)
+Dead Man",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",7.0,"Нечто (1982)
+The Thing",9.0,"Максин XXX (2024)
+MaXXXine",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",9.0,"Интерстеллар
+Interstellar, 2014",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Паразиты
+Gisaengchung, 2019",0.0,"Паразиты
+Gisaengchung, 2019",0.0,"Крик (1996)
+Scream",7.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Головоломка (2015)
+Inside Out",0.0

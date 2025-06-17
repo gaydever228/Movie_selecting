@@ -1,0 +1,314 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Один дома
+Home Alone, 1990",4.0,"Остров проклятых
+Shutter Island, 2009",7.0,"Один дома
+Home Alone, 1990",4.0,"Остров проклятых
+Shutter Island, 2009",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Один дома
+Home Alone, 1990",4.0,"Остров проклятых
+Shutter Island, 2009",7.0,"Один дома
+Home Alone, 1990",4.0,"Остров проклятых
+Shutter Island, 2009",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Один дома
+Home Alone, 1990",4.0,"Один дома
+Home Alone, 1990",4.0,"Один дома
+Home Alone, 1990",4.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Не говори никому (2021)
+Gæsterne",0.0,"Один дома
+Home Alone, 1990",4.0
+1,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Один дома
+Home Alone, 1990",4.0,"Титаник (1997)
+Titanic",4.0,"Один дома
+Home Alone, 1990",4.0,"Титаник (1997)
+Titanic",4.0,"Терминатор (1984)
+The Terminator",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Терминатор (1984)
+The Terminator",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Один дома
+Home Alone, 1990",4.0,"Титаник (1997)
+Titanic",4.0,"Один дома
+Home Alone, 1990",4.0,"Титаник (1997)
+Titanic",4.0,"Терминатор (1984)
+The Terminator",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Большой куш
+Snatch, 2000",5.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",9.0,"Зеленая миля
+The Green Mile, 1999",0.0
+2,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",5.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Дилер (1996)
+Pusher",0.0,"Достать ножи
+Knives Out, 2019",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Невезучие (2003)
+Tais-toi!",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0
+3,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Терминатор (1984)
+The Terminator",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Терминатор (1984)
+The Terminator",10.0,"Такие разные близнецы (2011)
+Jack and Jill",0.0,"Джанго освобожденный
+Django Unchained, 2012",0.0
+4,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",10.0,"Отступники
+The Departed, 2006",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",9.0,"Дом большой мамочки (2000)
+Big Momma's House",6.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Дилер (1996)
+Pusher",0.0,"Достать ножи
+Knives Out, 2019",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Отступники
+The Departed, 2006",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Одержимость
+Whiplash, 2013",4.0,"Терминатор (1984)
+The Terminator",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Один дома
+Home Alone, 1990",4.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0
+5,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",10.0,"Дилер (1996)
+Pusher",0.0,"Достать ножи
+Knives Out, 2019",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Одержимость
+Whiplash, 2013",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",9.0,"Дом большой мамочки (2000)
+Big Momma's House",6.0,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",10.0,"Вне закона (1986)
+Down by Law",0.0,"Терминал (2004)
+The Terminal",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",9.0,"Дом большой мамочки (2000)
+Big Momma's House",6.0,"Отступники
+The Departed, 2006",0.0,"Клик: С пультом по жизни
+Click, 2006",7.0,"Терминатор (1984)
+The Terminator",10.0,"Армагеддец (2013)
+The World's End",0.0,"Славные парни (2016)
+The Nice Guys",0.0,"Большой куш
+Snatch, 2000",5.0
+6,"Дилер (1996)
+Pusher",0.0,"Достать ножи
+Knives Out, 2019",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Большой куш
+Snatch, 2000",5.0,"Леон
+Léon, 1994",7.0,"Большой куш
+Snatch, 2000",5.0,"Леон
+Léon, 1994",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",8.0,"Терминатор (1984)
+The Terminator",10.0,"Леон
+Léon, 1994",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Форрест Гамп
+Forrest Gump, 1994",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Только бог простит (2012)
+Only God Forgives",0.0,Наша Russia: Яйца судьбы (2010),0.0
+7,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",10.0,"Терминатор (1984)
+The Terminator",10.0,"Леон
+Léon, 1994",7.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Отступники
+The Departed, 2006",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Образцовый самец (2001)
+Zoolander",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Отступники
+The Departed, 2006",0.0,"Игры разума
+A Beautiful Mind, 2001",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",9.0,"Дом большой мамочки (2000)
+Big Momma's House",6.0,"Клик: С пультом по жизни
+Click, 2006",7.0,"Терминал (2004)
+The Terminal",10.0,"Джанго освобожденный
+Django Unchained, 2012",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Большой куш
+Snatch, 2000",5.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",0.0,"Головоломка (2015)
+Inside Out",9.0
+8,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Бойцовский клуб
+Fight Club, 1999",10.0,"Клик: С пультом по жизни
+Click, 2006",7.0,"Терминал (2004)
+The Terminal",10.0,"Клик: С пультом по жизни
+Click, 2006",7.0,"Терминал (2004)
+The Terminal",10.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Терминатор (1984)
+The Terminator",10.0,"Леон
+Léon, 1994",7.0,"Терминатор (1984)
+The Terminator",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Одержимость
+Whiplash, 2013",4.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",8.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Одержимость
+Whiplash, 2013",4.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Мементо (2000)
+Memento",0.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"500 дней лета (2009)
+(500) Days of Summer",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0
+9,"Зодиак (2007)
+Zodiac",0.0,"Пленницы (2013)
+Prisoners",10.0,"Зодиак (2007)
+Zodiac",0.0,"Пленницы (2013)
+Prisoners",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Нечто (2011)
+The Thing",10.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",8.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Трасса 60
+Interstate 60, 2001",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",10.0,"Большой куш
+Snatch, 2000",5.0,"Леон
+Léon, 1994",7.0,"Большой куш
+Snatch, 2000",5.0,"Леон
+Léon, 1994",7.0,"Клик: С пультом по жизни
+Click, 2006",7.0,"Терминал (2004)
+The Terminal",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",9.0,"Форрест Гамп
+Forrest Gump, 1994",6.0,"Терминатор (1984)
+The Terminator",10.0,Чужие (1986),6.0,"Останься (2005)
+Stay",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Крик (1996)
+Scream",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0

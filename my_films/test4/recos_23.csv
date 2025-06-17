@@ -1,0 +1,305 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Леон
+Léon, 1994",0.0,"Начало
+Inception, 2010",10.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Начало
+Inception, 2010",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Леон
+Léon, 1994",0.0,"Начало
+Inception, 2010",10.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Начало
+Inception, 2010",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Перелом (2007)
+Fracture",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0
+1,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",6.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Начало
+Inception, 2010",10.0,"На посту!
+Au poste!, 2018",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",6.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Начало
+Inception, 2010",10.0,"Человек на Луне (2018)
+First Man",0.0,"Зодиак (2007)
+Zodiac",9.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0
+2,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Одержимость
+Whiplash, 2013",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Одержимость
+Whiplash, 2013",7.0,"Леон
+Léon, 1994",0.0,"1+1
+Intouchables, 2011",9.0,"Леон
+Léon, 1994",0.0,"1+1
+Intouchables, 2011",9.0,"На посту!
+Au poste!, 2018",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Леон
+Léon, 1994",0.0,"Начало
+Inception, 2010",10.0,О чём говорят мужчины (2010),0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",6.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Одержимость
+Whiplash, 2013",7.0,"Леон
+Léon, 1994",0.0,"1+1
+Intouchables, 2011",9.0,"Леон
+Léon, 1994",0.0,"1+1
+Intouchables, 2011",9.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Леон
+Léon, 1994",0.0,"Начало
+Inception, 2010",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Паразиты
+Gisaengchung, 2019",0.0,Майор Гром: Игра (2024),0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+3,"Пятый элемент
+The Fifth Element, 1997",8.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Не говори никому (2021)
+Gæsterne",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Леон
+Léon, 1994",0.0,"Леон
+Léon, 1994",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Чужой
+Alien, 1979",0.0,"Леон
+Léon, 1994",0.0
+4,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",6.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Хранители (2009)
+Watchmen",0.0,"Начало
+Inception, 2010",10.0,"Папа, сдохни (2018)",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Звездный десант (1997)
+Starship Troopers",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Железный человек (2008)
+Iron Man",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0
+5,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",10.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Субстанция (2024)
+The Substance",0.0,"Один дома
+Home Alone, 1990",6.0,"Пэрл (2022)
+Pearl",0.0,"Место под соснами (2012)
+The Place Beyond the Pines",8.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Славные парни (2016)
+The Nice Guys",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Паразиты
+Gisaengchung, 2019",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Леон
+Léon, 1994",0.0,"Семь
+Se7en, 1995",0.0,"Неогранённые алмазы (2019)
+Uncut Gems",0.0,"Остров проклятых
+Shutter Island, 2009",0.0
+6,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",6.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",6.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Одержимость
+Whiplash, 2013",7.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",8.0,"Папа, сдохни (2018)",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Пленницы (2013)
+Prisoners",0.0,"Зодиак (2007)
+Zodiac",9.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",6.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Одержимость
+Whiplash, 2013",7.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",0.0,"Семь
+Se7en, 1995",0.0,"Зеленая миля
+The Green Mile, 1999",0.0
+7,О чём говорят мужчины (2010),0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",6.0,О чём говорят мужчины (2010),0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",6.0,"Не говори никому (2021)
+Gæsterne",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Славные парни (2016)
+The Nice Guys",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Человек на Луне (2018)
+First Man",0.0,"Зодиак (2007)
+Zodiac",9.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Один дома
+Home Alone, 1990",6.0,О чём говорят мужчины (2010),0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",6.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Одержимость
+Whiplash, 2013",7.0,"Большой куш
+Snatch, 2000",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Хранители (2009)
+Watchmen",0.0,"Начало
+Inception, 2010",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",0.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",6.0,"Молчание ягнят
+The Silence of the Lambs, 1990",8.0,"Железный человек (2008)
+Iron Man",0.0
+8,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Клик: С пультом по жизни
+Click, 2006",8.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Клик: С пультом по жизни
+Click, 2006",8.0,"Большой куш
+Snatch, 2000",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",0.0,"Одержимость
+Whiplash, 2013",7.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Тайное окно (2004)
+Secret Window",8.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Одержимость
+Whiplash, 2013",7.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Люди в чёрном
+Men in Black, 1997",10.0,"Не говори никому (2021)
+Gæsterne",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,"Место под соснами (2012)
+The Place Beyond the Pines",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Чужой
+Alien, 1979",0.0,X (2022),0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0
+9,"Пленницы (2013)
+Prisoners",0.0,"Зодиак (2007)
+Zodiac",9.0,"Пленницы (2013)
+Prisoners",0.0,"Зодиак (2007)
+Zodiac",9.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",10.0,"Большой куш
+Snatch, 2000",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Человек на Луне (2018)
+First Man",0.0,"Зодиак (2007)
+Zodiac",9.0,"Славные парни (2016)
+The Nice Guys",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",9.0,"Копы в глубоком запасе (2010)
+The Other Guys",0.0,"Клик: С пультом по жизни
+Click, 2006",8.0,"Пленницы (2013)
+Prisoners",0.0,"Зодиак (2007)
+Zodiac",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Не говори никому (2021)
+Gæsterne",0.0,"Невезучие (2003)
+Tais-toi!",6.0,"Человек на Луне (2018)
+First Man",0.0,"Зодиак (2007)
+Zodiac",9.0,"Хранители (2009)
+Watchmen",0.0,"Начало
+Inception, 2010",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Большой куш
+Snatch, 2000",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0,"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",0.0

@@ -1,0 +1,304 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Трасса 60
+Interstate 60, 2001",7.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Трасса 60
+Interstate 60, 2001",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Вне закона (1986)
+Down by Law",6.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Трасса 60
+Interstate 60, 2001",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,Чужие (1986),10.0,"Мстители: Финал (2019)
+Avengers: Endgame",9.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"21 грамм (2003)
+21 Grams",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",9.0
+1,"Пятый элемент
+The Fifth Element, 1997",8.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Вне закона (1986)
+Down by Law",6.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Мимино
+1977",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Паразиты
+Gisaengchung, 2019",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Трасса 60
+Interstate 60, 2001",7.0,"Мимино
+1977",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Мементо (2000)
+Memento",9.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,Наша Russia: Яйца судьбы (2010),0.0
+2,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Семь
+Se7en, 1995",9.0,"Король говорит!
+The King's Speech, 2010",7.0,"Семь
+Se7en, 1995",9.0,"Мимино
+1977",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Вне закона (1986)
+Down by Law",6.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Семь
+Se7en, 1995",9.0,"Король говорит!
+The King's Speech, 2010",7.0,"Семь
+Se7en, 1995",9.0,"Мимино
+1977",0.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",7.0,"Вне закона (1986)
+Down by Law",6.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Вне закона (1986)
+Down by Law",6.0,"Мстители: Финал (2019)
+Avengers: Endgame",9.0,Наша Russia: Яйца судьбы (2010),0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Достать ножи
+Knives Out, 2019",6.0
+3,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Мертвец (1995)
+Dead Man",7.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Достать ножи
+Knives Out, 2019",6.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Не говори никому (2021)
+Gæsterne",0.0,"Человек на Луне (2018)
+First Man",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Фарго (1995)
+Fargo",7.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",10.0,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",10.0,"Достать ножи
+Knives Out, 2019",6.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Достать ножи
+Knives Out, 2019",6.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"Фарго (1995)
+Fargo",7.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",0.0,"Пятый элемент
+The Fifth Element, 1997",8.0
+4,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",10.0,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",10.0,"Не говори никому (2021)
+Gæsterne",0.0,"Человек на Луне (2018)
+First Man",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"21 грамм (2003)
+21 Grams",0.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"Нечто (2011)
+The Thing",10.0,"Отступники
+The Departed, 2006",9.0,"Король говорит!
+The King's Speech, 2010",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Не говори никому (2021)
+Gæsterne",0.0,"Мементо (2000)
+Memento",9.0,Чужие (1986),10.0,"Конклав (2024)
+Conclave",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0
+5,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",9.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Мертвец (1995)
+Dead Man",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Трасса 60
+Interstate 60, 2001",7.0,"Достать ножи
+Knives Out, 2019",6.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Нечто (2011)
+The Thing",10.0,"Отступники
+The Departed, 2006",9.0,"Пункт назначения (2000)
+Final Destination",7.0,"Крик (1996)
+Scream",9.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Мертвец (1995)
+Dead Man",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Достать ножи
+Knives Out, 2019",6.0,"Вне закона (1986)
+Down by Law",6.0,"Вне закона (1986)
+Down by Law",6.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0
+6,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",9.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Нечто (2011)
+The Thing",10.0,"Отступники
+The Departed, 2006",9.0,"Король говорит!
+The King's Speech, 2010",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Мертвец (1995)
+Dead Man",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Фарго (1995)
+Fargo",7.0,"Американская история X (1998)
+American History X",7.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Человек на Луне (2018)
+First Man",7.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",0.0,"Красота по-американски (1999)
+American Beauty",9.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Мементо (2000)
+Memento",9.0,"Пункт назначения (2000)
+Final Destination",7.0
+7,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",7.0,"Титаник (1997)
+Titanic",7.0,"Король говорит!
+The King's Speech, 2010",7.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Фарго (1995)
+Fargo",7.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Человек на Луне (2018)
+First Man",7.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",9.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Зодиак (2007)
+Zodiac",10.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Трасса 60
+Interstate 60, 2001",7.0,"21 грамм (2003)
+21 Grams",0.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Нечто (2011)
+The Thing",10.0,"Отступники
+The Departed, 2006",9.0,"Красота по-американски (1999)
+American Beauty",9.0,"Достать ножи
+Knives Out, 2019",6.0,"Круэлла (2021)
+Cruella",6.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,Гитлер капут! (2008),0.0
+8,"Король говорит!
+The King's Speech, 2010",7.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Трасса 60
+Interstate 60, 2001",7.0,День выборов (2009),0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",10.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Красота по-американски (1999)
+American Beauty",9.0,"Американская история X (1998)
+American History X",7.0,"Пункт назначения (2000)
+Final Destination",7.0,"Крик (1996)
+Scream",9.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0,"Драйв (2011)
+Drive",9.0,"Фарго (1995)
+Fargo",7.0,"Американская история X (1998)
+American History X",7.0,"Фарго (1995)
+Fargo",7.0,"Копы в глубоком запасе (2010)
+The Other Guys",7.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",0.0,"Круто сваренные (1992)
+Lat sau san taam",7.0,"Нечто (2011)
+The Thing",10.0,"Ворон (2024)
+The Crow",0.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Яйцеголовые
+Coneheads, 1993",7.0,Гитлер капут! (2008),0.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0
+9,"Пункт назначения (2000)
+Final Destination",7.0,"Крик (1996)
+Scream",9.0,"Пункт назначения (2000)
+Final Destination",7.0,"Крик (1996)
+Scream",9.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Зодиак (2007)
+Zodiac",10.0,"Фарго (1995)
+Fargo",7.0,"Американская история X (1998)
+American History X",7.0,"Семь психопатов (2012)
+Seven Psychopaths",9.0,"Семь
+Se7en, 1995",9.0,"21 грамм (2003)
+21 Grams",0.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",9.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",9.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",9.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",9.0,"Король говорит!
+The King's Speech, 2010",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Король говорит!
+The King's Speech, 2010",7.0,"Пятый элемент
+The Fifth Element, 1997",8.0,"Пленницы (2013)
+Prisoners",9.0,Чужие (1986),10.0,"Субстанция (2024)
+The Substance",6.0

@@ -1,0 +1,270 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Паразиты
+Gisaengchung, 2019",4.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Паразиты
+Gisaengchung, 2019",4.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Паразиты
+Gisaengchung, 2019",4.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Паразиты
+Gisaengchung, 2019",4.0,"Зеленая миля
+The Green Mile, 1999",9.0,О чём ещё говорят мужчины (2011),3.0,День радио (2008),8.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Паразиты
+Gisaengchung, 2019",4.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Паразиты
+Gisaengchung, 2019",4.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Паразиты
+Gisaengchung, 2019",4.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Паразиты
+Gisaengchung, 2019",4.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Паразиты
+Gisaengchung, 2019",4.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0,"Паразиты
+Gisaengchung, 2019",4.0,Гитлер капут! (2008),0.0,"Паразиты
+Gisaengchung, 2019",4.0
+1,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,Курьер (1986),4.0,"Достать ножи
+Knives Out, 2019",10.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Клик: С пультом по жизни
+Click, 2006",6.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,Курьер (1986),4.0,"Достать ножи
+Knives Out, 2019",10.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Здесь курят (2005)
+Thank You for Smoking",0.0,День радио (2008),8.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Чужой
+Alien, 1979",6.0,"Король говорит!
+The King's Speech, 2010",0.0,"Джанго освобожденный
+Django Unchained, 2012",7.0
+2,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",9.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Мертвец (1995)
+Dead Man",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Клик: С пультом по жизни
+Click, 2006",6.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",9.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",6.0,"Нечто (2011)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Паразиты
+Gisaengchung, 2019",4.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Нечто (1982)
+The Thing",0.0,"Ла-Ла Ленд
+La La Land, 2016",2.0
+3,"Семь
+Se7en, 1995",5.0,"Начало
+Inception, 2010",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Большой куш
+Snatch, 2000",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Большой куш
+Snatch, 2000",7.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,О чём ещё говорят мужчины (2011),3.0,День радио (2008),8.0,"Семь
+Se7en, 1995",5.0,"Начало
+Inception, 2010",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Большой куш
+Snatch, 2000",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Большой куш
+Snatch, 2000",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,Наша Russia: Яйца судьбы (2010),1.0,"Семь
+Se7en, 1995",5.0,"Терминал (2004)
+The Terminal",0.0,"Драйв (2011)
+Drive",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0
+4,Курьер (1986),4.0,"Достать ножи
+Knives Out, 2019",10.0,"Семь
+Se7en, 1995",5.0,"Начало
+Inception, 2010",9.0,"Семь
+Se7en, 1995",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Семь
+Se7en, 1995",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Семь
+Se7en, 1995",5.0,"Начало
+Inception, 2010",9.0,"Нечто (2011)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Семь
+Se7en, 1995",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Семь
+Se7en, 1995",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Семь
+Se7en, 1995",5.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Пленницы (2013)
+Prisoners",0.0,"Чужой
+Alien, 1979",6.0
+5,День выборов (2009),0.0,О чём говорят мужчины (2010),10.0,День выборов (2009),0.0,О чём говорят мужчины (2010),10.0,"Нечто (2011)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Нечто (2011)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,День радио (2008),8.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,День радио (2008),8.0,День выборов (2009),0.0,О чём говорят мужчины (2010),10.0,День выборов (2009),0.0,О чём говорят мужчины (2010),10.0,"Семь
+Se7en, 1995",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",10.0,"Нечто (2011)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",0.0,День радио (2008),8.0,"Бешеные псы (1991)
+Reservoir Dogs",4.0,"Большой куш
+Snatch, 2000",7.0,"Чужой
+Alien, 1979",6.0,"Терминал (2004)
+The Terminal",0.0,"Паразиты
+Gisaengchung, 2019",4.0,Наша Russia: Яйца судьбы (2010),1.0,Курьер (1986),4.0,Наша Russia: Яйца судьбы (2010),1.0
+6,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",10.0,"На посту!
+Au poste!, 2018",0.0,"Оппенгеймер (2023)
+Oppenheimer",10.0,Курьер (1986),4.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,Курьер (1986),4.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Вне закона (1986)
+Down by Law",0.0,День радио (2008),8.0,"Вне закона (1986)
+Down by Law",0.0,День радио (2008),8.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",10.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Зеленая миля
+The Green Mile, 1999",9.0,Курьер (1986),4.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,Курьер (1986),4.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,День радио (2003),9.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Субстанция (2024)
+The Substance",0.0,Наша Russia: Яйца судьбы (2010),1.0,"Семь
+Se7en, 1995",5.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Головоломка (2015)
+Inside Out",0.0
+7,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",9.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Большой куш
+Snatch, 2000",7.0,"Бешеные псы (1991)
+Reservoir Dogs",4.0,"Большой куш
+Snatch, 2000",7.0,"Бешеные псы (1991)
+Reservoir Dogs",4.0,"Большой куш
+Snatch, 2000",7.0,Курьер (1986),4.0,"Достать ножи
+Knives Out, 2019",10.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",10.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Большой куш
+Snatch, 2000",7.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Большой куш
+Snatch, 2000",7.0,"Нечто (2011)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",6.0,"Нечто (2011)
+The Thing",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Терминатор (1984)
+The Terminator",0.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Семь
+Se7en, 1995",5.0
+8,"Врожденный порок (2014)
+Inherent Vice",0.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",9.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Зеленая миля
+The Green Mile, 1999",9.0,"Семь психопатов (2012)
+Seven Psychopaths",0.0,"Большой куш
+Snatch, 2000",7.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,День радио (2003),9.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,День радио (2003),9.0,"Мимино
+1977",0.0,День радио (2008),8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"21 грамм (2003)
+21 Grams",0.0,День радио (2008),8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Криминальное чтиво
+Pulp Fiction, 1994",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,День радио (2003),9.0,"Ла-Ла Ленд
+La La Land, 2016",2.0,"Зеленая миля
+The Green Mile, 1999",9.0,"21 грамм (2003)
+21 Grams",0.0,"Король говорит!
+The King's Speech, 2010",0.0,"Драйв (2011)
+Drive",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0,"Субстанция (2024)
+The Substance",0.0,"Драйв (2011)
+Drive",0.0
+9,"Мимино
+1977",0.0,День радио (2008),8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"21 грамм (2003)
+21 Grams",0.0,День радио (2008),8.0,"21 грамм (2003)
+21 Grams",0.0,День радио (2008),8.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",6.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",6.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",9.0,"Мимино
+1977",0.0,День радио (2008),8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,День радио (2003),9.0,"21 грамм (2003)
+21 Grams",0.0,День радио (2008),8.0,"Бешеные псы (1991)
+Reservoir Dogs",4.0,"Большой куш
+Snatch, 2000",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Форрест Гамп
+Forrest Gump, 1994",7.0,"Между нами музыка (2015)
+Song to Song",0.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",0.0,"Чужой
+Alien, 1979",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Армагеддец (2013)
+The World's End",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",4.0

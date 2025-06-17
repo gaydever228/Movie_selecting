@@ -1,0 +1,312 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Большой куш
+Snatch, 2000",10.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Большой куш
+Snatch, 2000",10.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Большой куш
+Snatch, 2000",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0
+1,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Большой куш
+Snatch, 2000",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",8.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"
+Бременские музыканты (2023)",0.0,"Назад в будущее
+Back to the Future, 1985",0.0
+2,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"1+1
+Intouchables, 2011",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"1+1
+Intouchables, 2011",10.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"1+1
+Intouchables, 2011",10.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",10.0,"Мертвец (1995)
+Dead Man",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"1+1
+Intouchables, 2011",10.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Джокер (2019)
+Joker",6.0,"Чужой
+Alien, 1979",0.0,"Смертельное оружие (1987)
+Lethal Weapon",0.0,"Джокер (2019)
+Joker",6.0
+3,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",10.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Люди в чёрном
+Men in Black, 1997",0.0,"1+1
+Intouchables, 2011",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Люди в чёрном
+Men in Black, 1997",0.0,"Терминатор (1984)
+The Terminator",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0
+4,"Зеленая миля
+The Green Mile, 1999",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Один дома
+Home Alone, 1990",10.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Славные парни (2016)
+The Nice Guys",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Люди в чёрном
+Men in Black, 1997",0.0,"1+1
+Intouchables, 2011",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Люди в чёрном
+Men in Black, 1997",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0,"Останься (2005)
+Stay",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0
+5,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Славные парни (2016)
+The Nice Guys",10.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Славные парни (2016)
+The Nice Guys",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Один дома
+Home Alone, 1990",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Один дома
+Home Alone, 1990",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",9.0,"Славные парни (2016)
+The Nice Guys",10.0,"Король говорит!
+The King's Speech, 2010",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Один дома
+Home Alone, 1990",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Люди в чёрном
+Men in Black, 1997",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Дневник памяти (2004)
+The Notebook",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+6,"Король говорит!
+The King's Speech, 2010",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Король говорит!
+The King's Speech, 2010",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Одержимость
+Whiplash, 2013",0.0,"Начало
+Inception, 2010",8.0,"Красота по-американски (1999)
+American Beauty",0.0,"Один дома
+Home Alone, 1990",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Бешеные псы (1991)
+Reservoir Dogs",0.0,"Железный человек (2008)
+Iron Man",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Мимино
+1977",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0
+7,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Отступники
+The Departed, 2006",0.0,"Большой куш
+Snatch, 2000",10.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",8.0,"Люди в чёрном
+Men in Black, 1997",0.0,"1+1
+Intouchables, 2011",10.0,"Люди в чёрном
+Men in Black, 1997",0.0,"1+1
+Intouchables, 2011",10.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",4.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Железный человек (2008)
+Iron Man",10.0,"Интерстеллар
+Interstellar, 2014",8.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Начало
+Inception, 2010",8.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Терминатор (1984)
+The Terminator",0.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",8.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Люди в чёрном
+Men in Black, 1997",0.0
+8,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",10.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",10.0,"Мертвец (1995)
+Dead Man",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Мертвец (1995)
+Dead Man",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Терминал (2004)
+The Terminal",0.0,"Барби (2023)
+Barbie",10.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"1+1
+Intouchables, 2011",10.0,"Бойцовский клуб
+Fight Club, 1999",0.0,"Один дома
+Home Alone, 1990",10.0,"Мертвец (1995)
+Dead Man",0.0,"Славные парни (2016)
+The Nice Guys",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Железный человек (2008)
+Iron Man",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Головоломка 2 (2024)
+Inside Out 2",7.0,"Остров проклятых
+Shutter Island, 2009",0.0
+9,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",4.0,"Терминал (2004)
+The Terminal",0.0,"Барби (2023)
+Barbie",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Один дома
+Home Alone, 1990",10.0,"Зеленая миля
+The Green Mile, 1999",0.0,"1+1
+Intouchables, 2011",10.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Мартовские иды (2011)
+The Ides of March",10.0,"Серый человек (2022)
+The Gray Man",0.0,"Барби (2023)
+Barbie",10.0,"Железный человек (2008)
+Iron Man",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Джокер (2019)
+Joker",6.0,"Большой Лебовски (1998)
+The Big Lebowski",0.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Ворон (2024)
+The Crow",0.0,"Зеленая миля
+The Green Mile, 1999",0.0

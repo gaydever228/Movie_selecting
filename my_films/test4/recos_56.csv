@@ -1,0 +1,314 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Семь
+Se7en, 1995",8.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Семь
+Se7en, 1995",8.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Интерстеллар
+Interstellar, 2014",7.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Интерстеллар
+Interstellar, 2014",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"На посту!
+Au poste!, 2018",5.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"На посту!
+Au poste!, 2018",5.0,"Семь
+Se7en, 1995",8.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Семь
+Se7en, 1995",8.0,"Джанго освобожденный
+Django Unchained, 2012",6.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Интерстеллар
+Interstellar, 2014",7.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Интерстеллар
+Interstellar, 2014",7.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"На посту!
+Au poste!, 2018",5.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"На посту!
+Au poste!, 2018",5.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Фарго (1995)
+Fargo",0.0,"Люди в чёрном
+Men in Black, 1997",8.0
+1,"Люди в чёрном
+Men in Black, 1997",8.0,"1+1
+Intouchables, 2011",6.0,"Люди в чёрном
+Men in Black, 1997",8.0,"1+1
+Intouchables, 2011",6.0,"Семь
+Se7en, 1995",8.0,"Отступники
+The Departed, 2006",6.0,"Семь
+Se7en, 1995",8.0,"Отступники
+The Departed, 2006",6.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"На посту!
+Au poste!, 2018",5.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Люди в чёрном
+Men in Black, 1997",8.0,"1+1
+Intouchables, 2011",6.0,"Люди в чёрном
+Men in Black, 1997",8.0,"1+1
+Intouchables, 2011",6.0,"Семь
+Se7en, 1995",8.0,"Отступники
+The Departed, 2006",6.0,"Семь
+Se7en, 1995",8.0,"Отступники
+The Departed, 2006",6.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"На посту!
+Au poste!, 2018",5.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"На посту!
+Au poste!, 2018",5.0,"Семь
+Se7en, 1995",8.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",6.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Семь
+Se7en, 1995",8.0
+2,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",6.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Большой куш
+Snatch, 2000",7.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Большой куш
+Snatch, 2000",7.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",7.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"На посту!
+Au poste!, 2018",5.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",6.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Большой куш
+Snatch, 2000",7.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",7.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",7.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Семь
+Se7en, 1995",8.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,Мастер и Маргарита (2023),5.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0
+3,"Ночь на Земле (1991)
+Night on Earth",6.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",6.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Последний бойскаут (1991)
+The Last Boy Scout",5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Люди в чёрном
+Men in Black, 1997",8.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",7.0,"
+Небриллиантовая рука (2024)",1.0,Курьер (1986),6.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",5.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Круэлла (2021)
+Cruella",4.0,"Яйцеголовые
+Coneheads, 1993",6.0,"Грязь (2013)
+Filth",4.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",7.0
+4,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Последний бойскаут (1991)
+The Last Boy Scout",5.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",5.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",5.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"На посту!
+Au poste!, 2018",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Невезучие (2003)
+Tais-toi!",6.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"Последний бойскаут (1991)
+The Last Boy Scout",5.0,"
+Небриллиантовая рука (2024)",1.0,Курьер (1986),6.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",5.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Большой куш
+Snatch, 2000",7.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"На посту!
+Au poste!, 2018",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",7.0,"Семь
+Se7en, 1995",8.0,"Семь
+Se7en, 1995",8.0,"Круэлла (2021)
+Cruella",4.0
+5,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Мертвец (1995)
+Dead Man",5.0,"
+Небриллиантовая рука (2024)",1.0,Курьер (1986),6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Большой куш
+Snatch, 2000",7.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Дневник памяти (2004)
+The Notebook",5.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Король говорит!
+The King's Speech, 2010",7.0,"Врожденный порок (2014)
+Inherent Vice",5.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",7.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Невезучие (2003)
+Tais-toi!",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Невезучие (2003)
+Tais-toi!",6.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Большой Лебовски (1998)
+The Big Lebowski",7.0,"Образцовый самец (2001)
+Zoolander",0.0,"Максин XXX (2024)
+MaXXXine",4.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0
+6,"Терминал (2004)
+The Terminal",5.0,"Тайное окно (2004)
+Secret Window",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Мертвец (1995)
+Dead Man",5.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Дневник памяти (2004)
+The Notebook",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Невезучие (2003)
+Tais-toi!",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Ночь на Земле (1991)
+Night on Earth",6.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Мертвец (1995)
+Dead Man",5.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",4.0,"Хранители (2009)
+Watchmen",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"На посту!
+Au poste!, 2018",5.0,"Человек на Луне (2018)
+First Man",6.0,"Семь
+Se7en, 1995",8.0,"500 дней лета (2009)
+(500) Days of Summer",4.0,"Пришельцы в Америке (2001)
+Just Visiting",4.0,"
+Бременские музыканты (2023)",1.0,"Терминал (2004)
+The Terminal",5.0
+7,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"Яйцеголовые
+Coneheads, 1993",6.0,"Не говори никому (2021)
+Gæsterne",5.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"На посту!
+Au poste!, 2018",5.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Король говорит!
+The King's Speech, 2010",7.0,"Терминал (2004)
+The Terminal",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"21 грамм (2003)
+21 Grams",4.0,"На посту!
+Au poste!, 2018",5.0,"21 грамм (2003)
+21 Grams",4.0,"На посту!
+Au poste!, 2018",5.0,"Чокнутый (2006)
+Delirious",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Фанатик (2001)
+The Believer",5.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",6.0
+8,"
+Небриллиантовая рука (2024)",1.0,Курьер (1986),6.0,"Терминал (2004)
+The Terminal",5.0,"Тайное окно (2004)
+Secret Window",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"21 грамм (2003)
+21 Grams",4.0,"На посту!
+Au poste!, 2018",5.0,"21 грамм (2003)
+21 Grams",4.0,"На посту!
+Au poste!, 2018",5.0,"Оленья кожа (2019)
+Le daim",5.0,"Армагеддец (2013)
+The World's End",7.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Виды доброты (2024)
+Kinds of Kindness",4.0,"На посту!
+Au poste!, 2018",5.0,"Терминал (2004)
+The Terminal",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",5.0,"Армагеддец (2013)
+The World's End",7.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"Терминал (2004)
+The Terminal",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Зона интересов (2023)
+The Zone of Interest",4.0,"Чужой: Ромул (2024)
+Alien: Romulus.1",3.0,"Оппенгеймер (2023)
+Oppenheimer",6.0
+9,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Зодиак (2007)
+Zodiac",4.0,"Пленницы (2013)
+Prisoners",5.0,"Такие разные близнецы (2011)
+Jack and Jill",5.0,"Не говори никому (2021)
+Gæsterne",5.0,"Терминал (2004)
+The Terminal",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Мертвец (1995)
+Dead Man",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Мертвец (1995)
+Dead Man",5.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",4.0,"Хранители (2009)
+Watchmen",7.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Не говори никому (2021)
+Gæsterne",5.0,"Фарго (1995)
+Fargo",0.0,"Американская история X (1998)
+American History X",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",4.0,"Копы в глубоком запасе (2010)
+The Other Guys",4.0,"Терминал (2004)
+The Terminal",5.0,"Неогранённые алмазы (2019)
+Uncut Gems",4.0,"Серый человек (2022)
+The Gray Man",6.0,"Образцовый самец (2001)
+Zoolander",0.0

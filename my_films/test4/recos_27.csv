@@ -1,0 +1,292 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",6.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Круто сваренные (1992)
+Lat sau san taam",4.0,"Чокнутый (2006)
+Delirious",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0
+1,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",7.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",7.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Крик (1996)
+Scream",0.0,"Славные парни (2016)
+The Nice Guys",4.0,"Крик (1996)
+Scream",0.0,"Славные парни (2016)
+The Nice Guys",4.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",7.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Начало
+Inception, 2010",7.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Терминатор (1984)
+The Terminator",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",0.0,"Дом большой мамочки (2000)
+Big Momma's House",5.0,"Копы в глубоком запасе (2010)
+The Other Guys",2.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Такие разные близнецы (2011)
+Jack and Jill",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0
+2,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",10.0,День радио (2003),4.0,День радио (2008),7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Семь
+Se7en, 1995",8.0,"На посту!
+Au poste!, 2018",0.0,"Вне закона (1986)
+Down by Law",4.0,"На посту!
+Au poste!, 2018",0.0,"Вне закона (1986)
+Down by Law",4.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",10.0,День радио (2003),4.0,День радио (2008),7.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Вне закона (1986)
+Down by Law",4.0,День радио (2003),4.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"На посту!
+Au poste!, 2018",0.0,"Вне закона (1986)
+Down by Law",4.0,"Не говори никому (2021)
+Gæsterne",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Джокер: Безумие на двоих (2024)
+Joker: Folie à Deux",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0
+3,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",6.0,"Терминал (2004)
+The Terminal",3.0,"Вне закона (1986)
+Down by Law",4.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Вне закона (1986)
+Down by Law",4.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Вне закона (1986)
+Down by Law",4.0,"Мертвец (1995)
+Dead Man",0.0,"Вне закона (1986)
+Down by Law",4.0,"Мертвец (1995)
+Dead Man",0.0,"Вне закона (1986)
+Down by Law",4.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",6.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",6.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Трасса 60
+Interstate 60, 2001",6.0,День радио (2003),4.0,День радио (2008),7.0,"Мертвец (1995)
+Dead Man",0.0,"Вне закона (1986)
+Down by Law",4.0,"Крик (1996)
+Scream",0.0,"Славные парни (2016)
+The Nice Guys",4.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Красота по-американски (1999)
+American Beauty",7.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",5.0,"Место под соснами (2012)
+The Place Beyond the Pines",10.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",4.0,"Терминатор (1984)
+The Terminator",0.0
+4,"Терминал (2004)
+The Terminal",3.0,"Вне закона (1986)
+Down by Law",4.0,"Терминатор (1984)
+The Terminator",0.0,"Леон
+Léon, 1994",6.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Семь
+Se7en, 1995",8.0,День радио (2003),4.0,День радио (2008),7.0,День радио (2003),4.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,О чём говорят мужчины (2010),3.0,День радио (2008),7.0,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"Терминал (2004)
+The Terminal",3.0,"Вне закона (1986)
+Down by Law",4.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Семь
+Se7en, 1995",8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Семь
+Se7en, 1995",8.0,"Крик (1996)
+Scream",0.0,"Славные парни (2016)
+The Nice Guys",4.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Ночь на Земле (1991)
+Night on Earth",0.0,День радио (2003),4.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0,"Дневник памяти (2004)
+The Notebook",0.0,"Не говори никому (2024)
+Speak No Evil",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",5.0
+5,"Место под соснами (2012)
+The Place Beyond the Pines",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",4.0,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"Пэрл (2022)
+Pearl",2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",4.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,День радио (2003),4.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Терминал (2004)
+The Terminal",3.0,"Вне закона (1986)
+Down by Law",4.0,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Железный человек (2008)
+Iron Man",5.0,"Пэрл (2022)
+Pearl",2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",4.0,"Нечто (2011)
+The Thing",3.0,"Отступники
+The Departed, 2006",6.0,"Мертвец (1995)
+Dead Man",0.0,"Вне закона (1986)
+Down by Law",4.0,"Виды доброты (2024)
+Kinds of Kindness",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Красота по-американски (1999)
+American Beauty",7.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0
+6,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"На посту!
+Au poste!, 2018",0.0,"Оппенгеймер (2023)
+Oppenheimer",9.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Железный человек (2008)
+Iron Man",5.0,"На посту!
+Au poste!, 2018",0.0,"Вне закона (1986)
+Down by Law",4.0,О чём говорят мужчины (2010),3.0,День радио (2008),7.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,"На посту!
+Au poste!, 2018",0.0,"Оппенгеймер (2023)
+Oppenheimer",9.0,"Пэрл (2022)
+Pearl",2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",4.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"
+Небриллиантовая рука (2024)",0.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,День радио (2003),4.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"На посту!
+Au poste!, 2018",0.0,О чём говорят мужчины (2010),3.0,День радио (2003),4.0,"Терминал (2004)
+The Terminal",3.0,"Игра на понижение (2015)
+The Big Short",0.0,"Пункт назначения (2000)
+Final Destination",6.0
+7,"На посту!
+Au poste!, 2018",0.0,"Оппенгеймер (2023)
+Oppenheimer",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",4.0,"На посту!
+Au poste!, 2018",0.0,"Вне закона (1986)
+Down by Law",4.0,"Пэрл (2022)
+Pearl",2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",4.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",0.0,"Дом большой мамочки (2000)
+Big Momma's House",5.0,"Место под соснами (2012)
+The Place Beyond the Pines",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",4.0,"Место под соснами (2012)
+The Place Beyond the Pines",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",4.0,"Однажды в Ирландии (2011)
+The Guard",5.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",10.0,"На посту!
+Au poste!, 2018",0.0,"Вне закона (1986)
+Down by Law",4.0,"
+Небриллиантовая рука (2024)",0.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,"Страсти Христовы
+The Passion of the Christ, 2004",4.0,"Дилер (1996)
+Pusher",0.0,"Образцовый самец (2001)
+Zoolander",3.0,"Крик (1996)
+Scream",0.0,"Пункт назначения (2000)
+Final Destination",6.0,Гитлер капут! (2008),0.0
+8,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"Нечто (2011)
+The Thing",3.0,О чём ещё говорят мужчины (2011),6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",0.0,"Дом большой мамочки (2000)
+Big Momma's House",5.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Между нами музыка (2015)
+Song to Song",4.0,"На посту!
+Au poste!, 2018",0.0,"Оппенгеймер (2023)
+Oppenheimer",9.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Дом большой мамочки (2000)
+Big Momma's House",5.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",0.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",4.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Железный человек (2008)
+Iron Man",5.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Нечто (2011)
+The Thing",3.0,"Отступники
+The Departed, 2006",6.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0,"Оленья кожа (2019)
+Le daim",4.0,"Терминатор (1984)
+The Terminator",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Вонка (2023)
+Wonka",10.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",0.0
+9,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",3.0,"Назад в будущее
+Back to the Future, 1985",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",4.0,"Только бог простит (2012)
+Only God Forgives",4.0,"Нечто (2011)
+The Thing",3.0,О чём ещё говорят мужчины (2011),6.0,"Мстители: Финал (2019)
+Avengers: Endgame",5.0,"Железный человек (2008)
+Iron Man",5.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Между нами музыка (2015)
+Song to Song",4.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Дом большой мамочки (2000)
+Big Momma's House",5.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,"Джон Уик 4 (2023)
+John Wick: Chapter 4",0.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"
+Небриллиантовая рука (2024)",0.0,"Пришельцы в Америке (2001)
+Just Visiting",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"Терминатор (1984)
+The Terminator",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",6.0,День радио (2003),4.0,"Чокнутый (2006)
+Delirious",0.0,О чём говорят мужчины (2010),3.0,О чём говорят мужчины (2010),3.0,"Чужой: Ромул (2024)
+Alien: Romulus.1",0.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",0.0

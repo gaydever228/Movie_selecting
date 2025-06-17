@@ -1,0 +1,305 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Семь
+Se7en, 1995",10.0,"Вне закона (1986)
+Down by Law",0.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Семь
+Se7en, 1995",10.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Оппенгеймер (2023)
+Oppenheimer",0.0,"Назад в будущее
+Back to the Future, 1985",0.0
+1,"Игры разума
+A Beautiful Mind, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Нечто (2011)
+The Thing",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0
+2,"Назад в будущее
+Back to the Future, 1985",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Большой куш
+Snatch, 2000",0.0,"Леон
+Léon, 1994",6.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Мертвец (1995)
+Dead Man",7.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Мертвец (1995)
+Dead Man",7.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",9.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Большой куш
+Snatch, 2000",0.0,"Леон
+Léon, 1994",6.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Мертвец (1995)
+Dead Man",7.0,"Клик: С пультом по жизни
+Click, 2006",0.0,"Мертвец (1995)
+Dead Man",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0
+3,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Терминатор (1984)
+The Terminator",8.0,"Леон
+Léon, 1994",6.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"Большой куш
+Snatch, 2000",0.0,"Леон
+Léon, 1994",6.0,"Вне закона (1986)
+Down by Law",0.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",7.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Семь
+Se7en, 1995",10.0,"Достать ножи
+Knives Out, 2019",0.0,"Джокер (2019)
+Joker",10.0,"Терминатор (1984)
+The Terminator",8.0,"Леон
+Léon, 1994",6.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"Большой куш
+Snatch, 2000",0.0,"Леон
+Léon, 1994",6.0,День радио (2003),0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Семь
+Se7en, 1995",10.0,"Отступники
+The Departed, 2006",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",6.0,"Большой куш
+Snatch, 2000",0.0,"Красота по-американски (1999)
+American Beauty",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",6.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0
+4,"Терминатор (1984)
+The Terminator",8.0,"Леон
+Léon, 1994",6.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",7.0,"Терминатор (1984)
+The Terminator",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Однажды в Ирландии (2011)
+The Guard",0.0,"Зодиак (2007)
+Zodiac",8.0,"Назад в будущее
+Back to the Future, 1985",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Дилер (1996)
+Pusher",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Большой куш
+Snatch, 2000",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",0.0,"Чужой
+Alien, 1979",0.0,"Образцовый самец (2001)
+Zoolander",0.0,"Мимино
+1977",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0
+5,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"Мартовские иды (2011)
+The Ides of March",0.0,"Перелом (2007)
+Fracture",10.0,"Терминатор (1984)
+The Terminator",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",7.0,День радио (2003),0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,День радио (2003),0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,"Терминатор (1984)
+The Terminator",8.0,"Леон
+Léon, 1994",6.0,"Американская история X (1998)
+American History X",0.0,"Одержимость
+Whiplash, 2013",7.0,"Ворон (2024)
+The Crow",0.0,"Пленницы (2013)
+Prisoners",10.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",7.0,"Вне закона (1986)
+Down by Law",0.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",7.0,День радио (2003),0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Терминатор (1984)
+The Terminator",8.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Большой куш
+Snatch, 2000",0.0
+6,"Мартовские иды (2011)
+The Ides of March",0.0,"Перелом (2007)
+Fracture",10.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"На посту!
+Au poste!, 2018",0.0,"Мертвец (1995)
+Dead Man",7.0,"Человек на Луне (2018)
+First Man",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,"Терминатор (1984)
+The Terminator",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Не говори никому (2021)
+Gæsterne",0.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",7.0,"Залечь на дно в Брюгге (2007)
+In Bruges",0.0,"Грязь (2013)
+Filth",10.0,"Однажды в Ирландии (2011)
+The Guard",0.0,"Зодиак (2007)
+Zodiac",8.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Человек на Луне (2018)
+First Man",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,"Образцовый самец (2001)
+Zoolander",0.0,"Мертвец (1995)
+Dead Man",7.0,"Вне закона (1986)
+Down by Law",0.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",7.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",0.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Терминатор (1984)
+The Terminator",8.0,День радио (2003),0.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Чужой
+Alien, 1979",0.0
+7,"Американская история X (1998)
+American History X",0.0,"Одержимость
+Whiplash, 2013",7.0,"Однажды в Ирландии (2011)
+The Guard",0.0,"Зодиак (2007)
+Zodiac",8.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Перелом (2007)
+Fracture",10.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Телохранитель киллера (2017)
+The Hitman's Bodyguard",0.0,"Трасса 60
+Interstate 60, 2001",10.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Мертвец (1995)
+Dead Man",7.0,"Мартовские иды (2011)
+The Ides of March",0.0,"Перелом (2007)
+Fracture",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Перелом (2007)
+Fracture",10.0,"Фарго (1995)
+Fargo",0.0,"Мертвец (1995)
+Dead Man",7.0,"Тайное окно (2004)
+Secret Window",0.0,"Зодиак (2007)
+Zodiac",8.0,"На посту!
+Au poste!, 2018",0.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Драйв (2011)
+Drive",7.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",6.0,X (2022),0.0,Наша Russia: Яйца судьбы (2010),1.0
+8,"Отступники
+The Departed, 2006",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Мертвец (1995)
+Dead Man",7.0,"Человек на Луне (2018)
+First Man",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",6.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Фарго (1995)
+Fargo",0.0,"Мертвец (1995)
+Dead Man",7.0,"Фарго (1995)
+Fargo",0.0,"Мертвец (1995)
+Dead Man",7.0,"Нечто (1982)
+The Thing",0.0,"Пятый элемент
+The Fifth Element, 1997",10.0,Курьер (1986),0.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Перелом (2007)
+Fracture",10.0,"Чужой
+Alien, 1979",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Невезучие (2003)
+Tais-toi!",0.0,"Перелом (2007)
+Fracture",10.0,"Образцовый самец (2001)
+Zoolander",0.0,"Мертвец (1995)
+Dead Man",7.0,"Чужой
+Alien, 1979",0.0,"Большой куш
+Snatch, 2000",0.0,"Большой Лебовски (1998)
+The Big Lebowski",8.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",0.0,"Крик (1996)
+Scream",0.0,"Головоломка (2015)
+Inside Out",6.0
+9,"Однажды в Ирландии (2011)
+The Guard",0.0,"Зодиак (2007)
+Zodiac",8.0,"Американская история X (1998)
+American History X",0.0,"Одержимость
+Whiplash, 2013",7.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Перелом (2007)
+Fracture",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Мертвец (1995)
+Dead Man",7.0,"Вонка (2023)
+Wonka",0.0,"Пленницы (2013)
+Prisoners",10.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",5.0,"Семь психопатов (2012)
+Seven Psychopaths",6.0,"Мертвец (1995)
+Dead Man",7.0,"Терминатор (1984)
+The Terminator",8.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",10.0,"Дилер (1996)
+Pusher",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Фарго (1995)
+Fargo",0.0,"Мертвец (1995)
+Dead Man",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",0.0,"Дилер (1996)
+Pusher",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Чужой
+Alien, 1979",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",5.0,"Достать ножи
+Knives Out, 2019",0.0

@@ -1,0 +1,299 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Паразиты
+Gisaengchung, 2019",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Паразиты
+Gisaengchung, 2019",6.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Назад в будущее
+Back to the Future, 1985",5.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Назад в будущее
+Back to the Future, 1985",5.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Паразиты
+Gisaengchung, 2019",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Паразиты
+Gisaengchung, 2019",6.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Назад в будущее
+Back to the Future, 1985",5.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Назад в будущее
+Back to the Future, 1985",5.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",1.0,"Останься (2005)
+Stay",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Билли Мэдисон
+Billy Madison, 1995",6.0,Наша Russia: Яйца судьбы (2010),1.0
+1,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Король говорит!
+The King's Speech, 2010",5.0,"Семь
+Se7en, 1995",7.0,"Король говорит!
+The King's Speech, 2010",5.0,"Семь
+Se7en, 1995",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Вне закона (1986)
+Down by Law",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Вне закона (1986)
+Down by Law",5.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",7.0,"Король говорит!
+The King's Speech, 2010",5.0,"Семь
+Se7en, 1995",7.0,"Король говорит!
+The King's Speech, 2010",5.0,"Семь
+Se7en, 1995",7.0,"Король говорит!
+The King's Speech, 2010",5.0,"Ночь на Земле (1991)
+Night on Earth",3.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Вне закона (1986)
+Down by Law",5.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Фарго (1995)
+Fargo",9.0,Наша Russia: Яйца судьбы (2010),1.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Головоломка 2 (2024)
+Inside Out 2",4.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0
+2,"Король говорит!
+The King's Speech, 2010",5.0,"Мартовские иды (2011)
+The Ides of March",4.0,"Король говорит!
+The King's Speech, 2010",5.0,"Мартовские иды (2011)
+The Ides of March",4.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",3.0,"Вне закона (1986)
+Down by Law",5.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",3.0,"Вне закона (1986)
+Down by Law",5.0,"Нечто (1982)
+The Thing",7.0,"Чужой
+Alien, 1979",6.0,"Король говорит!
+The King's Speech, 2010",5.0,"Мартовские иды (2011)
+The Ides of March",4.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",8.0,"Круэлла (2021)
+Cruella",5.0,"Останься (2005)
+Stay",6.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Субстанция (2024)
+The Substance",10.0
+3,"500 дней лета (2009)
+(500) Days of Summer",3.0,"Отступники
+The Departed, 2006",8.0,"Конклав (2024)
+Conclave",3.0,"Здесь курят (2005)
+Thank You for Smoking",5.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Король говорит!
+The King's Speech, 2010",5.0,"Ночь на Земле (1991)
+Night on Earth",3.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"500 дней лета (2009)
+(500) Days of Summer",3.0,"Отступники
+The Departed, 2006",8.0,"Нечто (1982)
+The Thing",7.0,"Чужой
+Alien, 1979",6.0,"Дневник памяти (2004)
+The Notebook",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",3.0,"Вне закона (1986)
+Down by Law",5.0,"Король говорит!
+The King's Speech, 2010",5.0,"Ночь на Земле (1991)
+Night on Earth",3.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",7.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Образцовый самец (2001)
+Zoolander",1.0,"Дневник памяти (2004)
+The Notebook",7.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Нечто (1982)
+The Thing",7.0
+4,"Нечто (1982)
+The Thing",7.0,"Чужой
+Alien, 1979",6.0,"Нечто (1982)
+The Thing",7.0,"Чужой
+Alien, 1979",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Не говори никому (2021)
+Gæsterne",4.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Король говорит!
+The King's Speech, 2010",5.0,"Ночь на Земле (1991)
+Night on Earth",3.0,"Король говорит!
+The King's Speech, 2010",5.0,"Мартовские иды (2011)
+The Ides of March",4.0,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",6.0,"Нечто (1982)
+The Thing",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Врожденный порок (2014)
+Inherent Vice",5.0,"Страсти Христовы
+The Passion of the Christ, 2004",7.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",3.0,"Вне закона (1986)
+Down by Law",5.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",3.0,"Грязь (2013)
+Filth",3.0,"Бедные-несчастные (2023)
+Poor Things",10.0,О чём говорят мужчины (2010),3.0,День выборов (2009),1.0,"Король говорит!
+The King's Speech, 2010",5.0
+5,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",10.0,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",6.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Шоу Трумана
+The Truman Show, 1998",9.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",8.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",6.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Шоу Трумана
+The Truman Show, 1998",9.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Образцовый самец (2001)
+Zoolander",1.0,"Звездный десант (1997)
+Starship Troopers",1.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Психо (1960)
+Psycho",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",1.0
+6,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",6.0,"500 дней лета (2009)
+(500) Days of Summer",3.0,"Отступники
+The Departed, 2006",8.0,"Дневник памяти (2004)
+The Notebook",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Дневник памяти (2004)
+The Notebook",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",8.0,"Врожденный порок (2014)
+Inherent Vice",5.0,"Страсти Христовы
+The Passion of the Christ, 2004",7.0,"Пленницы (2013)
+Prisoners",9.0,"Зодиак (2007)
+Zodiac",6.0,"500 дней лета (2009)
+(500) Days of Summer",3.0,"Отступники
+The Departed, 2006",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Не говори никому (2021)
+Gæsterne",4.0,"Дневник памяти (2004)
+The Notebook",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",8.0,О чём говорят мужчины (2010),3.0,"Игры разума
+A Beautiful Mind, 2001",6.0,О чём говорят мужчины (2010),3.0,"Игры разума
+A Beautiful Mind, 2001",6.0,"Врожденный порок (2014)
+Inherent Vice",5.0,"Звездный десант (1997)
+Starship Troopers",1.0,"500 дней лета (2009)
+(500) Days of Summer",3.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",7.0,"Бедные-несчастные (2023)
+Poor Things",10.0,"Круэлла (2021)
+Cruella",5.0
+7,"Конклав (2024)
+Conclave",3.0,"Здесь курят (2005)
+Thank You for Smoking",5.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",10.0,"Нечто (1982)
+The Thing",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Пчеловод (2024)
+The Beekeeper",4.0,"Не говори никому (2021)
+Gæsterne",4.0,О чём говорят мужчины (2010),3.0,"Игры разума
+A Beautiful Mind, 2001",6.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",6.0,"
+Небриллиантовая рука (2024)",1.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",6.0,"Субстанция (2024)
+The Substance",10.0,"Остров проклятых
+Shutter Island, 2009",7.0,"Нечто (1982)
+The Thing",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Вне закона (1986)
+Down by Law",5.0,"Врожденный порок (2014)
+Inherent Vice",5.0,"Страсти Христовы
+The Passion of the Christ, 2004",7.0,Гидравлика (2010),3.0,"Папа, сдохни (2018)",5.0,"Нечто (1982)
+The Thing",7.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",3.0,"Звездный десант (1997)
+Starship Troopers",1.0,День выборов (2009),1.0
+8,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",6.0,"Пчеловод (2024)
+The Beekeeper",4.0,"Не говори никому (2021)
+Gæsterne",4.0,"Нечто (1982)
+The Thing",7.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",5.0,"
+Небриллиантовая рука (2024)",1.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",4.0,О чём говорят мужчины (2010),3.0,"Игры разума
+A Beautiful Mind, 2001",6.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",10.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Вне закона (1986)
+Down by Law",5.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",6.0,"Не говори никому (2021)
+Gæsterne",4.0,"Фарго (1995)
+Fargo",9.0,"Американская история X (1998)
+American History X",8.0,"Психо (1960)
+Psycho",7.0,"Такие разные близнецы (2011)
+Jack and Jill",4.0,"Конклав (2024)
+Conclave",3.0,"Нечто (1982)
+The Thing",7.0,"Король говорит!
+The King's Speech, 2010",5.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Каскадёры (2024)
+The Fall Guy",3.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0
+9,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",6.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Вне закона (1986)
+Down by Law",5.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Шоу Трумана
+The Truman Show, 1998",9.0,"Врожденный порок (2014)
+Inherent Vice",5.0,"Страсти Христовы
+The Passion of the Christ, 2004",7.0,Гидравлика (2010),3.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",3.0,"Грязь (2013)
+Filth",3.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",6.0,"Копы в глубоком запасе (2010)
+The Other Guys",1.0,"Человек на Луне (2018)
+First Man",3.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Вне закона (1986)
+Down by Law",5.0,"
+Небриллиантовая рука (2024)",1.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",4.0,"
+Небриллиантовая рука (2024)",1.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",4.0,"Папа, сдохни (2018)",5.0,"Психо (1960)
+Psycho",7.0,День выборов (2009),1.0,Наша Russia: Яйца судьбы (2010),1.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",7.0,О чём говорят мужчины (2010),3.0

@@ -1,0 +1,303 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",6.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",6.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Славные парни (2016)
+The Nice Guys",0.0,"Мертвец (1995)
+Dead Man",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",10.0,"Паразиты
+Gisaengchung, 2019",6.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Смертельное оружие (1987)
+Lethal Weapon",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Назад в будущее
+Back to the Future, 1985",10.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Славные парни (2016)
+The Nice Guys",0.0,"Мертвец (1995)
+Dead Man",6.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Джокер (2019)
+Joker",5.0,"Джокер (2019)
+Joker",5.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Фарго (1995)
+Fargo",0.0,"Джокер (2019)
+Joker",5.0
+1,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Смертельное оружие (1987)
+Lethal Weapon",10.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Смертельное оружие (1987)
+Lethal Weapon",10.0,"Джокер (2019)
+Joker",5.0,"Остров проклятых
+Shutter Island, 2009",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Славные парни (2016)
+The Nice Guys",0.0,"Мертвец (1995)
+Dead Man",6.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",10.0,"Паразиты
+Gisaengchung, 2019",6.0,"Джокер (2019)
+Joker",5.0,"Остров проклятых
+Shutter Island, 2009",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Вне закона (1986)
+Down by Law",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Ла-Ла Ленд
+La La Land, 2016",1.0,"Мстители: Финал (2019)
+Avengers: Endgame",1.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Вонка (2023)
+Wonka",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0
+2,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Вне закона (1986)
+Down by Law",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Вне закона (1986)
+Down by Law",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",6.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Пэрл (2022)
+Pearl",10.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Вне закона (1986)
+Down by Law",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Ла-Ла Ленд
+La La Land, 2016",1.0,"Останься (2005)
+Stay",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0
+3,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Психо (1960)
+Psycho",10.0,"Круто сваренные (1992)
+Lat sau san taam",0.0,"Психо (1960)
+Psycho",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Джокер (2019)
+Joker",5.0,"Остров проклятых
+Shutter Island, 2009",8.0,"Пришельцы в Америке (2001)
+Just Visiting",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",6.0,"Однажды в Ирландии (2011)
+The Guard",0.0,"Зодиак (2007)
+Zodiac",10.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Джокер (2019)
+Joker",5.0,"Остров проклятых
+Shutter Island, 2009",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Трасса 60
+Interstate 60, 2001",6.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Мстители: Финал (2019)
+Avengers: Endgame",1.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",0.0,"Ла-Ла Ленд
+La La Land, 2016",1.0
+4,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Трасса 60
+Interstate 60, 2001",6.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Зеленая миля
+The Green Mile, 1999",6.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Трасса 60
+Interstate 60, 2001",6.0,"Американская история X (1998)
+American History X",5.0,"Вонка (2023)
+Wonka",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Джокер (2019)
+Joker",5.0,"Человек на Луне (2018)
+First Man",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0
+5,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",10.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Трасса 60
+Interstate 60, 2001",6.0,"Звездный десант (1997)
+Starship Troopers",10.0,"Властелин колец: Братство Кольца
+The Lord of the Rings: The Fellowship of the Ring, 2001",10.0,"Дом большой мамочки (2000)
+Big Momma's House",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",0.0,"Смертельное оружие (1987)
+Lethal Weapon",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",7.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Криминальное чтиво
+Pulp Fiction, 1994",7.0,"Славные парни (2016)
+The Nice Guys",0.0,"Мертвец (1995)
+Dead Man",6.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Джокер (2019)
+Joker",5.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0,День выборов (2009),0.0,"Мстители: Финал (2019)
+Avengers: Endgame",1.0
+6,"Славные парни (2016)
+The Nice Guys",0.0,"Чужой
+Alien, 1979",10.0,"Славные парни (2016)
+The Nice Guys",0.0,"Чужой
+Alien, 1979",10.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Славные парни (2016)
+The Nice Guys",0.0,"Чужой
+Alien, 1979",10.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Конклав (2024)
+Conclave",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Не говори никому (2021)
+Gæsterne",0.0,"Шоу Трумана
+The Truman Show, 1998",0.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",0.0,"Мстители: Финал (2019)
+Avengers: Endgame",1.0,"Папа, сдохни (2018)",0.0,Наша Russia: Яйца судьбы (2010),0.0
+7,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",0.0,"Не говори никому (2024)
+Speak No Evil",10.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,Курьер (1986),8.0,"Однажды в Ирландии (2011)
+The Guard",0.0,"Зодиак (2007)
+Zodiac",10.0,"Славные парни (2016)
+The Nice Guys",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Славные парни (2016)
+The Nice Guys",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Пришельцы в Америке (2001)
+Just Visiting",0.0,"Яйцеголовые
+Coneheads, 1993",10.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Ла-Ла Ленд
+La La Land, 2016",1.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Образцовый самец (2001)
+Zoolander",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Терминал (2004)
+The Terminal",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0
+8,"Зомби по имени Шон (2004)
+Shaun of the Dead",10.0,"Паразиты
+Gisaengchung, 2019",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",10.0,"Паразиты
+Gisaengchung, 2019",6.0,"Не говори никому (2021)
+Gæsterne",0.0,Курьер (1986),8.0,"Славные парни (2016)
+The Nice Guys",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Трасса 60
+Interstate 60, 2001",6.0,"Американская история X (1998)
+American History X",5.0,"Красота по-американски (1999)
+American Beauty",7.0,О чём говорят мужчины (2010),0.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Нечто (1982)
+The Thing",10.0,"Не говори никому (2021)
+Gæsterne",0.0,Курьер (1986),8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",0.0,"Мертвец (1995)
+Dead Man",6.0,"Вонка (2023)
+Wonka",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",7.0,"Барби (2023)
+Barbie",6.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",9.0,"Джокер (2019)
+Joker",5.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0
+9,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",9.0,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",9.0,"Славные парни (2016)
+The Nice Guys",0.0,"Джанго освобожденный
+Django Unchained, 2012",8.0,"Не говори никому (2021)
+Gæsterne",0.0,Курьер (1986),8.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Конклав (2024)
+Conclave",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Пэрл (2022)
+Pearl",10.0,"Субстанция (2024)
+The Substance",10.0,"Один дома
+Home Alone, 1990",9.0,"Не говори никому (2021)
+Gæsterne",0.0,Курьер (1986),8.0,"Вонка (2023)
+Wonka",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Конклав (2024)
+Conclave",0.0,"Головоломка 2 (2024)
+Inside Out 2",6.0,"Ночь на Земле (1991)
+Night on Earth",0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",10.0,Наша Russia: Яйца судьбы (2010),0.0,X (2022),0.0,"Бешеные псы (1991)
+Reservoir Dogs",9.0

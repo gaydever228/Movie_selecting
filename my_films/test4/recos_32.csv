@@ -1,0 +1,292 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Терминатор (1984)
+The Terminator",4.0,"Леон
+Léon, 1994",6.0,"Нечто (1982)
+The Thing",10.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Терминатор (1984)
+The Terminator",4.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Терминатор (1984)
+The Terminator",4.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Терминатор (1984)
+The Terminator",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Терминатор (1984)
+The Terminator",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Терминатор (1984)
+The Terminator",4.0,"Леон
+Léon, 1994",6.0,"Нечто (1982)
+The Thing",10.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Терминатор (1984)
+The Terminator",4.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Терминатор (1984)
+The Terminator",4.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Терминатор (1984)
+The Terminator",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Терминатор (1984)
+The Terminator",4.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Терминатор (1984)
+The Terminator",4.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0,"Не говори никому (2021)
+Gæsterne",1.0,"Только бог простит (2012)
+Only God Forgives",1.0,Наша Russia: Яйца судьбы (2010),1.0
+1,"Нечто (1982)
+The Thing",10.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Терминатор (1984)
+The Terminator",4.0,"Леон
+Léon, 1994",6.0,Курьер (1986),5.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Достать ножи
+Knives Out, 2019",8.0,"Назад в будущее
+Back to the Future, 1985",9.0,"Человек на Луне (2018)
+First Man",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Человек на Луне (2018)
+First Man",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Нечто (1982)
+The Thing",10.0,"Типа крутые легавые (2007)
+Hot Fuzz",10.0,"Терминатор (1984)
+The Terminator",4.0,"Леон
+Léon, 1994",6.0,Курьер (1986),5.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Достать ножи
+Knives Out, 2019",8.0,"Назад в будущее
+Back to the Future, 1985",9.0,"Человек на Луне (2018)
+First Man",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",8.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",1.0,Наша Russia: Яйца судьбы (2010),1.0,"Достать ножи
+Knives Out, 2019",8.0
+2,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Достать ножи
+Knives Out, 2019",8.0,"Назад в будущее
+Back to the Future, 1985",9.0,Курьер (1986),5.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Такие разные близнецы (2011)
+Jack and Jill",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",10.0,"Достать ножи
+Knives Out, 2019",8.0,"Назад в будущее
+Back to the Future, 1985",9.0,Курьер (1986),5.0,"Джанго освобожденный
+Django Unchained, 2012",7.0,"Дилер (1996)
+Pusher",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",6.0,"Человек на Луне (2018)
+First Man",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Не говори никому (2021)
+Gæsterne",1.0,"Терминатор (1984)
+The Terminator",4.0,Наша Russia: Яйца судьбы (2010),1.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"500 дней лета (2009)
+(500) Days of Summer",1.0,"Терминатор (1984)
+The Terminator",4.0
+3,"Достать ножи
+Knives Out, 2019",8.0,"Джокер (2019)
+Joker",9.0,"Достать ножи
+Knives Out, 2019",8.0,"Джокер (2019)
+Joker",9.0,"Человек на Луне (2018)
+First Man",1.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,Курьер (1986),5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",6.0,"Достать ножи
+Knives Out, 2019",8.0,"Джокер (2019)
+Joker",9.0,"Достать ножи
+Knives Out, 2019",8.0,"Джокер (2019)
+Joker",9.0,"Не говори никому (2024)
+Speak No Evil",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Дилер (1996)
+Pusher",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",6.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",1.0,"Игры разума
+A Beautiful Mind, 2001",4.0,"Дом большой мамочки (2000)
+Big Momma's House",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Такие разные близнецы (2011)
+Jack and Jill",1.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0,"Терминатор (1984)
+The Terminator",4.0,"Человек на Луне (2018)
+First Man",1.0,"Не говори никому (2021)
+Gæsterne",1.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",6.0
+4,Курьер (1986),5.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,Курьер (1986),5.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Нечто (2011)
+The Thing",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Не говори никому (2024)
+Speak No Evil",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Такие разные близнецы (2011)
+Jack and Jill",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Однажды в Ирландии (2011)
+The Guard",8.0,"Зодиак (2007)
+Zodiac",7.0,Курьер (1986),5.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Не говори никому (2024)
+Speak No Evil",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",7.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",1.0,Майор Гром: Игра (2024),5.0,"Не говори никому (2024)
+Speak No Evil",1.0,"Достать ножи
+Knives Out, 2019",8.0,"Круэлла (2021)
+Cruella",7.0,"Однажды в Ирландии (2011)
+The Guard",8.0,"Соединённые штаты Лиланда (я отказываюсь называть этот фильм ""правда пацана"") (2003)
+The United States of Leland",1.0,"Большой Лебовски (1998)
+The Big Lebowski",10.0
+5,"Однажды в Ирландии (2011)
+The Guard",8.0,"Зодиак (2007)
+Zodiac",7.0,"Однажды в Ирландии (2011)
+The Guard",8.0,"Зодиак (2007)
+Zodiac",7.0,"Пленницы (2013)
+Prisoners",1.0,"Семь
+Se7en, 1995",7.0,"Человек на Луне (2018)
+First Man",1.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Субстанция (2024)
+The Substance",6.0,"Один дома
+Home Alone, 1990",8.0,"Однажды в Ирландии (2011)
+The Guard",8.0,"Зодиак (2007)
+Zodiac",7.0,"Дилер (1996)
+Pusher",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",6.0,"Человек на Луне (2018)
+First Man",1.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Как поймать монстра (2014)
+Lost River",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Не говори никому (2021)
+Gæsterne",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Человек на Луне (2018)
+First Man",1.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Останься (2005)
+Stay",1.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",1.0,"
+Бременские музыканты (2023)",1.0,Курьер (1986),5.0
+6,"Пэрл (2022)
+Pearl",1.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",6.0,"Субстанция (2024)
+The Substance",6.0,"Один дома
+Home Alone, 1990",8.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,Курьер (1986),5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,Курьер (1986),5.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",7.0,"Субстанция (2024)
+The Substance",6.0,"Один дома
+Home Alone, 1990",8.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",1.0,"Игры разума
+A Beautiful Mind, 2001",4.0,Курьер (1986),5.0,"Не говори никому (2021)
+Gæsterne",1.0,"500 дней лета (2009)
+(500) Days of Summer",1.0,"Место под соснами (2012)
+The Place Beyond the Pines",1.0,Гидравлика (2010),1.0,Гитлер капут! (2008),1.0
+7,"Образцовый самец (2001)
+Zoolander",7.0,"Чужой
+Alien, 1979",7.0,"Образцовый самец (2001)
+Zoolander",7.0,"Чужой
+Alien, 1979",7.0,"Не говори никому (2024)
+Speak No Evil",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",1.0,"Ла-Ла Ленд
+La La Land, 2016",6.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",7.0,"Образцовый самец (2001)
+Zoolander",7.0,"Чужой
+Alien, 1979",7.0,"Пэрл (2022)
+Pearl",1.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",6.0,"Человек на Луне (2018)
+First Man",1.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Дом большой мамочки (2000)
+Big Momma's House",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Пэрл (2022)
+Pearl",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Нечто (2011)
+The Thing",6.0,"Круэлла (2021)
+Cruella",7.0,"Достать ножи
+Knives Out, 2019",8.0,"Чокнутый (2006)
+Delirious",1.0,Курьер (1986),5.0,"Субстанция (2024)
+The Substance",6.0
+8,"Дом большой мамочки (2000)
+Big Momma's House",1.0,"Мертвые не умирают (2019)
+The Dead Don't Die",7.0,"Пэрл (2022)
+Pearl",1.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",6.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Дилер (1996)
+Pusher",8.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",6.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",1.0,Майор Гром: Игра (2024),5.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",1.0,Майор Гром: Игра (2024),5.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Армагеддец (2013)
+The World's End",8.0,"Пленницы (2013)
+Prisoners",1.0,"Зодиак (2007)
+Zodiac",7.0,"Пэрл (2022)
+Pearl",1.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",6.0,"Нечто (2011)
+The Thing",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Как поймать монстра (2014)
+Lost River",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Пэрл (2022)
+Pearl",1.0,"Нечто (2011)
+The Thing",6.0,"Образцовый самец (2001)
+Zoolander",7.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Дюна: Часть вторая (2024)
+Dune: Part Two",1.0,"Нечто (1982)
+The Thing",10.0
+9,"Субстанция (2024)
+The Substance",6.0,"Один дома
+Home Alone, 1990",8.0,"Пленницы (2013)
+Prisoners",1.0,"Зодиак (2007)
+Zodiac",7.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",1.0,"Ла-Ла Ленд
+La La Land, 2016",6.0,"Нечто (2011)
+The Thing",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Как поймать монстра (2014)
+Lost River",1.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Дом большой мамочки (2000)
+Big Momma's House",1.0,"Круто сваренные (1992)
+Lat sau san taam",6.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",1.0,Майор Гром: Игра (2024),5.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",1.0,"Армагеддец (2013)
+The World's End",8.0,"Нечто (2011)
+The Thing",6.0,"Страсти Христовы
+The Passion of the Christ, 2004",6.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",1.0,"Игры разума
+A Beautiful Mind, 2001",4.0,"Пленницы (2013)
+Prisoners",1.0,"Семь
+Se7en, 1995",7.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",1.0,"Славные парни (2016)
+The Nice Guys",7.0,"Между нами музыка (2015)
+Song to Song",1.0,"Такие разные близнецы (2011)
+Jack and Jill",1.0,Курьер (1986),5.0,Наша Russia: Яйца судьбы (2010),1.0,"Дилер (1996)
+Pusher",8.0,"Круэлла (2021)
+Cruella",7.0

@@ -1,0 +1,298 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",5.0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",5.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",6.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",6.0,"Вне закона (1986)
+Down by Law",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",10.0,"Вне закона (1986)
+Down by Law",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",10.0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",5.0,"Один дома
+Home Alone, 1990",6.0,"Красота по-американски (1999)
+American Beauty",5.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",6.0,"Один дома
+Home Alone, 1990",6.0,"Назад в будущее
+Back to the Future, 1985",6.0,"Вне закона (1986)
+Down by Law",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",10.0,"Вне закона (1986)
+Down by Law",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",10.0,"Вне закона (1986)
+Down by Law",6.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Один дома
+Home Alone, 1990",6.0,"Вне закона (1986)
+Down by Law",6.0,"Анора (2024)
+Anora",6.0,"Один дома
+Home Alone, 1990",6.0
+1,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Паразиты
+Gisaengchung, 2019",5.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Паразиты
+Gisaengchung, 2019",5.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Паразиты
+Gisaengchung, 2019",5.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Паразиты
+Gisaengchung, 2019",5.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Зеленая миля
+The Green Mile, 1999",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Один дома
+Home Alone, 1990",6.0,"Один дома
+Home Alone, 1990",6.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",3.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,О чём ещё говорят мужчины (2011),3.0,"Ла-Ла Ленд
+La La Land, 2016",7.0
+2,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",7.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",7.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Вне закона (1986)
+Down by Law",6.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Вне закона (1986)
+Down by Law",6.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Конклав (2024)
+Conclave",6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",7.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Вне закона (1986)
+Down by Law",6.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Вне закона (1986)
+Down by Law",6.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Вне закона (1986)
+Down by Law",6.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Последний бойскаут (1991)
+The Last Boy Scout",5.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",5.0
+3,"Полу-Нельсон (2006)
+Half Nelson",3.0,"Врожденный порок (2014)
+Inherent Vice",8.0,"Полу-Нельсон (2006)
+Half Nelson",3.0,"Врожденный порок (2014)
+Inherent Vice",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Одержимость
+Whiplash, 2013",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Одержимость
+Whiplash, 2013",8.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",7.0,"Виды доброты (2024)
+Kinds of Kindness",5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Одержимость
+Whiplash, 2013",8.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Одержимость
+Whiplash, 2013",8.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",8.0,"Останься (2005)
+Stay",7.0,"Невезучие (2003)
+Tais-toi!",8.0,"Один дома
+Home Alone, 1990",6.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",3.0
+4,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",5.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",5.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",5.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Конклав (2024)
+Conclave",6.0,X (2022),2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",8.0,"Чужой: Ромул (2024)
+Alien: Romulus",7.0,"Конклав (2024)
+Conclave",6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Американская история X (1998)
+American History X",9.0,"Полу-Нельсон (2006)
+Half Nelson",3.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",5.0,"Звездный десант (1997)
+Starship Troopers",3.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Платформа 2 (2024)
+El hoyo 2",4.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0
+5,"Чужой: Ромул (2024)
+Alien: Romulus",7.0,"Конклав (2024)
+Conclave",6.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Одержимость
+Whiplash, 2013",8.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",6.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Одержимость
+Whiplash, 2013",8.0,"Вне закона (1986)
+Down by Law",6.0,"Терминал (2004)
+The Terminal",6.0,"Субстанция (2024)
+The Substance",10.0,"Остров проклятых
+Shutter Island, 2009",6.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Конклав (2024)
+Conclave",6.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Конклав (2024)
+Conclave",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"500 дней лета (2009)
+(500) Days of Summer",5.0,"Звездный десант (1997)
+Starship Troopers",3.0,"500 дней лета (2009)
+(500) Days of Summer",5.0,"Субстанция (2024)
+The Substance",10.0
+6,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Пэрл (2022)
+Pearl",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,О чём ещё говорят мужчины (2011),3.0,"Нечто (2011)
+The Thing",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Пэрл (2022)
+Pearl",6.0,"Полу-Нельсон (2006)
+Half Nelson",3.0,"Врожденный порок (2014)
+Inherent Vice",8.0,"Каскадёры (2024)
+The Fall Guy",8.0,"Неогранённые алмазы (2019)
+Uncut Gems",7.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,"Последний бойскаут (1991)
+The Last Boy Scout",5.0,"Гладиатор 2 (2024)
+Gladiator II",6.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",6.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",10.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",5.0,X (2022),2.0,"Мартовские иды (2011)
+The Ides of March",5.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0
+7,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",5.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",6.0,"Чужой: Ромул (2024)
+Alien: Romulus",7.0,"Конклав (2024)
+Conclave",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Субстанция (2024)
+The Substance",10.0,"Остров проклятых
+Shutter Island, 2009",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,О чём ещё говорят мужчины (2011),3.0,"Нечто (2011)
+The Thing",6.0,"Полу-Нельсон (2006)
+Half Nelson",3.0,"Врожденный порок (2014)
+Inherent Vice",8.0,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Одержимость
+Whiplash, 2013",8.0,"Пункт назначения. Аквапарк (2019)
+Aquaslash",2.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Субстанция (2024)
+The Substance",10.0,"Остров проклятых
+Shutter Island, 2009",6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,Курьер (1986),6.0,"Последний бойскаут (1991)
+The Last Boy Scout",5.0,"Гладиатор 2 (2024)
+Gladiator II",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",5.0,"Звездный десант (1997)
+Starship Troopers",3.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Один дома
+Home Alone, 1990",6.0,"Мементо (2000)
+Memento",7.0,О чём ещё говорят мужчины (2011),3.0
+8,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Пэрл (2022)
+Pearl",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Не говори никому (2021)
+Gæsterne",6.0,"Миссия невыполнима: Смертельная расплата. Часть первая (2023)
+Mission: Impossible - Dead Reckoning Part One",5.0,"Не говори никому (2021)
+Gæsterne",6.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",6.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",5.0,"Чужой: Ромул (2024)
+Alien: Romulus",7.0,"Конклав (2024)
+Conclave",6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Пэрл (2022)
+Pearl",6.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Каскадёры (2024)
+The Fall Guy",8.0,"Неогранённые алмазы (2019)
+Uncut Gems",7.0,"Каскадёры (2024)
+The Fall Guy",8.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",3.0,"Звёздные войны: Эпизод 3 – Месть ситхов (2005)
+Star Wars: Episode III - Revenge of the Sith",3.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",5.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",8.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0
+9,"Ла-Ла Ленд
+La La Land, 2016",7.0,"Одержимость
+Whiplash, 2013",8.0,X (2022),2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",8.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",5.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Каскадёры (2024)
+The Fall Guy",8.0,"Неогранённые алмазы (2019)
+Uncut Gems",7.0,"Каскадёры (2024)
+The Fall Guy",8.0,"Ночь на Земле (1991)
+Night on Earth",5.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,X (2022),2.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",8.0,"Дилер (1996)
+Pusher",6.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Семь психопатов (2012)
+Seven Psychopaths",7.0,"Семь
+Se7en, 1995",9.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",6.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",7.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",7.0,"Славные парни (2016)
+The Nice Guys",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",4.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",5.0,"
+Мемуары Улитки (2024)
+Memoir of a Snail",5.0,"Грязь (2013)
+Filth",10.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",8.0

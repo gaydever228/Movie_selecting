@@ -1,0 +1,296 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Паразиты
+Gisaengchung, 2019",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Паразиты
+Gisaengchung, 2019",9.0,"Терминатор (1984)
+The Terminator",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",8.0,"Терминатор (1984)
+The Terminator",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",8.0,"Крик (1996)
+Scream",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Крик (1996)
+Scream",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Паразиты
+Gisaengchung, 2019",9.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Паразиты
+Gisaengchung, 2019",9.0,"Терминатор (1984)
+The Terminator",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",8.0,"Терминатор (1984)
+The Terminator",9.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",8.0,"Крик (1996)
+Scream",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Мимино
+1977",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Чокнутый (2006)
+Delirious",0.0,"Чокнутый (2006)
+Delirious",0.0,"Терминатор (1984)
+The Terminator",9.0,"Хранители (2009)
+Watchmen",7.0,Мастер и Маргарита (2023),0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0
+1,"Терминатор (1984)
+The Terminator",9.0,"Леон
+Léon, 1994",9.0,"Терминатор (1984)
+The Terminator",9.0,"Леон
+Léon, 1994",9.0,"Хранители (2009)
+Watchmen",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Хранители (2009)
+Watchmen",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Мимино
+1977",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Терминатор (1984)
+The Terminator",9.0,"Леон
+Léon, 1994",9.0,"Терминатор (1984)
+The Terminator",9.0,"Леон
+Léon, 1994",9.0,"Хранители (2009)
+Watchmen",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Хранители (2009)
+Watchmen",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Мимино
+1977",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Король говорит!
+The King's Speech, 2010",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Останься (2005)
+Stay",6.0,"Терминал (2004)
+The Terminal",8.0,Чужие (1986),8.0,"Терминатор (1984)
+The Terminator",9.0
+2,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,X (2022),7.0,"Американская история X (1998)
+American History X",8.0,"Большой куш
+Snatch, 2000",8.0,"Американская история X (1998)
+American History X",8.0,"Большой куш
+Snatch, 2000",8.0,"Мимино
+1977",0.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,X (2022),7.0,"Американская история X (1998)
+American History X",8.0,"Большой куш
+Snatch, 2000",8.0,"Американская история X (1998)
+American History X",8.0,"Большой куш
+Snatch, 2000",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Крик (1996)
+Scream",6.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",7.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Американская история X (1998)
+American History X",8.0,"Образцовый самец (2001)
+Zoolander",6.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Фанатик (2001)
+The Believer",0.0,"Хранители (2009)
+Watchmen",7.0
+3,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,X (2022),7.0,"Король говорит!
+The King's Speech, 2010",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Назад в будущее
+Back to the Future, 1985",8.0,"21 грамм (2003)
+21 Grams",7.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"21 грамм (2003)
+21 Grams",7.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,X (2022),7.0,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",9.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Назад в будущее
+Back to the Future, 1985",8.0,"Мертвые не умирают (2019)
+The Dead Don't Die",6.0,"Мертвец (1995)
+Dead Man",7.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Нечто (2011)
+The Thing",9.0,"Терминатор (1984)
+The Terminator",9.0,"
+Бременские музыканты (2023)",0.0,"Король говорит!
+The King's Speech, 2010",6.0,"Мимино
+1977",0.0,Майор Гром: Игра (2024),0.0,Гитлер капут! (2008),4.0
+4,"Американская история X (1998)
+American History X",8.0,Курьер (1986),8.0,"Нечто (1982)
+The Thing",9.0,"Чужой
+Alien, 1979",9.0,"Король говорит!
+The King's Speech, 2010",6.0,"Семь
+Se7en, 1995",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",8.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Терминатор (1984)
+The Terminator",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Терминатор (1984)
+The Terminator",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Американская история X (1998)
+American History X",8.0,Курьер (1986),8.0,"Король говорит!
+The King's Speech, 2010",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Король говорит!
+The King's Speech, 2010",6.0,"Семь
+Se7en, 1995",8.0,"Хранители (2009)
+Watchmen",7.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",9.0,"Терминатор (1984)
+The Terminator",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Американская история X (1998)
+American History X",8.0,"Мертвые не умирают (2019)
+The Dead Don't Die",6.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Бедные-несчастные (2023)
+Poor Things",8.0,"Конклав (2024)
+Conclave",0.0,"Нечто (1982)
+The Thing",9.0
+5,"Король говорит!
+The King's Speech, 2010",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Американская история X (1998)
+American History X",8.0,Курьер (1986),8.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Нечто (2011)
+The Thing",9.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Нечто (2011)
+The Thing",9.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Американская история X (1998)
+American History X",8.0,Курьер (1986),8.0,"Красота по-американски (1999)
+American Beauty",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",7.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Король говорит!
+The King's Speech, 2010",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,День радио (2003),6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Дэдпул и Росомаха (2024)
+Deadpool & Wolverine",0.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Мартовские иды (2011)
+The Ides of March",0.0,"Король говорит!
+The King's Speech, 2010",6.0
+6,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",8.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Король говорит!
+The King's Speech, 2010",6.0,"Семь
+Se7en, 1995",8.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Король говорит!
+The King's Speech, 2010",6.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",8.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Король говорит!
+The King's Speech, 2010",6.0,"Семь
+Se7en, 1995",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Мертвец (1995)
+Dead Man",7.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Крик (1996)
+Scream",6.0,"Мимино
+1977",0.0,"Бедные-несчастные (2023)
+Poor Things",8.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Полу-Нельсон (2006)
+Half Nelson",0.0,"Американская история X (1998)
+American History X",8.0
+7,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Красота по-американски (1999)
+American Beauty",8.0,"Один дома
+Home Alone, 1990",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Чокнутый (2006)
+Delirious",0.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Красота по-американски (1999)
+American Beauty",8.0,"Один дома
+Home Alone, 1990",7.0,"Загадочная история Бенджамина Баттона
+The Curious Case of Benjamin Button, 2008",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Крик (1996)
+Scream",6.0,"Славные парни (2016)
+The Nice Guys",7.0,"Чокнутый (2006)
+Delirious",0.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Гладиатор 2 (2024)
+Gladiator II",0.0,"Нечто (2011)
+The Thing",9.0,"Мертвые не умирают (2019)
+The Dead Don't Die",6.0,"Мертвец (1995)
+Dead Man",7.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Терминал (2004)
+The Terminal",8.0,"Перелом (2007)
+Fracture",6.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",7.0
+8,"Однажды в Ирландии (2011)
+The Guard",6.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Чокнутый (2006)
+Delirious",0.0,"Виды доброты (2024)
+Kinds of Kindness",7.0,"Секреты Лос-Анджелеса (1997)
+L.A. Confidential",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",7.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Типа крутые легавые (2007)
+Hot Fuzz",7.0,"Отступники
+The Departed, 2006",9.0,"Образцовый самец (2001)
+Zoolander",6.0,"Мертвец (1995)
+Dead Man",7.0,"Терминатор (1984)
+The Terminator",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",7.0,"Мертвец (1995)
+Dead Man",7.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",8.0,"Терминал (2004)
+The Terminal",8.0,"Нечто (1982)
+The Thing",9.0,День радио (2008),6.0,"Мертвые не умирают (2019)
+The Dead Don't Die",6.0,"Крик (1996)
+Scream",6.0
+9,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Мимино
+1977",0.0,"Поймай меня, если сможешь
+Catch Me If You Can, 2002",8.0,"Крик (1996)
+Scream",6.0,"Славные парни (2016)
+The Nice Guys",7.0,"Типа крутые легавые (2007)
+Hot Fuzz",7.0,"Отступники
+The Departed, 2006",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",8.0,"Чужой
+Alien, 1979",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",8.0,"Чужой
+Alien, 1979",9.0,"Фарго (1995)
+Fargo",9.0,"Ночь на Земле (1991)
+Night on Earth",8.0,"Красота по-американски (1999)
+American Beauty",8.0,"Один дома
+Home Alone, 1990",7.0,"Образцовый самец (2001)
+Zoolander",6.0,"Мертвец (1995)
+Dead Man",7.0,"Красота по-американски (1999)
+American Beauty",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",7.0,День радио (2003),6.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",8.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",0.0,"Игры разума
+A Beautiful Mind, 2001",8.0,"21 грамм (2003)
+21 Grams",7.0,День радио (2003),6.0,"Клуб «Завтрак» (1985)
+The Breakfast Club",8.0,"21 грамм (2003)
+21 Grams",7.0,"Последний бойскаут (1991)
+The Last Boy Scout",0.0,"Мачо и ботан (2012)
+21 Jump Street",6.0

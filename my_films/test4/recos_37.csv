@@ -1,0 +1,300 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Славные парни (2016)
+The Nice Guys",7.0,"Чужой
+Alien, 1979",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Чужой
+Alien, 1979",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Славные парни (2016)
+The Nice Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Славные парни (2016)
+The Nice Guys",7.0,"Чужой
+Alien, 1979",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Чужой
+Alien, 1979",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Джанго освобожденный
+Django Unchained, 2012",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Славные парни (2016)
+The Nice Guys",7.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Пэрл (2022)
+Pearl",7.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Хранители (2009)
+Watchmen",10.0,"Армагеддец (2013)
+The World's End",4.0,"Драйв (2011)
+Drive",9.0
+1,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",7.0,О чём говорят мужчины (2010),10.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Славные парни (2016)
+The Nice Guys",7.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0
+2,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",9.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,Курьер (1986),8.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",9.0,X (2022),6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",5.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",6.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",6.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",6.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0
+3,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,Курьер (1986),8.0,"Пэрл (2022)
+Pearl",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Драйв (2011)
+Drive",9.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Драйв (2011)
+Drive",9.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"На посту!
+Au poste!, 2018",6.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"На посту!
+Au poste!, 2018",6.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Драйв (2011)
+Drive",9.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Драйв (2011)
+Drive",9.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",5.0,"На посту!
+Au poste!, 2018",6.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"На посту!
+Au poste!, 2018",6.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",5.0,"Чужой
+Alien, 1979",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Фанатик (2001)
+The Believer",8.0,"Мементо (2000)
+Memento",5.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,"Хранители (2009)
+Watchmen",10.0
+4,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,Курьер (1986),8.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",5.0,"На посту!
+Au poste!, 2018",6.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",5.0,"На посту!
+Au poste!, 2018",6.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",4.0,"На посту!
+Au poste!, 2018",6.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",7.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"Терминал (2004)
+The Terminal",6.0,"Поцелуй на вылет (2005)
+Kiss Kiss Bang Bang",5.0,"На посту!
+Au poste!, 2018",6.0,"Драйв (2011)
+Drive",9.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"На посту!
+Au poste!, 2018",6.0,"Хранители (2009)
+Watchmen",10.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Круэлла (2021)
+Cruella",9.0,"Пэрл (2022)
+Pearl",7.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0
+5,"Драйв (2011)
+Drive",9.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Драйв (2011)
+Drive",9.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",4.0,"На посту!
+Au poste!, 2018",6.0,"Драйв (2011)
+Drive",9.0,"Форрест Гамп
+Forrest Gump, 1994",8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Семь
+Se7en, 1995",10.0,"Пэрл (2022)
+Pearl",7.0,Курьер (1986),8.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",7.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Безумный Макс 2: Воин дороги (1981)
+Mad Max 2",8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",5.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",6.0,"Хранители (2009)
+Watchmen",10.0,"Славные парни (2016)
+The Nice Guys",7.0
+6,"Пэрл (2022)
+Pearl",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Зомби по имени Шон (2004)
+Shaun of the Dead",8.0,"Пэрл (2022)
+Pearl",7.0,Курьер (1986),8.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Семь
+Se7en, 1995",10.0,"Каскадёры (2024)
+The Fall Guy",4.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Дневник памяти (2004)
+The Notebook",8.0,"На посту!
+Au poste!, 2018",6.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",8.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,Курьер (1986),8.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Семь
+Se7en, 1995",10.0,"Как поймать монстра (2014)
+Lost River",5.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Как поймать монстра (2014)
+Lost River",5.0,"Полу-Нельсон (2006)
+Half Nelson",7.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"Мементо (2000)
+Memento",5.0,"Фанатик (2001)
+The Believer",8.0,X (2022),6.0,"Максин XXX (2024)
+MaXXXine",5.0,Гитлер капут! (2008),2.0
+7,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Король говорит!
+The King's Speech, 2010",8.0,"Хранители (2009)
+Watchmen",10.0,"Король говорит!
+The King's Speech, 2010",8.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Большой куш
+Snatch, 2000",8.0,"Пэрл (2022)
+Pearl",7.0,Курьер (1986),8.0,"Максин XXX (2024)
+MaXXXine",5.0,"Зона интересов (2023)
+The Zone of Interest",6.0,"Максин XXX (2024)
+MaXXXine",5.0,"Зона интересов (2023)
+The Zone of Interest",6.0,"Пэрл (2022)
+Pearl",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Хранители (2009)
+Watchmen",10.0,"Король говорит!
+The King's Speech, 2010",8.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Большой куш
+Snatch, 2000",8.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Отступники
+The Departed, 2006",7.0,"Дневник памяти (2004)
+The Notebook",8.0,"На посту!
+Au poste!, 2018",6.0,"Дневник памяти (2004)
+The Notebook",8.0,"На посту!
+Au poste!, 2018",6.0,"Как поймать монстра (2014)
+Lost River",5.0,"Мачо и ботан (2012)
+21 Jump Street",8.0,"Драйв (2011)
+Drive",9.0,"Молчание ягнят
+The Silence of the Lambs, 1990",10.0,X (2022),6.0,"Кот в сапогах 2: Последнее желание (2022)
+Puss in Boots: The Last Wish",5.0
+8,О чём говорят мужчины (2010),10.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",7.0,"Здесь курят (2005)
+Thank You for Smoking",6.0,"Терминал (2004)
+The Terminal",6.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Семь
+Se7en, 1995",10.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",7.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Хранители (2009)
+Watchmen",10.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",10.0,"Битлджус Битлджус (2024)
+Beetlejuice Beetlejuice",4.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Пэрл (2022)
+Pearl",7.0,"Место под соснами (2012)
+The Place Beyond the Pines",9.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",6.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,"Эта дурацкая любовь (2011)
+Crazy, Stupid, Love.",6.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",8.0,X (2022),6.0,"Апокалипсис сегодня (1979)
+Apocalypse Now",8.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"21 грамм (2003)
+21 Grams",6.0,"Неогранённые алмазы (2019)
+Uncut Gems",8.0,"Психо (1960)
+Psycho",9.0,"Славные парни (2016)
+The Nice Guys",7.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Мачо и ботан (2012)
+21 Jump Street",8.0
+9,"Здесь курят (2005)
+Thank You for Smoking",6.0,"Терминал (2004)
+The Terminal",6.0,"Смертельное оружие (1987)
+Lethal Weapon",8.0,"Король говорит!
+The King's Speech, 2010",8.0,"Залечь на дно в Брюгге (2007)
+In Bruges",8.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Большой куш
+Snatch, 2000",8.0,"Дневник памяти (2004)
+The Notebook",8.0,"На посту!
+Au poste!, 2018",6.0,"Каскадёры (2024)
+The Fall Guy",4.0,"Ночь на Земле (1991)
+Night on Earth",7.0,"Хранители (2009)
+Watchmen",10.0,"Король говорит!
+The King's Speech, 2010",8.0,О чём говорят мужчины (2010),10.0,"Агенты А.Н.К.Л. (2015)
+The Man from U.N.C.L.E.",7.0,"Пэрл (2022)
+Pearl",7.0,Курьер (1986),8.0,"Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу (1963)
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",8.0,"На посту!
+Au poste!, 2018",6.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"21 грамм (2003)
+21 Grams",6.0,"Таксист
+Taeksi unjeonsa, 2017
+(корейский, а не который с робертом де ниро!)",7.0,"Виды доброты (2024)
+Kinds of Kindness",6.0,"Выживут только любовники (2013)
+Only Lovers Left Alive",9.0,"Билли Мэдисон
+Billy Madison, 1995",6.0,О чём говорят мужчины (2010),10.0,"Армагеддец (2013)
+The World's End",4.0,"Большой Лебовски (1998)
+The Big Lebowski",9.0,"Круэлла (2021)
+Cruella",9.0

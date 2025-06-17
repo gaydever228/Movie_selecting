@@ -1,0 +1,310 @@
+,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=0,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_jaccar_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=0,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_cosine_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=0,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,STV_star_kendall_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=0,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_jaccar_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=0,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_cosine_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=0,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,SNTV_kendall_deg=7_size=10_weighted_rate=1,KNN cosine,KNN cosine,KNN TF-IDF,KNN TF-IDF,KNN BM25,KNN BM25,ALS,ALS,Random,Random,Popular,Popular
+,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,ближайший сосед,оценка соседа,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка,рекомендации,реальная оценка
+0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Большой куш
+Snatch, 2000",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Большой куш
+Snatch, 2000",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Джанго освобожденный
+Django Unchained, 2012",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Джанго освобожденный
+Django Unchained, 2012",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Большой куш
+Snatch, 2000",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Большой куш
+Snatch, 2000",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Джанго освобожденный
+Django Unchained, 2012",10.0,"Большой куш
+Snatch, 2000",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Начало
+Inception, 2010",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Титаник (1997)
+Titanic",0.0,"Начало
+Inception, 2010",0.0,"Место под соснами (2012)
+The Place Beyond the Pines",0.0,"Титаник (1997)
+Titanic",0.0
+1,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Одержимость
+Whiplash, 2013",9.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Большой куш
+Snatch, 2000",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Джанго освобожденный
+Django Unchained, 2012",10.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Начало
+Inception, 2010",0.0,"Железный человек (2008)
+Iron Man",6.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Отступники
+The Departed, 2006",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0
+2,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"1+1
+Intouchables, 2011",8.0,Курьер (1986),0.0,"Достать ножи
+Knives Out, 2019",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"1+1
+Intouchables, 2011",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Одержимость
+Whiplash, 2013",9.0,"Большой куш
+Snatch, 2000",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Леон
+Léon, 1994",0.0,"Молчание ягнят
+The Silence of the Lambs, 1990",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0
+3,"Игры разума
+A Beautiful Mind, 2001",0.0,"Одержимость
+Whiplash, 2013",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"1+1
+Intouchables, 2011",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Одержимость
+Whiplash, 2013",9.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"1+1
+Intouchables, 2011",8.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Леон
+Léon, 1994",0.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Ла-Ла Ленд
+La La Land, 2016",0.0,"Министерство неджентльменских дел (2024)
+The Ministry of Ungentlemanly Warfare",0.0,"Начало
+Inception, 2010",0.0
+4,Курьер (1986),0.0,"Достать ножи
+Knives Out, 2019",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Большой куш
+Snatch, 2000",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Зодиак (2007)
+Zodiac",0.0,"Однажды в Ирландии (2011)
+The Guard",9.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Здесь курят (2005)
+Thank You for Smoking",0.0,"Леон
+Léon, 1994",0.0
+5,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Большой куш
+Snatch, 2000",0.0,"Бесславные ублюдки
+Inglourious Basterds, 2009",10.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Одержимость
+Whiplash, 2013",9.0,"Семь
+Se7en, 1995",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Семь
+Se7en, 1995",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Леон
+Léon, 1994",0.0,"Стражи Галактики. Часть 3 (2023)
+Guardians of the Galaxy Vol. 3",7.0,"Бегущий по лезвию 2049 (2017)
+Blade Runner 2049",0.0,"Остров проклятых
+Shutter Island, 2009",0.0
+6,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Одержимость
+Whiplash, 2013",9.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",7.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Пираты Карибского моря: Проклятие Черной жемчужины
+Pirates of the Caribbean: The Curse of the Black Pearl, 2003",7.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Однажды в Ирландии (2011)
+The Guard",9.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Шоу Трумана
+The Truman Show, 1998",8.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Однажды в Ирландии (2011)
+The Guard",9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Однажды в Ирландии (2011)
+The Guard",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Большой куш
+Snatch, 2000",0.0,"Начало
+Inception, 2010",0.0,"Железный человек (2008)
+Iron Man",6.0,"Человек на Луне (2018)
+First Man",0.0,"Зеленая миля
+The Green Mile, 1999",0.0
+7,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Вне закона (1986)
+Down by Law",0.0,"Дилер (1996)
+Pusher",7.0,"Вне закона (1986)
+Down by Law",0.0,"Дилер (1996)
+Pusher",7.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Одержимость
+Whiplash, 2013",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Побег из Шоушенка
+The Shawshank Redemption, 1994",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Общество мертвых поэтов (1989)
+Dead Poets Society",0.0,"Одержимость
+Whiplash, 2013",9.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Омерзительная восьмерка
+The Hateful Eight, 2015",8.0,"Леон
+Léon, 1994",0.0,"Титаник (1997)
+Titanic",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Большой куш
+Snatch, 2000",0.0,"Каскадёры (2024)
+The Fall Guy",0.0,"Железный человек (2008)
+Iron Man",6.0
+8,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Кофе и сигареты (2003)
+Coffee and Cigarettes",0.0,"Король говорит!
+The King's Speech, 2010",8.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Семь
+Se7en, 1995",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Побег из Нью-Йорка (1981)
+Escape from New York (не тарков)",0.0,"Терминатор 2: Судный день
+Terminator 2: Judgment Day, 1991",7.0,"Титаник (1997)
+Titanic",0.0,"Круэлла (2021)
+Cruella",7.0,"Титаник (1997)
+Titanic",0.0,"Круэлла (2021)
+Cruella",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,"Полночь с дьяволом (2023)
+Late Night with the Devil",0.0,"Однажды в Ирландии (2011)
+The Guard",9.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Чужой: Ромул (2024)
+Alien: Romulus",0.0,"Не шутите с Zоханом! (2008)
+You Don't Mess with the Zohan",7.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Скотт Пилигрим против всех (2010)
+Scott Pilgrim vs. the World",8.0,"Большой куш
+Snatch, 2000",0.0,"Форрест Гамп
+Forrest Gump, 1994",0.0,"Максин XXX (2024)
+MaXXXine",0.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0
+9,День радио (2008),0.0,"Бедные-несчастные (2023)
+Poor Things",8.0,День радио (2008),0.0,"Бедные-несчастные (2023)
+Poor Things",8.0,"Семь
+Se7en, 1995",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,"Безумный Макс: Дорога ярости
+Mad Max: Fury Road, 2015",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Начало
+Inception, 2010",0.0,"Интерстеллар
+Interstellar, 2014",9.0,"Таксист (1976)
+Taxi Driver
+(с робертом де ниро)",0.0,"Бешеные псы (1991)
+Reservoir Dogs",8.0,"Пятый элемент
+The Fifth Element, 1997",7.0,"Паразиты
+Gisaengchung, 2019",7.0,"Зодиак (2007)
+Zodiac",0.0,"Однажды в Ирландии (2011)
+The Guard",9.0,"Игры разума
+A Beautiful Mind, 2001",0.0,"Паразиты
+Gisaengchung, 2019",7.0,"Остров проклятых
+Shutter Island, 2009",0.0,"Криминальное чтиво
+Pulp Fiction, 1994",9.0,Курьер (1986),0.0,"Пункт назначения (2000)
+Final Destination",7.0,"Отступники
+The Departed, 2006",0.0,"Вечное сияние чистого разума (2004)
+Eternal Sunshine of the Spotless Mind",9.0,Курьер (1986),0.0,"Достучаться до небес
+Knockin' on Heaven's Door, 1997",0.0,"Зеленая миля
+The Green Mile, 1999",0.0,"Ларс и настоящая девушка (2007)
+Lars and the Real Girl",0.0,"Титаник (1997)
+Titanic",0.0,"Карты, деньги, два ствола
+Lock, Stock and Two Smoking Barrels, 1998",0.0
