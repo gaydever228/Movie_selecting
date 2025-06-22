@@ -44,15 +44,18 @@ def time_split(df, quant = 0.5):
         # Разделяем на train и test по split_date
         train_user = user_df[user_df[Columns.Datetime] <= split_date]
         test_user = user_df[user_df[Columns.Datetime] > split_date]
+        #print(test_user)
         #print(test_user[Columns.Item].nunique()/user_df[Columns.Item].nunique())
         train_parts.append(train_user)
+        if test_user.empty:
+            test_user.loc[0] = [0, user_id, 0, 0, 0]
         test_parts.append(test_user)
 
     # Объединяем по всем пользователям
     train_df = pd.concat(train_parts)
     test_df = pd.concat(test_parts)
     pivot_df = train_df.pivot_table(index=Columns.User, columns=Columns.Item, values=Columns.Weight)
-    print(train_df[Columns.Item].nunique()/df[Columns.Item].nunique())
+    #print(train_df[Columns.Item].nunique()/df[Columns.Item].nunique())
     return train_df, test_df, pivot_df
 def test_GT_light(df_train, df_test, links, pivo, cand_dist, ids_to_num, user_id = 0, size = 10, degrees = 4,
                   weighted = True, rule = 'SNTV', dist_method = 'jaccar', series_rate = 2, metric = True):
@@ -122,12 +125,12 @@ params_grid = {'rule':['STV_star', 'SNTV'],
                'degrees':[7],
                'size':[10],
                'weighted':[True],
-               'series_rate':[0, 1]}
+               'series_rate':[1]}
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 
-df_train, df_test, pivo = time_split(rating, quant=0.75)
-
+df_train, df_test, pivo = time_split(rating, quant=1)
+#print(df_test.head(5))
 #print(links_dic)
 
 # full_test_GT_light(['STV_basic', 'jaccar', 7, 10, False, 0], 0)
@@ -145,7 +148,10 @@ models_dic = {'KNN cosine': recs_test.recs_KNN(commit_size=10, dist_method='cosi
 for mod in models_list:
     models_dic[mod]
     _, recos_ml_dic[mod] = recs_test.metrics(df_test, mod)
-for user in rating[Columns.User].unique()[:100]:
+death_set = {19, 32, 36, 37, 58}
+for user in rating[Columns.User].unique():
+    if user in death_set:
+        continue
     tests = []
     print(user)
     for combination in product(*params_values):
@@ -181,11 +187,13 @@ for user in rating[Columns.User].unique()[:100]:
 
 
     user_recos = pd.concat(recos_list, axis=1, keys=recos_keys_list)
+    # здесь удаляю реальные оценки для рекомендаций с квантилем 1!
+    user_recos = user_recos.drop("реальная оценка", axis=1, level=1)
     #metrics_df = pd.DataFrame.from_dict(metrics, orient='index')
     #metrics_df = metrics_df.T
     #recos_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in recos_dic.items()]))
     #metrics_df.to_csv('my_films/test4/metrics_user' + str(user) + '.csv', index=True)
-    user_recos.to_csv('my_films/test4/recos_' + str(user) + '.csv')
+    user_recos.to_csv('my_films/test5/recos_' + str(user) + '.csv')
 
 
 # for key, item in times.items():

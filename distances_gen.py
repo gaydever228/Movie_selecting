@@ -129,7 +129,7 @@ params_grid = {'rule':['SNTV', 'STV_basic', 'STV_star', 'BnB'],
 params_keys = params_grid.keys()
 params_values = params_grid.values()
 
-df_train, df_test, pivo = time_split(rating, quant=0.75)
+df_train, df_test, pivo = time_split(rating, quant=1)
 
 
 
